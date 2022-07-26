@@ -17,6 +17,7 @@
 	<a href="./InsertFood.jsp"><h2>음식등록하기</h2></a><br>
 	<a href="./UpdateMember.jsp"><h2>회원정보수정</h2> <br></a>
 	<a href="./DeleteMember.do"><h2>회원탈퇴</h2>
+	<a href="http://127.0.0.1:5000?id=<%= info.getUserid()%>"><h2>메뉴추천받기</h2></a>
 		<br></a>
 </body>
 </html>
