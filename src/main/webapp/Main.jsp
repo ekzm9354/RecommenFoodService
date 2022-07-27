@@ -36,7 +36,7 @@
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="bradcumb-title text-center">
-						<h2>각 페이지를 입력해주세요</h2>
+						<h2>메인페이지</h2>
 					</div>
 				</div>
 			</div>

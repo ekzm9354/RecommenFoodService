@@ -15,7 +15,7 @@
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="bradcumb-title text-center">
-						<h2>각 페이지를 입력해주세요</h2>
+						<h2>음식 등록</h2>
 					</div>
 				</div>
 			</div>
