@@ -7,6 +7,7 @@
 	<typeAliases>
 		<typeAlias type="ikujo.model.MemberDTO" alias="MemberDTO" />
 		<typeAlias type="ikujo.model.FoodDTO" alias="FoodDTO" />
+		<typeAlias type="ikujo.model.ShowFoodDTO" alias="ShowFoodDTO" />
 	</typeAliases>
 
 	<environments default="development">
