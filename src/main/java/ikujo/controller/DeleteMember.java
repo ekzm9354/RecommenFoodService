@@ -20,7 +20,8 @@ public class DeleteMember implements Command {
 		int row = new MemberDAO().Delete(id);
 		String moveURL = "";
 		if (row > 0) {
-			moveURL = "./DeleteMember.jsp";
+			session.removeAttribute("info");
+			moveURL = "./Main.jsp";
 		} else {
 			moveURL = "./Main.jsp";
 		}

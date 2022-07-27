@@ -13,6 +13,7 @@ import ikujo.controller.DeleteMember;
 import ikujo.controller.InsertFood;
 import ikujo.controller.Join;
 import ikujo.controller.Login;
+import ikujo.controller.Logout;
 import ikujo.controller.SelectFood;
 
 public class FrontController extends HttpServlet {
@@ -42,8 +43,10 @@ public class FrontController extends HttpServlet {
 			service = new DeleteMember();
 		} else if (result.equals("InsertFood.do")) {
 			service = new InsertFood();
-		}else if(result.equals("SelectFood.do")) {
+		} else if (result.equals("SelectFood.do")) {
 			service = new SelectFood();
+		} else if (result.equals("Logout.do")) {
+			service = new Logout();
 		}
 		moveURL = service.execute(request, response);
 		rd = request.getRequestDispatcher(moveURL);

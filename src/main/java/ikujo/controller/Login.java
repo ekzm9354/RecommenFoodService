@@ -24,12 +24,12 @@ public class Login implements Command {
 		MemberDTO info = new MemberDAO().Login(dto);
 		String moveURL = "";
 		if (info != null) {
-			moveURL = "./showMember.jsp";
+			moveURL = "./Main.jsp";
 			HttpSession session = request.getSession();
 			session.setAttribute("info", info);
 			session.setAttribute("id", id);
 		} else {
-			moveURL = "./Main.jsp";
+			moveURL = "./Login.jsp";
 		}
 		return moveURL;
 	}

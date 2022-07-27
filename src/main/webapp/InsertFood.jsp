@@ -7,9 +7,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="Join.css" rel="stylesheet">
 </head>
 <body>
-	<form action="InsertFood.do" method="post">
+
+		<h1>음 식 등 록</h1>
+		<div class="textForm">
+			<h3>오늘 음식 등록</h3>
+		</div>
+		<div class="textForm">
+			<h3>과거 음식 등록</h3>
+		</div>
+		<input type="submit" class="btn" value="I N S E R T" />
+	
+	<%-- <form action="InsertFood.do" method="post">
 		<%
 		MemberDTO info = (MemberDTO) session.getAttribute("info");
 		session.setAttribute("id", info.getUserid());
@@ -30,6 +41,6 @@
 		<input type="submit" value="등록하기">
 	</form>
 	<a href="./SelectFood.jsp"><button>조회하기</button></a>
-	<br>
+	<br> --%>
 </body>
 </html>
