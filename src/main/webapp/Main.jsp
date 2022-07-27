@@ -28,8 +28,8 @@
 </head>
 
 <body>
-<%@ include file="./include.jsp" %>
-	
+	<%@ include file="./include.jsp"%>
+
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
@@ -784,7 +784,7 @@
 	<script type="text/javascript">
 	$(document).on('click','#yummy-nav',()=>{
 	
-	if(<%= info%> == null){
+	if(<%=info%> == null){
 		console.log("info null")
 		var link = "Login.jsp";
 		location.href=link;
