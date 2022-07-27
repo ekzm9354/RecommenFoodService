@@ -122,8 +122,8 @@
 								<li class="nav-item active"><a class="nav-link"
 									href="index.html">음식 등록<span class="sr-only">(current)</span></a>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="#">음식
-										카테고리</a></li>
+								<li class="nav-item"><a class="nav-link" href="#" onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
+								<!--↑예림 : 음식카테고리 이동하는거 썼습니다.  -->
 								<li class="nav-item"><a class="nav-link" href="#">영양보충제</a>
 								</li>
 								<li class="nav-item"><a class="nav-link"
