@@ -31,10 +31,8 @@ body {
 
 .textForm {
   border-bottom: 2px solid #adadad;
-  margin: 20px;
-  padding: 5px 5px;
-  width: 5px;
-  height: 5px;
+  margin: 30px;
+  padding: 10px 10px;
 }
 
 
@@ -105,7 +103,7 @@ body {
   margin-bottom: 40px;
   width:80%;
   height:40px;
-  background:  #fc6c3f;
+  background: #fc6c3f;
   background-position: left;
   background-size: 200%;
   color:white;
