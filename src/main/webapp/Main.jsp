@@ -29,8 +29,6 @@
 
 <body>
 	<%@ include file="./include.jsp"%>
-
-
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/bg-img/breadcumb.jpg);">
@@ -38,7 +36,7 @@
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="bradcumb-title text-center">
-						<h2>Single Post Blog</h2>
+						<h2>각 페이지를 입력해주세요</h2>
 					</div>
 				</div>
 			</div>
@@ -51,10 +49,10 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#"><i
-									class="fa fa-home" aria-hidden="true"></i> Home</a></li>
-							<li class="breadcrumb-item"><a href="#">Archive</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Single
-								Post Blog</li>
+									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
+							<!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
+							<!-- <li class="breadcrumb-item active" aria-current="page">Single
+								Post Blog</li> -->
 						</ol>
 					</nav>
 				</div>
@@ -62,6 +60,8 @@
 		</div>
 	</div>
 	<!-- ****** Breadcumb Area End ****** -->
+
+
 
 	<!-- ****** Single Blog Area Start ****** -->
 	<section class="single_blog_area section_padding_80">
@@ -780,21 +780,7 @@
 	</footer>
 	<!-- ****** Footer Menu Area End ****** -->
 
-	<!-- 로그인으로로 -->
-	<script type="text/javascript">
-	$(document).on('click','#yummy-nav',()=>{
-	
-	if(<%=info%> == null){
-		console.log("info null")
-		var link = "Login.jsp";
-		location.href=link;
-		location.replace(link);
-		window.open(link);
-	}
-	
-	})
-	
-	</script>
+
 	<!-- Jquery-2.2.4 js -->
 	<script src="js/jquery/jquery-2.2.4.min.js"></script>
 	<!-- Popper js -->
