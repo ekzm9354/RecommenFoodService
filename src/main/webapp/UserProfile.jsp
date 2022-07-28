@@ -68,7 +68,7 @@ width: 300px;
              
         });
     });
- $("#showfood").click(function(){
+ $("#showFood").click(function(){
         $.ajax({
             type : "GET", 
             url : "http://localhost:8081/ikujo/ShowFood.jsp?id=<%=id %>",        
