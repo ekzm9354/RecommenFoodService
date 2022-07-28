@@ -11,14 +11,7 @@
 </head>
 <body>
 
-		<h1>음 식 등 록</h1>
-		<div class="textForm">
-			<h3>오늘 음식 등록</h3>
-		</div>
-		<div class="textForm">
-			<h3>과거 음식 등록</h3>
-		</div>
-		<input type="submit" class="btn" value="I N S E R T" />
+	
 	
 	<%-- <form action="InsertFood.do" method="post">
 		<%

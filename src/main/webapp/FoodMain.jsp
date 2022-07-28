@@ -19,12 +19,7 @@
 <body>
 	<%@ include file="./include.jsp"%>
 
-	<%-- <%
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
-		session.setAttribute("id", fo.getUserid());
-		session.setAttribute("name", info.getUserNm());
-		String foodNm = request.getParameter("food");
-		%> --%>
+
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/bg-img/breadcumb.jpg);">
@@ -122,9 +117,11 @@
 										<%
 										if (foodNm != null) {
 										%>
+										<form action="InsertFood.do" method="post">
 										<td><input type="text" placeholder="음식명" name="foodNm"
 											value="<%=foodNm%>"></td>
-										<td><button class="btn">등록하기</button></td>
+										<td><input type="submit" value="등록하기" class="btn"></td>
+										</form>
 										<%
 										} else {
 										%>

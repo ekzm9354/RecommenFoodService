@@ -25,7 +25,7 @@ public class InsertFood implements Command {
 		String moveURL ="";
 		
 		if(row >0) {
-			moveURL="./showMember.jsp";
+			moveURL="./FoodMain.jsp";
 		}else {
 			moveURL ="./insertFood.jsp";
 		}
