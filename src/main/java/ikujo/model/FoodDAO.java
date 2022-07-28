@@ -35,5 +35,5 @@ public class FoodDAO {
 		return food_list;
 	}
 	
-	
+
 }
