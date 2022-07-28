@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<%@ include file="./include.jsp" %>
+
 <%
 	String id = (String)session.getAttribute("id");
 	%>
@@ -26,7 +26,6 @@
 		<input type="submit">
 	</form>
 	<%
-	System.out.print("되너");
 	String[] menu =request.getParameterValues("menu");
 	if(menu !=null){%>
 	<% for(int i =0; i<menu.length	; i++){ %>
