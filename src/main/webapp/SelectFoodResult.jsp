@@ -15,7 +15,7 @@
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-	<form action="./InsertFood.jsp">
+	<form action="./FoodMain.jsp">
 		<!------ Include the above in your HEAD tag ---------->
 		<%
 		ArrayList<String> list = (ArrayList) session.getAttribute("foodInfo");
