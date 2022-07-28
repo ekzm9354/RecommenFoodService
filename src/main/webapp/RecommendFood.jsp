@@ -92,22 +92,27 @@ background-color: blue;
 								</div>
 								<div id="recommendNtrients">
 									<%
-								NutrientsDAO dao =new NutrientsDAO();
+								NutrientsDAO nutDao =new NutrientsDAO();
 								String[] nutrients = request.getParameterValues("nutrients");
 								if (nutrients != null) {
 								%>
 								<%
-								for (int i = 0; i < nutrients.length; i++) {
-								ArrayList<NutrientsDTO> NutDto=	dao.showNutrients(nutrients[i]);
+								for (String nutNm : nutrients) {
 								
 								%>
-								<img sr>
-								<%=nutrients[i]%><br>
+								<%=nutNm%>:
+								<img src="<%=nutDao.showNutImg(nutNm)%>" >
 								<%
 								}
 								}
 								
+								
 								%>
+								</div>
+								<div id="chat">
+									
+									
+								
 								</div>
 							</div>
 						</div>

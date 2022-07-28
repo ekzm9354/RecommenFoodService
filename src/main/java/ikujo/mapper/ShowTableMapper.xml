@@ -8,7 +8,12 @@
 	<select id="showFoodId" parameterType="String" resultType="ShowFoodDTO">
 		select u.udate,f.* from food f, userui u where f.foodid=u.foodid and u.userid =#{id}
 	</select>
+	
 	<select id="showNutrients" parameterType="String" resultType="NutrientsDTO">
-		select * from nutrients where nutid=#{nutnm}
+		select * from nutrients where nutnm=#{nutnm}
+	</select>
+	
+	<select id="showNutImg" parameterType="String" resultType="String">
+		select img from nutrients where nutnm=#{nutnm}
 	</select>
 </mapper>
