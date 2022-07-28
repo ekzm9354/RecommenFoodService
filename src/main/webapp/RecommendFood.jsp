@@ -9,7 +9,7 @@
 
 </head>
 <body>
-
+<%@ include file="./include.jsp"%>
 <%
 	String id = (String)session.getAttribute("id");
 	%>
