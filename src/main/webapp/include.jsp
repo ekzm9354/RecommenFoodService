@@ -17,6 +17,13 @@
 <link href="css/responsive/responsive.css" rel="stylesheet">
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style type="text/css">
+	img{display:block;
+		margin:auto;
+	}
+</style>
+
 </head>
 </head>
 <body>
@@ -90,7 +97,10 @@
 				<!-- Logo Area Start -->
 				<div class="col-12">
 					<div class="logo_area text-center">
-						<a href="Main.jsp" class="yummy-logo">밥줘 영양줘</a>
+						<a href="Main.jsp" class="yummy-logo">
+							<!-- 수지 : 페이지 로고 추가 -->
+							<img src="./img/blog-img/Green Healthy Food.png" width=300 height=300>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -147,15 +157,13 @@
 									</li>
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="FoodMain.jsp">음식 등록</a></li>
-<<<<<<< HEAD
 								<li class="nav-item"><a class="nav-link" href="#" onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
-=======
+
 								<li class="nav-item"><a class="nav-link" href="#" onclick="location.href='foodcate.jsp'">음식
 										카테고리</a></li>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BIgData-14/-.git
-								<li class="nav-item"><a class="nav-link" href="#">영양보충제</a>
-								</li>
+								<li class="nav-item"><a class="nav-link" 
+									href="Nutrition.jsp">영양보충제</a>	</li>
 								<li class="nav-item"><a class="nav-link"
 									href="archive.html">만남의 장</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">만든이</a></li>
