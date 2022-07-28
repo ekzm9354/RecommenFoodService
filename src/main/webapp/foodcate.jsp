@@ -1,3 +1,7 @@
+<%@page import="ikujo.model.FoodcateDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="ikujo.model.FoodDAO"%>
+<%@page import="ikujo.model.FoodcateDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,6 +15,41 @@
 </head>
 <body>
 <%@ include file="./include.jsp"%>
+
+<!-- ****** Breadcumb Area Start ****** -->
+	<div class="breadcumb-area"
+		style="background-image: url(img/bg-img/breadcumb.jpg);">
+		<div class="container h-100">
+			<div class="row h-100 align-items-center">
+				<div class="col-12">
+					<div class="bradcumb-title text-center">
+						<h2>음식 카테고리</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="breadcumb-nav">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="./Main.jsp"><i
+									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
+							<li class="breadcrumb-item"><a href="#"> 음식 카테고리 </a></li>
+							<!-- <li class="breadcrumb-item active" aria-current="page">Single
+								Post Blog</li> -->
+						</ol>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ****** Breadcumb Area End ****** -->
+	
+	
+	
 <section id="tabs" class="project-tab">	
             <div class="container">
                 <div class="row">
@@ -29,10 +68,12 @@
                         <div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="rice" role="tabpanel" aria-labelledby="rice_tab">
                                 <table class="table" cellspacing="0">
+                                <!--밥류 -->
                                     <thead>
                                         <tr>
                                             <th>음식 사진</th>
                                             <th>음식 이름</th>
+                                            <th>칼로리</th>
                                             <th>탄수화물</th>
                                             <th>단백질</th>
                                             <th>지방</th>
@@ -42,6 +83,9 @@
                                         <tr>
                                         
                                             <td><img src="">
+                                            <%
+                                           
+                                            %>
                                             <!-- <a href="#">Work 1</a> -->
                                             </td>
                                             <td>그레이프 소스 스테이크</td>
@@ -81,20 +125,12 @@
                                             <td>Doe</td>
                                             <td>john@example.com</td>
                                         </tr>
-                                        <tr>
-                                            <td><a href="#">Work 2</a></td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 3</a></td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="tab-pane fade" id="noodle" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="tab-pane fade" id="noodle" role="tabpanel" aria-labelledby="nav-profile-tab" >
+                            
                                 <table class="table" cellspacing="0">
                                     <thead>
                                         <tr>
@@ -111,16 +147,94 @@
                                             <td>Doe</td>
                                             <td>john@example.com</td>
                                         </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="bread" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <table class="table" cellspacing="0">
+                                    <thead>
                                         <tr>
-                                            <td><a href="#">Work 2</a></td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
+                                            <th>음식 사진</th>
+                                            <th>음식 이름</th>
+                                            <th>탄수화물</th>
+                                            <th>단백질</th>
+                                            <th>지방</th>
                                         </tr>
+                                    </thead>
+                                    <tbody>
                                         <tr>
-                                            <td><a href="#">Work 3</a></td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
+                                            <td><a href="#">빵</a></td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
                                         </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="meat" role="tabpanel" aria-labelledby="nav-profile-tab" >
+                            
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>음식 사진</th>
+                                            <th>음식 이름</th>
+                                            <th>탄수화물</th>
+                                            <th>단백질</th>
+                                            <th>지방</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#">고기</a></td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="fired" role="tabpanel" aria-labelledby="nav-profile-tab" >
+                            
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>음식 사진</th>
+                                            <th>음식 이름</th>
+                                            <th>탄수화물</th>
+                                            <th>단백질</th>
+                                            <th>지방</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#">튀김</a></td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane fade" id="others" role="tabpanel" aria-labelledby="nav-profile-tab" >
+                            
+                                <table class="table" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>음식 사진</th>
+                                            <th>음식 이름</th>
+                                            <th>탄수화물</th>
+                                            <th>단백질</th>
+                                            <th>지방</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><a href="#">기타</a></td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>
