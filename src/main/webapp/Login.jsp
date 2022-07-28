@@ -26,7 +26,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-6 text-center mb-5">
 						<h2 class="heading-section">
-							<!-- 제목 쓸수 있는 곳 -->
+							<!-- 제목 쓸수 있는 곳임 -->
 						</h2>
 					</div>
 				</div>
