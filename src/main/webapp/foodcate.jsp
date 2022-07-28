@@ -11,18 +11,18 @@
 </head>
 <body>
 <%@ include file="./include.jsp"%>
-<section id="tabs" class="project-tab">
+<section id="tabs" class="project-tab">	
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <nav>
                             <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="rice_tab" data-toggle="tab" href="#rice" role="tab" aria-controls="rice" aria-selected="true">밥류</a>|
-                                <a class="nav-item nav-link" id="soup_tab" data-toggle="tab" href="#soup" role="tab" aria-controls="soup" aria-selected="false">국류</a>|
-                                <a class="nav-item nav-link" id="noodle_tab" data-toggle="tab" href="#noodle" role="tab" aria-controls="noodle" aria-selected="false">면류</a>|
-                                <a class="nav-item nav-link" id="bread_tab" data-toggle="tab" href="#bread" role="tab" aria-controls="bread" aria-selected="false">빵류</a>|
-                                <a class="nav-item nav-link" id="meat_tab" data-toggle="tab" href="#meat" role="tab" aria-controls="meat" aria-selected="false">고기류</a>|
-                                <a class="nav-item nav-link" id="fried_tab" data-toggle="tab" href="#fried" role="tab" aria-controls="fried" aria-selected="false">튀김류</a>|
+                                <a class="nav-item nav-link active" id="rice_tab" data-toggle="tab" href="#rice" role="tab" aria-controls="rice" aria-selected="true">밥류</a>
+                                <a class="nav-item nav-link" id="soup_tab" data-toggle="tab" href="#soup" role="tab" aria-controls="soup" aria-selected="false">국류</a>
+                                <a class="nav-item nav-link" id="noodle_tab" data-toggle="tab" href="#noodle" role="tab" aria-controls="noodle" aria-selected="false">면류</a>
+                                <a class="nav-item nav-link" id="bread_tab" data-toggle="tab" href="#bread" role="tab" aria-controls="bread" aria-selected="false">빵류</a>
+                                <a class="nav-item nav-link" id="meat_tab" data-toggle="tab" href="#meat" role="tab" aria-controls="meat" aria-selected="false">고기류</a>
+                                <a class="nav-item nav-link" id="fried_tab" data-toggle="tab" href="#fried" role="tab" aria-controls="fried" aria-selected="false">튀김류</a>
                                 <a class="nav-item nav-link" id="others_tab" data-toggle="tab" href="#others" role="tab" aria-controls="others" aria-selected="false">기타류</a>
                             </div>
                         </nav>
