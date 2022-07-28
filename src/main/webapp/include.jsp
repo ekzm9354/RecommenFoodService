@@ -16,7 +16,7 @@
 <!-- Responsive CSS -->
 <link href="css/responsive/responsive.css" rel="stylesheet">
 
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 </head>
 <body>
@@ -112,16 +112,11 @@
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
 								<li class="nav-item dropdown"><a
-									class="nav-link dropdown-toggle" href="#" id="yummyDropdown"
+									class="nav-link dropdown-toggle" href="./Login.jsp" id="yummyDropdown"
 									role="button" data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">프로필</a>
-									<div class="dropdown-menu" aria-labelledby="yummyDropdown">
-										<a class="dropdown-item" href="index.html">1</a> <a
-											class="dropdown-item" href="archive.html">2</a> <a
-											class="dropdown-item" href="single.html">3</a> <a
-											class="dropdown-item" href="static.html">4</a> <a
-											class="dropdown-item" href="contact.html">5</a>
-									</div></li>
+									
+									</li>
 
 
 								<li class="nav-item" id="insertFood"><a class="nav-link"
@@ -146,20 +141,19 @@
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
 								<li class="nav-item dropdown"><a
-									class="nav-link dropdown-toggle" href="#" id="yummyDropdown"
+									class="nav-link dropdown-toggle" href="#" onclick="location.href='UserProfile.jsp'" id="yummyDropdown"
 									role="button" data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">프로필</a>
-									<div class="dropdown-menu" aria-labelledby="yummyDropdown">
-										<a class="dropdown-item" href="index.html">1</a> <a
-											class="dropdown-item" href="archive.html">2</a> <a
-											class="dropdown-item" href="single.html">3</a> <a
-											class="dropdown-item" href="static.html">4</a> <a
-											class="dropdown-item" href="contact.html">5</a>
-									</div></li>
+									</li>
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="FoodMain.jsp">음식 등록</a></li>
+<<<<<<< HEAD
 								<li class="nav-item"><a class="nav-link" href="#" onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
+=======
+								<li class="nav-item"><a class="nav-link" href="#" onclick="location.href='foodcate.jsp'">음식
+										카테고리</a></li>
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BIgData-14/-.git
 								<li class="nav-item"><a class="nav-link" href="#">영양보충제</a>
 								</li>
 								<li class="nav-item"><a class="nav-link"
@@ -181,6 +175,8 @@
 	
 	<!-- 로그인으로로 -->
 	<script type="text/javascript">
+	
+	
 	$(document).on('click','#yummy-nav',()=>{
 	
 	if(<%=info%> == null){
