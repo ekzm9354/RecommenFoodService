@@ -8,6 +8,7 @@
 		<typeAlias type="ikujo.model.MemberDTO" alias="MemberDTO" />
 		<typeAlias type="ikujo.model.FoodDTO" alias="FoodDTO" />
 		<typeAlias type="ikujo.model.ShowFoodDTO" alias="ShowFoodDTO" />
+		<typeAlias type="ikujo.model.NutrientsDTO" alias="NutrientsDTO" />
 		<typeAlias type="ikujo.model.FoodcateDTO" alias="FoodcateDTO" /><!--예림추가  -->
 	</typeAliases>
 
@@ -25,6 +26,7 @@
 	<mappers>
 		<mapper resource="ikujo/mapper/MemberMapper.xml" />
 		<mapper resource="ikujo/mapper/FoodMapper.xml" />
+		<mapper resource="ikujo/mapper/ShowTableMapper.xml" />
 		<mapper resource="ikujo/mapper/FoodcateMapper.xml" /><!--예림추가  -->
 	</mappers>
 </configuration>

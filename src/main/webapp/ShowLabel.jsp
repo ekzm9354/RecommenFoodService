@@ -1,6 +1,6 @@
+<%@page import="ikujo.model.ShowFoodDAO"%>
 <%@page import="ikujo.model.ShowFoodDTO"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="ikujo.model.FoodDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ canvas {
 <body>
 	<%
 	String id=request.getParameter("id"); 
-	ArrayList<ShowFoodDTO> foodList =new FoodDAO().showFoodId(id);
+	ArrayList<ShowFoodDTO> foodList =new ShowFoodDAO().showFoodId(id);
 	int gogi=0;
 	int gook=0;
 	int myun=0;
@@ -49,11 +49,12 @@ canvas {
 
 	}
 	%>
-	dkjdkdk
+	
 	<canvas id="myChart" width="400" height="400"></canvas>
-	<script> 
-const ctx = document.getElementById('myChart').getContext('2d');
-const myChart = new Chart(ctx, {
+	<script>
+	
+	var ctx = document.getElementById('myChart').getContext('2d');
+	var myChart = new Chart(ctx, {
     type: 'pie', // 차트의 형태 (bar, line, pie)
     data: { // 차트에 들어갈 데이터
         labels: ['고기류', '국류', '면류', '튀김류', '빵류', '기타류'],

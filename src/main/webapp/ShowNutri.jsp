@@ -1,5 +1,5 @@
-<%@page import="ikujo.model.FoodDAO"%>
 <%@page import="ikujo.model.ShowFoodDTO"%>
+<%@page import="ikujo.model.ShowFoodDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -12,7 +12,7 @@
 <body>
 <%
 String id=request.getParameter("id"); 
-ArrayList<ShowFoodDTO> foodList =new FoodDAO().showFoodId(id);
+ArrayList<ShowFoodDTO> foodList =new ShowFoodDAO().showFoodId(id);
 %>
 <table>
 <tr>
