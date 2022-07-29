@@ -1,6 +1,9 @@
 
+<%@page import="ikujo.model.NutrientsDAO"%>
+<%@page import="ikujo.model.NutrientsDTO"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,43 +12,51 @@
 
 <style type="text/css">
 .project-tab {
-    padding: 10%;
-    margin-top: -8%;
+	padding: 10%;
+	margin-top: -8%;
 }
-.project-tab #tabs{
-    background: #007b5e;
-    color: #eee;
+
+.project-tab #tabs {
+	background: #007b5e;
+	color: #eee;
 }
-.project-tab #tabs h6.section-title{
-    color: #eee;
+
+.project-tab #tabs h6.section-title {
+	color: #eee;
 }
-.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
-    color: #0062cc;
-    background-color: transparent;
-    border-color: transparent transparent #f3f3f3;
-    border-bottom: 3px solid !important;
-    font-size: 16px;
-    font-weight: bold;
+
+.project-tab #tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active
+	{
+	color: #0062cc;
+	background-color: transparent;
+	border-color: transparent transparent #f3f3f3;
+	border-bottom: 3px solid !important;
+	font-size: 16px;
+	font-weight: bold;
 }
+
 .project-tab .nav-link {
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-    color: #0062cc;
-    font-size: 16px;
-    font-weight: 600;
+	border: 1px solid transparent;
+	border-top-left-radius: .25rem;
+	border-top-right-radius: .25rem;
+	color: #0062cc;
+	font-size: 16px;
+	font-weight: 600;
 }
+
 .project-tab .nav-link:hover {
-    border: none;
+	border: none;
 }
-.project-tab thead{
-    background: #f3f3f3;
-    color: #333;
+
+.project-tab thead {
+	background: #f3f3f3;
+	color: #333;
 }
-.project-tab a{
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
+
+.project-tab a {
+	text-decoration: none;
+	color: #333;
+	font-weight: 600;
 }
 </style>
 
@@ -53,7 +64,7 @@
 <!-- 찡 -->
 
 <body>
-<%@ include file="./include.jsp"%>
+	<%@ include file="./include.jsp"%>
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/bg-img/breadcumb.jpg);">
@@ -86,113 +97,122 @@
 	</div>
 	<!-- ****** Breadcumb Area End ****** -->
 
-<section id="tabs" class="project-tab">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <nav>
-                        	<!-- 각 영양분을 클릭하면 그 영양보충제의 정보만 나올 수 있게 해야함 -->
-                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">마그네슘</a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">비타민B</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">비타민C</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">철</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">칼륨</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">칼슘</a>
-                            </div>
-                        </nav>
-                        <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-                                <table class="table" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>마그네슘</th> <!-- 각 영양분이름으로 바꿔줘야함 -->
-                                            <th>정보</th>
-                                            <th>링크</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    	<!-- tr과 td for문으로 돌려서 모든 영양제 이미지, 정보, 사이트링크 넣기 -->
-                                        <tr>
-                                            <td><a href="#"><img src="./img/blog-img/2.jpg" width="200px" height="200px"></a></td>
-                                            <td>영양정보를 넣으세요</td>
-                                            <td>보충제의 링크를 넣으세요</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 2</a></td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 3</a></td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                <table class="table" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Project Name</th>
-                                            <th>Employer</th>
-                                            <th>Time</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="#">Work 1</a></td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 2</a></td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 3</a></td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                <table class="table" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>Contest Name</th>
-                                            <th>Date</th>
-                                            <th>Award Position</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><a href="#">Work 1</a></td>
-                                            <td>Doe</td>
-                                            <td>john@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 2</a></td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 3</a></td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+	<section id="tabs" class="project-tab">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav>
+						<!-- 각 영양분을 클릭하면 그 영양보충제의 정보만 나올 수 있게 해야함 -->
+						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+							<a class="nav-item nav-link active keyword" id="nav-home-tab"
+								data-toggle="tab" href="#nav-home" role="tab"
+								aria-controls="nav-home" aria-selected="true">마그네슘</a> <a
+								class="nav-item nav-link keyword" id="nav-profile-tab"
+								data-toggle="tab" href="#nav-profile" role="tab"
+								aria-controls="nav-profile" aria-selected="false">비타민B</a> <a
+								class="nav-item nav-link keyword" id="nav-contact-tab"
+								data-toggle="tab" href="#nav-contact" role="tab"
+								aria-controls="nav-contact" aria-selected="false">비타민C</a> <a
+								class="nav-item nav-link keyword" id="nav-contact-tab"
+								data-toggle="tab" href="#nav-contact" role="tab"
+								aria-controls="nav-contact" aria-selected="false">철</a> <a
+								class="nav-item nav-link keyword" id="nav-contact-tab"
+								data-toggle="tab" href="#nav-contact" role="tab"
+								aria-controls="nav-contact" aria-selected="false">칼륨</a> <a
+								class="nav-item nav-link keyword" id="nav-contact-tab"
+								data-toggle="tab" href="#nav-contact" role="tab"
+								aria-controls="nav-contact" aria-selected="false">칼슘</a>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="nav-home"
+							role="tabpanel" aria-labelledby="nav-home-tab">
+							<table class="table" cellspacing="0">
+								<thead>
+								<!-- 이미지를 누르면 해당 링크로 이동  -->
+										<th>영양제 사진</th>
+										<th>이름</th>
+										<th>가격</th>
+									</tr>
+								</thead>
+								<tbody id="Nutrients">
+									<%
+									String keyword = "mg";
+									ArrayList<NutrientsDTO> nutriCate = (ArrayList) new NutrientsDAO().showNutreCate(keyword);
 
+									for (int i = 0; i < nutriCate.size(); i++) {
+									%>
+									<!-- tr과 td for문으로 돌려서 모든 영양제 이미지, 정보, 사이트링크 넣기 -->
+									<tr>
+										<td><a href="<%=nutriCate.get(i).getLink()%>"><img src="<%=nutriCate.get(i).getImg()%>"
+											width="200px" height="200px"></a></td>
+										<td><%=nutriCate.get(i).getNutnm()%></td>
+										<td><%=nutriCate.get(i).getPrice()%>￦</td>
+									</tr>
+									<%
+									}
+									%>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		$('.keyword').on('click', function() {
+			var keyword = $(this).text()
+			if(keyword == "비타민B"){
+				 keyword = "vitaminb"
+			}else if(keyword =="비타민C"){
+				 keyword = "vitaminc"
+			}else if(keyword =="철"){
+				 keyword = "fe"
+			}else if(keyword =="칼륨"){
+				 keyword="k"
+			}else if(keyword == "칼슘"){
+				 keyword="ca"
+			}else if(keyword =="마그네슘"){
+				keyword ="mg"
+			}
+			console.log(keyword)
+			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
+			$.ajax({
+				/* 어디로 보낼건지? */
+				url : "NutrientsAjax",
+				/* 어떤 데이터를 보낼 것인지? */
+				data : {
+					keyword : keyword
+				},
+				/* 데이터를 어떤 형태로 받아올 것인지 */
+				dataType : "json",
+				/* 성공 시 */
+				success : function(key) {
+					console.log(key)
+					makeTable(key)
+				},
+				/* 실패 시 */
+				error : function(e) {
+					alert('실패');
+					console.log(e);
+				}
+
+			})
+		});
+		
+		function makeTable(key) {
+			$("#Nutrients").children().remove();
+		for (var i = 0; i < key.length; i++) {
+			console.log("g")
+			$("#Nutrients").append("<tr> </tr>");
+	 		$("#Nutrients tr").last().append("<td>" + "<a href='"+key[i].link+"'>'"+"<img src='"+key[i].img+"'width=200px height=200px>"+"</a><td>");
+			$("#Nutrients tr").last().append("<td>" + key[i].nutnm+ "</td>");
+			$("#Nutrients tr").last().append("<td>" + key[i].price + "￦</td>");
+			
+		}
+	}
+	</script>
 
 </body>
 </html>

@@ -15,6 +15,7 @@ import ikujo.controller.Join;
 import ikujo.controller.Login;
 import ikujo.controller.Logout;
 import ikujo.controller.SelectFood;
+import ikujo.controller.Update;
 
 public class FrontController extends HttpServlet {
 	String moveURL = null;
@@ -47,6 +48,8 @@ public class FrontController extends HttpServlet {
 			service = new SelectFood();
 		} else if (result.equals("Logout.do")) {
 			service = new Logout();
+		} else if (result.equals("Update.do")) {
+			service = new Update();
 		}
 		moveURL = service.execute(request, response);
 		rd = request.getRequestDispatcher(moveURL);

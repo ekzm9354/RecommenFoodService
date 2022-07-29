@@ -1,6 +1,5 @@
 package ikujo.model;
 
-import java.util.ArrayList;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -32,6 +31,11 @@ public class MemberDAO {
 		session.close();
 		return row;
 	}
-
+	public int update(MemberDTO dto) {
+		session = sqlSessionFactory.openSession(true);
+		row = session.update("update",dto);
+		session.close();
+		return row;
+	}
 
 }

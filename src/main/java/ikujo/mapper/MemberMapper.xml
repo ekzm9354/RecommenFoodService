@@ -15,6 +15,7 @@
 		userpw=#{userpw}
 	</select>
 	<update id="update" parameterType="MemberDTO">
+	 update userinfo set userpw=#{userpw} where userid=#{userid}
 	</update>
 	<delete id="delete" parameterType="String">
 		delete from userinfo where userid=#{userid}
