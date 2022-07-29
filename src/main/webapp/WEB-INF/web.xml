@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>ikujo.frontcontroller.FrontController</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>NutrientsAjax</servlet-name>
+  	<display-name>NutrientsAjax</display-name>
+  	<description></description>
+  	<servlet-class>ikujo.controller.NutrientsAjax</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>
   	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>NutrientsAjax</servlet-name>
+  	<url-pattern>/NutrientsAjax</url-pattern>
   </servlet-mapping>
 </web-app>

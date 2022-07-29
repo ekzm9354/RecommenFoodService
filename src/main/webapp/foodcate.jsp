@@ -116,17 +116,7 @@
 									<%
 									}
 									%>
-									<!--   <tr>
-                                            <td><a href="#">여기는 음식사진 </a></td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 3</a></td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                            
-                                        </tr> 위에꺼 반복시키면 이건 필요없을거같음 ~~! -->
+									
 								</tbody>
 							</table>
 						</div>

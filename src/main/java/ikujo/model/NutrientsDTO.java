@@ -17,5 +17,5 @@ public class NutrientsDTO {
 	private String img;
 	private BigDecimal score;
 	private String link;
-	
+	private String price;
 }

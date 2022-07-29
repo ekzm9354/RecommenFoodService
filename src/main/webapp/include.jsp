@@ -74,6 +74,9 @@
 							<div class="login">
 								<a href="./Logout.do">로그아웃</a>
 							</div>
+							<div class="login">
+								<a href="./UpdateMember.jsp">회원정보 수정</a>
+							</div>
 							<div class="register">
 								<a href="./DeleteMember.jsp">회원탈퇴</a>
 							</div>
