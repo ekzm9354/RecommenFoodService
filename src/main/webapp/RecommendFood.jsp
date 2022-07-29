@@ -1,3 +1,5 @@
+<%@page import="ikujo.model.FoodDTO"%>
+<%@page import="ikujo.model.FoodDAO"%>
 <%@page import="ikujo.model.ShowFoodDAO"%>
 <%@page import="ikujo.model.ShowFoodDTO"%>
 <%@page import="ikujo.model.NutrientsDTO"%>
@@ -29,8 +31,32 @@
 	<%@ include file="./include.jsp"%>
 	<%
 	String id = (String) session.getAttribute("id");
+	MemberDTO memDto = (MemberDTO) session.getAttribute("info");
+	String category = request.getParameter("category");
+	%>
+	<%
+	
+	if (category == null && id != null) {
 	%>
 
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var keyword = '밥류'
+			console.log(keyword)
+			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
+		       console.log("flask로 간다")
+				var link = "http://127.0.0.1:5000/?id=<%=id%>&category=" + keyword;
+			location.href = link;
+			location.replace(link);
+			window.open(link);
+
+		});
+		
+	</script>
+
+	<%
+	}
+	%>
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
@@ -95,46 +121,49 @@
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="rice" role="tabpanel"
 							aria-labelledby="rice_tab">
-							<table class="table" cellspacing="0">
-								<!--밥류 -->
+							<table class="table">
 								<thead>
 									<tr>
+
 										<th>음식 사진</th>
 										<th>음식 이름</th>
 										<th>칼로리</th>
 										<th>탄수화물</th>
 										<th>단백질</th>
 										<th>지방</th>
-											<table>
-		<!-- 여기 음식 이미지 넣을 준비 -->
-		<%
-		String[] menu = request.getParameterValues("menu");
-		if (menu != null) {
-			for (String foodNm : menu) {
-				ArrayList<ShowFoodDTO> menuList = new ShowFoodDAO().recommendFood(foodNm);
-				for (ShowFoodDTO dto : menuList) {
-		%>
-		<tr>
-			<td><img src="file/<%=dto.getImg()%>" width="200px"
-				height="200px"></td>
-			<td><%=dto.getFoodNm()%></td>
-			<td><%=dto.getKcal()%></td>
-			<td><%=dto.getCarbohydrate()%></td>
-			<td><%=dto.getProtein()%></td>
-			<td><%=dto.getFat()%></td>
-		</tr>
-		<%
-		}
-		}
-		}
-		%>
-
-	</table>
+										<th>선택</th>
+										<%
+										int i = 0;
+										String[] menu = request.getParameterValues("menu");
+										if (menu != null) {
+											for (String foodNm : menu) {
+												ArrayList<ShowFoodDTO> menuList = new ShowFoodDAO().recommendFood(foodNm);
+												for (ShowFoodDTO dto : menuList) {
+										%>
+									<tr>
+										<td><img src="file/<%=dto.getImg()%>" width="200px"
+											height="200px"></td>
+										<td><%=dto.getFoodNm()%></td>
+										<td><%=dto.getKcal()%></td>
+										<td><%=dto.getCarbohydrate()%></td>
+										<td><%=dto.getProtein()%></td>
+										<td><%=dto.getFat()%></td>
+										<td>
+									<form action="./RecommendFoodInsert">
+										<input type="hidden" name="userId" value="<%=id%>">
+										<input type="hidden" name="userNm"
+											value="<%=memDto.getUserNm()%>">
+										<input type="hidden" name="foodNm"
+											value="<%=dto.getFoodNm()%>">
+										<input type="submit" value="선택">
+									</form>
+										</td>
 									</tr>
+
+
+									<%}}}%>
 								</thead>
 								<tbody id="foods">
-
-
 								</tbody>
 							</table>
 						</div>
@@ -156,30 +185,7 @@
 			window.open(link);
 
 		});
-
-		function makeTable(key) {
-			$("#foodRe").children().remove();
-			for (var i = 0; i < key.length; i++) {
-				console.log("g")
-				$("#foodRe").append("<tr> </tr>");
-				$("#foodRe tr")
-						.last()
-						.append(
-								"<td>"
-										+ "<img src= 'file/"+key[i].img+"' width=200px height=200px>"
-										+ "</td>");
-				$("#foodRe tr").last().append("<td>" + key[i].foodnm + "</td>");
-				$("#foodRe tr").last().append("<td>" + key[i].kcal + "</td>");
-				$("#foodRe tr").last().append(
-						"<td>" + key[i].carbohydrate + "</td>");
-				$("#foodRe tr").last()
-						.append("<td>" + key[i].protein + "</td>");
-				$("#foodRe tr").last().append("<td>" + key[i].fat + "</td>");
-			}
-		}
 	</script>
-
-
 
 	<!-------------------------         영양제               ------------------------  -->
 
@@ -203,36 +209,36 @@
 										<!--  데이터를 요청해줄 버튼 -->
 										<th>이미지</th>
 										<th>이름</th>
-										<th>타입</th>
+										<th>선택</th>
+
+
+
 									</tr>
 								</thead>
 								<tbody>
-
+									<%
+									NutrientsDAO nutDao = new NutrientsDAO();
+									String[] nutrients = request.getParameterValues("nutrients");
+									if (nutrients != null) {
+									%>
+									<%
+									for (String nutNm : nutrients) {
+									ArrayList<NutrientsDTO> nutrientsList= nutDao.showNutrients(nutNm);
+										for(NutrientsDTO nutrientsDto :nutrientsList){
+									%>
 									<tr>
-
-
-										<td colspan="2">
-											<!--  사용자프로필 정보를 띄어줄 공간 -->
-											<div id="recommendNtrients">
-												<%
-												NutrientsDAO nutDao = new NutrientsDAO();
-												String[] nutrients = request.getParameterValues("nutrients");
-												if (nutrients != null) {
-												%>
-												<%
-												for (String nutNm : nutrients) {
-												%>
-												<%=nutNm%>: <img src="<%=nutDao.showNutImg(nutNm)%>">
-												<%
-												}
-												}
-												%>
-
-											</div>
-										</td>
-
+										<td><a href="<%=nutrientsDto.getLink()%>"> <img
+												src="<%=nutrientsDto.getImg()%>">
+										</a></td>
+										<td><%=nutrientsDto.getNutnm()%></td>
+										<td>선택버튼</td> <!-- 유사한 사용자가 선택한 영양제 추천 메커니즘 추가할꺼면 만들고  사용자가 선택한 영양제 데이터테이블도 같이 추가해야됨  
+															안할거면 버튼 삭제 하기 -->
 									</tr>
-
+									<%
+										}
+									}
+									}
+									%>
 								</tbody>
 							</table>
 						</div>
