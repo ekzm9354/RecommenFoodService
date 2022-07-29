@@ -30,5 +30,26 @@ public class ShowFoodDTO {
 	private BigDecimal vitaminB;
 	private BigDecimal vitaminC;
 	private String img;
+	
+	public ShowFoodDTO(BigDecimal foodId, @NonNull String foodNm, String label, BigDecimal kcal,
+			BigDecimal carbohydrate, BigDecimal protein, BigDecimal fat, BigDecimal sugar, BigDecimal ca, BigDecimal fe,
+			BigDecimal mg, BigDecimal na, BigDecimal k, BigDecimal vitaminB, BigDecimal vitaminC, String img) {
+		this.foodId = foodId;
+		this.foodNm = foodNm;
+		this.label = label;
+		this.kcal = kcal;
+		this.carbohydrate = carbohydrate;
+		this.protein = protein;
+		this.fat = fat;
+		this.sugar = sugar;
+		this.ca = ca;
+		this.fe = fe;
+		this.mg = mg;
+		this.na = na;
+		this.k = k;
+		this.vitaminB = vitaminB;
+		this.vitaminC = vitaminC;
+		this.img = img;
+	}
 
 }

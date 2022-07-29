@@ -21,4 +21,10 @@ public class ShowFoodDAO {
 			return food_list;
 		}
 
+		public ArrayList<ShowFoodDTO> recommendFood(String foodNm) {
+			session = sqlSessionFactory.openSession(true);
+			ArrayList<ShowFoodDTO> food_list = (ArrayList)session.selectList("recommendFood", foodNm);
+			session.close();
+			return food_list;
+		}
 }
