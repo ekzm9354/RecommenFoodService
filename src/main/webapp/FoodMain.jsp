@@ -122,7 +122,7 @@
 										<%
 										}
 										%>
-										<td><input type="text" placeholder="음식명" name="foodNm"></td>
+										<!-- <td><input type="text" placeholder="음식명" name="foodNm"></td> -->
 										<td><a href="SelectFood.jsp"><button class="btn"
 													id="search">조회하기</button></a></td>
 

@@ -8143,7 +8143,8 @@ body {
   line-height: 1.8;
   font-weight: normal;
   background: #f8f9fd;
-  color: gray; }
+  text-align:center;
+  color: rgb(255, 128, 0); }
 
 a {
   -webkit-transition: .3s all ease;
@@ -8177,7 +8178,7 @@ h1, h2, h3, h4, h5,
 
 .heading-section {
   font-size: 28px;
-  color: #000; }
+  color: rgb(255, 128, 0); }
 
 .img {
   background-size: cover;
