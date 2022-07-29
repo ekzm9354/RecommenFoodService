@@ -9,21 +9,38 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script src="jquery-3.6.0.min.js"></script>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style type="text/css">
+
+.project-tab a {
+    color:gray;
+    background-color: transparent;
+    border-color: transparent red;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+} 
+
+.project-tab .nav-link:hover {
+    border: solid;
+} 
+
+
+</style>
+<!-- <script src="jquery-3.6.0.min.js"></script> -->
+
+<!-- <link rel="stylesheet" href="../css/yerim/yerimy.css"> -->
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 </head>
 <body>
 	<%@ include file="./include.jsp"%>
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
-		style="background-image: url(img/bg-img/breadcumb.jpg);">
+		style="background-image: url(img/yerimimg/foodcatebanner.jpg);">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
@@ -54,33 +71,26 @@
 	<!-- ****** Breadcumb Area End ****** -->
 
 
-
 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<nav>
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-							<a class="nav-item nav-link active keyword" id="rice_tab"
-								data-toggle="tab" href="#rice" role="tab" aria-controls="rice"
-								aria-selected="true">밥류</a> <a class="nav-item nav-link keyword"
-								id="soup_tab" data-toggle="tab" href="#soup" role="tab"
-								aria-controls="soup" aria-selected="false">국류</a> <a
-								class="nav-item nav-link keyword" id="noodle_tab"
-								data-toggle="tab" href="#noodle" role="tab"
-								aria-controls="noodle" aria-selected="false">면류</a> <a
-								class="nav-item nav-link keyword" id="bread_tab"
-								data-toggle="tab" href="#bread" role="tab" aria-controls="bread"
-								aria-selected="false">빵류</a> <a
-								class="nav-item nav-link keyword" id="meat_tab"
-								data-toggle="tab" href="#meat" role="tab" aria-controls="meat"
-								aria-selected="false">고기류</a> <a
-								class="nav-item nav-link keyword" id="fried_tab"
-								data-toggle="tab" href="#fried" role="tab" aria-controls="fried"
-								aria-selected="false">튀김류</a> <a
-								class="nav-item nav-link keyword" id="others_tab"
-								data-toggle="tab" href="#others" role="tab"
-								aria-controls="others" aria-selected="false">기타류</a>
+							<a class="nav-item nav-link keyword" id="rice_tab" data-toggle="tab" href="#rice" role="tab" 
+							aria-controls="rice" aria-selected="true">밥류</a> 
+							<a class="nav-item nav-link keyword" id="soup_tab" data-toggle="tab" href="#soup" role="tab"
+							aria-controls="soup" aria-selected="false">국류</a> 
+							<a class="nav-item nav-link keyword" id="noodle_tab" data-toggle="tab" href="#noodle" role="tab"
+							aria-controls="noodle" aria-selected="false">면류</a> 
+							<a class="nav-item nav-link keyword" id="bread_tab" data-toggle="tab" href="#bread" role="tab" aria-controls="bread"
+							aria-selected="false">빵류</a> 
+							<a class="nav-item nav-link keyword" id="meat_tab" data-toggle="tab" href="#meat" role="tab" aria-controls="meat"
+							aria-selected="false">고기류</a> 
+							<a class="nav-item nav-link keyword" id="fried_tab" data-toggle="tab" href="#fried" role="tab" aria-controls="fried"
+							aria-selected="false">튀김류</a> 
+							<a class="nav-item nav-link keyword" id="others_tab" data-toggle="tab" href="#others" role="tab"
+							aria-controls="others" aria-selected="false">기타류</a>
 						</div>
 					</nav>
 					<div class="tab-content" id="nav-tabContent">
@@ -167,6 +177,10 @@
 				$("#foods tr").last().append("<td>" + key[i].fat + "</td>"); 
 			}
 		}
+		
+		
+
+	     
 	</script>
 </body>
 </html>
