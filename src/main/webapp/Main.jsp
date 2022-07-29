@@ -100,6 +100,7 @@
 											<!-- Post Author -->
 											<div class="post-author">
 												<a href="#">By Marian</a>
+								
 											</div>
 											<!-- Post Date -->
 											<div class="post-date">
