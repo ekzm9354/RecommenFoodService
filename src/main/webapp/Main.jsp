@@ -321,7 +321,6 @@
     </section>
     <!-- ****** Categories Area End ****** -->
 
-
                       
 
     <!-- ****** Instagram Area Start ****** -->

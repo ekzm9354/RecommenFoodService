@@ -24,4 +24,7 @@
 		resultType="NutrientsDTO">
 		select * from nutrients where label=#{keyword}
 	</select>
+	<select id="recommendFood" parameterType="String" resultType="ShowFoodDTO">
+		select * from food where foodnm = #{foodnm}
+	</select>
 </mapper>
