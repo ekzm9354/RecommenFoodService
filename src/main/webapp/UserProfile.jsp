@@ -5,21 +5,26 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="FoodMain.css" rel="stylesheet">
-<link href="FoodMain2.css" rel="stylesheet">
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <style type="text/css">
-#userprofile{
+/* #userprofile{
 height: 300px;
 width: 300px;
 
-}
+} */
 button{
 border: 0;
-outline: ;
+background: transparent;
+/* outline: ; */
 }
+
+.table th{
+text-align: center;
+}
+
 </style>
 </head>
 <body>
@@ -43,8 +48,9 @@ outline: ;
 				<div class="col-12">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#"><i
+							<li class="breadcrumb-item"><a href="Main.jsp"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
+									<li class="breadcrumb-item"><a href="UserProfile.jsp">  프로필 </a></li>
 							<!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
 							<!-- <li class="breadcrumb-item active" aria-current="page">Single
 								Post Blog</li> -->
@@ -63,7 +69,7 @@ outline: ;
 					<nav>
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 							<a class="nav-item nav-link active" id="nav-home-tab"
-								data-toggle="tab" href="#nav-home" role="tab"
+								data-toggle="tab" role="tab"
 								aria-controls="nav-home" aria-selected="true">유저섭취내역</a>
 						</div>
 					</nav>
@@ -82,11 +88,10 @@ outline: ;
 								<tbody>
 
 									<tr>
-									
-										
-											<td colspan="2">
-	<!--  사용자프로필 정보를 띄어줄 공간 -->
-    <div id="userprofile"></div></td>
+										<td colspan="2">
+											 <!-- 사용자프로필 정보를 띄어줄 공간 -->
+											<div id="userprofile"></div>
+										</td>
 
 									</tr>
 
@@ -94,6 +99,7 @@ outline: ;
 							</table>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
