@@ -74,7 +74,7 @@
 .tab-content{
 text-align: center;
 }
-.table td, .table th{
+.table th{
 text-align: center;
 }
 </style>
@@ -147,13 +147,13 @@ text-align: center;
 						<div class="tab-pane fade show active" id="nav-home"
 							role="tabpanel" aria-labelledby="nav-home-tab">
 							<table class="table" cellspacing="0">
-								<thead>
-								
 								<!-- 이미지를 누르면 해당 링크로 이동  -->
-								<tr>
+								<thead>
+									<tr>
 										<th>영양제 사진</th>
-										<th>이름</th>
+										<th>영양제 이름</th>
 										<th>가격</th>
+										
 									</tr>
 								</thead>
 								<tbody id="Nutrients">
