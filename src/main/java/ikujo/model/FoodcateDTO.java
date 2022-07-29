@@ -18,5 +18,6 @@ public class FoodcateDTO {
 	private BigDecimal carbohydrate;
 	private BigDecimal protein;
 	private BigDecimal fat;
+	private String img;
 
 }

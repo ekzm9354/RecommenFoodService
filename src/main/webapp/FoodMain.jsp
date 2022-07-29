@@ -86,10 +86,7 @@
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 							<a class="nav-item nav-link active" id="nav-home-tab"
 								data-toggle="tab" href="#nav-home" role="tab"
-								aria-controls="nav-home" aria-selected="true">현재 음식 등록</a> <a
-								class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
-								href="#nav-profile" role="tab" aria-controls="nav-profile"
-								aria-selected="false">과거 음식 등록 </a>
+								aria-controls="nav-home" aria-selected="true">지난 음식 등록</a>
 						</div>
 					</nav>
 					<div class="tab-content" id="nav-tabContent">
@@ -118,80 +115,19 @@
 										if (foodNm != null) {
 										%>
 										<form action="InsertFood.do" method="post">
-										<td><input type="text" placeholder="음식명" name="foodNm"
-											value="<%=foodNm%>"></td>
-										<td><input type="submit" value="등록하기" class="btn"></td>
+											<td><input type="text" placeholder="음식명" name="foodNm"
+												value="<%=foodNm%>"></td>
+											<td><input type="submit" value="등록하기" class="btn"></td>
 										</form>
-										<%
-										} else {
-										%>
-										<td><input type="text" placeholder="음식명" name="foodNm"></td>
-										<td><a href="SelectFood.jsp"><button class="btn">조회하기</button></a></td>
 										<%
 										}
 										%>
+										<td><input type="text" placeholder="음식명" name="foodNm"></td>
+										<td><a href="SelectFood.jsp"><button class="btn"
+													id="search">조회하기</button></a></td>
+
 									</tr>
 
-								</tbody>
-							</table>
-						</div>
-
-						<!-- 과거 음식 등록 -->
-						<div class="tab-pane fade" id="nav-profile" role="tabpanel"
-							aria-labelledby="nav-profile-tab">
-							<table class="table" cellspacing="0">
-								<thead>
-									<tr>
-										<th>Project Name</th>
-										<th>Employer</th>
-										<th>Time</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><a href="#">Work 1</a></td>
-										<td>Doe</td>
-										<td>john@example.com</td>
-									</tr>
-									<tr>
-										<td><a href="#">Work 2</a></td>
-										<td>Moe</td>
-										<td>mary@example.com</td>
-									</tr>
-									<tr>
-										<td><a href="#">Work 3</a></td>
-										<td>Dooley</td>
-										<td>july@example.com</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="tab-pane fade" id="nav-contact" role="tabpanel"
-							aria-labelledby="nav-contact-tab">
-							<table class="table" cellspacing="0">
-								<thead>
-									<tr>
-										<th>Contest Name</th>
-										<th>Date</th>
-										<th>Award Position</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><a href="#">Work 1</a></td>
-										<td>Doe</td>
-										<td>john@example.com</td>
-									</tr>
-									<tr>
-										<td><a href="#">Work 2</a></td>
-										<td>Moe</td>
-										<td>mary@example.com</td>
-									</tr>
-									<tr>
-										<td><a href="#">Work 3</a></td>
-										<td>Dooley</td>
-										<td>july@example.com</td>
-									</tr>
 								</tbody>
 							</table>
 						</div>
@@ -200,6 +136,20 @@
 			</div>
 		</div>
 	</section>
+	<script type="text/javascript">
+
+	$(document).on('click','#search',()=>{
+	
+	
+		console.log("info null")
+		var link = "SelectFood.jsp";
+		location.href=link;
+		location.replace(link);
+		window.open(link);
+	
+	
+	})
+	</script>
 
 </body>
 </html>

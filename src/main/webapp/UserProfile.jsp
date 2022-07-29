@@ -46,9 +46,7 @@ width: 300px;
             success : function(Parse_data){
                 $("#userprofile").append(Parse_data); //div에 받아온 값을 넣는다.
                 $("#userprofile").append("<button id='remove'>취소</button>");
-                
             }
-             
         });
         
     });

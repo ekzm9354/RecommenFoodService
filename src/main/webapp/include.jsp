@@ -139,7 +139,7 @@
 								<li class="nav-item"><a class="nav-link" href="#">영양보충제</a>
 								</li>
 								<li class="nav-item"><a class="nav-link"
-									href="archive.html">만남의 장</a></li>
+									href="./Chatting.jsp">만남의 장</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">만든이</a></li>
 
 							</ul>
@@ -156,15 +156,15 @@
 									aria-expanded="false">프로필</a>
 									</li>
 								<li class="nav-item"><a class="nav-link"
-									href="#">메뉴 추천</a></li>
+									href="#" onclick="location.href='RecommendFood.jsp'">메뉴 추천</a></li>
 								<li class="nav-item" id="insertFood"><a class="nav-link"
-									href="FoodMain.jsp">음식 등록</a></li>
+									href="FoodMain.jsp" >음식 등록</a></li>
 								<li class="nav-item"><a class="nav-link" href="#" onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
 								<li class="nav-item"><a class="nav-link" 
 									href="Nutrition.jsp">영양보충제</a>	</li>
 								<li class="nav-item"><a class="nav-link"
-									href="archive.html">만남의 장</a></li>
+									href="./Chatting.jsp">만남의 장</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">만든이</a></li>
 
 							</ul>

@@ -64,7 +64,6 @@
 	<!-- ****** Breadcumb Area End ****** -->
 
 
-
 	<!-- ****** Single Blog Area Start ****** -->
 	<section class="single_blog_area section_padding_80">
 		<div class="container">
@@ -781,8 +780,16 @@
 			</div>
 		</div>
 	</footer>
+	
+	<!-- ****** Footer Menu Area End ****** -->
+	<!-- ****** Breadcumb Area End ****** -->
+
 	<!-- ****** Footer Menu Area End ****** -->
 
+
+
+
+	
 
 	<!-- Jquery-2.2.4 js -->
 	<script src="js/jquery/jquery-2.2.4.min.js"></script>

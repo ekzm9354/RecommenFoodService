@@ -113,7 +113,7 @@ src=url("./fonts/210font.ttf");} */
 									for (int i = 0; i < riceList.size(); i++) {
 									%>
 									<tr>
-										<td>이미지공간</td>
+										<td><img src="file/<%=riceList.get(i).getImg() %>" width="200px" height="200px"></td>
 										<td><%=riceList.get(i).getFoodnm()%></td>
 										<td><%=riceList.get(i).getKcal()%></td>
 										<td><%=riceList.get(i).getCarbohydrate()%></td>
@@ -176,7 +176,7 @@ src=url("./fonts/210font.ttf");} */
 			for (var i = 0; i < key.length; i++) {
 				console.log("g")
 				$("#foods").append("<tr> </tr>");
-		 		$("#foods tr").last().append("<td>" + "이미지공간" + "</td>");
+		 		$("#foods tr").last().append("<td>" + "<img src= 'file/"+key[i].img+"' width=200px height=200px>" + "</td>");
 		 		$("#foods tr").last().append("<td>" + key[i].foodnm + "</td>");
 				$("#foods tr").last().append("<td>" + key[i].kcal + "</td>");
 				$("#foods tr").last().append("<td>" + key[i].carbohydrate + "</td>");
