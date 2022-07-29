@@ -9,27 +9,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<!-- <style type="text/css">
-/* @font-face	{
-font-family : "fontyo";
-src=url("./fonts/210font.ttf");} */
-	/* a.active-color{ background-color : #5F00FF; } */
-	/* a:visited{color: white;} */
+<style type="text/css">
+
+.project-tab a {
+    color:gray;
+    background-color: transparent;
+    border-color: transparent red;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+} 
+
+.project-tab .nav-link:hover {
+    border: solid;
+} 
 
 
+</style>
+<!-- <script src="jquery-3.6.0.min.js"></script> -->
 
-</style> -->
-<script src="jquery-3.6.0.min.js"></script>
+<!-- <link rel="stylesheet" href="../css/yerim/yerimy.css"> -->
 
-<link rel="stylesheet" href="../css/yerim/yerimy.css">
-
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 </head>
 <body>
 	<%@ include file="./include.jsp"%>
@@ -67,14 +71,13 @@ src=url("./fonts/210font.ttf");} */
 	<!-- ****** Breadcumb Area End ****** -->
 
 
-
 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
 					<nav>
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-							<a class="nav-item nav-link active keyword" id="rice_tab" data-toggle="tab" href="#rice" role="tab" 
+							<a class="nav-item nav-link keyword" id="rice_tab" data-toggle="tab" href="#rice" role="tab" 
 							aria-controls="rice" aria-selected="true">밥류</a> 
 							<a class="nav-item nav-link keyword" id="soup_tab" data-toggle="tab" href="#soup" role="tab"
 							aria-controls="soup" aria-selected="false">국류</a> 
@@ -123,17 +126,7 @@ src=url("./fonts/210font.ttf");} */
 									<%
 									}
 									%>
-									<!--   <tr>
-                                            <td><a href="#">여기는 음식사진 </a></td>
-                                            <td>Moe</td>
-                                            <td>mary@example.com</td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="#">Work 3</a></td>
-                                            <td>Dooley</td>
-                                            <td>july@example.com</td>
-                                            
-                                        </tr> 위에꺼 반복시키면 이건 필요없을거같음 ~~! -->
+									
 								</tbody>
 							</table>
 						</div>
@@ -185,11 +178,9 @@ src=url("./fonts/210font.ttf");} */
 			}
 		}
 		
-		$('.rice_tab').on('click', function() {
-			
-			
-			
-		}) 
+		
+
+	     
 	</script>
 </body>
 </html>
