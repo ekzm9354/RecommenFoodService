@@ -26,7 +26,7 @@ outline: ;
 <%@ include file="./include.jsp"%>
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
-		style="background-image: url(img/bg-img/breadcumb.jpg);">
+		style="background-image: url(img/yerimimg/profile2.jpg);">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
@@ -112,7 +112,7 @@ outline: ;
 	 /* $(document).on('click','#showLabel',function(){ */
        abc= $.ajax({
             type : "GET", //전송방식을 지정한다 (POST,GET)
-            url : "http://localhost:8081/ikujo/ShowLabel.jsp?id=<%=id %>",        
+            url : "http://localhost:8083/ikujo/ShowLabel.jsp?id=<%=id %>",        
             		//호출 URL을 설정한다. GET방식일경우 뒤에 파라티터를 붙여서 사용해도된다.
             dataType : "html",//호출한 페이지의 형식이다. xml,json,html,text등의 여러 방식을 사용할 수 있다.
             error : function(){
@@ -128,7 +128,7 @@ outline: ;
  $("#showNutri").click(function(){
         $.ajax({
             type : "GET", 
-            url : "http://localhost:8081/ikujo/ShowNutri.jsp?id=<%=id %>",        
+            url : "http://localhost:8083/ikujo/ShowNutri.jsp?id=<%=id %>",        
             dataType : "html",
             error : function(){
                 alert("통신실패!!!!");
@@ -143,7 +143,7 @@ outline: ;
  $("#showFood").click(function(){
         $.ajax({
             type : "GET", 
-            url : "http://localhost:8081/ikujo/ShowFood.jsp?id=<%=id %>",        
+            url : "http://localhost:8083/ikujo/ShowFood.jsp?id=<%=id %>",        
             		
             dataType : "html",
             error : function(){
@@ -159,7 +159,7 @@ outline: ;
  $("#showFood").ready(function(){
         $.ajax({
             type : "GET", 
-            url : "http://localhost:8081/ikujo/ShowFood.jsp?id=<%=id %>",        
+            url : "http://localhost:8083/ikujo/ShowFood.jsp?id=<%=id %>",        
             		
             dataType : "html",
             error : function(){
