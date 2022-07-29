@@ -19,9 +19,10 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <style type="text/css">
-	img{display:block;
-		margin:auto;
-	}
+img {
+	display: block;
+	margin: auto;
+}
 </style>
 
 </head>
@@ -100,8 +101,7 @@
 				<!-- Logo Area Start -->
 				<div class="col-12">
 					<div class="logo_area text-center">
-						<a href="Main.jsp" class="yummy-logo">
-							<!-- 수지 : 페이지 로고 추가 -->
+						<a href="Main.jsp" class="yummy-logo"> <!-- 수지 : 페이지 로고 추가 -->
 							<img src="./img/tomato.png" width=300 height=300>
 						</a>
 					</div>
@@ -125,22 +125,23 @@
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
 								<li class="nav-item dropdown"><a
-									class="nav-link dropdown-toggle" href="./Login.jsp" id="yummyDropdown"
-									role="button"  aria-haspopup="true"
-									aria-expanded="false">프로필</a>
-									
-									</li>
+									class="nav-link dropdown-toggle" href="./Login.jsp"
+									id="yummyDropdown" role="button" aria-haspopup="true"
+									aria-expanded="false">프로필</a></li>
 
 
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="./Login.jsp">메뉴 추천</a></li>
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="./Login.jsp">음식 등록</a></li>
-								<li class="nav-item"><a class="nav-link" href="#" onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
+								<li class="nav-item"><a class="nav-link" href="#"
+									onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
-
+								<li class="nav-item"><a class="nav-link" href="#">디저트
+										카테고리</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">영양보충제</a>
 								</li>
+
 								<li class="nav-item"><a class="nav-link"
 									href="./Chatting.jsp">만남의 장</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">만든이</a></li>
@@ -154,18 +155,21 @@
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
 								<li class="nav-item dropdown"><a
-									class="nav-link dropdown-toggle" href="#" onclick="location.href='UserProfile.jsp'" id="yummyDropdown"
-									role="button"  aria-haspopup="true"
-									aria-expanded="false">프로필</a>
-									</li>
-								<li class="nav-item"><a class="nav-link"
-									href="#" onclick="location.href='RecommendFood.jsp'">메뉴 추천</a></li>
+									class="nav-link dropdown-toggle" href="#"
+									onclick="location.href='UserProfile.jsp'" id="yummyDropdown"
+									role="button" aria-haspopup="true" aria-expanded="false">프로필</a>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="#"
+									onclick="location.href='RecommendFood.jsp'">메뉴 추천</a></li>
 								<li class="nav-item" id="insertFood"><a class="nav-link"
-									href="FoodMain.jsp" >음식 등록</a></li>
-								<li class="nav-item"><a class="nav-link" href="#" onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
+									href="FoodMain.jsp">음식 등록</a></li>
+								<li class="nav-item"><a class="nav-link" href="#"
+									onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
-								<li class="nav-item"><a class="nav-link" 
-									href="Nutrition.jsp">영양보충제</a>	</li>
+								<li class="nav-item"><a class="nav-link" href="Dessert.jsp">디저트
+										카테고리</a></li>
+								<li class="nav-item"><a class="nav-link"
+									href="Nutrition.jsp">영양보충제</a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="./Chatting.jsp">만남의 장</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">만든이</a></li>
@@ -182,7 +186,7 @@
 	</header>
 
 	<!-- ****** Header Area End ****** -->
-	
+
 	<!-- 로그인으로로 -->
 	<script type="text/javascript">
 	
