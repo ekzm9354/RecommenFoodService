@@ -142,7 +142,7 @@ img {
 								</li>
 
 								<li class="nav-item"><a class="nav-link"
-									href="./Chatting.jsp">만남의 장</a></li>
+									href="#">만남의 장</a></li>
 								<li class="nav-item"><a class="nav-link" href="ikujoteam.jsp">만든이</a></li>
 
 							</ul>

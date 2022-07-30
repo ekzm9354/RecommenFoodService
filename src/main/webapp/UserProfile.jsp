@@ -69,7 +69,7 @@ outline: ;
 							<li class="breadcrumb-item"><a href="Main.jsp"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
 									<li class="breadcrumb-item"><a href="UserProfile.jsp">  프로필 </a></li>
-							<!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
+							<!-- <li class="breadcrumb-item"><a href="#"></a></li>
 							<!-- <li class="breadcrumb-item active" aria-current="page">Single
 								Post Blog</li> -->
 						</ol>
