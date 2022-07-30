@@ -21,9 +21,8 @@
 <link href="Login.css" rel="stylesheet">
 <body>
 
-<form action="Update.do"method="post">
-	<% MemberDTO info = (MemberDTO) session.getAttribute("info"); %>
-		<section class="ftco-section">
+
+	<section class="ftco-section">
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-6 text-center mb-5">
@@ -61,12 +60,15 @@
 										</p>
 									</div> -->
 								</div>
+								<form action="Update.do"method="post">
+									<% MemberDTO info = (MemberDTO) session.getAttribute("info"); %>
 									<div class="form-group mb-3">
 										<label class="label" for="name">닉네임</label>
 										<label class="form-control"><%=info.getUserNm() %></label>
 									</div>
 									<div class="form-group mb-3">
-										<label class="label" for="name" name="id" value="<%= info.getUserid()%>">아이디</label>
+										<label class="label" for="name">아이디</label>
+										<input type="hidden" name="id" value="<%= info.getUserid()%>">
 										<label class="form-control"><%=info.getUserid() %></label>
 									</div>
 									<div class="form-group mb-3">
@@ -89,7 +91,7 @@
 											<a href="#">Forgot Password</a>
 										</div> -->
 							</div>
-	</form>
+							</form>
 	</div>
 	</div>
 	</div>
@@ -105,7 +107,7 @@
 	</form>
 
 
-<%-- 	<form action="Update.do"method="post">
+<%-- <form action="Update.do"method="post">
 	 <% MemberDTO info = (MemberDTO) session.getAttribute("info"); %>
 	닉네임 : <%=info.getUserNm() %><br>
 	아이디 : <%=info.getUserid() %>
@@ -113,6 +115,6 @@
 	비밀번호: <input type="password" name="pw" placeholder="변경할 비밀번호를 입력하세요"><br>
 	<input type="submit" value="U P D A T E">
 	
-	</form> --%>
+	</form>  --%>
 </body>
 </html>
