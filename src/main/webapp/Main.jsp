@@ -16,7 +16,7 @@
 <title>밥줘 영양줘</title>
 
 <!-- Favicon -->
-<link rel="icon" href="img/core-img/favicon.ico">
+<link rel="icon" href="img/core-img/favicon2.ico">
 
 <!-- Core Stylesheet -->
 <link href="style.css" rel="stylesheet">
