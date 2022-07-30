@@ -41,7 +41,7 @@ margin-right:auto;
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
-		style="background-image: url(img/yerimimg/foodcatebanner.jpg);"> <!--여기 사진 변경하기   -->
+		style="background-image: url(img/메인5.jpg);"> <!--여기 사진 변경하기   -->
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">

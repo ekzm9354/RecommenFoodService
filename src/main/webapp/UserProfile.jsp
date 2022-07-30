@@ -49,12 +49,12 @@ outline: ;
 <%@ include file="./include.jsp"%>
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
-		style="background-image: url(img/yerimimg/profile2.jpg);">
+		style="background-image: url(img/메인5.jpg);">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="bradcumb-title text-center">
-						<h2>유저기록정보</h2>
+						<h2> 사용자 프로필</h2>
 					</div>
 				</div>
 			</div>
@@ -66,12 +66,12 @@ outline: ;
 				<div class="col-12">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="Main.jsp"><i
+							<li class="breadcrumb-item"><a href="./Main.jsp"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
-									<li class="breadcrumb-item"><a href="UserProfile.jsp">  프로필 </a></li>
-							<!-- <li class="breadcrumb-item"><a href="#"></a></li>
+							<li class="breadcrumb-item"><a href="#"></a> 프로필 </li>
 							<!-- <li class="breadcrumb-item active" aria-current="page">Single
 								Post Blog</li> -->
+
 						</ol>
 					</nav>
 				</div>

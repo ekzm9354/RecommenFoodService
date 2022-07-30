@@ -60,12 +60,12 @@
 	%>
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
-		style="background-image: url(img/bg-img/breadcumb.jpg);">
+		style="background-image: url(img/메인5.jpg);">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="bradcumb-title text-center">
-						<h2>추천시스템</h2>
+						<h2>메뉴 추천</h2>
 					</div>
 				</div>
 			</div>
@@ -77,9 +77,12 @@
 				<div class="col-12">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#"><i
+							<li class="breadcrumb-item"><a href=".Main.jsp"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
-							<!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
+							<!--  <li class="breadcrumb-item"><a href="#"></a>음식추천 시스템</li> 
+							 <li class="breadcrumb-item"><a href="#"></a>영양제추천 시스템</li>  -->
+
+							<li class="breadcrumb-item"><a href="#"></a>메뉴 추천</li>
 							<!-- <li class="breadcrumb-item active" aria-current="page">Single
 								Post Blog</li> -->
 						</ol>
