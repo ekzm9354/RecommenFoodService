@@ -6,9 +6,8 @@
 <head>
 <meta charset="UTF-8">
 <title>밥줘 영양줘</title>
-
 <!-- Favicon -->
-<link rel="icon" href="img/core-img/favicon.ico">
+<link rel="icon" href="img/yerimimg/logoimg.ico">
 
 <!-- Core Stylesheet -->
 <link href="style.css" rel="stylesheet">
@@ -144,7 +143,7 @@ img {
 
 								<li class="nav-item"><a class="nav-link"
 									href="./Chatting.jsp">만남의 장</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">만든이</a></li>
+								<li class="nav-item"><a class="nav-link" href="ikujoteam.jsp">만든이</a></li>
 
 							</ul>
 						</div>
@@ -172,7 +171,7 @@ img {
 									href="Nutrition.jsp">영양보충제</a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="./Chatting.jsp">만남의 장</a></li>
-								<li class="nav-item"><a class="nav-link" href="#">만든이</a></li>
+								<li class="nav-item"><a class="nav-link" href="ikujoteam.jsp">만든이</a></li>
 
 							</ul>
 						</div>

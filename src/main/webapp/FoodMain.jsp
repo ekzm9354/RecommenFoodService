@@ -8,7 +8,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>밥줘 영양줘</title>
+<!-- Favicon -->
+<link rel="icon" href="img/yerimimg/logoimg.ico">
 <link href="FoodMain.css" rel="stylesheet">
 <link href="FoodMain2.css" rel="stylesheet">
 <script

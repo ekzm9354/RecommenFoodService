@@ -8,9 +8,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<!-- Title -->
 <title>밥줘 영양줘</title>
 <!-- Favicon -->
-<link rel="icon" href="img/core-img/favicon2.ico">
+<link rel="icon" href="img/yerimimg/logoimg.ico">
 <style type="text/css">
 
 
@@ -166,7 +167,7 @@ animation-fill-mode:forwards;}
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> 이쿠조 </a>
                         </div>
                     </div>
                 </div>
