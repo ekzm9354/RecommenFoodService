@@ -30,11 +30,10 @@
 <body>
 	<%@ include file="./include.jsp"%>
 	<%
-	String ip = (String) session.getAttribute("ip");
 	String id = (String) session.getAttribute("id");
 	MemberDTO memDto = (MemberDTO) session.getAttribute("info");
 	String category = request.getParameter("category");
-	System.out.print(ip);
+	
 	%>
 	<%
 	
@@ -47,7 +46,7 @@
 			console.log(keyword)
 			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
 		       console.log("flask로 간다")
-				var link = "http://<%=ip%>:5000/?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
+				var link = "http://127.0.0.1:5000/?id=<%=id%>&category=" + keyword;
 			location.href = link;
 			location.replace(link);
 			window.open(link);
@@ -153,10 +152,8 @@
 										<td>
 									<form action="./RecommendFoodInsert">
 										<input type="hidden" name="userId" value="<%=id%>">
-										<input type="hidden" name="userNm"
-											value="<%=memDto.getUserNm()%>">
-										<input type="hidden" name="foodNm"
-											value="<%=dto.getFoodNm()%>">
+										<input type="hidden" name="userNm" value="<%=memDto.getUserNm()%>">
+										<input type="hidden" name="foodNm" value="<%=dto.getFoodNm()%>">
 										<input type="submit" value="선택">
 									</form>
 										</td>
@@ -181,7 +178,7 @@
 			console.log(keyword)
 			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
 		       console.log("flask로 간다")
-				var link = "http://<%=ip%>:5000/?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
+				var link = "http://127.0.0.1:5000/?id=<%=id%>&category=" + keyword;
 			location.href = link;
 			location.replace(link);
 			window.open(link);
