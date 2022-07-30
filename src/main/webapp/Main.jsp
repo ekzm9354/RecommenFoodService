@@ -26,6 +26,13 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+  <script language="javascript">
+  function showNutients() { window.open("MainNtrients.jsp", "showNutients", "width=400, height=300, left=100, top=50"); }
+  </script>
+
+
+
+
 </head>
 
 <link href="Main.css" rel="stylesheet">
@@ -310,8 +317,8 @@
                     <div class="single_catagory wow fadeInUp" data-wow-delay=".9s">
                         <img src="./img/영양보충제.jpg" alt="">
                         <div class="catagory-title">
-                            <a href="#">
-                                <h5>영양 보충제</h5>
+                            <a href="#" onclick="showNutients()">
+                            <h5> 영양 보충제 </h5>
                             </a>
                         </div>
                     </div>

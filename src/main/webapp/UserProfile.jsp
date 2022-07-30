@@ -118,7 +118,7 @@ text-align: center;
 	 /* $(document).on('click','#showLabel',function(){ */
        abc= $.ajax({
             type : "GET", //전송방식을 지정한다 (POST,GET)
-            url : "http://localhost:8083/ikujo/ShowLabel.jsp?id=<%=id %>",        
+            url : "./ShowLabel.jsp?id=<%=id %>",        
             		//호출 URL을 설정한다. GET방식일경우 뒤에 파라티터를 붙여서 사용해도된다.
             dataType : "html",//호출한 페이지의 형식이다. xml,json,html,text등의 여러 방식을 사용할 수 있다.
             error : function(){
@@ -134,7 +134,7 @@ text-align: center;
  $("#showNutri").click(function(){
         $.ajax({
             type : "GET", 
-            url : "http://localhost:8083/ikujo/ShowNutri.jsp?id=<%=id %>",        
+            url : "./ShowNutri.jsp?id=<%=id %>",        
             dataType : "html",
             error : function(){
                 alert("통신실패!!!!");
@@ -149,7 +149,7 @@ text-align: center;
  $("#showFood").click(function(){
         $.ajax({
             type : "GET", 
-            url : "http://localhost:8083/ikujo/ShowFood.jsp?id=<%=id %>",        
+            url : "./ShowFood.jsp?id=<%=id %>",        
             		
             dataType : "html",
             error : function(){
@@ -165,7 +165,7 @@ text-align: center;
  $("#showFood").ready(function(){
         $.ajax({
             type : "GET", 
-            url : "http://localhost:8083/ikujo/ShowFood.jsp?id=<%=id %>",        
+            url : "./ShowFood.jsp?id=<%=id %>",        
             		
             dataType : "html",
             error : function(){
