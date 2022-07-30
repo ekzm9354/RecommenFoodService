@@ -21,7 +21,6 @@
 	width: 500px;
 	background-color: yellow;
 }
-
 #recommendNutrients {
 	height: 500px;
 	width: 500px;
@@ -43,7 +42,6 @@
 	
 	if (category == null && id != null) {
 	%>
-
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var keyword = '밥류'
@@ -54,15 +52,12 @@
 			location.href = link;
 			location.replace(link);
 			window.open(link);
-
 		});
 		
 	</script>
-
 	<%
 	}
 	%>
-
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/bg-img/breadcumb.jpg);">
@@ -76,7 +71,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="breadcumb-nav">
 		<div class="container">
 			<div class="row">
@@ -129,7 +123,6 @@
 							<table class="table">
 								<thead>
 									<tr>
-
 										<th>음식 사진</th>
 										<th>음식 이름</th>
 										<th>칼로리</th>
@@ -162,8 +155,6 @@
 									</form>
 										</td>
 									</tr>
-
-
 									<%}}}%>
 								</thead>
 								<tbody id="foods">
@@ -175,7 +166,6 @@
 			</div>
 		</div>
 	</section>
-
 	<script type="text/javascript">
 		$('.keyword').on('click', function() {
 			var keyword = $(this).text()
@@ -186,12 +176,9 @@
 			location.href = link;
 			location.replace(link);
 			window.open(link);
-
 		});
 	</script>
-
 	<!-------------------------         영양제               ------------------------  -->
-
 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row">
@@ -213,9 +200,6 @@
 										<th>이미지</th>
 										<th>이름</th>
 										<th>선택</th>
-
-
-
 									</tr>
 								</thead>
 								<tbody>
@@ -234,7 +218,7 @@
 												src="<%=nutrientsDto.getImg()%>">
 										</a></td>
 										<td><%=nutrientsDto.getNutnm()%></td>
-										<td>선택버튼</td> <!-- 유사한 사용자가 선택한 영양제 추천 메커니즘 추가할꺼면 만들고  사용자가 선택한 영양제 데이터테이블도 같이 추가해야됨  
+										<td>선택버튼</td> <!-- 유사한 사용자가 선택한 영양제 추천 메커니즘 추가할꺼면 만들고  사용자가 선택한 영양제 데이터테이블도 같이 추가해야됨
 															안할거면 버튼 삭제 하기 -->
 									</tr>
 									<%
@@ -250,8 +234,6 @@
 			</div>
 		</div>
 	</section>
-
-
 	<script src="js/jquery/jquery-2.2.4.min.js"></script>
 	<!-- Popper js -->
 	<script src="js/bootstrap/popper.min.js"></script>

@@ -169,9 +169,10 @@ img {
 										카테고리</a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="Nutrition.jsp">영양보충제</a></li>
-								<li class="nav-item"><a class="nav-link"
-									href="./Chatting.jsp">만남의 장</a></li>
+								<li class="nav-item"><a class="nav-link" href="./Chatting.jsp">만남의 장</a></li>
+									
 								<li class="nav-item"><a class="nav-link" href="ikujoteam.jsp">만든이</a></li>
+
 
 							</ul>
 						</div>
