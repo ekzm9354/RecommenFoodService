@@ -23,8 +23,17 @@
 <title>Awesome Search Box</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    
 
+<!-- serch 템플릿 -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<title>Animated Dynamic Form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	
 </head>
 <body>
 	<%@ include file="./include.jsp"%>
@@ -88,9 +97,79 @@
 	<a href="./SelectFood.jsp"><button>조회하기</button></a>
 	<br> --%>
 
+<!-- search 템플릿 html코드 -->
+	<dvi class="container h-100">
+	<div class="d-flex justify-content-center">
+		<div class="card mt-5 col-md-4 animated bounceInDown myForm">
+			<div class="card-header">
+				<h4>먹었던 음식을 등록하세요</h4>
+			</div>
+			<div class="card-body">
+				<form>
+					<div id="dynamic_container">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text br-15"><i class="fas fa-user-graduate"></i></span>
+							</div>
+							<input type="date" class="form-control"/>
+						</div>
+<!-- 						<div class="input-group mt-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text br-15"><i class="fas fa-phone-square"></i></span>
+							</div>
+							<input type="text" placeholder="등록할 음식" class="form-control"/> -->
+							<%
+								info = (MemberDTO) session.getAttribute("info");
+								session.setAttribute("id", info.getUserid());
+								session.setAttribute("name", info.getUserNm());
+								String foodNm = request.getParameter("food");
+								%>
+								<%
+								if (foodNm != null) {
+								%>
+								<form action="InsertFood.do" method="post">
+							<div class="input-group mt-3">
+								<div class="input-group-prepend">
+										<span class="input-group-text br-15"><i class="fas fa-phone-square"></i></span>
+								</div>
+									<input type="text" name="foodNm" value="<%=foodNm%>" class="form-control"/>
+								<div>
+									<button type="submit" value="등록" class="btn btn-success btn-sm float-right submit_btn"><i class="fas fa-arrow-alt-circle-right"></i> 등록</button>
+								</div>
+								</form>
+								<%
+								} else {
+								%>
+								<div class="input-group mt-3">
+									<div class="input-group-prepend">
+											<span class="input-group-text br-15"><i class="fas fa-phone-square"></i></span>
+									</div>
+									<input type="text" placeholder="등록할 음식" class="form-control"/>
+								
+								<% } %>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="container h-100">
+			      <div class="d-flex justify-content-center h-100">
+			        <div class="searchbar">
+			          <input class="search_input" type="text" name="" placeholder="돋보기 버튼을 클릭">
+			          <a href="SelectFood.jsp" class="search_icon" id="search"><i class="fas fa-search"></i></a>
+			        </div>
+			      </div>
+			    </div>
+				<!-- <a class="btn btn-secondary btn-sm" id="add_more"><i class="fas fa-plus-circle"></i> Add</a> -->
+				<!-- <a class="btn btn-secondary btn-sm" id="remove_more"><i class="fas fa-trash-alt"></i> Remove</a> -->
+				<!-- <button class="btn btn-success btn-sm float-right submit_btn"><i class="fas fa-arrow-alt-circle-right"></i> Submit</button> -->
+			</div>
+		</div>
+	</div>
+	</dvi>
 
-
-	<section id="tabs" class="project-tab">
+<%-- 원래 코드
+ 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -156,7 +235,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --%>
 
     <!-- ****** Instagram Area Start ****** -->
     <div class="instargram_area owl-carousel section_padding_100_0 clearfix" id="portfolio">
@@ -334,6 +413,59 @@
 	
 	
 	})
+	
+	/* search 템플릿 */
+		var i=0;
+	$(document).ready(function(){
+     $('#add_more').on('click', function(){
+      var colorR = Math.floor((Math.random() * 256));
+      var colorG = Math.floor((Math.random() * 256));
+      var colorB = Math.floor((Math.random() * 256));
+      i++;
+      var html ='<div id="append_no_'+i+'" class="animated bounceInLeft">'+
+          '<div class="input-group mt-3">'+
+		  '<div class="input-group-prepend">'+
+		  '<span class="input-group-text br-15" style="color:rgb('+colorR+','+colorG+','+colorB+'">'+
+		  '<i class="fas fa-user-graduate"></i></span>'+
+		  '</div>'+
+		  '<input type="text" placeholder="Student Name"  class="form-control"/>'+
+		  '</div>'+
+		  '<div class="input-group mt-3">'+
+		  '<div class="input-group-prepend">'+
+		  '<span class="input-group-text br-15" style="color:rgb('+colorR+','+colorG+','+colorB+'">'+
+		  '<i class="fas fa-phone-square"></i></span>'+
+		  '</div>'+
+		  '<input type="text" placeholder="Student Phone" class="form-control"/>'+
+		  '</div>'+
+		  '<div class="input-group mt-3">'+
+		  '<div class="input-group-prepend">'+
+		  '<span class="input-group-text br-15" style="color:rgb('+colorR+','+colorG+','+colorB+'">'+
+		  '<i class="fas fa-at"></i></span>'+
+		  '</div>'+
+		  '<input type="email" placeholder="Student Email" class="form-control"/>'+
+		  '</div></div>';
+
+	  $('#dynamic_container').append(html);
+	  $('#remove_more').fadeIn(function(){
+	  	 $(this).show();
+	  });
+     });
+
+     $('#remove_more').on('click', function(){
+         
+         $('#append_no_'+i).removeClass('bounceInLeft').addClass('bounceOutRight')
+            .fadeOut(function(){
+            	$(this).remove();
+            });
+            i--;
+            if(i==0){
+            	$('#remove_more').fadeOut(function(){
+            		$(this).hide()
+            	});;
+            }
+   
+     });
+	});
 	</script>
 
 </body>
