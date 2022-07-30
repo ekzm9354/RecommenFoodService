@@ -9,8 +9,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-/* .table th {
-text-align: center;} */
+.table th {
+text-align: center;}
 </style>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -41,7 +41,7 @@ text-align: center;} */
                                             <th>음식명</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                  
                                     <%for(ShowFoodDTO dto : foodList) {%>
                                         <tr>
                                             <td><%=dto.getUdate() %></td>
@@ -50,7 +50,7 @@ text-align: center;} */
                                         <%} %>
                                    
                                        
-                                    </tbody>
+                                   
                                 </table>
                             </div>
                            

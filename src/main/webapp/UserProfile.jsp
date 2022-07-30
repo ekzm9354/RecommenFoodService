@@ -10,11 +10,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <style type="text/css">
-/* #userprofile{
-height: 300px;
-width: 300px;
-
-} */
+#userprofile{
+/* height: 400px;
+width: 900px; */
+text-align: center;
+}
 button{
 border: 0;
 background: transparent;
@@ -85,17 +85,17 @@ text-align: center;
 										<th> <button type="button" id="showLabel">카테고리별보기</button></th>
 									</tr>
 								</thead>
-								<tbody>
+								
 
 									<tr>
-										<td colspan="2">
-											 <!-- 사용자프로필 정보를 띄어줄 공간 -->
+									<td colspan="3">
+										<!-- 	 사용자프로필 정보를 띄어줄 공간 -->
 											<div id="userprofile"></div>
-										</td>
-
+									</td>
+								<!-- 	<td id="userprofile"></td> -->
 									</tr>
 
-								</tbody>
+								
 							</table>
 						</div>
 					</div>
