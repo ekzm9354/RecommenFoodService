@@ -26,6 +26,10 @@ public class Login implements Command {
 		if (info != null) {
 			moveURL = "./Main.jsp";
 			HttpSession session = request.getSession();
+			String ip = request.getRemoteHost();
+			System.out.println(ip);
+			response.setContentType("text/jsp; charset=utf-8");
+			session.setAttribute("ip", ip);
 			session.setAttribute("info", info);
 			session.setAttribute("id", id);
 		} else {
