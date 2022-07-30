@@ -1,35 +1,22 @@
-<%@page
-	import="org.eclipse.jdt.internal.compiler.ast.Annotation.AnnotationTargetAllowed"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="java.io.InputStream"%>
-<%@page import="ikujo.model.MemberDTO"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<link href="FoodMain.css" rel="stylesheet">
-<link href="FoodMain2.css" rel="stylesheet">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
 <script
 	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	
-<!-- 조회버튼 -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<title>Awesome Search Box</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    
-
 </head>
+<!-- css 연결 -->
+<link href="Chat.css" rel="stylesheet">
 <body>
-	<%@ include file="./include.jsp"%>
-
-
+<%@ include file="./include.jsp"%>
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/bg-img/breadcumb.jpg);">
@@ -37,12 +24,13 @@
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="bradcumb-title text-center">
-						<h2>음식 등록</h2>
+						<h2>만남의 장</h2>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 	<div class="breadcumb-nav">
 		<div class="container">
 			<div class="row">
@@ -51,7 +39,7 @@
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
-							<li class="breadcrumb-item"><a href="#"></a>음식 등록</li>
+							<li class="breadcrumb-item"><a href="#">만남의 장</a></li>
 							<!-- <li class="breadcrumb-item active" aria-current="page">Single
 								Post Blog</li> -->
 						</ol>
@@ -61,104 +49,183 @@
 		</div>
 	</div>
 	<!-- ****** Breadcumb Area End ****** -->
-	
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-
-	<!------ Include the above in your HEAD tag ---------->
-	<%-- <form action="InsertFood.do" method="post">
-		<%
-		MemberDTO info = (MemberDTO) session.getAttribute("info");
-		session.setAttribute("id", info.getUserid());
-		session.setAttribute("name", info.getUserNm());
-		String foodNm = request.getParameter("food");
-		%>
-		<%
-		if (foodNm != null) {
-		%>
-		음식명 : <input type="text" name="foodNm" value="<%=foodNm%>">
-		<%
-		} else {
-		%>
-		음식명 : <input type="text" name="foodNm">
-		<%
-		}
-		%>
-		<input type="submit" value="등록하기">
-	</form>
-	<a href="./SelectFood.jsp"><button>조회하기</button></a>
-	<br> --%>
-
-
-
-	<section id="tabs" class="project-tab">
+	<section>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
-					<nav>
-						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-							<a class="nav-item nav-link active" id="nav-home-tab"
-								data-toggle="tab" href="#nav-home" role="tab"
-								aria-controls="nav-home" aria-selected="true">지난 음식 등록</a>
+				<div class="col-md-4">
+					<div class="chat-list-box">
+						<div class="head-box">
+							<ul class="list-inline text-left d-inline-block float-left">
+								<li><img src="https://i.ibb.co/fCzfFJw/person.jpg" alt=""
+									width="40px"></li>
+							</ul>
+							<ul
+								class="flat-icon list-inline text-right d-inline-block float-right">
+								<li><a href="#"> <i class="fas fa-search"></i>
+								</a></li>
+								<li><a href="#"> <i class="fas fa-ellipsis-v"></i>
+								</a></li>
+							</ul>
 						</div>
-					</nav>
-					<div class="tab-content" id="nav-tabContent">
-						<div class="tab-pane fade show active" id="nav-home"
-							role="tabpanel" aria-labelledby="nav-home-tab">
-							<table class="table" cellspacing="0">
-								<thead>
-									<tr>
-										<th>날짜</th>
-										<th>음식</th>
-										<th>조회 / 등록</th>
-									</tr>
-								</thead>
-								<tbody>
 
-
-									<tr>
-										<td><input type="date"></td>
-										<%
-										info = (MemberDTO) session.getAttribute("info");
-										session.setAttribute("id", info.getUserid());
-										session.setAttribute("name", info.getUserNm());
-										String foodNm = request.getParameter("food");
-										%>
-										<%
-										if (foodNm != null) {
-										%>
-										<form action="InsertFood.do" method="post">
-											<td><input type="text" placeholder="음식명" name="foodNm"
-												value="<%=foodNm%>"></td>
-											<td><input type="submit" value="등록하기" class="btn"></td>
-										</form>
-										<%
-										}
-										%>
-										<!-- <td><input type="text" placeholder="음식명" name="foodNm"></td> -->
-										<td>
-										
-										    <div class="container h-100">
-										      <div class="d-flex justify-content-center h-100">
-										        <div class="searchbar">
-										          <input class="search_input" type="text" name="" placeholder="돋보기 버튼을 클릭">
-										          <a href="SelectFood.jsp" class="search_icon" id="search"><i class="fas fa-search"></i></a>
-										        </div>
-										      </div>
-										    </div>
-													
-										</td>
-
-									</tr>
-
-								</tbody>
-							</table>
+						<div class="chat-person-list">
+							<ul class="list-inline">
+								<li><a href="#" class="flip"> <img
+										src="https://i.ibb.co/6JpcfrK/p4.png" alt=""> <span>
+											Naveen Mandwariya</span> <span class="chat-time">12:00 Am</span>
+								</a></li>
+								<li><a href="#" class="flip"> <img
+										src="https://i.ibb.co/vdyYVvp/p1.png" alt=""> <span>
+											Sunena Daksh </span> <span class="chat-time">11:45 Pm</span>
+								</a></li>
+								<li><a href="#" class="flip"> <img
+										src="https://i.ibb.co/vY406Hp/p3.png" alt=""> <span>
+											Arpit Singh </span> <span class="chat-time">12:15 Pm</span>
+								</a></li>
+								<li><a href="#" class="flip"> <img
+										src="https://i.ibb.co/KhYZwPg/p2.png" alt=""> <span>
+											Arpita </span> <span class="chat-time">09:10 Am</span>
+								</a></li>
+								<li><a href="#" class="flip"> <img
+										src="https://i.ibb.co/ChGLXKZ/p5.png" alt=""> <span>
+											Sorasth parmar </span> <span class="chat-time">02:00 Pm</span>
+								</a></li>
+								<li><a href="#" class="flip"> <img
+										src="https://i.ibb.co/KDZymW5/p6.png" alt=""> <span>
+											Sushmita </span> <span class="chat-time">08:00 Am</span>
+								</a></li>
+							</ul>
 						</div>
+
 					</div>
 				</div>
+				<!-- col-md-4 closed -->
+
+				<div class="col-md-8">
+					<div class="message-box">
+						<div class="head-box-1">
+
+							<ul
+								class="msg-box list-inline text-left d-inline-block float-left">
+								<li><i class="fas fa-arrow-left" id="back"></i></li>
+								<li><img src="https://i.ibb.co/fCzfFJw/person.jpg" alt=""
+									width="40px"> <span> Naveen mandwariya </span> <br>
+									<small class="timee"> 12:45 Pm </small></li>
+							</ul>
+
+							<ul
+								class="flat-icon list-inline text-right d-inline-block float-right">
+								<li><a href="#"> <i class="fas fa-video"></i>
+								</a></li>
+								<li><a href="#"> <i class="fas fa-camera"></i>
+								</a></li>
+								<li><a href="#" id="dset"> <i class="fas fa-ellipsis-v"></i>
+								</a>
+									<div class="setting-drop">
+										<ul class="list-inline">
+											<li><a href="#"> My Profile</a></li>
+											<li><a href="#"> Setting </a></li>
+											<li><a href="#"> Privacy Policy </a></li>
+											<li><a href="#"> Hidden chat </a></li>
+											<li><a href="#"> Logout </a></li>
+										</ul>
+									</div></li>
+							</ul>
+
+						</div>
+
+						<div class="msg_history">
+							<div class="incoming_msg">
+								<div class="incoming_msg_img">
+									<img src="https://ptetutorials.com/images/user-profile.png"
+										alt="sunil">
+								</div>
+								<div class="received_msg">
+									<div class="received_withd_msg">
+										<p>Hi, How are you ?</p>
+										<span class="time_date"> 11:01 AM | June 9</span>
+									</div>
+								</div>
+							</div>
+							<div class="outgoing_msg">
+								<div class="sent_msg">
+									<p>Hello, i am fine thankyou, what about you ?</p>
+									<span class="time_date"> 11:01 AM | June 9</span>
+								</div>
+							</div>
+							<div class="incoming_msg">
+								<div class="incoming_msg_img">
+									<img src="https://ptetutorials.com/images/user-profile.png"
+										alt="sunil">
+								</div>
+								<div class="received_msg">
+									<div class="received_withd_msg">
+										<p>I am also good thankyou!</p>
+										<span class="time_date"> 11:01 AM | Yesterday</span>
+									</div>
+								</div>
+							</div>
+							<div class="outgoing_msg">
+								<div class="sent_msg">
+									<p>ok</p>
+									<span class="time_date"> 11:01 AM | Today</span>
+								</div>
+							</div>
+							<div class="incoming_msg">
+								<div class="incoming_msg_img">
+									<img src="https://ptetutorials.com/images/user-profile.png"
+										alt="sunil">
+								</div>
+								<div class="received_msg">
+									<div class="received_withd_msg">
+										<p>What's going on ?</p>
+										<span class="time_date"> 11:01 AM | Today</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="send-message">
+							<form action="" method="">
+								<textarea cols="10" rows="2" class="form-control"
+									placeholder="Type your message here ..."> </textarea>
+								<ul class="list-inline">
+									<li><a href="#" id="attach"> <i
+											class="fas fa-paperclip"></i>
+									</a>
+										<div class="attachement">
+											<ul class="list-inline">
+												<li><a href="#"> <i class="fas fa-file"></i>
+												</a></li>
+												<li><a href="#"> <i class="fas fa-camera"></i>
+												</a></li>
+												<li><a href="#"> <i class="fas fa-image"></i>
+												</a></li>
+												<li><a href="#"> <i class="far fa-play-circle"></i>
+												</a></li>
+												<li><a href="#"> <i class="fas fa-map-marker-alt"></i>
+												</a></li>
+												<li><a href="#"> <i class="fas fa-id-card"></i>
+												</a></li>
+											</ul>
+										</div></li>
+									<li><i class="fas fa-paper-plane"></i></li>
+								</ul>
+							</form>
+						</div>
+
+
+					</div>
+				</div>
+
 			</div>
 		</div>
-
-    <!-- ****** Instagram Area Start ****** -->
+	</section>
+	
+	    <!-- ****** Instagram Area Start ****** -->
     <div class="instargram_area owl-carousel section_padding_100_0 clearfix" id="portfolio">
 
         <!-- Instagram Item -->
@@ -319,22 +386,40 @@
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
-		
-	</section>
-	<script type="text/javascript">
 
-	$(document).on('click','#search',()=>{
-	
-	
-		console.log("info null")
-		var link = "SelectFood.jsp";
-		location.href=link;
-		location.replace(link);
-		window.open(link);
-	
-	
-	})
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script>
+		$("#attach").click(function() {
+			$(".attachement").toggle();
+		});
+	</script>
+	<script>
+		$("#dset").click(function() {
+			$(".setting-drop").toggle('1000');
+		});
 	</script>
 
+	<script>
+		$(document).ready(function() {
+			$(".flip").click(function() {
+				$(".message-box").show("slide", {
+					direction : "right"
+				}, 10000);
+			});
+		});
+	</script>
+	<script>
+	$(document).ready(function(){
+    $("#back").click(function(){
+        $(".message-box").hide("slide", { direction: "left" }, 10000);
+    });
+});
+ </script>
 </body>
 </html>
