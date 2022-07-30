@@ -5,25 +5,44 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<title>밥줘 영양줘</title>
+<!-- Favicon -->
+<link rel="icon" href="img/core-img/favicon2.ico">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 
 <style type="text/css">
+
 #userprofile{
+margin-left:auto; 
+margin-right:auto;
 /* height: 400px;
-width: 900px; */
+width: 1300px;  */
 text-align: center;
-}
+} 
 button{
 border: 0;
 background: transparent;
-/* outline: ; */
+outline: ; 
+}
+#scrollUp {
+    bottom: 55px;
+    font-size: 14px;
+    right: 50%;
+    width: 30px;
+    background-color: #fc6c3f;
+    color: #fff;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    margin-right: -15px;
 }
 
-.table th{
-text-align: center;
-}
+/* .project-tab {
+    padding: 10%;
+    margin-top: -8%;
+} */
 
 </style>
 </head>
@@ -85,18 +104,15 @@ text-align: center;
 										<th> <button type="button" id="showLabel">카테고리별보기</button></th>
 									</tr>
 								</thead>
+								</table>
 								
-
-									<tr>
-									<td colspan="3">
-										<!-- 	 사용자프로필 정보를 띄어줄 공간 -->
-											<div id="userprofile"></div>
-									</td>
-								<!-- 	<td id="userprofile"></td> -->
-									</tr>
-
+								<table class="table2" id="userprofile">
+									<!-- 용자프로필 정보를 띄어줄 공간-->
+									
+								</table>
+								<div style="margin:100px 0px 100px 0px"></div>
 								
-							</table>
+							
 						</div>
 					</div>
 					
@@ -105,6 +121,172 @@ text-align: center;
 		</div>
 	</section>
 
+	<!--여기부터 하단 사진 나오는 페이지  -->
+<!--     ****** Instagram Area Start ******
+    <div class="instargram_area owl-carousel section_padding_100_0 clearfix" id="portfolio">
+
+        Instagram Item
+        <div class="instagram_gallery_item">
+            Instagram Thumb
+            <img src="img/instagram-img/1.jpg" alt="">
+            Hover
+            <div class="hover_overlay">
+                <div class="yummy-table">
+                    <div class="yummy-table-cell">
+                        <div class="follow-me text-center">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        Instagram Item
+        <div class="instagram_gallery_item">
+            Instagram Thumb
+            <img src="img/instagram-img/2.jpg" alt="">
+            Hover
+            <div class="hover_overlay">
+                <div class="yummy-table">
+                    <div class="yummy-table-cell">
+                        <div class="follow-me text-center">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        Instagram Item
+        <div class="instagram_gallery_item">
+            Instagram Thumb
+            <img src="img/instagram-img/3.jpg" alt="">
+            Hover
+            <div class="hover_overlay">
+                <div class="yummy-table">
+                    <div class="yummy-table-cell">
+                        <div class="follow-me text-center">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        Instagram Item
+        <div class="instagram_gallery_item">
+            Instagram Thumb
+            <img src="img/instagram-img/4.jpg" alt="">
+            Hover
+            <div class="hover_overlay">
+                <div class="yummy-table">
+                    <div class="yummy-table-cell">
+                        <div class="follow-me text-center">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        Instagram Item
+        <div class="instagram_gallery_item">
+            Instagram Thumb
+            <img src="img/instagram-img/5.jpg" alt="">
+            Hover
+            <div class="hover_overlay">
+                <div class="yummy-table">
+                    <div class="yummy-table-cell">
+                        <div class="follow-me text-center">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        Instagram Item
+        <div class="instagram_gallery_item">
+            Instagram Thumb
+            <img src="img/instagram-img/6.jpg" alt="">
+            Hover
+            <div class="hover_overlay">
+                <div class="yummy-table">
+                    <div class="yummy-table-cell">
+                        <div class="follow-me text-center">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        Instagram Item
+        <div class="instagram_gallery_item">
+            Instagram Thumb
+            <img src="img/instagram-img/1.jpg" alt="">
+            Hover
+            <div class="hover_overlay">
+                <div class="yummy-table">
+                    <div class="yummy-table-cell">
+                        <div class="follow-me text-center">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        Instagram Item
+        <div class="instagram_gallery_item">
+            Instagram Thumb
+            <img src="img/instagram-img/2.jpg" alt="">
+            Hover
+            <div class="hover_overlay">
+                <div class="yummy-table">
+                    <div class="yummy-table-cell">
+                        <div class="follow-me text-center">
+                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    ****** Our Creative Portfolio Area End ******
+
+
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    Copywrite Text
+                    <div class="copy_right_text text-center">
+                        <p>메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="Main.jsp" target="_blank">밥조 영양조</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    ****** Footer Menu Area End ******
+
+    Jquery-2.2.4 js
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    Popper js
+    <script src="js/bootstrap/popper.min.js"></script>
+    Bootstrap-4 js
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    All Plugins JS
+    <script src="js/others/plugins.js"></script>
+    Active JS
+    <script src="js/active.js"></script> -->
+	<!--여기까지 하단 사진 나오는 페이지  -->
+	
+	
+	
 	
 <%
  	String id =(String)session.getAttribute("id");
@@ -178,6 +360,10 @@ text-align: center;
             }
         });
     });
+ 
+
+	
     </script>
+    
 </body>
 </html>

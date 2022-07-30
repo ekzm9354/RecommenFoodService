@@ -8,36 +8,92 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+/* .table {
+margin-left: auto; 
+margin-right: auto;
+
+} */
+.table th {
+text-align: center;}
+
+
+</style>
 </head>
 <body>
 <%
 String id=request.getParameter("id"); 
 ArrayList<ShowFoodDTO> foodList =new ShowFoodDAO().showFoodId(id);
-%>
-<table>
-<tr>
-<th>날짜</th>
-<th>kcal</th><th>carbohydrate</th><th>protein</th><th>fat</th><th>sugar</th><th>ca</th><th>fe</th><th>mg</th><th>na</th><th>k</th>
-<th>vitaminB</th><th>vitaminC</th>
-</tr>
-<%for(ShowFoodDTO dto:foodList){ %>
-	<tr>
-	<td><%= dto.getUdate()%></td>
-	<td><%=dto.getKcal() %></td>
-	<td><%=dto.getCarbohydrate() %></td>
-	<td><%=dto.getProtein() %></td>
-	<td><%=dto.getFat() %></td>
-	<td><%=dto.getSugar()%></td>
-	<td><%=dto.getCa()%></td>
-	<td><%=dto.getFe()%></td>
-	<td><%=dto.getMg()%></td>
-	<td><%=dto.getNa()%></td>
-	<td><%=dto.getK()%></td>
-	<td><%=dto.getVitaminB()%></td>
-	<td><%=dto.getVitaminC()%></td>
-	<tr>
-<% }%>
-</table>
+%><section id="tabs" class="project-tab">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Project Tab 1</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Project Tab 2</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Project Tab 3</a>
+                            </div>
+                        </nav> -->
+                        
+                        <!--요기부터  -->
+                       <!--  <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"> -->
+							<table class="table" cellspacing="0">
+							
+									<tr>
+										<th>날짜</th>
+										<th>kcal</th>
+										<th>carbohydrate</th>
+										<th>protein</th>
+										<th>fat</th>
+										<th>sugar</th>
+										<th>ca</th>
+										<th>fe</th>
+										<th>mg</th>
+										<th>na</th>
+										<th>k</th>
+										<th>vitaminB</th>
+										<th>vitaminC</th>
+									</tr>
+
+								
+
+								<%for(ShowFoodDTO dto:foodList){ %>
+								<tr>
+									<td><%= dto.getUdate()%></td>
+									<td><%=dto.getKcal() %></td>
+									<td><%=dto.getCarbohydrate() %></td>
+									<td><%=dto.getProtein() %></td>
+									<td><%=dto.getFat() %></td>
+									<td><%=dto.getSugar()%></td>
+									<td><%=dto.getCa()%></td>
+									<td><%=dto.getFe()%></td>
+									<td><%=dto.getMg()%></td>
+									<td><%=dto.getNa()%></td>
+									<td><%=dto.getK()%></td>
+									<td><%=dto.getVitaminB()%></td>
+									<td><%=dto.getVitaminC()%></td>
+								<tr>
+									<%
+									}
+									%>
+								
+							</table>
+					<!-- 	</div>
+                           
+                        </div> -->
+                        
+                        <!--여기까지   -->
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
 
 </body>
 </html>

@@ -6,7 +6,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>밥줘 영양줘</title>
+<!-- Favicon -->
+<link rel="icon" href="img/core-img/favicon2.ico">
 <link href="FoodMain.css" rel="stylesheet">
 <link href="SelectFoodResult.css" rel="stylesheet">
 <script

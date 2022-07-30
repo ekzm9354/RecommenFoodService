@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>밥줘 영양줘</title>
+<!-- Favicon -->
+<link rel="icon" href="img/core-img/favicon2.ico">
     <title>Login 07</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

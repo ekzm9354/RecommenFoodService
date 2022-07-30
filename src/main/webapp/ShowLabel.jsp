@@ -11,11 +11,13 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <style>
-#myChart {
-	width: 300px;
-	height: 400px;
-}
-div
+/* #myChart {
+	width="1000";
+ 	height="600";
+} */
+.table th {
+text-align: center;}
+
 </style>
 </head>
 <body>
@@ -55,7 +57,7 @@ div
 	}
 	%>
 	
-	<canvas id="myChart" width="50" height="50"></canvas>
+<canvas id="myChart" width="1000"; height="600"; ></canvas>
 	<script>
 	
 	var ctx = document.getElementById('myChart').getContext('2d');
@@ -98,11 +100,17 @@ div
     	
         scales: {
             y: {
-                beginAtZero: true
+               beginAtZero: true 
             }
         }
     }
 });
+	
+	
 </script>
+
+
+
+
 </body>
 </html>
