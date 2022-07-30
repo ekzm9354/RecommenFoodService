@@ -28,6 +28,12 @@
   	<description></description>
   	<servlet-class>ikujo.controller.RecommendFoodInsert</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>DessertAjax</servlet-name>
+  	<display-name>DessertAjax</display-name>
+  	<description></description>
+  	<servlet-class>ikujo.controller.DessertAjax</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>
   	<url-pattern>*.do</url-pattern>
@@ -43,5 +49,9 @@
   <servlet-mapping>
   	<servlet-name>RecommendFoodInsert</servlet-name>
   	<url-pattern>/RecommendFoodInsert</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>DessertAjax</servlet-name>
+  	<url-pattern>/DessertAjax</url-pattern>
   </servlet-mapping>
 </web-app>
