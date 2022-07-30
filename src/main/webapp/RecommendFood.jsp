@@ -12,13 +12,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<title>밥줘 영양줘</title>
+<!-- Favicon -->
+<link rel="icon" href="img/yerimimg/logoimg.ico">
 <style type="text/css">
 #recommendFood {
 	height: 500px;
 	width: 500px;
 	background-color: yellow;
 }
-
 #recommendNutrients {
 	height: 500px;
 	width: 500px;
@@ -30,36 +32,31 @@
 <body>
 	<%@ include file="./include.jsp"%>
 	<%
-	String ip = (String) session.getAttribute("ip");
 	String id = (String) session.getAttribute("id");
 	MemberDTO memDto = (MemberDTO) session.getAttribute("info");
 	String category = request.getParameter("category");
-	System.out.print(ip);
+	
 	%>
 	<%
 	
 	if (category == null && id != null) {
 	%>
-
 	<script type="text/javascript">
 		$(document).ready(function(){
 			var keyword = '밥류'
 			console.log(keyword)
 			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
 		       console.log("flask로 간다")
-				var link = "http://61.80.80.212:5000/?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
+				var link = "http://127.0.0.1:5000/?id=<%=id%>&category=" + keyword;
 			location.href = link;
 			location.replace(link);
 			window.open(link);
-
 		});
 		
 	</script>
-
 	<%
 	}
 	%>
-
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/bg-img/breadcumb.jpg);">
@@ -73,7 +70,6 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="breadcumb-nav">
 		<div class="container">
 			<div class="row">
@@ -126,7 +122,6 @@
 							<table class="table">
 								<thead>
 									<tr>
-
 										<th>음식 사진</th>
 										<th>음식 이름</th>
 										<th>칼로리</th>
@@ -153,16 +148,12 @@
 										<td>
 									<form action="./RecommendFoodInsert">
 										<input type="hidden" name="userId" value="<%=id%>">
-										<input type="hidden" name="userNm"
-											value="<%=memDto.getUserNm()%>">
-										<input type="hidden" name="foodNm"
-											value="<%=dto.getFoodNm()%>">
+										<input type="hidden" name="userNm" value="<%=memDto.getUserNm()%>">
+										<input type="hidden" name="foodNm" value="<%=dto.getFoodNm()%>">
 										<input type="submit" value="선택">
 									</form>
 										</td>
 									</tr>
-
-
 									<%}}}%>
 								</thead>
 								<tbody id="foods">
@@ -174,23 +165,19 @@
 			</div>
 		</div>
 	</section>
-
 	<script type="text/javascript">
 		$('.keyword').on('click', function() {
 			var keyword = $(this).text()
 			console.log(keyword)
 			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
 		       console.log("flask로 간다")
-				var link = "http://61.80.80.212:5000/?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
+				var link = "http://127.0.0.1:5000/?id=<%=id%>&category=" + keyword;
 			location.href = link;
 			location.replace(link);
 			window.open(link);
-
 		});
 	</script>
-
 	<!-------------------------         영양제               ------------------------  -->
-
 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row">
@@ -212,9 +199,6 @@
 										<th>이미지</th>
 										<th>이름</th>
 										<th>선택</th>
-
-
-
 									</tr>
 								</thead>
 								<tbody>
@@ -233,7 +217,7 @@
 												src="<%=nutrientsDto.getImg()%>">
 										</a></td>
 										<td><%=nutrientsDto.getNutnm()%></td>
-										<td>선택버튼</td> <!-- 유사한 사용자가 선택한 영양제 추천 메커니즘 추가할꺼면 만들고  사용자가 선택한 영양제 데이터테이블도 같이 추가해야됨  
+										<td>선택버튼</td> <!-- 유사한 사용자가 선택한 영양제 추천 메커니즘 추가할꺼면 만들고  사용자가 선택한 영양제 데이터테이블도 같이 추가해야됨
 															안할거면 버튼 삭제 하기 -->
 									</tr>
 									<%
@@ -249,8 +233,6 @@
 			</div>
 		</div>
 	</section>
-
-
 	<script src="js/jquery/jquery-2.2.4.min.js"></script>
 	<!-- Popper js -->
 	<script src="js/bootstrap/popper.min.js"></script>

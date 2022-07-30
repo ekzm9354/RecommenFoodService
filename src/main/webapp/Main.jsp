@@ -26,10 +26,10 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <script language="javascript">
+  <!-- <script language="javascript">
   function showNutients() { window.open("MainNtrients.jsp", "showNutients", "width=400, height=300, left=100, top=50"); }
   </script>
-
+ -->
 
 
 
@@ -359,8 +359,30 @@
             </div>
         </div>
     </section>
+    <div id="show"> 여기에 영양제 나옴 </div>
     <!-- ****** Categories Area End ****** -->
+<script type="text/javascript">
 
+function showNutients() { 
+	  $("#show").innerHtml
+	  
+	  
+        $.ajax({
+            type : "GET", 
+            url : "./MainNtrients.jsp",        
+            dataType : "html",
+            error : function(){
+                alert("통신실패!!!!");
+            },
+            success : function(Parse_data){
+                $("#show").append(Parse_data); //div에 받아온 값을 넣는다.
+            }
+             
+        });
+    }
+
+
+</script>
                       
 
     <!-- ****** Instagram Area Start ****** -->
