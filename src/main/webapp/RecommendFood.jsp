@@ -218,8 +218,14 @@
 												src="<%=nutrientsDto.getImg()%>">
 										</a></td>
 										<td><%=nutrientsDto.getNutnm()%></td>
-										<td>선택버튼</td> <!-- 유사한 사용자가 선택한 영양제 추천 메커니즘 추가할꺼면 만들고  사용자가 선택한 영양제 데이터테이블도 같이 추가해야됨
-															안할거면 버튼 삭제 하기 -->
+											<td>
+									<form action="./RecommendNutriInsert">
+										<input type="hidden" name="id" value="<%=id%>">
+										<input type="hidden" name="nutNm" value="<%=nutrientsDto.getNutnm()%>">
+										<input type="hidden" name="nutId" value="<%=nutrientsDto.getNutid()%>">
+										<input type="submit" value="선택">
+									</form>
+										</td>
 									</tr>
 									<%
 										}

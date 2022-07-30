@@ -40,6 +40,12 @@
   	<description></description>
   	<servlet-class>ikujo.controller.IPinfo</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>RecommendNutriInsert</servlet-name>
+  	<display-name>RecommendNutriInsert</display-name>
+  	<description></description>
+  	<servlet-class>ikujo.controller.RecommendNutriInsert</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>
   	<url-pattern>*.do</url-pattern>
@@ -63,5 +69,9 @@
   <servlet-mapping>
   	<servlet-name>IPinfo</servlet-name>
   	<url-pattern>/IPinfo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>RecommendNutriInsert</servlet-name>
+  	<url-pattern>/RecommendNutriInsert</url-pattern>
   </servlet-mapping>
 </web-app>

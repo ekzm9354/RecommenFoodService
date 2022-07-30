@@ -11,6 +11,7 @@
 		<typeAlias type="ikujo.model.NutrientsDTO" alias="NutrientsDTO" />
 		<typeAlias type="ikujo.model.DessertDTO" alias="DessertDTO" />
 		<typeAlias type="ikujo.model.FoodcateDTO" alias="FoodcateDTO" /><!--예림추가  -->
+		<typeAlias type="ikujo.model.NutrientsRegistDTO" alias="NutrientsRegistDTO" />
 	</typeAliases>
 
 	<environments default="development">
@@ -30,5 +31,6 @@
 		<mapper resource="ikujo/mapper/ShowTableMapper.xml" />
 		<mapper resource="ikujo/mapper/DessertMapper.xml" />
 		<mapper resource="ikujo/mapper/FoodcateMapper.xml" /><!--예림추가  -->
+		<mapper resource="ikujo/mapper/NutrientsMapper.xml" />
 	</mappers>
 </configuration>
