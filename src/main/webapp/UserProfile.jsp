@@ -66,13 +66,13 @@ text-align: center;
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<nav>
+					<!-- <nav>
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 							<a class="nav-item nav-link active" id="nav-home-tab"
 								data-toggle="tab" role="tab"
 								aria-controls="nav-home" aria-selected="true">유저섭취내역</a>
 						</div>
-					</nav>
+					</nav> -->
 					<div class="tab-content" id="nav-tabContent">
 						<div class="tab-pane fade show active" id="nav-home"
 							role="tabpanel" aria-labelledby="nav-home-tab">
