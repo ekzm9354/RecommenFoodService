@@ -77,9 +77,10 @@
 				<div class="col-12">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#"><i
+							<li class="breadcrumb-item"><a href=".Main.jsp"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
-							<!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
+							<!--  <li class="breadcrumb-item"><a href="#"></a>음식추천 시스템</li> 
+							 <li class="breadcrumb-item"><a href="#"></a>영양제추천 시스템</li>  -->
 							<!-- <li class="breadcrumb-item active" aria-current="page">Single
 								Post Blog</li> -->
 						</ol>
