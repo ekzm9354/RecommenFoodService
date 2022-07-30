@@ -11,10 +11,11 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 <style>
-canvas {
+#myChart {
 	width: 300px;
 	height: 400px;
 }
+div
 </style>
 </head>
 <body>
@@ -27,6 +28,7 @@ canvas {
 	int tigim=0;
 	int gita=0;
     int bbang=0;
+    int bab=0;
 	for(ShowFoodDTO dto:foodList){
 	 if(dto.getLabel().equals("고기류")){
 		 gogi++;
@@ -46,22 +48,25 @@ canvas {
 	 else if (dto.getLabel().equals("빵류")){
 		 bbang++;
 	 }
+	 else if (dto.getLabel().equals("밥류")){
+		 bab++;
+	 }
 
 	}
 	%>
 	
-	<canvas id="myChart" width="400" height="400"></canvas>
+	<canvas id="myChart" width="50" height="50"></canvas>
 	<script>
 	
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var myChart = new Chart(ctx, {
     type: 'pie', // 차트의 형태 (bar, line, pie)
     data: { // 차트에 들어갈 데이터
-        labels: ['고기류', '국류', '면류', '튀김류', '빵류', '기타류'],
+        labels: ['밥류','고기류','국류', '면류', '튀김류', '빵류', '기타류'],
         // labels -> x축에 들어갈 데이터
         datasets: [{
             label: '# of Votes', // 차트제목
-            data: [<%=gogi%>, <%=gook%>, <%=myun%>, <%=tigim%>, <%=bbang%>, <%=gita%>],
+            data: [<%=bab%>,<%=gogi%>, <%=gook%>, <%=myun%>, <%=tigim%>, <%=bbang%>, <%=gita%>],
             // data -> x축 라벨에 대응되는 데이터 값
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -69,7 +74,10 @@ canvas {
                 'rgba(255, 206, 86, 0.2)',
                 'rgba(75, 192, 192, 0.2)',
                 'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(191, 239, 255, 0.2)'
+                
+              
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -77,12 +85,17 @@ canvas {
                 'rgba(255, 206, 86, 1)',
                 'rgba(75, 192, 192, 1)',
                 'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+                'rgba(255, 159, 64, 1)',
+                'rgba(224, 238, 224, 1)'
+                
+              
+                
             ],
             borderWidth: 1
         }]
     },
     options: {
+    	
         scales: {
             y: {
                 beginAtZero: true
