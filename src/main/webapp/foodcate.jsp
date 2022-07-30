@@ -11,6 +11,14 @@
 <title>Insert title here</title>
 <style type="text/css">
 
+
+.tab-content{
+text-align: center;
+}
+.table td, .table th{
+text-align: center;
+}
+
 .project-tab a {
     color:gray;
     background-color: transparent;
@@ -23,17 +31,25 @@
 .project-tab .nav-link:hover {
     border: solid;
 } 
+.keyword:active{
+background-color : pink
+animation-fill-mode:forwards;}
 
 
+/* .project-tab #tabs .nav-tabs .nav-item .nav-link.show , .nav-tabs .nav-link keyword.active{
+	color: red;
+    background-color: transparent;
+    border-color: transparent transparent #f3f3f3;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+} */
 </style>
 <!-- <script src="jquery-3.6.0.min.js"></script> -->
-
-<!-- <link rel="stylesheet" href="../css/yerim/yerimy.css"> -->
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 </head>
 <body>
 	<%@ include file="./include.jsp"%>
@@ -118,10 +134,10 @@
 									<tr>
 										<td><img src="file/<%=riceList.get(i).getImg() %>" width="200px" height="200px"></td>
 										<td><%=riceList.get(i).getFoodnm()%></td>
-										<td><%=riceList.get(i).getKcal()%></td>
-										<td><%=riceList.get(i).getCarbohydrate()%></td>
-										<td><%=riceList.get(i).getProtein()%></td>
-										<td><%=riceList.get(i).getFat()%></td>
+										<td><%=riceList.get(i).getKcal()%>Kcal</td>
+										<td><%=riceList.get(i).getCarbohydrate()%>g</td>
+										<td><%=riceList.get(i).getProtein()%>g</td>
+										<td><%=riceList.get(i).getFat()%>g</td>
 									</tr>
 									<%
 									}
@@ -137,6 +153,7 @@
 	</section>
 	<script type="text/javascript">
 		$('.keyword').on('click', function() {
+			
 			var keyword = $(this).text()
 			console.log(keyword)
 			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
@@ -161,9 +178,10 @@
 				}
 
 			})
+		
 		});
 		
-	
+	/*	$(this).addClass('active');  */
 		function makeTable(key) {
 				$("#foods").children().remove();
 			for (var i = 0; i < key.length; i++) {
@@ -171,10 +189,10 @@
 				$("#foods").append("<tr> </tr>");
 		 		$("#foods tr").last().append("<td>" + "<img src= 'file/"+key[i].img+"' width=200px height=200px>" + "</td>");
 		 		$("#foods tr").last().append("<td>" + key[i].foodnm + "</td>");
-				$("#foods tr").last().append("<td>" + key[i].kcal + "</td>");
-				$("#foods tr").last().append("<td>" + key[i].carbohydrate + "</td>");
-				$("#foods tr").last().append("<td>" + key[i].protein + "</td>");
-				$("#foods tr").last().append("<td>" + key[i].fat + "</td>"); 
+				$("#foods tr").last().append("<td>" + key[i].kcal + "Kcal</td>");
+				$("#foods tr").last().append("<td>" + key[i].carbohydrate + "g</td>");
+				$("#foods tr").last().append("<td>" + key[i].protein + "g</td>");
+				$("#foods tr").last().append("<td>" + key[i].fat + "g</td>"); 
 			}
 		}
 		

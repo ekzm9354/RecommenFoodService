@@ -11,7 +11,8 @@
 <title>Insert title here</title>
 
 <style type="text/css">
-.project-tab {
+
+/* .project-tab {
 	padding: 10%;
 	margin-top: -8%;
 }
@@ -57,6 +58,24 @@
 	text-decoration: none;
 	color: #333;
 	font-weight: 600;
+} */
+/*=============================스타일 수정=========================  */
+.project-tab a {
+    color:gray;
+    background-color: transparent;
+    border-color: transparent red;
+    border-bottom: 3px solid !important;
+    font-size: 16px;
+    font-weight: bold;
+} 
+.project-tab .nav-link:hover {
+    border: solid;
+} 
+.tab-content{
+text-align: center;
+}
+.table th{
+text-align: center;
 }
 </style>
 
@@ -67,7 +86,7 @@
 	<%@ include file="./include.jsp"%>
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
-		style="background-image: url(img/bg-img/breadcumb.jpg);">
+		style="background-image: url(img/yerimimg/kusuri2.jpg);">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
@@ -84,7 +103,7 @@
 				<div class="col-12">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#"><i
+							<li class="breadcrumb-item"><a href="./Main.jsp"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
 							<li class="breadcrumb-item"><a href="#"> 영양 보충제 </a></li>
 							<!-- <li class="breadcrumb-item active" aria-current="page">Single
@@ -104,7 +123,7 @@
 					<nav>
 						<!-- 각 영양분을 클릭하면 그 영양보충제의 정보만 나올 수 있게 해야함 -->
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-							<a class="nav-item nav-link active keyword" id="nav-home-tab"
+							<a class="nav-item nav-link keyword" id="nav-home-tab"
 								data-toggle="tab" href="#nav-home" role="tab"
 								aria-controls="nav-home" aria-selected="true">마그네슘</a> <a
 								class="nav-item nav-link keyword" id="nav-profile-tab"
@@ -128,11 +147,13 @@
 						<div class="tab-pane fade show active" id="nav-home"
 							role="tabpanel" aria-labelledby="nav-home-tab">
 							<table class="table" cellspacing="0">
-								<thead>
 								<!-- 이미지를 누르면 해당 링크로 이동  -->
+								<thead>
+									<tr>
 										<th>영양제 사진</th>
-										<th>이름</th>
+										<th>영양제 이름</th>
 										<th>가격</th>
+										
 									</tr>
 								</thead>
 								<tbody id="Nutrients">
