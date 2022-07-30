@@ -18,4 +18,11 @@ public class DessertDAO {
 		session.close();
 		return row;
 	}
+	
+	public ArrayList<DessertDTO> showD(String keyword){
+		session = sqlSessionFactory.openSession(true);
+		ArrayList<DessertDTO> showList = (ArrayList) session.selectList("showD", keyword);
+		session.close();
+		return showList;
+	}
 }
