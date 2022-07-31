@@ -37,5 +37,18 @@ public class MemberDAO {
 		session.close();
 		return row;
 	}
+	
+	public String CheckId(String userid) {
+		session = sqlSessionFactory.openSession(true);
+		String data = session.selectOne("CheckId", userid);
+		session.close();
+		return data;
+	}
+	public String CheckName(String userNm) {
+		session = sqlSessionFactory.openSession(true);
+		String data = session.selectOne("CheckName", userNm);
+		session.close();
+		return data;
+	}
 
 }
