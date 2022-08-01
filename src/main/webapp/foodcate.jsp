@@ -64,7 +64,7 @@ animation-fill-mode:forwards;}
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
 					<div class="bradcumb-title text-center">
-						<h2>음식 카테고리</h2>
+						<h2>음식</h2>
 					</div>
 				</div>
 			</div>
