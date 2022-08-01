@@ -2,7 +2,7 @@
 <%@page import="ikujo.model.ShowFoodDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,83 +17,157 @@ margin-right: auto;
 
 } */
 .table th {
-text-align: center;}
-
-
+	text-align: center;
+}
 </style>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
 </head>
 <body>
-<%
-String id=request.getParameter("id"); 
-ArrayList<ShowFoodDTO> foodList =new ShowFoodDAO().showFoodId(id);
-%><section id="tabs" class="project-tab">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- <nav>
-                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
-                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Project Tab 1</a>
-                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Project Tab 2</a>
-                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Project Tab 3</a>
-                            </div>
-                        </nav> -->
-                        
-                        <!--요기부터  -->
-                       <!--  <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"> -->
-							<table class="table" cellspacing="0">
-							
-									<tr>
-										<th>날짜</th>
-										<th>kcal</th>
-										<th>carbohydrate</th>
-										<th>protein</th>
-										<th>fat</th>
-										<th>sugar</th>
-										<th>ca</th>
-										<th>fe</th>
-										<th>mg</th>
-										<th>na</th>
-										<th>k</th>
-										<th>vitaminB</th>
-										<th>vitaminC</th>
-									</tr>
+	<%
+	String id = request.getParameter("id");
+	ArrayList<ShowFoodDTO> foodList = new ShowFoodDAO().showFoodId(id);
+	%>
 
-								
+	<section id="tabs" class="project-tab">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<canvas id="myChart" width="1000" ; height="600"; ></canvas>
+				</div>
+			</div>
+		</div>
+	</section>
 
-								<%for(ShowFoodDTO dto:foodList){ %>
-								<tr>
-									<td><%= dto.getUdate()%></td>
-									<td><%=dto.getKcal() %></td>
-									<td><%=dto.getCarbohydrate() %></td>
-									<td><%=dto.getProtein() %></td>
-									<td><%=dto.getFat() %></td>
-									<td><%=dto.getSugar()%></td>
-									<td><%=dto.getCa()%></td>
-									<td><%=dto.getFe()%></td>
-									<td><%=dto.getMg()%></td>
-									<td><%=dto.getNa()%></td>
-									<td><%=dto.getK()%></td>
-									<td><%=dto.getVitaminB()%></td>
-									<td><%=dto.getVitaminC()%></td>
-								<tr>
-									<%
-									}
-									%>
-								
-							</table>
-					<!-- 	</div>
-                           
-                        </div> -->
-                        
-                        <!--여기까지   -->
-                        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
+	<script>
+	var ctx = document.getElementById('myChart').getContext('2d');
+	var myChart = new Chart(ctx, {
+	    type: 'bar', // 차트의 형태 (bar, line, pie)
+	    data: { // 차트에 들어갈 데이터
+	        labels: [
+	        <%for (ShowFoodDTO dto : foodList) {%>
+	        '<%=dto.getUdate()%>',
+	        <%}%>
+	       ],
+	        // labels -> x축에 들어갈 데이터
+	        datasets: [
+	        	{
+	            label: 'Kcal' , // 차트제목
+	            data: [
+	            		<%for(ShowFoodDTO dto : foodList) {%>
+	            		<%=dto.getKcal()%>,
+	            		<%}%> 
+	            		]
+	        	},		  
+	            { 
+	        	label: 'Carbohydrate' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                        <%=dto.getCarbohydrate()%>,
+                        <%}%>
+	            		]
+	        	},		  
+	            {
+	        	label: 'protein' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                        <%=dto.getProtein()%>,
+                        <%}%>
+	            		]
+	        	},		  
+	            { 
+	        	label: 'fat' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                        <%=dto.getFat()%>,
+                        <%}%>
+	            		]
+	        	},
+	            {
+	        	label: 'sugar' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                        <%=dto.getSugar()%>,
+                        <%}%>
+	            		]
+	        	},
+	            { 
+	        	label: 'ca' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                        <%=dto.getCa()%>,
+                        <%}%>
+	            		]
+	        	},
+	            {
+	        	label: 'fe' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                        <%=dto.getFe()%>,
+                        <%}%>
+                        ]
+	        	},
+                {
+	        	label: 'mg' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                        <%=dto.getMg()%>,
+                        <%}%>
+                        ]
+	        	},
+	            {
+	        	label: 'na' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                       	<%=dto.getNa()%>,
+                       	<%}%>
+                        ]
+	        	},
+                { 
+	        	label: 'k' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                        <%=dto.getK()%>,
+                        <%}%>
+                       ]
+	        	},
+	            {
+	        	label: 'vitaminB' , // 차트제목
+	            data: [
+	            	  	<%for (ShowFoodDTO dto : foodList) {%>
+                      	<%=dto.getVitaminB()%>,	
+                      	<%}%>
+                      ]
+	        	},
+	            {
+	        	label: 'vitaminC' , // 차트제목
+	            data: [
+	            		<%for (ShowFoodDTO dto : foodList) {%>
+                    	<%=dto.getVitaminC()%>,
+                     	<%}%>
+                      ]
+	        	}]	
+                
+	   
+    },
+    options: {
+        scales: {
+            y: {
+               beginAtZero: true 
+            }
+        }
+    }
+});
+            		
+            	 
+            
+         
+ 
+	
+	</script>
+	
+
+
 
 
 
