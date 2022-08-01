@@ -34,9 +34,9 @@ text-align: center;
 .project-tab .nav-link:hover {
     border: solid;
 } 
-.keyword:active{
+/* .keyword:active{
 background-color : pink
-animation-fill-mode:forwards;}
+animation-fill-mode:forwards;} */
 
 
 /* .project-tab #tabs .nav-tabs .nav-item .nav-link.show , .nav-tabs .nav-link keyword.active{
@@ -330,7 +330,7 @@ animation-fill-mode:forwards;}
 				url : "FoodCate2",
 				/* 어떤 데이터를 보낼 것인지? */
 				data : {
-					keyword : keywWord
+					keyword : keyword
 				},
 				/* 데이터를 어떤 형태로 받아올 것인지 */
 				dataType : "json",

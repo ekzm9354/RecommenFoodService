@@ -76,10 +76,12 @@
 .tab-content{
 text-align: center;
 }
-.table th{
+.table td, .table th{
 text-align: center;
 }
+
 </style>
+
 
 </head>
 <!-- 찡 -->
@@ -152,10 +154,9 @@ text-align: center;
 								<!-- 이미지를 누르면 해당 링크로 이동  -->
 								<thead>
 									<tr>
-										<th>영양제 사진</th>
-										<th>영양제 이름</th>
+										<th>영양보충제 사진</th>
+										<th>영양보충제 이름</th>
 										<th>가격</th>
-										
 									</tr>
 								</thead>
 								<tbody id="Nutrients">

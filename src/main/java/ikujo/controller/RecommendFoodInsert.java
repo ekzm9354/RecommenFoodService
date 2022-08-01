@@ -15,7 +15,6 @@ public class RecommendFoodInsert extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		String userId = request.getParameter("userId");
 		String userNm = request.getParameter("userNm");
 		String foodNm = request.getParameter("foodNm");
