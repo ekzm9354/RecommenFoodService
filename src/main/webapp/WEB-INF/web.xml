@@ -64,6 +64,12 @@
   	<description></description>
   	<servlet-class>ikujo.controller.MemberNmAjax</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ChattingAjax</servlet-name>
+  	<display-name>ChattingAjax</display-name>
+  	<description></description>
+  	<servlet-class>ikujo.controller.ChattingAjax</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>
   	<url-pattern>*.do</url-pattern>
@@ -103,5 +109,9 @@
   <servlet-mapping>
   	<servlet-name>MemberNmAjax</servlet-name>
   	<url-pattern>/MemberNmAjax</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ChattingAjax</servlet-name>
+  	<url-pattern>/ChattingAjax</url-pattern>
   </servlet-mapping>
 </web-app>
