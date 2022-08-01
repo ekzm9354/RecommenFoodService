@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -103,7 +104,9 @@
 					</div>
 				</div>
 				<!-- col-md-4 closed -->
-
+				<%
+				String usaUser = request.getParameter("usaUser");
+				%>
 				<div class="col-md-8">
 					<div class="message-box">
 						<div class="head-box-1">
@@ -113,7 +116,8 @@
 								<li><i class="fas fa-arrow-left" id="back"></i></li>
 								<li>
 									<!-- <img src="https://i.ibb.co/fCzfFJw/person.jpg" alt=""
-									width="40px"> --> <span> 나와 식습관이 비슷한 사람 </span> <br> <!-- <small class="timee"> 12:45 Pm </small>-->
+									width="40px"> --> <span> 나와 식습관이 비슷한 사람 </span> <br> <sapn>대화상대
+									: <%=usaUser%></span><!-- <small class="timee"> 12:45 Pm </small>-->
 								</li>
 							</ul>
 
@@ -138,6 +142,9 @@
 
 						</div>
 
+						<%
+
+						%>
 						<div class="msg_history">
 							<div class="incoming_msg">
 								<div class="incoming_msg_img">
@@ -151,42 +158,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="outgoing_msg">
+							<!-- send -->
+							<!-- <div class="outgoing_msg">
 								<div class="sent_msg">
 									<p>반가워요 !</p>
 									<span class="time_date"> 11:01 AM</span>
 								</div>
-							</div>
-							<div class="incoming_msg">
-								<div class="incoming_msg_img">
-									<img src="https://ptetutorials.com/images/user-profile.png"
-										alt="sunil">
-								</div>
-								<div class="received_msg">
-									<div class="received_withd_msg">
-										<p>식사 하셨어요 ?</p>
-										<span class="time_date"> 11:01 AM</span>
-									</div>
-								</div>
-							</div>
-							<div class="outgoing_msg">
-								<div class="sent_msg">
-									<p>네 밥먹었어요</p>
-									<span class="time_date"> 11:01 AM</span>
-								</div>
-							</div>
-							<div class="incoming_msg">
-								<div class="incoming_msg_img">
-									<img src="https://ptetutorials.com/images/user-profile.png"
-										alt="sunil">
-								</div>
-								<div class="received_msg">
-									<div class="received_withd_msg">
-										<p>같이 드실래요 ?</p>
-										<span class="time_date"> 11:01 AM</span>
-									</div>
-								</div>
-							</div>
+							</div> -->
 						</div>
 
 						<div class="send-message">

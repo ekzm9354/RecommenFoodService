@@ -140,6 +140,8 @@
 			})
 
 		});
+	</script>
+	<script type="text/javascript">
 		$('.name').focusout(function() {
 			var name = $('.name').val();
 			console.log(name)
