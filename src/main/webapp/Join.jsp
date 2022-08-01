@@ -7,33 +7,39 @@
 <title>밥줘 영양줘</title>
 <!-- Favicon -->
 <link rel="icon" href="img/core-img/favicon2.ico">
-	<!-- Required meta tags-->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Colorlib Templates">
-    <meta name="author" content="Colorlib">
-    <meta name="keywords" content="Colorlib Templates">
+<!-- Required meta tags-->
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Colorlib Templates">
+<meta name="author" content="Colorlib">
+<meta name="keywords" content="Colorlib Templates">
 
-    <!-- Title Page-->
-    <title>Au Register Forms by Colorlib</title>
+<!-- Title Page-->
+<title>Au Register Forms by Colorlib</title>
 
-    <!-- Icons font CSS-->
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <!-- Font special for pages-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<!-- Icons font CSS-->
+<link href="vendor/mdi-font/css/material-design-iconic-font.min.css"
+	rel="stylesheet" media="all">
+<link href="vendor/font-awesome-4.7/css/font-awesome.min.css"
+	rel="stylesheet" media="all">
+<!-- Font special for pages-->
+<link
+	href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+	rel="stylesheet">
 
-    <!-- Vendor CSS-->
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+<!-- Vendor CSS-->
+<link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+<link href="vendor/datepicker/daterangepicker.css" rel="stylesheet"
+	media="all">
 
-    <!-- Main CSS-->
-    <link href="css/main.css" rel="stylesheet" media="all">
+<!-- Main CSS-->
+<link href="css/main.css" rel="stylesheet" media="all">
 </head>
 <link href="Join2.css" rel="stylesheet">
 <body>
 
-<form action="Join.do" method="POST" class="joinForm">
+	<form action="Join.do" method="POST" class="joinForm">
 		<div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
 			<div class="wrapper wrapper--w960">
 				<div class="card card-2">
@@ -42,6 +48,8 @@
 						<h2 class="title">회 원 가 입</h2>
 						<div class="input-group">
 							<input name="id" type="text" class="id" placeholder="아이디">
+							<font id="checkid" size="2"></font>
+
 						</div>
 						<div class="row row-space">
 							<div class="col-2">
@@ -77,17 +85,19 @@
 							<div class="col-2">
 								<div class="input-group">
 									<input name="name" type="text" class="name" placeholder="닉네임">
+									<font id="checkName" size="2"></font>
 								</div>
 							</div>
 						</div>
 						<div class="p-t-30">
-							<button class="btn btn--radius btn--green" type="submit">회원가입</button>
+							<button class="btn btn--radius btn--green disabled" type="submit">회원가입</button>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</form>
-	</div>
-	</div>
-	</div>
-	</div>
+
 
 	<!-- Jquery JS-->
 	<script src="vendor/jquery/jquery.min.js"></script>
@@ -98,9 +108,68 @@
 
 	<!-- Main JS-->
 	<script src="js/global.js"></script>
+	<!-- 회원가입 중복 id,name 확인  -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$('.id').focusout(function() {
+			var id = $('.id').val();
+			console.log(id)
+			$.ajax({
 
-	</form>
+				url : "MemberIdAjax",
 
+				data : {
+					userid : id
+				},
+				dataType : "json",
+				success : function(data) {
+					console.log(data)
+					if (data == '0') {
+						$("#checkid").html('사용가능한 아이디입니다')
+						$('#checkid').css('color', 'green')
+					} else {
+						$("#checkid").html('사용불가능한 아이디입니다')
+						$('#checkid').css('color', 'red')
+					}
+				},
+				error : function(e) {
+					alert('실패');
+					console.log(e);
+				}
+
+			})
+
+		});
+		$('.name').focusout(function() {
+			var name = $('.name').val();
+			console.log(name)
+			$.ajax({
+
+				url : "MemberNmAjax",
+
+				data : {
+					name : name
+				},
+				dataType : "json",
+				success : function(data) {
+					console.log(data)
+					if (data == '0') {
+						$("#checkName").html('사용가능한 닉네임입니다')
+						$('#checkName').css('color', 'green')
+					} else {
+						$("#checkName").html('사용불가능한 닉네임입니다')
+						$('#checkName').css('color', 'red')
+					}
+				},
+				error : function(e) {
+					alert('실패');
+					console.log(e);
+				}
+
+			})
+
+		});
+	</script>
 	<!-- <form action="Join.do" method="POST" class="joinForm">
 
 		<h2>J O I N</h2>

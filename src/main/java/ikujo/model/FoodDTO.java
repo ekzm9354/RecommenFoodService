@@ -19,5 +19,5 @@ public class FoodDTO {
 	private String userpw;
 	@NonNull private String userNm;
 	@NonNull private String foodNm;
-
+	
 }

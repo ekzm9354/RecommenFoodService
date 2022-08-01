@@ -46,6 +46,24 @@
   	<description></description>
   	<servlet-class>ikujo.controller.RecommendNutriInsert</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>MemberCheck</servlet-name>
+  	<display-name>MemberCheck</display-name>
+  	<description></description>
+  	<servlet-class>ikujo.controller.MemberCheck</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MemberIdAjax</servlet-name>
+  	<display-name>MemberIdAjax</display-name>
+  	<description></description>
+  	<servlet-class>ikujo.controller.MemberIdAjax</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>MemberNmAjax</servlet-name>
+  	<display-name>MemberNmAjax</display-name>
+  	<description></description>
+  	<servlet-class>ikujo.controller.MemberNmAjax</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>
   	<url-pattern>*.do</url-pattern>
@@ -73,5 +91,17 @@
   <servlet-mapping>
   	<servlet-name>RecommendNutriInsert</servlet-name>
   	<url-pattern>/RecommendNutriInsert</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MemberCheck</servlet-name>
+  	<url-pattern>/MemberCheck</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MemberIdAjax</servlet-name>
+  	<url-pattern>/MemberIdAjax</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>MemberNmAjax</servlet-name>
+  	<url-pattern>/MemberNmAjax</url-pattern>
   </servlet-mapping>
 </web-app>

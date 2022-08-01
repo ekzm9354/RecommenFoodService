@@ -20,4 +20,11 @@
 	<delete id="delete" parameterType="String">
 		delete from userinfo where userid=#{userid}
 	</delete>
+	<!-- id 중복확인  -->
+	<select id="CheckId" parameterType="String" resultType="String">
+		select nvl(COUNT(*),0) from userinfo where userid=#{userid}
+	</select>
+	<select id="CheckName" parameterType="String" resultType="String">
+		select nvl(COUNT(*),0) from userinfo where userNm=#{userNm}
+	</select>
 </mapper>

@@ -17,16 +17,17 @@ public class SelectFood implements Command {
 
 		String keyword = request.getParameter("keyword");
 		System.out.println(keyword);
-		ArrayList<String> food_list = new FoodDAO().SelectFood(keyword);
-		String moveURL ="";
-		
-		if(food_list != null)
-		{
+	    ArrayList<String> food_list = new FoodDAO().SelectFood(keyword);
+	    ArrayList<String> food_img = new FoodDAO().SelectImg(keyword);
+		String moveURL = "";
+
+		if (food_list != null) {
 			HttpSession session = request.getSession();
-			session.setAttribute("foodInfo",food_list);
-			moveURL="./SelectFoodResult.jsp";
-		}else {
-			moveURL="./SelectFood.jsp";
+			session.setAttribute("foodInfo", food_list);
+			session.setAttribute("foodImg", food_img);
+			moveURL = "./SelectFoodResult.jsp";
+		} else {
+			moveURL = "./SelectFood.jsp";
 		}
 		return moveURL;
 	}

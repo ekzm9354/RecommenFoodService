@@ -330,7 +330,7 @@ animation-fill-mode:forwards;}
 				url : "FoodCate2",
 				/* 어떤 데이터를 보낼 것인지? */
 				data : {
-					keyword : keyword
+					keyword : keywWord
 				},
 				/* 데이터를 어떤 형태로 받아올 것인지 */
 				dataType : "json",
@@ -353,7 +353,6 @@ animation-fill-mode:forwards;}
 		function makeTable(key) {
 				$("#foods").children().remove();
 			for (var i = 0; i < key.length; i++) {
-				console.log("g")
 				$("#foods").append("<tr> </tr>");
 		 		$("#foods tr").last().append("<td>" + "<img src= 'file/"+key[i].img+"' width=200px height=200px>" + "</td>");
 		 		$("#foods tr").last().append("<td>" + key[i].foodnm + "</td>");

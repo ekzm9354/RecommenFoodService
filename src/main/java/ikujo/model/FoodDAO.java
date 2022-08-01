@@ -27,6 +27,14 @@ public class FoodDAO {
 		return food_list;
 	}
 	
+	public ArrayList<String> SelectImg(String keyword) {
+		System.out.println(keyword);
+		session = sqlSessionFactory.openSession(true);
+		ArrayList<String> food_img = (ArrayList) session.selectList("SelectImg", keyword);
+		session.close();
+		return food_img;
+	}
+	
 	
 
 }

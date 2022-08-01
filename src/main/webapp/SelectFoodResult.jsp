@@ -62,6 +62,7 @@
 		<!-- 상품 배열 -->
 		<%
 		ArrayList<String> list = (ArrayList) session.getAttribute("foodInfo");
+		ArrayList<String> img = (ArrayList) session.getAttribute("foodImg");
 		%>
 		<div class="products">
 			<h3>
@@ -74,10 +75,10 @@
 
 			<div class="product-list">
 				<a class="product"> <img
-					src="https://bakey-api.codeit.kr/files/629/images/sunglasses.jpg"
+					src="file/<%=img.get(i)%>"
 					width="225" height=225> <!-- 음식 이미지 -->
 					<div class="product-name">
-						<%=list.get(i)%>
+						<%=list.get(i) %>
 					</div>
 					<div class="product-price">
 						<button type="submit" name="food" class="btn"
