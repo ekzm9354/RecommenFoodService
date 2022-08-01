@@ -10,9 +10,9 @@
 <!-- Favicon -->
 <link rel="icon" href="img/yerimimg/logoimg.ico">
 <style>
-img{
+img {
 	margin-bottom: 50px;
-    margin-top: 50px;
+	margin-top: 50px;
 }
 </style>
 </head>
@@ -52,12 +52,10 @@ img{
 	</div>
 	<!-- ****** Breadcumb Area End ****** -->
 
-	<div style="
-    margin-top: 50px;
-    margin-bottom: 50px;
-	">
-		<img src="./img/chatlogo.jpg">
-	</div>
+	
+		<div style="margin-top: 50px; margin-bottom: 50px;">
+			<a href="ChttingFlask"><img src="./img/chatlogo.jpg"></a> 
+		</div>
 
 
 	<!-- ****** Instagram Area Start ****** -->
@@ -242,6 +240,6 @@ img{
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-	
+
 </body>
 </html>
