@@ -7913,7 +7913,7 @@ button.bg-dark:focus {
 
 .text-wrap {
   white-space: normal !important;
-  background:#FFBA85; }
+  background:#FFD8D8; }
 
 .text-nowrap {
   white-space: nowrap !important; }
@@ -8144,7 +8144,7 @@ body {
   font-weight: normal;
   background: #f8f9fd;
   text-align:center;
-  color: rgb(255, 128, 0); }
+  color: #F15F5F; }
 
 a {
   -webkit-transition: .3s all ease;
@@ -8162,7 +8162,7 @@ h1, h2, h3, h4, h5,
   line-height: 1.5;
   font-weight: 400;
   font-family: "Lato", Arial, sans-serif;
-  color: rgb(255, 128, 0); }
+  color: #F15F5F; }
 
 .bg-primary {
   background: #f35588 !important; }
@@ -8217,14 +8217,14 @@ h1, h2, h3, h4, h5,
     font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #FFBA85;
+    color: #F15F5F;
     font-weight: 700; }
   .form-group a {
     color: gray; }
 
 .form-control {
   height: 48px;
-  background: rgba(0, 0, 0, 0.05);
+  background: #FFD8D8;
   color: #000;
   font-size: 16px;
   border-radius: 50px;
@@ -8346,10 +8346,10 @@ h1, h2, h3, h4, h5,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #FFBA85;
-    border: 1px solid #FFBA85;
-    color: #fff;
-    background: #FFBA85;
+    background: #FFD8D8;
+    border: 1px solid #F15F5F;
+    color: #F15F5F;
+    background: #FFD8D8;
     background: -moz-linear-gradient(-45deg, #FFBA85 0%, #FFBA85 100%);
     background: -webkit-gradient(left top, right bottom, color-stop(0%, #FFBA85), color-stop(100%, #FFBA85));
     background: -webkit-linear-gradient(-45deg, #FFBA85 0%, #FFBA85 100%);
@@ -8357,11 +8357,11 @@ h1, h2, h3, h4, h5,
     background: -ms-linear-gradient(-45deg, #FFBA85 0%, #FFBA85 100%);
     background: -webkit-linear-gradient(315deg, #FFBA85 0%, #FFBA85 100%);
     background: -o-linear-gradient(315deg, #FFBA85 0%, #FFBA85 100%);
-    background: linear-gradient(135deg, #FFBA85 0%, #FFBA85 100%);
+	background: linear-gradient(135deg, #FFD8D8 0%, #FFD8D8 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFBA85', endColorstr='#FFBA85', GradientType=1 ); }
     .btn.btn-primary:hover {
-      border: 1px solid #FFBA85;
-      background: #FFBA85;
+      border: 1px solid #F15F5F;
+      background: #FFD8D8;
       color: #fff; }
     .btn.btn-primary.btn-outline-primary {
       border: 1px solid #f35588;

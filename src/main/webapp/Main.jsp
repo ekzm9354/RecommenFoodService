@@ -30,8 +30,6 @@
   function showNutients() { window.open("MainNtrients.jsp", "showNutients", "width=400, height=300, left=100, top=50"); }
   </script>
  -->
-
-
 </head>
 
 <link href="Main.css" rel="stylesheet">
@@ -52,8 +50,12 @@
 			</div>
 		</div>
 	</div>
+	
+	<div style="padding:20px">
+		
+	</div>
 
-	<div class="breadcumb-nav">
+<!-- 	<div class="breadcumb-nav">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -61,15 +63,15 @@
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
-							<!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
-							<!-- <li class="breadcrumb-item active" aria-current="page">Single
-								Post Blog</li> -->
+							<li class="breadcrumb-item"><a href="#"></a></li>
+							<li class="breadcrumb-item active" aria-current="page">Single
+								Post Blog</li>
 						</ol>
 					</nav>
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<!-- ****** Breadcumb Area End ****** -->
 
 	<!-- ****** Welcome Post Area Start ****** -->

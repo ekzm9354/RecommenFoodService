@@ -134,10 +134,10 @@ img {
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="./Login.jsp">음식 등록</a></li>
 								<li class="nav-item"><a class="nav-link" href="#"
-									onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
+									onclick="location.href='foodcate.jsp'">음식</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
 								<li class="nav-item"><a class="nav-link" href="#">디저트
-										카테고리</a></li>
+										</a></li>
 								<li class="nav-item"><a class="nav-link" href="#">영양보충제</a>
 								</li>
 
@@ -163,10 +163,10 @@ img {
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="FoodMain.jsp">음식 등록</a></li>
 								<li class="nav-item"><a class="nav-link" href="#"
-									onclick="location.href='foodcate.jsp'">음식 카테고리</a></li>
+									onclick="location.href='foodcate.jsp'">음식</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
 								<li class="nav-item"><a class="nav-link" href="Dessert2.jsp">디저트
-										카테고리</a></li>
+										</a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="Nutrition.jsp">영양보충제</a></li>
 								<li class="nav-item"><a class="nav-link" href="Chat.jsp">만남의 장</a></li>
