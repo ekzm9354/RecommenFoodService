@@ -101,7 +101,7 @@ img {
 				<div class="col-12">
 					<div class="logo_area text-center">
 						<a href="Main.jsp" class="yummy-logo"> <!-- 수지 : 페이지 로고 추가 -->
-							<img src="./img/tomato.png" width=300 height=300>
+							<img src="./img/mainlogo.jpg" width=150 height=150>
 						</a>
 					</div>
 				</div>
