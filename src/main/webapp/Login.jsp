@@ -71,7 +71,7 @@
 											name="pw" type="password" class="form-control"
 											placeholder="비밀번호" required>
 									</div>
-									<div class="form-group">
+									<div class="form-group" style="padding-top: 35px;">
 										<button type="submit"
 											class="form-control btn btn-primary submit px-3">로그인</button>
 									</div>
