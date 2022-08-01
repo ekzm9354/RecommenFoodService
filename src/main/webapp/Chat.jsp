@@ -4,14 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link
-	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-	rel="stylesheet" id="bootstrap-css">
-<script
-	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script
-	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Title -->
+<title>밥줘 영양줘</title>
+
+<!-- Favicon -->
+<link rel="icon" href="img/yerimimg/logoimg.ico">
+<style>
+img{
+	margin-bottom: 50px;
+    margin-top: 50px;
+}
+</style>
 </head>
 <!-- css 연결 -->
 <link href="Chat.css" rel="stylesheet">
@@ -48,10 +51,14 @@
 		</div>
 	</div>
 	<!-- ****** Breadcumb Area End ****** -->
-	<link rel="stylesheet"
-		href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-	
+	<div style="
+    margin-top: 50px;
+    margin-bottom: 50px;
+	">
+		<img src="./img/chatlogo.jpg">
+	</div>
+
 
 	<!-- ****** Instagram Area Start ****** -->
 	<div
