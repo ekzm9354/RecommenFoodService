@@ -50,23 +50,51 @@ text-align: center;}
                             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
  -->                                
  								<table class="table" cellspacing="0">
-                                   
-                                        <tr >
-                                            <th>날짜</th>
-                                            <th>음식명</th>
-                                     	</tr>
-                                
-                                  
-                                    <%for(ShowFoodDTO dto : foodList) {%>
-                                    	<tr > 
-                                            <td><%=dto.getUdate() %></td>
-                                            <td><%=dto.getFoodNm() %></td>
-                                        </tr>
-                                        <%} %>
-                                   
-                                       
-                                   
-                                </table>
+
+						<tr>
+							<th>날짜</th>
+							<th>음식명</th>
+							<th>kcal</th>
+							<th>carbohydrate</th>
+							<th>protein</th>
+							<th>fat</th>
+							<th>sugar</th>
+							<th>ca</th>
+							<th>fe</th>
+							<th>mg</th>
+							<th>na</th>
+							<th>k</th>
+							<th>vitaminB</th>
+							<th>vitaminC</th>
+						</tr>
+
+
+						<%
+						for (ShowFoodDTO dto : foodList) {
+						%>
+						<tr>
+							<td><%=dto.getUdate()%></td>
+							<td><%=dto.getFoodNm()%></td>
+							<td><%=dto.getKcal()%></td>
+							<td><%=dto.getCarbohydrate()%></td>
+							<td><%=dto.getProtein()%></td>
+							<td><%=dto.getFat()%></td>
+							<td><%=dto.getSugar()%></td>
+							<td><%=dto.getCa()%></td>
+							<td><%=dto.getFe()%></td>
+							<td><%=dto.getMg()%></td>
+							<td><%=dto.getNa()%></td>
+							<td><%=dto.getK()%></td>
+							<td><%=dto.getVitaminB()%></td>
+							<td><%=dto.getVitaminC()%></td>
+						</tr>
+						<%
+						}
+						%>
+
+
+
+					</table>
                      <!--        </div>
                            
                         </div>
