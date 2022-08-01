@@ -331,10 +331,10 @@ html {
 	box-sizing: inherit
 }
 
-@
+/* @
 -ms-viewport {
 	width: device-width
-}
+} */
 
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main,
 	nav, section {
@@ -2696,7 +2696,8 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-block {
 	display: block;
-	width: 100%
+	width: 100%;
+	margin-left : 185px
 }
 
 .btn-block+.btn-block {
@@ -4415,7 +4416,7 @@ tbody.collapse.show {
 	color: #040505
 }
 
-@
+/* @
 -webkit-keyframes progress-bar-stripes {
 	from {background-position: 1rem 0
 }
@@ -4434,7 +4435,7 @@ to {
 	background-position: 0 0
 }
 
-}
+} */
 .progress {
 	display: -ms-flexbox;
 	display: flex;
@@ -5251,7 +5252,7 @@ button.close {
 	transform: translateX(0)
 }
 
-@
+/* @
 supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d))
 	{ .
 	carousel-item-next
@@ -5288,7 +5289,7 @@ supports ((-webkit-transform-style:preserve-3d) or (transform-style:preserve-3d)
 	transform: translate3d(-100%, 0, 0)
 }
 
-}
+} */
 .carousel-control-next, .carousel-control-prev {
 	position: absolute;
 	top: 0;
@@ -6521,7 +6522,7 @@ a.bg-dark:focus, a.bg-dark:hover {
 	z-index: 1030
 }
 
-@
+/* @
 supports ((position:-webkit-sticky) or (position:sticky)) { .
 	sticky-top {position: -webkit-sticky;
 	position: sticky;
@@ -6529,7 +6530,7 @@ supports ((position:-webkit-sticky) or (position:sticky)) { .
 	z-index: 1020
 }
 
-}
+} */
 .sr-only {
 	position: absolute;
 	width: 1px;
