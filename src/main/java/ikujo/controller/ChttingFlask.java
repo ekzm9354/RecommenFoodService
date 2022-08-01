@@ -24,7 +24,7 @@ public class ChttingFlask extends HttpServlet {
 		
 //		Flask로 간다
 
-		response.sendRedirect("http://59.0.147.198:5000/usaMember/?ip="+ip+"&id="+id);
+		response.sendRedirect("http://59.0.147.198:5000/?ip="+ip+"&id="+id);
 	}
 
 }

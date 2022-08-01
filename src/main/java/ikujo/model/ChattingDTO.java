@@ -16,6 +16,6 @@ public class ChattingDTO {
 	@NonNull private String toName;
 //	보내는 사람
 	@NonNull private String fromName;
-	private String messeges;
+	@NonNull private String messeges;
 	
 }
