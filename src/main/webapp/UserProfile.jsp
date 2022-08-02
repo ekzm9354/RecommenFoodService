@@ -104,6 +104,10 @@ font-weight : bold;
 								</thead>
 								</table>
 								<div id="showNutriButton"></div>
+								<table class="table2" id="userprofile2">
+									<!-- 용자프로필 정보를 띄어줄 공간-->
+									
+								</table>
 								<table class="table2" id="userprofile">
 									<!-- 용자프로필 정보를 띄어줄 공간-->
 									
@@ -294,7 +298,7 @@ font-weight : bold;
     function deleteTable() {
     	
   	  $("#userprofile").children().remove();
-  	  $("#showNutriButton").children().remove();
+  	  $("#userprofile2").children().remove();
   	  
     }
     function deleteTable2() {
@@ -320,12 +324,9 @@ font-weight : bold;
         });
         
     });
- $("#showNutri").click(function(){
-	 deleteTable()
-	 document.getElementById('showNutriButton').innerHTML=
-	"<tr><th><button type='button' id='showNutriTag'>날짜별</button></th><th><button type='button' id='showNutriTag2'>영양소별</button></th><tr>"})
-	
-	 $(document).on('click', '#showNutriTag' , function(){
+
+	 $(document).on('click', '#showNutri' , function(){
+		 deleteTable()
         $.ajax({
             type : "GET", 
             url : "./ShowNutri.jsp?id=<%=id %>",        
@@ -335,24 +336,10 @@ font-weight : bold;
             },
             success : function(Parse_data){
             	deleteTable2()
-                $("#userprofile").prepend(Parse_data); //div에 받아온 값을 넣는다.
+                $("#userprofile2").prepend(Parse_data); //div에 받아온 값을 넣는다.
             }
-        });
-    	});
-	 $(document).on('click', '#showNutriTag2' , function(){
-        $.ajax({
-            type : "GET", 
-            url : "./ShowNutri2.jsp?id=<%=id %>",        
-            dataType : "html",
-            error : function(){
-                alert("통신실패!!!!");
-            },
-            success : function(Parse_data){
-            	deleteTable2()
-                $("#userprofile").prepend(Parse_data); //div에 받아온 값을 넣는다.
-            }
-        });
-    	});
+       	 });
+    	});	
  
  $("#showFood").click(function(){
         $.ajax({
