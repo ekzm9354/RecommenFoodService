@@ -26,7 +26,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-6 text-center mb-5">
-						<h2 class="heading-section">계 정 탈 퇴</h2>
+						<h2 class="heading-section"> 회 원 탈 퇴</h2>
 					</div>
 				</div>
 				<div class="row justify-content-center">
@@ -35,7 +35,7 @@
 							<div
 								class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last"> 
 								<!-- 사진넣기 -->
-								<img src="./img/orange4.jpg">
+								<img src="./img/logintomato.jpg"  width="360" height="400">
 <!-- 								<div class="text w-100">
 									<h2>글씨 가능</h2>
 									<p>글씨 가능</p>
@@ -70,7 +70,7 @@
 
 									<div class="form-group">
 										<button type="submit"
-											class="form-control btn btn-primary submit px-3">네</button>
+											class="form-control btn btn-primary submit px-3"> 네 </button>
 									</div>
 									<!-- <div class="form-group d-md-flex">
 										<div class="w-50 text-left">

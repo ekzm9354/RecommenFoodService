@@ -38,7 +38,7 @@
 							<div
 								class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 								<!-- 사진넣기 -->
-								<img src="./img/orange4.jpg">
+								<img src="./img/logintomato.jpg" width="360" height="400">
 								<!-- 								<div class="text w-100">
 									<h2>글씨 가능</h2>
 									<p>글씨 가능</p>
