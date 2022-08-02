@@ -100,7 +100,7 @@ margin-right:auto;
 						<ul class="timeline animate-box">
 							<li class="animate-box">
 								<div class="timeline-badge"
-									style="background-image: url(img/yerimimg/couple-1.jpg);"></div>
+									style="background-image: url(img/yerimimg/권도형.jpg);"></div>
 								<!--여기에 사진  -->
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -109,14 +109,14 @@ margin-right:auto;
 									</div>
 									<div class="timeline-body">
 										<p>
-											email:<br> 역할:팀장님<br> 맡은부분:<br> 별칭:<br>
+											email:<br> 역할:팀장님<br> 맡은부분:<br> 별칭: 권도형<br>
 										</p>
 									</div>
 								</div>
 							</li>
 							<li class="timeline-inverted animate-box">
 								<div class="timeline-badge"
-									style="background-image: url(img/yerimimg/couple-2.jpg);"></div>
+									style="background-image: url(img/yerimimg/다운로드.jfif);"></div>
 								<!--여기에 사진  -->
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -132,7 +132,7 @@ margin-right:auto;
 							</li>
 							<li class="animate-box">
 								<div class="timeline-badge"
-									style="background-image: url(img/yerimimg/couple-3.jpg);"></div>
+									style="background-image: url(img/yerimimg/리타.jfif);"></div>
 								<!--여기에 사진  -->
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -141,7 +141,7 @@ margin-right:auto;
 									</div>
 									<div class="timeline-body">
 										<p>
-											email:<br> 역할:팀원<br> 맡은부분:<br> 별칭:<br>
+											email:<br> 역할:팀원<br> 맡은부분:<br> 별칭: 리타<br>
 										</p>
 									</div>
 								</div>
@@ -149,7 +149,7 @@ margin-right:auto;
 
 							<li class="timeline-inverted animate-box">
 								<div class="timeline-badge"
-									style="background-image: url(img/yerimimg/couple-2.jpg);"></div>
+									style="background-image: url(img/yerimimg/예림.jpg);"></div>
 								<!--여기에 사진  -->
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -166,7 +166,7 @@ margin-right:auto;
 
 							<li class="animate-box">
 								<div class="timeline-badge"
-									style="background-image: url(img/yerimimg/couple-3.jpg);"></div>
+									style="background-image: url(img/yerimimg/총사령관.jpeg);"></div>
 								<!--여기에 사진  -->
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -175,7 +175,7 @@ margin-right:auto;
 									</div>
 									<div class="timeline-body">
 										<p>
-											email:<br> 역할:팀원<br> 맡은부분:<br> 별칭:<br>
+											email:<br> 역할:팀원<br> 맡은부분:<br> 별칭: 총사령관<br>
 										</p>
 									</div>
 								</div>
