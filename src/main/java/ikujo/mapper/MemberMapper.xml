@@ -15,8 +15,11 @@
 	<update id="update" parameterType="MemberDTO">
 	 update userinfo set userpw=#{userpw} where userid=#{userid}
 	</update>
-	<delete id="delete" parameterType="String">
+	<delete id="deleteInfo" parameterType="String">
 		delete from userinfo where userid=#{userid}
+	</delete>
+	<delete id="deleteUi" parameterType="String">
+		delete from userui where userid=#{userid}
 	</delete>
 	<!-- id 중복확인  -->
 	<select id="CheckId" parameterType="String" resultType="String">
