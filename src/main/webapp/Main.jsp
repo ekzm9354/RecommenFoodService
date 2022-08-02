@@ -477,7 +477,7 @@
             $("#show").append(Parse_data); //div에 받아온 값을 넣는다.
         }
          
-    });
+    });	
     }
 	
 	
