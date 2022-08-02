@@ -123,12 +123,10 @@ img {
 						<div class="collapse navbar-collapse justify-content-center"
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
-								<li class="nav-item dropdown"><a
-									class="nav-link dropdown-toggle" href="./Login.jsp"
-									id="yummyDropdown" role="button" aria-haspopup="true"
-									aria-expanded="false">프로필</a></li>
-
-
+								<!-- 드롭바 없애기 -->
+								<li class="nav-item"><a class="nav-link"
+									href="./Loin.jsp">프로필</a></li>
+								<!-- 드롭바 여기까지 수정 -->
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="./Login.jsp">메뉴 추천</a></li>
 								<li class="nav-item" id="insertFood"><a class="nav-link"
@@ -153,11 +151,13 @@ img {
 						<div class="collapse navbar-collapse justify-content-center"
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
-								<li class="nav-item dropdown"><a
+<!-- 								<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="#"
 									onclick="location.href='UserProfile.jsp'" id="yummyDropdown"
 									role="button" aria-haspopup="true" aria-expanded="false">프로필</a>
-								</li>
+								</li> -->
+								<li class="nav-item"><a class="nav-link" href="#"
+									onclick="location.href='UserProfile.jsp'">프로필</a></li>
 								<li class="nav-item"><a class="nav-link" href="#"
 									onclick="location.href='RecommendFood.jsp'">메뉴 추천</a></li>
 								<li class="nav-item" id="insertFood"><a class="nav-link"

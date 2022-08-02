@@ -79,6 +79,19 @@ display:flex;
 
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
+</style>
+
 </head>
 <body>
 
@@ -353,14 +366,13 @@ display:flex;
 									</thead>
 									<tbody>
 									<%
-									if (nutrients != null) {
-										int j =0;
+									String[] nutrientsReCo = request.getParameterValues("nutrientsReCo");
+									if (nutrientsReCo != null) {
+							
 									%>
 									<%
-									for (String nutNm : nutrients) {
+									for (String nutNm : nutrientsReCo) {
 									ArrayList<NutrientsDTO> nutrientsList= nutDao.showNutrients(nutNm);
-											j++;
-											if(j==4){break;}
 										for(NutrientsDTO nutrientsDto :nutrientsList){
 									%>
 									<tr>
@@ -368,7 +380,14 @@ display:flex;
 												src="<%=nutrientsDto.getImg()%>">
 										</a></td>
 										<td><%=nutrientsDto.getNutnm()%></td>
-									<!-- 	<td>선택버튼...?</td> -->
+												<td>
+									<form action="./RecommendNutriInsert">
+										<input type="hidden" name="id" value="<%=id%>">
+										<input type="hidden" name="nutNm" value="<%=nutrientsDto.getNutnm()%>">
+										<input type="hidden" name="nutId" value="<%=nutrientsDto.getNutid()%>">
+										<input type="submit" value="선택">
+									</form>
+										</td>
 							
 									</tr>
 									<%}}}%>
