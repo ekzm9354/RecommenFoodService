@@ -40,8 +40,18 @@ font-weight : bold;
     margin-right: -15px;
 } */
 
+</style>
 
+ <!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
 
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
 </style>
 </head>
 <body>
@@ -67,7 +77,7 @@ font-weight : bold;
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="./Main.jsp"><i
 									class="fa fa-home" aria-hidden="true"></i> 홈</a></li>
-							<li class="breadcrumb-item"><a href="#"></a> 프로필 </li>
+							<li class="breadcrumb-item"><a href="UserProfile.jsp"></a> 프로필 </li>
 							<!-- <li class="breadcrumb-item active" aria-current="page">Single
 								Post Blog</li> -->
 
