@@ -22,17 +22,17 @@ public class ChattingAjax extends HttpServlet {
 		String toName = request.getParameter("toName");
 		String fromName = request.getParameter("fromName");
 		String messeges = request.getParameter("messeges");
-		int cnt = Integer.parseInt(request.getParameter("cnt"));
 		
 		System.out.println(toName);
 		System.out.println(fromName);
 		System.out.println(messeges);
-		System.out.println(cnt);
+		
 
 //		메시지 넣기
 		ChattingDTO dto = new ChattingDTO(toName, fromName, messeges);
 		int row = new ChattingDAO().ChattingInsert(dto);
 		
+		ChattingDTO dto2 = new ChattingDTO(toName, fromName);
 		if (row > 0) {
 			System.out.println("성공");
 		} else {
