@@ -34,6 +34,9 @@ color: #F15F5F;}
 .project-tab .nav-link:hover {
     border: solid;
 }
+#foods{/* td 안에 세로가운데정렬  */
+vertical-align:middle;
+}
 /*여기부터  ************************************************************************  */
 /* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 div,tr,th,td{
