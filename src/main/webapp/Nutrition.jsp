@@ -76,6 +76,9 @@
 .tab-content{
 text-align: center;
 }
+.table tr th{
+background-color: white;
+}
 .table td{
 text-align: center;
 }

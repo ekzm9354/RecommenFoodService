@@ -31,10 +31,20 @@
 .table th {
 	text-align: center;
 }
+div{
+margin: auto;
+height: auto;}
+.table td{
+text-align: center;}
 </style>
 </head>
 
 <body>
+<!--여기부터  -->
+<section class="categories_area clearfix" id="about">
+		<div class="container">
+			<!-- <div class="row">  -->
+<!--여기까지 추가했음 -->
 <div class="tab-content" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="nav-home" role="tabpanel"
 			aria-labelledby="nav-home-tab">
@@ -77,6 +87,11 @@
 			</table>
 		</div>
 	</div>
+	<!--여기부터  -->
+	<!--  </div> -->
+	</div>
+	</section>
+	<!--여기까지  추가했음 -->
 
 
 </body>

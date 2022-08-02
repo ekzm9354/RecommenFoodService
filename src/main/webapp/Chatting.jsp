@@ -6,30 +6,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>밥줘 영양줘</title>
+<!-- Favicon -->
+<link rel="icon" href="img/yerimimg/logoimg.ico">
+<link href="Chat.css" rel="stylesheet">
 </head>
 <body>
-	<div>
-		<fieldset>
-			<legend>여기는 대화목록입니다</legend>
-			<table>
-				<thead>대화방 목록
-				</thead>
-				<tbody id="whos">
-					<tr></tr>
-				</tbody>
-			</table>
-		</fieldset>
-	</div>
-	<div id="chattingMain">
-		<fieldset id="chattingRoom">
-			<legend>여기는 채팅방입니다</legend>
-			<%
+
+<div class="chat_window">
+    <div class="top_menu">
+        <div class="buttons">
+            <div class="button close"></div>
+            <div class="button minimize"></div>
+            <div class="button maximize"></div>
+        </div>
+        <div id="whos">대화방 목록</div>
+    </div>
+    <ul id="chattingMain">
+    <div id="chattingRoom">
+   <%
 MemberDTO info = (MemberDTO) session.getAttribute("info");
-String toName = info.getUserNm();
+String toName = info.getUserid();
 String fromName = request.getParameter("usaUser");
 %>
 
@@ -49,12 +50,33 @@ String fromName = request.getParameter("usaUser");
 			<%=MessegesAll.get(i).getC_date()%><br>
 			<%}
 		} %>
-		</fieldset>
-		<textarea rows="3" cols="30" class="textbox"></textarea>
-		<input type="submit" value="보내기" id="send"> <input
-			type="submit" value="나가기" id="out">
-	</div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    
+    </div>
+    </ul>
+    <div class="bottom_wrapper clearfix">
+        <div class="message_input_wrapper">
+            <input class="message_input" placeholder="Type your message here..." />
+        </div>
+        
+              
+        <div class="textbox">
+            <input type="submit" value="보내기" id="send">
+            
+           <input type="submit" value="나가기" id="out">
+        </div>
+    </div>
+</div>
+<div class="message_template">
+    <li class="message">
+        <div class="avatar"></div>
+        <div class="text_wrapper">
+            <div class="text"></div>
+        </div>
+    </li>
+</div>
+<!--여기부터 스크립트부분  -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 		
 		
@@ -62,7 +84,7 @@ String fromName = request.getParameter("usaUser");
 					var toName ='<%=toName%>'
 		           var fromName ='<%=fromName%>'
 		           var cnt = 1
-		var messeges = $('.textbox').val();
+		var messeges = $('.message_input').val();
 					$.ajax({
 						/* 어디로 보낼건지? */
 						url : "ChattingAjax",
@@ -86,7 +108,7 @@ String fromName = request.getParameter("usaUser");
 						},
 						/* 실패 시 */
 						 error : function(e) {
-							alert('실패');
+							alert('전송실패');
 							console.log(e);
 						} 
 
@@ -108,16 +130,16 @@ String fromName = request.getParameter("usaUser");
 		$(document).on('click','#inRoom',function(){
 			var json = <%=json%>
 			console.log(json)
-			$('#chattingMain').append("<fieldset></fieldset>")
+			$('#chattingMain').append("<div></div>")
 			대화상대 : '<%=fromName%>'
 			for(var i = 0; i<json.length;i++){
-			$('#chattingMain fieldset').last().append(json[i].toName+":")
-			$('#chattingMain fieldset').last().append(json[i].messeges+"<br>")
-			$('#chattingMain fieldset').last().append(json[i].c_date+"<br>")
+			$('#chattingMain div').last().append(json[i].toName+":")
+			$('#chattingMain div').last().append(json[i].messeges+"<br>")
+			$('#chattingMain div').last().append(json[i].c_date+"<br>")
 			}
-			$('#chattingMain').last().append("<textarea row=3 col=30 class=retextbox></textarea>")
-			$('#chattingMain').append("<tr></tr>")
-			$('#chattingMain tr').append("<input type=submit value=보내기 id=resend>")
+			$('#chattingMain').last().append("<div row=3 col=30 class=retextbox></div>")
+			$('#chattingMain').append("<div></div>")
+			$('#chattingMain div').append("<input type=submit value=보내기 id=resend>")
 			location.reload()
 			/* $('#chattingMain tr').append("<input type=submit value=나가기 id=reout>") */
 		})
@@ -143,9 +165,9 @@ String fromName = request.getParameter("usaUser");
 				/* 성공 시 */
 				success : function(key) {
 					for(var i =0;i<key.length;i++){
-						$('#chattingMain fieldset').last().append(key[i].toName+":")
-						$('#chattingMain fieldset').last().append(key[i].messeges)
-						$('#chattingMain fieldset').last().append(key[i].c_date+"<br>")
+						$('#chattingMain div').last().append(key[i].toName+":")
+						$('#chattingMain div').last().append(key[i].messeges)
+						$('#chattingMain div').last().append(key[i].c_date+"<br>")
 					}
 				},
 				/* 실패 시 */
@@ -177,6 +199,7 @@ String fromName = request.getParameter("usaUser");
 			})
 		});
 	</script>
+<!--여기까지 스크립트부분  -->
 
 </body>
 </html>
