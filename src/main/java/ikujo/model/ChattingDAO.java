@@ -24,4 +24,17 @@ public class ChattingDAO {
 		session.close();
 		return AllChtting;
 	}
+	public ArrayList<ChattingDTO> ChattingShow(ChattingDTO dto){
+		session=sqlSessionFactory.openSession(true);
+		ArrayList<ChattingDTO> ShowChatting = (ArrayList) session.selectList("ChattingShow", dto);
+		session.close();
+		return ShowChatting;
+	}
+	public int DeleteChatting(ChattingDTO dto){
+		session=sqlSessionFactory.openSession(true);
+		row = session.delete("DeleteChatting", dto);
+		session.close();
+		return row;
+	}
+	
 }

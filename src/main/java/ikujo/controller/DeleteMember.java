@@ -17,9 +17,10 @@ public class DeleteMember implements Command {
 		String id= (String) session.getAttribute("id");
 		System.out.println(id);
 
-		int row = new MemberDAO().Delete(id);
+		int info = new MemberDAO().deleteInfo(id);
+		int ui = new MemberDAO().deleteUi(id);
 		String moveURL = "";
-		if (row > 0) {
+		if (info > 0 && ui > 0) {
 			session.removeAttribute("info");
 			moveURL = "./Main.jsp";
 		} else {
