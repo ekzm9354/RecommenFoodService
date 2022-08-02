@@ -58,7 +58,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Dongle', sans-serif;
     font-weight: 700;
     color: #232d37;
     line-height: 1.25;
@@ -457,7 +457,7 @@ li {
     padding: 25px 30px;
     color: #F15F5F;
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-size: 37px;
 }
 
 .navbar.navbar-expand-lg .navbar-nav .nav-link:hover,
@@ -613,7 +613,9 @@ li {
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
     background: #FFD8D8;
-    color:#F15F5F
+    color:#F15F5F;
+    font-size: 35px;
+    border-radius: 20px;
 }
 
 .single_catagory:hover .catagory-title a > h5 {
@@ -871,8 +873,8 @@ li {
 }
 
 .copy_right_text > p {
-    font-size: 14px;
-    color: #b5aec4;
+    font-size: 22px;
+    color: black;
     margin-bottom: 0;
 }
 
@@ -1097,7 +1099,7 @@ li {
 }
 
 .breadcumb-area .bradcumb-title h2 {
-    font-size: 48px;
+    font-size: 70px;
     color: #fff;
 }
 
@@ -1490,4 +1492,14 @@ li {
 	z-index: 99999;
 	color: #fff;
 	cursor: pointer;
+}
+
+
+a {
+    color: #F15F5F;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    font-weight: 800;
+    font-size: 30px;
 }

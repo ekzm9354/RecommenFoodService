@@ -37,15 +37,30 @@
 <link href="css/main.css" rel="stylesheet" media="all">
 </head>
 <link href="Join2.css" rel="stylesheet">
+
+ <!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
+</style>
+
 <body>
 
 	<form action="Join.do" method="POST" class="joinForm">
 		<div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
 			<div class="wrapper wrapper--w960">
 				<div class="card card-2">
-					<div class="card-heading"></div>
+					<!-- <div class="card-heading"></div> -->
 					<div class="card-body">
-						<h2 class="title">회 원 가 입</h2>
+						<h2 class="title">회 원 가 입 <img src="./img/jointomato.jpg" weight=50px height=50px style="
+									    padding-left: 10px;
+									"></h2>
 						<div class="input-group">
 							<input name="id" type="text" class="id" placeholder="아이디">
 							<font id="checkid" size="2"></font>

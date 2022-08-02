@@ -17,6 +17,20 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<link rel="stylesheet" href="css/style.css">
+	
+<!-- 폰트 추가 -->
+<!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
+</style>
+	
 </head>
 
 <link href="Login.css" rel="stylesheet">
@@ -28,7 +42,7 @@
 				<div class="row justify-content-center">
 					<div class="col-md-6 text-center mb-5">
 						<h2 class="heading-section">
-							<!-- 제목 쓸수 있는 곳임 -->
+							로 그 인
 						</h2>
 					</div>
 				</div>
@@ -38,7 +52,7 @@
 							<div
 								class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 								<!-- 사진넣기 -->
-								<img src="./img/logintomato.jpg" width="360" height="400">
+								<img src="./img/logintomato.jpg" width="180" height="200">
 								<!-- 								<div class="text w-100">
 									<h2>글씨 가능</h2>
 									<p>글씨 가능</p>
@@ -47,8 +61,11 @@
 							</div>
 							<div class="login-wrap p-4 p-lg-5">
 								<div class="d-flex">
-									<div class="w-100">
-										<h3 class="mb-4">로 그 인</h3>
+									<div class="w-100" style="
+										    height: 0px;
+										    width: 0px;
+										">
+										<h3 class="mb-4"><!-- 로 그 인 --></h3>
 									</div>
 									<!-- 소셜미디어		
 									<div class="w-100">
