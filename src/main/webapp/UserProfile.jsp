@@ -107,9 +107,9 @@ font-weight : bold;
 								<thead>
 									<tr>
     <!--  데이터를 요청해줄 버튼 -->
-										<th> <button type="button" id="showFood">등록된음식보기</button></th>
-										<th><button type="button" id="showNutri">전체영양소보기</button></th>
-										<th> <button type="button" id="showLabel">카테고리별보기</button></th>
+										<th> <button type="button" id="showFood">등록된 음식</button></th>
+										<th><button type="button" id="showNutri">영양소 그래프</button></th>
+										<th> <button type="button" id="showLabel">음식 그래프</button></th>
 									</tr>
 								</thead>
 								</table>
