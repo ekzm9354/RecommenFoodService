@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 public class referenceDTO {
 
 	
-	private Timestamp udate;
+	private String udate;
 	@NonNull private BigDecimal kcal;
 	@NonNull private BigDecimal carbohydrate;
 	@NonNull private BigDecimal protein;

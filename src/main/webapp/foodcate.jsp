@@ -13,18 +13,14 @@
 <!-- Favicon -->
 <link rel="icon" href="img/yerimimg/logoimg.ico">
 <style type="text/css">
-
-
 .tab-content{
 text-align: center;
 }
 .table td, .table th{
 text-align: center;
-
 }
 .table th{
 color: #F15F5F;}
-
 .project-tab a {
     color:#F15F5F;
     background-color :#FFD8D8 ;
@@ -34,48 +30,51 @@ color: #F15F5F;}
     border-bottom-color : #F15F5F;
     font-size: 16px;
     font-weight: bold;
-} 
-
+}
 .project-tab .nav-link:hover {
     border: solid;
-} 
+}
 /*여기부터  ************************************************************************  */
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 div,tr,th,td{
 font-family: 'Black Han Sans', sans-serif;
-}
+} */
 /*여기까지 구글웹폰트 스타일css  ************************************************************************ */
-
 						
 /* .keyword:active{
 background-color : pink
 animation-fill-mode:forwards;} */
-
-
 /* .project-tab #tabs .nav-tabs .nav-item .nav-link.show , .nav-tabs .nav-link keyword.active{
 	color: red;
     background-color: transparent;
-    border-color: transparent transparent #f3f3f3;
+    border-color: transparent transparent #F3F3F3;
     border-bottom: 3px solid !important;
     font-size: 16px;
     font-weight: bold;
 } */
-
 </style>
 <!-- <script src="jquery-3.6.0.min.js"></script> -->
 <!--여기부터 ************************************************************************ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"> -->
 <!--여기까지 구글 웹폰트 링크  ************************************************************************ -->
-
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
+</style>
 </head>
 <body>
 	<%@ include file="./include.jsp"%>
-
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/메인5.jpg);">

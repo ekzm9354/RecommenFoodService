@@ -7,8 +7,8 @@
 
 	<select id="showFoodId" parameterType="String"
 		resultType="ShowFoodDTO">
-		select u.udate,f.* from food f, userui u where
-		f.foodid=u.foodid and u.userid =#{id} order by u.udate desc
+		select to_char(u.udate, 'YYYY-MM-DD'),f.* from food f, userui u where
+		f.foodid=u.foodid and u.userid =#{id} order by to_char(u.udate, 'YYYY-MM-DD') desc
 	</select>
 
 	<select id="showNutrients" parameterType="String"
@@ -32,6 +32,6 @@
 		select kcal,carbohydrate,protein,fat,sugar,ca,fe,mg,k,na,vitaminb,vitaminc from reference r,userinfo u where r.gender=u.gender and r.age=u.age and u.userid=#{id}
 	</select>
 	<select id="userAvgNutri" parameterType="String" resultType="referenceDTO">
-		select u.udate,sum(kcal),sum(carbohydrate),sum(protein),sum(fat),sum(sugar),sum(ca),sum(fe),sum(mg),sum(k),sum(na),sum(vitaminb),sum(vitaminc) from food f, userui u where f.foodid=u.foodid and u.userid =#{id} group by u.udate order by u.udate
+		select to_char(u.udate, 'YYYY-MM-DD'),sum(kcal),sum(carbohydrate),sum(protein),sum(fat),sum(sugar),sum(ca),sum(fe),sum(mg),sum(k),sum(na),sum(vitaminb),sum(vitaminc) from food f, userui u where f.foodid=u.foodid and u.userid =#{id} group by to_char(u.udate, 'YYYY-MM-DD') order by to_char(u.udate, 'YYYY-MM-DD') desc
 	</select>
 </mapper>

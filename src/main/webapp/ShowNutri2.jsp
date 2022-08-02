@@ -100,7 +100,13 @@ margin-right: auto;
 	            <%=K.get(udate)%>,
 	            <%=VitaminB.get(udate)%>,
 	            <%=VitaminC.get(udate)%>
-	            ]},
+	            ],
+	           /* 컬러 넣기 */
+	            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)'],  
+           		 borderColor: [
+                'rgba(255, 99, 132, 1)']
+	        	},
 	            {
 		            label: 'refer' , // 차트제목
 		            data: [
@@ -116,7 +122,12 @@ margin-right: auto;
 		            <%=referDto.getK()%>,
 		            <%=referDto.getVitaminB()%>,
 		            <%=referDto.getVitaminC()%>
-		            ]},
+		            ],
+		            backgroundColor: [
+		                'rgba(153, 102, 255, 0.2)'],
+		            borderColor: [
+		                'rgba(153, 102, 255, 1)']
+	            },
 	            
 	            
 	            ]		  
