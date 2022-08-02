@@ -1,3 +1,4 @@
+<%@page import="java.util.Random"%>
 <%@page import="ikujo.model.FoodDTO"%>
 <%@page import="ikujo.model.FoodDAO"%>
 <%@page import="ikujo.model.ShowFoodDAO"%>
@@ -403,18 +404,41 @@ display:flex;
 			</div><!--<div class="row">끝  -->
 		</div>
 	</section>
+
 	<!--여기부터 디저트공간  -->
 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row1">
 				<div class="col-md-121" >
-				여기부터 쓰세요~~~~ 
+				<button id="desert">디저트 뽑기</button>
+				<div id="deCate"></div>
 	</div>
 	</div>
 	</div>
-	
-	
 	</section>
+	<script type="text/javascript">
+	
+		 $(document).on('click', '#desert' , function(){
+		  
+		  $.ajax({
+	            type : "GET", 
+	            url : "./dessertCate.jsp",        
+	            dataType : "html",
+	            error : function(){
+	                alert("통신실패!!!!");
+	            },
+	            success : function(Parse_data){
+	            	$("#deCate").children().remove();
+	                $("#deCate").prepend(Parse_data); //div에 받아온 값을 넣는다.
+	            }
+	       	 });
+	    	  
+		
+	})
+	
+	
+	</script>
+	
 	<!--여기까지 디저트공간  -->
 	<script src="js/jquery/jquery-2.2.4.min.js"></script>
 	<!-- Popper js -->
