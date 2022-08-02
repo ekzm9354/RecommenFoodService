@@ -171,7 +171,7 @@ img {
 								<li class="nav-item"><a class="nav-link" href="#"
 									onclick="location.href='RecommendFood.jsp'">메뉴 추천</a></li>
 								<li class="nav-item" id="insertFood"><a class="nav-link"
-									href="FoodMain.jsp">음식 등록</a></li>
+									href="SelectFood.jsp">음식 등록</a></li>
 								<li class="nav-item"><a class="nav-link" href="#"
 									onclick="location.href='foodcate.jsp'">음식</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->

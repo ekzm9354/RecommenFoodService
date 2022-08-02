@@ -168,7 +168,10 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: none; }
+  border-style: none;
+  display: block;
+  margin: auto;
+}
 
 svg {
   overflow: hidden;
