@@ -47,7 +47,7 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Dongle', sans-serif;
     position: relative;
     z-index: auto;
 }
@@ -62,11 +62,12 @@ h6 {
     font-weight: 700;
     color: #232d37;
     line-height: 1.25;
+    font-size: 40px;
 }
 
 p {
     color: #51545f;
-    font-size: 16px;
+    font-size: 30px;
 }
 
 .section_padding_100 {
@@ -328,6 +329,7 @@ li {
     height: 40px;
     border-bottom: 1px solid #F15F5F;
     background: #FFD8D8;
+    font-size: 16px;
 }
 
 .top_header_area .top_social_bar {
@@ -362,7 +364,7 @@ li {
 }
 
 .top_header_area .signup-search-area a {
-    font-size: 1.5em;
+    font-size: 24px;
     color: #F15F5F;
 }
 
@@ -370,7 +372,7 @@ li {
     margin-right: 13px;
     border-right: 2px solid #F15F5F;
     padding-right: 13px;
-    font-size: 1.5em
+    font-size: 24px
 }
 
 .top_header_area .signup-search-area .search_button {
@@ -457,7 +459,7 @@ li {
     padding: 25px 30px;
     color: #F15F5F;
     text-transform: uppercase;
-    font-size: 37px;
+	font-size: 37px;
 }
 
 .navbar.navbar-expand-lg .navbar-nav .nav-link:hover,
@@ -1110,11 +1112,12 @@ li {
     background-color: transparent;
     border-radius: .25rem;
     margin-top: 30px;
+    color: #F15F5F;
 }
 
 .breadcumb-nav .breadcrumb .breadcrumb-item a {
-    color: #232d37;
-    font-size: 16px;
+	color: #F15F5F;
+    font-size: 25px;
 }
 
 .breadcrumb-item + .breadcrumb-item:before {
@@ -1501,5 +1504,54 @@ a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
     font-weight: 800;
+    font-size: 30px;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #F15F5F;
+    content: ">";
+}
+
+.breadcrumb-item {
+    float: left;
+    font-size: 25px;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #F15F5F;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #F15F5F;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: 30px;
+    line-height: inherit;
+}
+
+.table th {
+    text-align: center;
+    white-space: nowrap;
+    background: #FFD8D8;
+}
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    font-size: 23px;
+}
+
+.nav-fill .nav-item {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
     font-size: 30px;
 }
