@@ -32,17 +32,23 @@
   function showNutients() { window.open("MainNtrients.jsp", "showNutients", "width=400, height=300, left=100, top=50"); }
   </script>
  -->
- 
- <!-- 폰트 적용 -->
+
+<!-- 폰트 적용 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Dongle:wght@400;700&display=swap"
+	rel="stylesheet">
 
 <!-- 폰트 스타일 적용 -->
 <style>
-	*{
-		font-family: 'Dongle', sans-serif;
-	}
+* {
+	font-family: 'Dongle', sans-serif;
+}
+
+.kimch {
+	
+}
 </style>
 </head>
 
@@ -57,19 +63,15 @@
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
-					<div class="bradcumb-title text-center">
-						<h2>메인페이지</h2>
-					</div>
+					<div class="bradcumb-title text-center"></div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-	<div style="padding:20px">
-		
-	</div>
 
-<!-- 	<div class="breadcumb-nav">
+	<div style="padding: 20px"></div>
+
+	<!-- 	<div class="breadcumb-nav">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -89,299 +91,44 @@
 	<!-- ****** Breadcumb Area End ****** -->
 
 	<!-- ****** Welcome Post Area Start ****** -->
-	<section class="welcome-post-sliders owl-carousel">
-
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식1.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식2.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식3.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식4.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식5.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식6.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식7.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식8.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식9.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식10.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식11.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식12.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식13.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식14.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식15.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식16.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
-					</a>
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
 
 
-	</section>
+
+
+
+	<!-- 검색창  -->
+
+	<p calss="kimch" style="text-align: center; font-size : 100px" >내 몸은 내가 지킨다...</p>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src ="https://health.chosun.com/site/data/img_dir/2022/03/03/2022030302148_0.jpg">
+	
+	
+	<div>
+	<<h3 style="text-align: center">step 1</h3>
+	<p style="text-align: center; font-size : 40px">개인별 식단 추천</p>
+	<p style="text-align: center; font-size : 25px">개인의 영양소를 고려한 식단 추천!</p>
+	<h3 style="text-align: center">step 2 </h3>
+	<p style="text-align: center; font-size : 40px">영양제 추천</p>
+	<p style="text-align: center; font-size : 25px">음식에서 얻기힘든 영양소는 영양제를 통해!</p>
+	<h3 style="text-align: center">step 3</h3>
+	<p style="text-align: center; font-size : 40px">만남서비스</p>
+	<p style="text-align: center; font-size : 25px">미모의 여성이 대기하고 있습니다!</p>
+	</div>
+
+
+
+
+
+
+
+
+
+
 	<!-- ****** Welcome Area End ****** -->
 
 	<!-- ****** Categories Area Start ****** -->
@@ -393,7 +140,7 @@
 						<img src="./img/음식.jpg" alt="">
 						<div class="catagory-title">
 							<a id="food" href="#">
-								<h5 id ="foodtext">음식</h5>
+								<h5 id="foodtext">음식</h5>
 							</a>
 						</div>
 					</div>
@@ -412,7 +159,7 @@
 					<div class="single_catagory wow fadeInUp" data-wow-delay=".9s">
 						<img src="./img/영양보충제.jpg" alt="">
 						<div class="catagory-title">
-							<a id="nutrients" href="#" >
+							<a id="nutrients" href="#">
 								<h5 id="nutrientstext">영양 보충제</h5>
 							</a>
 						</div>
@@ -423,8 +170,8 @@
 	</section>
 	<div id="show"></div>
 	<!-- ****** Categories Area End ****** -->
-	
-	
+
+
 	<script type="text/javascript">
 	document.querySelector('#nutrients').addEventListener('click', function () {
             if ($('#nutrientstext').text() == '영양 보충제') {
@@ -477,7 +224,7 @@
             $("#show").append(Parse_data); //div에 받아온 값을 넣는다.
         }
          
-    });	
+    });
     }
 	
 	
@@ -512,7 +259,7 @@ function showDessert() {
 </script>
 
 
-       <!-- ****** Instagram Area Start ****** -->
+	<!-- ****** Instagram Area Start ****** -->
 	<div
 		class="instargram_area owl-carousel section_padding_100_0 clearfix"
 		id="portfolio">
