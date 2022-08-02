@@ -13,6 +13,7 @@
 		<typeAlias type="ikujo.model.FoodcateDTO" alias="FoodcateDTO" /><!--예림추가  -->
 		<typeAlias type="ikujo.model.NutrientsRegistDTO" alias="NutrientsRegistDTO" />
 		<typeAlias type="ikujo.model.ChattingDTO" alias="ChattingDTO" />
+		<typeAlias type="ikujo.model.referenceDTO" alias="referenceDTO" />
 	</typeAliases>
 
 	<environments default="development">

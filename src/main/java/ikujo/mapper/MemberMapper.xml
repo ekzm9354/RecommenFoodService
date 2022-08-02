@@ -5,14 +5,12 @@
 <mapper namespace="ikujo.mapper.MemberMapper">
 
 	<insert id="Join" parameterType="MemberDTO">
-		insert into userinfo
-		values(#{userid},#{userpw},#{userNm},#{gender},#{age})
+		insert into userinfo values(#{userid},#{userpw},#{userNm},#{gender},#{age})
 	</insert>
 
 	<select id="Login" parameterType="MemberDTO"
 		resultType="MemberDTO">
-		select * from userinfo where userid=#{userid} and
-		userpw=#{userpw}
+		select * from userinfo where userid=#{userid} and userpw=#{userpw}
 	</select>
 	<update id="update" parameterType="MemberDTO">
 	 update userinfo set userpw=#{userpw} where userid=#{userid}

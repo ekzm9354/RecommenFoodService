@@ -38,7 +38,7 @@
 							<div
 								class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
 								<!-- 사진넣기 -->
-								<img src="./img/orange4.jpg">
+								<img src="./img/logintomato.jpg" width="360" height="400">
 								<!-- 								<div class="text w-100">
 									<h2>글씨 가능</h2>
 									<p>글씨 가능</p>
@@ -71,7 +71,7 @@
 											name="pw" type="password" class="form-control"
 											placeholder="비밀번호" required>
 									</div>
-									<div class="form-group">
+									<div class="form-group" style="padding-top: 35px;">
 										<button type="submit"
 											class="form-control btn btn-primary submit px-3">로그인</button>
 									</div>

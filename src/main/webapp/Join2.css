@@ -57,12 +57,14 @@ html {
 * {
   padding: 0;
   margin: 0;
+  
 }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+  color : #F15F5F
 }
 
 /* ==========================================================================
@@ -212,7 +214,7 @@ h6 {
   display: inline-block;
   padding: 0 25px;
   cursor: pointer;
-  color: #fff;
+  color: #F15F5F;
   font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
@@ -229,7 +231,7 @@ h6 {
 }
 
 .btn--green {
-  background:  #fc6c3f;
+  background:  #FFD8D8;
 }
 
 .btn--green:hover {
@@ -448,6 +450,7 @@ input {
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 37px;
+  color: #F15F5F;
 }
 
 /* ==========================================================================
@@ -500,3 +503,6 @@ input {
   }
 }
 
+input::placeholder {
+  color: #F15F5F;
+}
