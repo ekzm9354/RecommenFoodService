@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="ikujo.model.referenceDTO"%>
 <%@page import="ikujo.model.referenceDAO"%>
 <%@page import="java.math.BigDecimal"%>
@@ -29,7 +30,7 @@ margin-right: auto;
 <body>
 	<%
 	String id = "zxc";/* request.getParameter("id"); */
-	/* ArrayList<ShowFoodDTO> foodList = new ShowFoodDAO().showFoodId(id); */
+	int udate =Integer.parseInt(request.getParameter("udate")); 
 	ArrayList<referenceDTO> userAvgNutri = new ShowFoodDAO().userAvgNutri(id);
 	referenceDTO referDto = new referenceDAO().referData(id);
 	
@@ -48,7 +49,6 @@ margin-right: auto;
 	<script>
 	<%
 	
-	ArrayList<BigDecimal> date = new ArrayList<BigDecimal>();
 	ArrayList<Integer> Kcal = new ArrayList<Integer>();
 	ArrayList<Integer> Carbohydrate = new ArrayList<Integer>();
 	ArrayList<Integer> Protein = new ArrayList<Integer>();
@@ -62,7 +62,6 @@ margin-right: auto;
 	ArrayList<Integer> VitaminB = new ArrayList<Integer>();
 	ArrayList<Integer> VitaminC = new ArrayList<Integer>();
 	for(referenceDTO dto : userAvgNutri) {
-		/* date.add(dto.getUdate()); */
 		Kcal.add(dto.getKcal().intValue());
 		Carbohydrate.add( dto.getCarbohydrate().intValue());
 		Protein.add( dto.getProtein().intValue());
@@ -76,7 +75,7 @@ margin-right: auto;
 		VitaminB.add(dto.getVitaminB().intValue());
 		VitaminC.add(dto.getVitaminC().intValue());
 		}%>
-		<%int i = 0;%> 
+		
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var myChart = new Chart(ctx, {
 	    type: 'line', // 차트의 형태 (bar, line, pie)
@@ -89,18 +88,18 @@ margin-right: auto;
 	        	{
 	            label: '합' , // 차트제목
 	            data: [
-	            <%=Kcal.get(i)%>,
-	            <%=Carbohydrate.get(i)%>,
-	            <%=Protein.get(i)%>,
-	            <%=Fat.get(i)%>,
-	            <%=Sugar.get(i)%>,
-	            <%=Ca.get(i)%>,
-	            <%=Fe.get(i)%>,
-	            <%=Mg.get(i)%>,
-	            <%=Na.get(i)%>,
-	            <%=K.get(i)%>,
-	            <%=VitaminB.get(i)%>,
-	            <%=VitaminC.get(i)%>
+	            <%=Kcal.get(udate)%>,
+	            <%=Carbohydrate.get(udate)%>,
+	            <%=Protein.get(udate)%>,
+	            <%=Fat.get(udate)%>,
+	            <%=Sugar.get(udate)%>,
+	            <%=Ca.get(udate)%>,
+	            <%=Fe.get(udate)%>,
+	            <%=Mg.get(udate)%>,
+	            <%=Na.get(udate)%>,
+	            <%=K.get(udate)%>,
+	            <%=VitaminB.get(udate)%>,
+	            <%=VitaminC.get(udate)%>
 	            ]},
 	            {
 		            label: 'refer' , // 차트제목

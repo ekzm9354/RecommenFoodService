@@ -1,3 +1,6 @@
+<%@page import="java.sql.Timestamp"%>
+<%@page import="ikujo.model.referenceDAO"%>
+<%@page import="ikujo.model.referenceDTO"%>
 <%@page import="ikujo.model.ShowFoodDTO"%>
 <%@page import="ikujo.model.ShowFoodDAO"%>
 <%@page import="java.util.ArrayList"%>
@@ -27,144 +30,51 @@ margin-right: auto;
 	<%
 	String id = request.getParameter("id");
 	ArrayList<ShowFoodDTO> foodList = new ShowFoodDAO().showFoodId(id);
+	ArrayList<referenceDTO> userAvgNutri = new ShowFoodDAO().userAvgNutri(id);
+	referenceDTO referDto = new referenceDAO().referData(id);
+	
+	for (referenceDTO userDate : userAvgNutri){
+		userDate.getUdate();
+	}
+	
 	%>
 
 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<canvas id="myChart" width="1000" ; height="600"; ></canvas>
+					<!-- <canvas id="myChart" width="1000" ; height="600"; ></canvas> -->
+						<select id="udate" onchange="selectFn();">
+						<%
+						int udate =0;
+						for (referenceDTO userDate : userAvgNutri){%>
+						<option value="<%=udate %>"><%=userDate.getUdate()%> </option>
+						<%udate++; }%>
+						</select>
 				</div>
 			</div>
 		</div>
 	</section>
-
 	<script>
-	var ctx = document.getElementById('myChart').getContext('2d');
-	var myChart = new Chart(ctx, {
-	    type: 'bar', // 차트의 형태 (bar, line, pie)
-	    data: { // 차트에 들어갈 데이터
-	        labels: [
-	        <%for (ShowFoodDTO dto : foodList) {%>
-	        '<%=dto.getUdate()%>',
-	        <%}%>
-	       ],
-	        // labels -> x축에 들어갈 데이터
-	        datasets: [
-	        	{
-	            label: 'Kcal' , // 차트제목
-	            data: [
-	            		<%for(ShowFoodDTO dto : foodList) {%>
-	            		<%=dto.getKcal()%>,
-	            		<%}%> 
-	            		]
-	        	},		  
-	            { 
-	        	label: 'Carbohydrate' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                        <%=dto.getCarbohydrate()%>,
-                        <%}%>
-	            		]
-	        	},		  
-	            {
-	        	label: 'protein' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                        <%=dto.getProtein()%>,
-                        <%}%>
-	            		]
-	        	},		  
-	            { 
-	        	label: 'fat' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                        <%=dto.getFat()%>,
-                        <%}%>
-	            		]
-	        	},
-	            {
-	        	label: 'sugar' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                        <%=dto.getSugar()%>,
-                        <%}%>
-	            		]
-	        	},
-	            { 
-	        	label: 'ca' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                        <%=dto.getCa()%>,
-                        <%}%>
-	            		]
-	        	},
-	            {
-	        	label: 'fe' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                        <%=dto.getFe()%>,
-                        <%}%>
-                        ]
-	        	},
-                {
-	        	label: 'mg' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                        <%=dto.getMg()%>,
-                        <%}%>
-                        ]
-	        	},
-	            {
-	        	label: 'na' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                       	<%=dto.getNa()%>,
-                       	<%}%>
-                        ]
-	        	},
-                { 
-	        	label: 'k' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                        <%=dto.getK()%>,
-                        <%}%>
-                       ]
-	        	},
-	            {
-	        	label: 'vitaminB' , // 차트제목
-	            data: [
-	            	  	<%for (ShowFoodDTO dto : foodList) {%>
-                      	<%=dto.getVitaminB()%>,	
-                      	<%}%>
-                      ]
-	        	},
-	            {
-	        	label: 'vitaminC' , // 차트제목
-	            data: [
-	            		<%for (ShowFoodDTO dto : foodList) {%>
-                    	<%=dto.getVitaminC()%>,
-                     	<%}%>
-                      ]
-	        	}]	
-                
-	   
-    },
-    options: {
-        scales: {
-            y: {
-               beginAtZero: true 
-            }
-        }
-    }
-});
-            		
-            	 
-            
-         
- 
+	function selectFn() {
+			let date= $("#udate").val()
+		   $.ajax({
+	            type : "GET", 
+	            url : "./ShowNutri2.jsp?id=<%=id %>&udate="+ date,        
+	            dataType : "html",
+	            error : function(){
+	                alert("통신실패!!!!");
+	            },
+	            success : function(Parse_data){
+	            	deleteTable2()
+	                $("#userprofile").prepend(Parse_data); //div에 받아온 값을 넣는다.
+	            }
+	        });
 	
-	</script>
+	}
+       
+</script>
+
 	
 
 
