@@ -72,6 +72,22 @@ margin-right: auto;
 	        });
 	
 	}
+	$(document).ready(function(){
+        $.ajax({
+            type : "GET", 
+            url : "./ShowNutri2.jsp?id=<%=id %>&udate=0",          
+            		
+            dataType : "html",
+            error : function(){
+                alert("통신실패!!!!");
+            },
+            success : function(Parse_data){
+            	
+            	deleteTable2(); 
+                $("#userprofile").append(Parse_data); 
+            }
+        });
+    });
        
 </script>
 
