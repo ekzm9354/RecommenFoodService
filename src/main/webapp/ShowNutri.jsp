@@ -51,6 +51,8 @@ margin-right: auto;
 						<option value="<%=udate %>"><%=userDate.getUdate()%> </option>
 						<%udate++; }%>
 						</select>
+						
+						
 				</div>
 			</div>
 		</div>

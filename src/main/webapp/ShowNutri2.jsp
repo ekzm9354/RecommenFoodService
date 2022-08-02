@@ -100,7 +100,10 @@ margin-right: auto;
 	            <%=K.get(udate)%>,
 	            <%=VitaminB.get(udate)%>,
 	            <%=VitaminC.get(udate)%>
-	            ]},
+	            ],
+	           /* 컬러 넣기 */
+	           
+	        	},
 	            {
 		            label: 'refer' , // 차트제목
 		            data: [
