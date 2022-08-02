@@ -18,11 +18,13 @@
 .table td, .table th {
 	text-align: center;
 }
+.table th{
+color:#F15F5F}
 
 .project-tab a {
-	color: gray;
-	background-color: transparent;
-	border-color: transparent red;
+    color:#F15F5F;
+    background-color :#FFD8D8 ;
+	/* border-color: transparent red; */
 	border-bottom: 3px solid !important;
 	font-size: 16px;
 	font-weight: bold;

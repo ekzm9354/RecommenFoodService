@@ -28,16 +28,27 @@
 #recommendFood {
 	height: 500px;
 	width: 500px;
-	background-color: yellow;
+	/* background-color: yellow; */
 }
 #recommendNutrients {
 	height: 500px;
 	width: 500px;
 	background-color: blue;
 }
-.menutab { /*메뉴추천탭,영양제추천탭 스타일 (수정하기) */
-border:1px solid;
+
+.menutab { 
+/* border:1px solid; */
 text-align: center;
+}
+.tab1, .tab2{/*메뉴추천탭,영양제추천탭 스타일 (수정하기) */
+background-color: pink;
+color: maroon;
+padding: 15px 25px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+border-radius: 20px;
+border:pink;
 }
 .table th, .table tr{
 text-align: center;}
@@ -48,12 +59,22 @@ box-sizing: border-box;
 color: white; */
 background:white;
 border: 3px solid #f199bc;
-color: #6e6e6e;
+color: #F15F5F;
+font : bold;
 border-radius: 10px;
 text-align: center;
 padding: 7px;
 margin:10px;
 display: table-cell;
+}
+/* .tab1 {
+border: 1px solid;} */
+/*영양제 부분 양 옆 배치 스타일 */
+.col-md-121{
+flex: 1;
+}
+.row1{
+display:flex;
 }
 
 </style>
@@ -152,10 +173,14 @@ display: table-cell;
 			<div class="row">
 				<div class="col-md-12">
 					<nav>
-					<div class="menutab"> <!-- 탭 클릭하면 음식추천으로 넘어가고 영양제추천으로 넘어가는식으로 만들기 -->
-					<a >탭1 - 음식추천탭</a>
-					<a>탭2 - 영양제추천탭</a>
+					
+					 <!-- 탭 클릭하면 음식추천으로 넘어가고 영양제추천으로 넘어가는식으로 만들기 -->
+					<div class="menutab">
+					<a class="tab1" href="#rice_tab">음식 추천으로 넘어가기</a>
+					<a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+					<a class="tab1" href="#nav-home-tab">영양보충제로 넘어가기</a>
 					</div>
+				
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 							<a class="nav-item nav-link active keyword" id="rice_tab"
 								data-toggle="tab" href="#rice" role="tab" aria-controls="rice"
@@ -247,8 +272,8 @@ display: table-cell;
 	<!-------------------------         영양보충제               ------------------------  -->
 	<section id="tabs" class="project-tab">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
+			<div class="row1">
+				<div class="col-md-121" >
 					<nav>
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 							<a class="nav-item nav-link active" id="nav-home-tab"
@@ -302,8 +327,60 @@ display: table-cell;
 							</table>
 						</div>
 					</div>
-				</div>
-			</div>
+				</div> <!--<div class="col-md-121" > 끝 -->
+				<!--이 공간에 넣어주세요~!--------------------- 사용자와 비슷한 유저가 선택한 영양제------------------------------  -->
+				<div class="col-md-121">
+						<nav>
+							<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+								<a class="nav-item nav-link active" id="nav-home-tab"
+									data-toggle="tab" href="#nav-home" role="tab"
+									aria-controls="nav-home" aria-selected="true">사용자와 비슷한 유저
+									영양제추천</a>
+							</div>
+						</nav>
+						<!--여기에 사용자와 비슷한 유저가 선택한 영양제 추천....   -->
+						<div class="tab-content" id="nav-tabContent">
+							<div class="tab-pane fade show active" id="nav-home"
+								role="tabpanel" aria-labelledby="nav-home-tab">
+								<table class="table">
+									<thead>
+										<tr>
+											<!--  데이터를 요청해줄 버튼 -->
+											<th>영양보충제 이미지</th>
+											<th>영양보충제 이름</th>
+											<th>선택</th>
+										</tr>
+									</thead>
+									<tbody>
+									<%
+									if (nutrients != null) {
+										int j =0;
+									%>
+									<%
+									for (String nutNm : nutrients) {
+									ArrayList<NutrientsDTO> nutrientsList= nutDao.showNutrients(nutNm);
+											j++;
+											if(j==4){break;}
+										for(NutrientsDTO nutrientsDto :nutrientsList){
+									%>
+									<tr>
+										<td><a href="<%=nutrientsDto.getLink()%>"> <img
+												src="<%=nutrientsDto.getImg()%>">
+										</a></td>
+										<td><%=nutrientsDto.getNutnm()%></td>
+									<!-- 	<td>선택버튼...?</td> -->
+							
+									</tr>
+									<%}}}%>
+										
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+				</div><!--<div class="col-md-121">끝  -->
+				<!-----------------------------------여기까지 쓰세요--------------------------------------- -->
+			</div><!--<div class="row">끝  -->
 		</div>
 	</section>
 	

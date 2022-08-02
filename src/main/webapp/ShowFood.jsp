@@ -16,10 +16,12 @@
 
 margin-left: auto; 
 margin-right: auto;
+/* table-layout:fixed; */
 
 }
 .table th,td {
-text-align: center;}
+text-align: center;
+white-space: nowrap;}
 
 </style>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -34,7 +36,7 @@ text-align: center;}
 	<section id="tabs" class="project-tab">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12" style="width:1200px">
+                    <div class="col-md-12" ><!--style="width:1200px"  -->
                         <!-- <nav>
                             <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                                 <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Project Tab 1</a>
@@ -54,18 +56,18 @@ text-align: center;}
 						<tr>
 							<th>날짜</th>
 							<th>음식명</th>
-							<th>kcal</th>
-							<th>carbohydrate</th>
-							<th>protein</th>
-							<th>fat</th>
-							<th>sugar</th>
-							<th>ca</th>
-							<th>fe</th>
-							<th>mg</th>
-							<th>na</th>
-							<th>k</th>
-							<th>vitaminB</th>
-							<th>vitaminC</th>
+							<th>칼로리</th>
+							<th>탄수화물</th>
+							<th>단백질</th>
+							<th>지방</th>
+							<th>당</th>
+							<th>칼슘</th>
+							<th>철</th>
+							<th>마그네슘</th>
+							<th>나트륨</th>
+							<th>칼륨</th>
+							<th>비타민B</th>
+							<th>비타민C</th>
 						</tr>
 
 
