@@ -15,6 +15,8 @@
 <!-- Title -->
 <title>밥줘 영양줘</title>
 
+
+
 <!-- Favicon -->
 <link rel="icon" href="img/yerimimg/logoimg.ico">
 
@@ -510,11 +512,10 @@ function showDessert() {
 </script>
 
 
-	<!-- ****** Instagram Area Start ****** -->
+       <!-- ****** Instagram Area Start ****** -->
 	<div
 		class="instargram_area owl-carousel section_padding_100_0 clearfix"
 		id="portfolio">
-
 		<!-- Instagram Item -->
 		<div class="instagram_gallery_item">
 			<!-- Instagram Thumb -->
@@ -531,7 +532,6 @@ function showDessert() {
 				</div>
 			</div>
 		</div>
-
 		<!-- Instagram Item -->
 		<div class="instagram_gallery_item">
 			<!-- Instagram Thumb -->
@@ -548,7 +548,6 @@ function showDessert() {
 				</div>
 			</div>
 		</div>
-
 		<!-- Instagram Item -->
 		<div class="instagram_gallery_item">
 			<!-- Instagram Thumb -->
@@ -565,7 +564,6 @@ function showDessert() {
 				</div>
 			</div>
 		</div>
-
 		<!-- Instagram Item -->
 		<div class="instagram_gallery_item">
 			<!-- Instagram Thumb -->
@@ -582,7 +580,6 @@ function showDessert() {
 				</div>
 			</div>
 		</div>
-
 		<!-- Instagram Item -->
 		<div class="instagram_gallery_item">
 			<!-- Instagram Thumb -->
@@ -599,7 +596,6 @@ function showDessert() {
 				</div>
 			</div>
 		</div>
-
 		<!-- Instagram Item -->
 		<div class="instagram_gallery_item">
 			<!-- Instagram Thumb -->
@@ -616,7 +612,6 @@ function showDessert() {
 				</div>
 			</div>
 		</div>
-
 		<!-- Instagram Item -->
 		<div class="instagram_gallery_item">
 			<!-- Instagram Thumb -->
@@ -633,7 +628,6 @@ function showDessert() {
 				</div>
 			</div>
 		</div>
-
 		<!-- Instagram Item -->
 		<div class="instagram_gallery_item">
 			<!-- Instagram Thumb -->
@@ -650,7 +644,6 @@ function showDessert() {
 				</div>
 			</div>
 		</div>
-
 	</div>
 	<!-- ****** Our Creative Portfolio Area End ****** -->
 

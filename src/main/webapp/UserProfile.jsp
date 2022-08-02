@@ -23,8 +23,10 @@ button{
 border: 0;
 background: transparent;
 outline: ; 
+color:#F15F5F;
+font-weight : bold;
 }
-#scrollUp {
+/* #scrollUp {
     bottom: 55px;
     font-size: 14px;
     right: 50%;
@@ -36,12 +38,9 @@ outline: ;
     line-height: 30px;
     border-radius: 50%;
     margin-right: -15px;
-}
-
-/* .project-tab {
-    padding: 10%;
-    margin-top: -8%;
 } */
+
+
 
 </style>
 </head>
@@ -134,7 +133,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                            <!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -150,7 +149,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -166,7 +165,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -182,7 +181,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -198,7 +197,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                            <!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -214,7 +213,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -230,7 +229,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -246,7 +245,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
