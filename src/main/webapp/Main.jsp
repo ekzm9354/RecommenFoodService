@@ -52,7 +52,7 @@
 
 	<%@ include file="./include.jsp"%>
 
-	<!-- ****** Breadcumb Area Start ****** -->
+<!-- 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area" style="background-image: url(img/메인5.jpg);">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
@@ -67,7 +67,7 @@
 	
 	<div style="padding:20px">
 		
-	</div>
+	</div> -->
 
 <!-- 	<div class="breadcumb-nav">
 		<div class="container">
@@ -89,299 +89,299 @@
 	<!-- ****** Breadcumb Area End ****** -->
 
 	<!-- ****** Welcome Post Area Start ****** -->
-	<section class="welcome-post-sliders owl-carousel">
+<!-- 	<section class="welcome-post-sliders owl-carousel">
 
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식1.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식2.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식3.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식4.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식5.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식6.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식7.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식8.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식9.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식10.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식11.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식12.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식13.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식14.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식15.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
-		<!-- Single Slide -->
+		Single Slide
 		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+			Post Thumb
 			<img src="img/food-img/음식16.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> <!-- May 19, 2017 -->
-					</a> <a href="#"> <!-- 5 Comment -->
+					<a href="#"> May 19, 2017
+					</a> <a href="#"> 5 Comment
 					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
 		</div>
 
 
-	</section>
+	</section> 
 	<!-- ****** Welcome Area End ****** -->
 
 	<!-- ****** Categories Area Start ****** -->
