@@ -27,4 +27,10 @@ public class ShowFoodDAO {
 			session.close();
 			return food_list;
 		}
+		public ArrayList<referenceDTO> userAvgNutri(String id) {
+			session = sqlSessionFactory.openSession(true);
+			ArrayList<referenceDTO> userAvgNutri = (ArrayList) session.selectList("userAvgNutri", id);
+			session.close();
+			return userAvgNutri;
+		}
 }

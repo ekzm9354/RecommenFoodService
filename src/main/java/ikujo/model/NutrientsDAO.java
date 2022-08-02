@@ -25,7 +25,7 @@ public class NutrientsDAO {
 		session.close();
 		return nutri_img;
 	}
-
+	//showNutriCate 오타
 	public ArrayList<NutrientsDTO> showNutreCate(String keyword) {
 		session = sqlSessionFactory.openSession(true);
 		ArrayList<NutrientsDTO> nutriList = (ArrayList) session.selectList("showNutreCate", keyword);
