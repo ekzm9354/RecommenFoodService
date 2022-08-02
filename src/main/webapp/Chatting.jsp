@@ -29,7 +29,7 @@
 			<legend>여기는 채팅방입니다</legend>
 			<%
 MemberDTO info = (MemberDTO) session.getAttribute("info");
-String toName = info.getUserNm();
+String toName = info.getUserid();
 String fromName = request.getParameter("usaUser");
 %>
 
