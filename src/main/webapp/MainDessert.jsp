@@ -35,7 +35,7 @@ div{
 margin: auto;
 height: auto;}
 .table td{
-text-align: left;}
+text-align: center;}
 </style>
 </head>
 
