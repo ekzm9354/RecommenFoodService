@@ -18,7 +18,7 @@ public class RecommendNutriInsert extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-	
+		System.out.println("넘어감확인");
 		String id = request.getParameter("id");
 		BigDecimal nutId =new BigDecimal(request.getParameter("nutId"));
 		String nutNm = request.getParameter("nutNm");

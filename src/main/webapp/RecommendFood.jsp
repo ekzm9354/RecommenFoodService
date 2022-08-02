@@ -94,7 +94,7 @@ display:flex;
 			console.log(keyword)
 			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
 		       console.log("flask로 간다")
-				var link = "http://61.80.80.212:5000/?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
+				var link = "http://61.80.80.212:5001/?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
 			location.href = link;
 			location.replace(link);
 			window.open(link);
@@ -261,7 +261,7 @@ display:flex;
 			console.log(keyword)
 			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
 	        console.log("[keyword클릭]flask로 간다")
-			var link = "http://61.80.80.212:5000/?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
+			var link = "http://61.80.80.212:5001/?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
 			location.href = link;
 			//location.replace(link);
 			//window.open(link);

@@ -326,7 +326,8 @@ li {
 .top_header_area {
     width: 100%;
     height: 40px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #F15F5F;
+    background: #FFD8D8;
 }
 
 .top_header_area .top_social_bar {
@@ -362,12 +363,12 @@ li {
 
 .top_header_area .signup-search-area a {
     font-size: 13px;
-    color: #222;
+    color: #F15F5F;
 }
 
 .top_header_area .signup-search-area .login a {
     margin-right: 13px;
-    border-right: 2px solid #c2c2c2;
+    border-right: 2px solid #F15F5F;
     padding-right: 13px;
 }
 
@@ -453,7 +454,7 @@ li {
 
 .navbar.navbar-expand-lg .navbar-nav .nav-link {
     padding: 25px 30px;
-    color: #232d37;
+    color: #F15F5F;
     text-transform: uppercase;
     font-size: 14px;
 }
@@ -610,6 +611,8 @@ li {
     line-height: 50px;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
+    background: #FFD8D8;
+    color:#F15F5F
 }
 
 .single_catagory:hover .catagory-title a > h5 {
