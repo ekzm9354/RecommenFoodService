@@ -411,7 +411,8 @@ display:flex;
 			<div class="row1">
 				<div class="col-md-121" >
 				<button id="desert">디저트 뽑기</button>
-				<div id="deCate"></div>
+				<div id="deCate"></div><!--버튼나옴  -->
+				<div style="margin:100px 0px 100px 0px"></div>
 	</div>
 	</div>
 	</div>

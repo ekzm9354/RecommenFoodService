@@ -171,26 +171,34 @@ body {
   width: 140px;
   height: 50px;
   display: inline-block;
-  border-radius: 50px;
+ /*  border-radius: 50px;
   background-color: #a3d063;
   border: 2px solid #a3d063;
-  color: #fff;
+  color: #fff; */
   cursor: pointer;
   transition: all 0.2s linear;
   text-align: center;
   float: right;
-}
+ 
+} 
 .bottom_wrapper .textbox:hover {
   color: #a3d063;
   background-color: #fff;
 }
-.bottom_wrapper .textbox#send,#id{
+.bottom_wrapper .textbox#send{
   font-size: 18px;
   font-weight: 300;
   display: inline-block;
   line-height: 48px;
-}
+} 
 
 .message_template {
   display: none;
+}
+#send, #out{
+	border: none;
+	background-color: #E4F7BA;
+	font-size:17px;
+	border-radius: 10px;
+	
 }

@@ -34,7 +34,7 @@ color: #F15F5F;}
 .project-tab .nav-link:hover {
     border: solid;
 }
-#foods{/* td 안에 세로가운데정렬  */
+#foods td{/* td 안에 세로가운데정렬  */
 vertical-align:middle;
 }
 /*여기부터  ************************************************************************  */

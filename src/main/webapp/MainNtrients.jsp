@@ -34,30 +34,13 @@
 .table th {
 	text-align: center;
 }
-.table td{
-table-layout:fixed;}
+
 </style>
 </head>
 
 <body>
 
 	<!-- ****** Breadcumb Area End ****** -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
