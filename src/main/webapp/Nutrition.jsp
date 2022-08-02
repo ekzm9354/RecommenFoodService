@@ -76,11 +76,16 @@
 .tab-content{
 text-align: center;
 }
-.table td, .table th{
+.table td{
 text-align: center;
 }
 .table th{
-color : #F15F5F;}
+color : #F15F5F;
+text-align: center;
+}
+#Nutrients td{/* td 안에 세로가운데정렬  */
+vertical-align:middle;
+}
 
 </style>
 
@@ -399,12 +404,13 @@ color : #F15F5F;}
 		for (var i = 0; i < key.length; i++) {
 			console.log("g")
 			$("#Nutrients").append("<tr> </tr>");
-	 		$("#Nutrients tr").last().append("<td>" + "<a href='"+key[i].link+"'>'"+"<img src='"+key[i].img+"'width=200px height=200px>"+"</a><td>");
+	 		$("#Nutrients tr").last().append("<td>" + "<a href='"+key[i].link+"'>'"+"<img src='"+key[i].img+"'width=200px height=200px>"+"</a></td>");
 			$("#Nutrients tr").last().append("<td>" + key[i].nutnm+ "</td>");
 			$("#Nutrients tr").last().append("<td>" + key[i].price + "￦</td>");
 			
 		}
 	}
+		
 	</script>
 
 

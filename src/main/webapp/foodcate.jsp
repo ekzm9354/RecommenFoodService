@@ -39,11 +39,18 @@ color: #F15F5F;}
 .project-tab .nav-link:hover {
     border: solid;
 } 
-/*여기부터  ************************************************************************  */
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+#foods td{ /* td 안에 세로가운데정렬  */
+vertical-align:middle;
+}
+/*여기부터 구글웹폰트 스타일css ************************************************************************  */
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 div,tr,th,td{
 font-family: 'Black Han Sans', sans-serif;
-}
+} */
+/* *{
+font-family: 'Dongle', sans-serif;
+font-size: x-large; 
+} */
 /*여기까지 구글웹폰트 스타일css  ************************************************************************ */
 
 						
@@ -63,10 +70,16 @@ animation-fill-mode:forwards;} */
 
 </style>
 <!-- <script src="jquery-3.6.0.min.js"></script> -->
-<!--여기부터 ************************************************************************ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!--여기부터 구글 웹폰트 링크 ************************************************************************ -->
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"> -->
+
+
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+ 동글체-->
 <!--여기까지 구글 웹폰트 링크  ************************************************************************ -->
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
