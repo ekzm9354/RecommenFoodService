@@ -1,5 +1,7 @@
 package ikujo.model;
 
+import java.util.ArrayList;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -15,5 +17,11 @@ public class ChattingDAO {
 		row = session.insert("ChattingInsert",dto);
 		session.close();
 		return row;
+	}
+	public ArrayList<ChattingDTO> ChattingAll(ChattingDTO dto){
+		session = sqlSessionFactory.openSession(true);
+		ArrayList<ChattingDTO> AllChtting = (ArrayList) session.selectList("ChattingAll", dto);
+		session.close();
+		return AllChtting;
 	}
 }
