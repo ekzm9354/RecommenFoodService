@@ -18,7 +18,7 @@ String fromName = request.getParameter("usaUser");
 
 	대화상대 :
 	<%=fromName%>
-
+	
 	<textarea rows="3" cols="30" class="textbox"></textarea>
 	<input type="submit" value="보내기" id="send">
 
