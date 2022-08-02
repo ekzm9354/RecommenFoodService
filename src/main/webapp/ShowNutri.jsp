@@ -1,6 +1,6 @@
-<%@page import="java.sql.Timestamp"%>
 <%@page import="ikujo.model.referenceDAO"%>
 <%@page import="ikujo.model.referenceDTO"%>
+<%@page import="java.sql.Timestamp"%>
 <%@page import="ikujo.model.ShowFoodDTO"%>
 <%@page import="ikujo.model.ShowFoodDAO"%>
 <%@page import="java.util.ArrayList"%>
@@ -31,7 +31,6 @@ margin-right: auto;
 	String id = request.getParameter("id");
 	ArrayList<ShowFoodDTO> foodList = new ShowFoodDAO().showFoodId(id);
 	ArrayList<referenceDTO> userAvgNutri = new ShowFoodDAO().userAvgNutri(id);
-	referenceDTO referDto = new referenceDAO().referData(id);
 	
 	for (referenceDTO userDate : userAvgNutri){
 		userDate.getUdate();
@@ -51,6 +50,8 @@ margin-right: auto;
 						<option value="<%=udate %>"><%=userDate.getUdate()%> </option>
 						<%udate++; }%>
 						</select>
+						
+						
 				</div>
 			</div>
 		</div>

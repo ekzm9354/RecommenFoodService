@@ -10,4 +10,13 @@
 	<select id="ChattingAll" parameterType="ChattingDTO" resultType="ChattingDTO">
 	select * from chatting where toName=#{toName} and  fromName =#{fromName} or  toName=#{fromName} and  fromName =#{toName} order by c_date asc
 	</select>
+	
+	<select id="ChattingShow" parameterType="ChattingDTO" resultType="ChattingDTO">
+	select * from (
+	select * from chatting where toName=#{toName} and  fromName =#{fromName} or  toName=#{fromName} and  fromName =#{toName} order by c_date desc
+	)where <![CDATA[rownum<=1]]>
+	</select>
+	<delete id="DeleteChatting" parameterType="ChattingDTO">
+		delete from chatting where toName=#{toName} and fromName=#{fromName} or toName=#{fromName} and fromName=#{toName}
+	</delete>
 </mapper>

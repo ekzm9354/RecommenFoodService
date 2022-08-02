@@ -1,7 +1,6 @@
 package ikujo.model;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +12,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ShowFoodDTO {
 	
-	private Timestamp udate;
+	private String udate;
 	private BigDecimal foodId;
 	@NonNull private String foodNm;
 	private String label;

@@ -86,7 +86,7 @@ margin-right: auto;
 	        // labels -> x축에 들어갈 데이터
 	        datasets: [
 	        	{
-	            label: '합' , // 차트제목
+	            label: '사용자의 일일 섭취량' , // 차트제목
 	            data: [
 	            <%=Kcal.get(udate)%>,
 	            <%=Carbohydrate.get(udate)%>,
@@ -100,9 +100,15 @@ margin-right: auto;
 	            <%=K.get(udate)%>,
 	            <%=VitaminB.get(udate)%>,
 	            <%=VitaminC.get(udate)%>
-	            ]},
+	            ],
+	           /* 컬러 넣기 */
+	            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)'],  
+           		 borderColor: [
+                'rgba(255, 99, 132, 1)']
+	        	},
 	            {
-		            label: 'refer' , // 차트제목
+		            label: '일일 기준 권장 섭취량' , // 차트제목
 		            data: [
 		            <%=referDto.getKcal()%>,
 		            <%=referDto.getCarbohydrate()%>,
@@ -116,7 +122,12 @@ margin-right: auto;
 		            <%=referDto.getK()%>,
 		            <%=referDto.getVitaminB()%>,
 		            <%=referDto.getVitaminC()%>
-		            ]},
+		            ],
+		            backgroundColor: [
+		                'rgba(153, 102, 255, 0.2)'],
+		            borderColor: [
+		                'rgba(153, 102, 255, 1)']
+	            },
 	            
 	            
 	            ]		  
