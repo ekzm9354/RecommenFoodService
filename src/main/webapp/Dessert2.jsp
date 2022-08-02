@@ -29,6 +29,9 @@ color:#F15F5F}
 	font-size: 16px;
 	font-weight: bold;
 }
+.table tr th{
+background-color: white;
+}
 
 .project-tab .nav-link:hover {
 	border: solid;
@@ -36,6 +39,7 @@ color:#F15F5F}
 #dessert td{/* td 안에 세로가운데정렬  */
 vertical-align:middle;
 }
+
 </style>
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"

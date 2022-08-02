@@ -30,7 +30,7 @@
     <div id="chattingRoom">
    <%
 MemberDTO info = (MemberDTO) session.getAttribute("info");
-String toName = info.getUserNm();
+String toName = info.getUserid();
 String fromName = request.getParameter("usaUser");
 %>
 

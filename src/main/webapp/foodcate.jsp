@@ -20,10 +20,15 @@ text-align: center;
 text-align: center;
 }
 .table th{
-color: #F15F5F;}
+color: #F15F5F;
+}
+.table tr th{
+background-color: white;
+}
+
 .project-tab a {
     color:#F15F5F;
-    background-color :#FFD8D8 ;
+	background-color :#FFD8D8 ;
    /*  background-color: transparent ;
     border-color: transparent #F15F5F; */
     border-bottom: 3px solid !important;
@@ -31,6 +36,7 @@ color: #F15F5F;}
     font-size: 16px;
     font-weight: bold;
 }
+
 .project-tab .nav-link:hover {
     border: solid;
 }
