@@ -40,10 +40,10 @@ color: #F15F5F;}
     border: solid;
 } 
 /*여기부터  ************************************************************************  */
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 div,tr,th,td{
 font-family: 'Black Han Sans', sans-serif;
-}
+} */
 /*여기까지 구글웹폰트 스타일css  ************************************************************************ */
 
 						
@@ -64,14 +64,27 @@ animation-fill-mode:forwards;} */
 </style>
 <!-- <script src="jquery-3.6.0.min.js"></script> -->
 <!--여기부터 ************************************************************************ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"> -->
 <!--여기까지 구글 웹폰트 링크  ************************************************************************ -->
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
+</style>
+
 </head>
 <body>
 	<%@ include file="./include.jsp"%>

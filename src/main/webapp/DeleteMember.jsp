@@ -16,6 +16,17 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 	<link rel="stylesheet" href="css/style.css">
+ <!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
+</style>
 </head>
 
 <link href="Login.css" rel="stylesheet">
@@ -59,14 +70,16 @@
 									</div> -->
 								</div>
 								<form action="#" class="signin-form">
-									<div class="form-group mb-3">
+									<div class="form-group mb-3" style="
+											    padding-top: 50px;
+											">
 										<label class="label" for="name"></label> 한번 탈퇴하시면 계정을 되돌릴 수
 										없습니다 <br> 그래도 계정을 탈퇴하시겠습니까?
 									</div>
 									
-									<div class="form-group mb-3">
+<!-- 									<div class="form-group mb-3">
 										<img src="./img/버거로고.jpg">
-									</div>
+									</div> -->
 
 									<div class="form-group">
 										<button type="submit"
