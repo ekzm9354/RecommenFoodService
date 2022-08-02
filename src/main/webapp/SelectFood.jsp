@@ -116,7 +116,10 @@
         <div class="container">
             <div class="row">
                 <!-- Blog entries-->
-                <div class="col-lg-8">
+                <div class="col-lg-8" style="
+						    padding-bottom: 50px;
+						    padding-top: 50px;
+						">
                     <!-- Featured blog post-->
                     <div class="card mb-4">
                         <a href="#!">
@@ -146,268 +149,268 @@
 		<div class="welcome-single-slide">
 			<!-- Post Thumb -->
 			<img src="img/food-img/음식2.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식3.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식4.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식5.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식6.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식7.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식8.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식9.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식10.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식11.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식12.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식13.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식14.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식15.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
 		</div>
-		Single Slide
+		<!-- Single Slide -->
 		<div class="welcome-single-slide">
-			Post Thumb
+			<!-- Post Thumb -->
 			<img src="img/food-img/음식16.jpg" alt="">
-			Overlay Text
+			<!-- Overlay Text -->
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<a href="#"> May 19, 2017
+					<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a>
+					</a> -->
 				</div>
 				<a href="#">
 					<h5>
-						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
+						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
 					</h5>
 				</a>
 			</div>
@@ -424,7 +427,7 @@
                             <div class="small text-muted">January 1, 2022</div>
                             <h2 class="card-title">Featured Post Title</h2>
                             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-                            <a class="btn btn-primary" href="#!">Read more →</a>
+                            <!-- <a class="btn btn-primary" href="#!">Read more →</a> -->
                         </div>
                     </div>
                     <!-- Nested row for non-featured blog posts
@@ -489,17 +492,23 @@
                     </nav> -->
                 </div>
                 <!-- Side widgets-->
-                <div class="col-lg-4">
+                <div class="col-lg-4" style="
+							    padding-top: 50px;
+							">
                     <!-- Search widget-->
+                    <form action="SelectFood.do" method="post">
                     <div class="card mb-4">
                         <div class="card-header">Search</div>
                         <div class="card-body">
                             <div class="input-group">
-                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
-                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            	<input name="keyword" type="text" class="form-control" placeholder="food name" aria-label="Enter search term..." aria-describedby="button-search"/>
+                                <!-- <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" /> -->
+                                <!-- <button class="btn btn-primary" id="button-search" type="button">Go!</button> -->
+                               <input type="submit" class="btn btn-primary" id="button-search" value="조회">
                             </div>
                         </div>
                     </div>
+                    </form>
                     <!-- Categories widget-->
                     <div class="card mb-4">
                         <div class="card-header">Categories</div>

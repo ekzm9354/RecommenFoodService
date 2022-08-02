@@ -212,7 +212,7 @@ ol {
     font-size: 14px;
     right: 50%;
     width: 30px;
-    background-color: #fc6c3f;
+    background-color: #F15F5F;
     color: #fff;
     text-align: center;
     height: 30px;
@@ -1554,4 +1554,12 @@ button, input, optgroup, select, textarea {
     flex: 1 1 auto;
     text-align: center;
     font-size: 30px;
+}
+
+.bg-dark {
+    background-color: #FFD8D8!important;
+}
+
+.text-white {
+    color: #F15F5F!important;
 }
