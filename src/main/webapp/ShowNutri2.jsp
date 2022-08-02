@@ -86,7 +86,7 @@ margin-right: auto;
 	        // labels -> x축에 들어갈 데이터
 	        datasets: [
 	        	{
-	            label: '합' , // 차트제목
+	            label: '사용자의 일일 섭취량' , // 차트제목
 	            data: [
 	            <%=Kcal.get(udate)%>,
 	            <%=Carbohydrate.get(udate)%>,
@@ -108,7 +108,7 @@ margin-right: auto;
                 'rgba(255, 99, 132, 1)']
 	        	},
 	            {
-		            label: 'refer' , // 차트제목
+		            label: '일일 기준 권장 섭취량' , // 차트제목
 		            data: [
 		            <%=referDto.getKcal()%>,
 		            <%=referDto.getCarbohydrate()%>,

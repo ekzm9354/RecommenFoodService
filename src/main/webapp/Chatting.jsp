@@ -159,8 +159,7 @@ String fromName = request.getParameter("usaUser");
 		});
 		$(document).on('click','#delete',function(){
 			var toName='<%=toName%>'
-			var fromName='<%=fromName%>
-		'
+			var fromName='<%=fromName%>'
 			$.ajax({
 				url : "DeleteChattingAjax",
 				data : {
