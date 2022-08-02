@@ -54,6 +54,10 @@ img {
 
 	
 		<div style="margin-top: 50px; margin-bottom: 50px;">
+		현재 홈페이지에 접속 중 인사람 :
+		<%
+		String ip = (String) session.getAttribute("ip");
+		%>
 			<a href="ChttingFlask"><img src="./img/chatlogo.jpg"></a> 
 		</div>
 
