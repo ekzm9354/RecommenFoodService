@@ -6,4 +6,8 @@
 	<insert id="ChattingInsert" parameterType="ChattingDTO">
 		insert into Chatting values(c_seq.nextval,sysdate,#{toName},#{fromName},#{messeges})
 	</insert>
+	
+	<select id="ChattingAll" parameterType="ChattingDTO" resultType="ChattingDTO">
+	select * from chatting where toName=#{toName} and  fromName =#{fromName} or  toName=#{fromName} and  fromName =#{toName} order by c_date asc
+	</select>
 </mapper>
