@@ -98,28 +98,47 @@
 
 	<!-- 검색창  -->
 
-	<p calss="kimch" style="text-align: center; font-size : 100px" >내 몸은 내가 지킨다...</p>
+	<p calss="kimch" style="text-align: center; font-size: 100px">내 몸은
+		내가 지킨다...</p>
 	<br>
 	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<img src ="https://health.chosun.com/site/data/img_dir/2022/03/03/2022030302148_0.jpg">
 	
-	
-	<div>
-	<<h3 style="text-align: center">step 1</h3>
-	<p style="text-align: center; font-size : 40px">개인별 식단 추천</p>
-	<p style="text-align: center; font-size : 25px">개인의 영양소를 고려한 식단 추천!</p>
-	<h3 style="text-align: center">step 2 </h3>
-	<p style="text-align: center; font-size : 40px">영양제 추천</p>
-	<p style="text-align: center; font-size : 25px">음식에서 얻기힘든 영양소는 영양제를 통해!</p>
-	<h3 style="text-align: center">step 3</h3>
-	<p style="text-align: center; font-size : 40px">만남서비스</p>
-	<p style="text-align: center; font-size : 25px">미모의 여성이 대기하고 있습니다!</p>
-	</div>
+	<img
+		src="https://health.chosun.com/site/data/img_dir/2022/03/03/2022030302148_0.jpg">
+	<br>
+	<br>
+	<br>
 
+	<div style="text-align: center;">
+		
+		<h3>step 1</h3>
+		<p style="font-size: 40px">개인별 메뉴 추천</p>
+		<p style="font-size: 25px">
+			개인의 영양소를 고려한 메뉴 추천!
+		</p>
+		<br>
+		<h3>step 2</h3>
+		<p style="font-size: 40px">영양보충제 추천</p>
+		<p style="font-size: 25px">
+			음식에서 얻기힘든 영양소는 영양보충제를 통해!
+		</p>
+		<br>
+		<h3>step 3</h3>
+		<p style="font-size: 40px">만남서비스</p>
+		<p style="font-size: 25px">
+			미모의 여성이 대기하고 있습니다!
+		</p>
+	</div>
+	<br>
+	<br>
+	<br>
+
+	<div style="text-align: center;">
+		<section>
+			<p style="text-align: center; font-size: 50px">망설이지 마세요</p>
+			<button class="kimch2" type="button">지금 시작</button>
+		</section>
+	</div>
 
 
 
@@ -173,90 +192,89 @@
 
 
 	<script type="text/javascript">
-	document.querySelector('#nutrients').addEventListener('click', function () {
-            if ($('#nutrientstext').text() == '영양 보충제') {
-                $('#nutrientstext').text('닫기')
-                showNutrients()
-            } else {
-                $('#nutrientstext').text('영양 보충제')
-                $("#show").empty()
-             }
-    })
-    
-    function showNutrients() {
-  $("#show").innerHtml
-    $.ajax({
-        type : "GET", 
-        url : "./MainNtrients.jsp",        
-        dataType : "html",
-        error : function(){
-            alert("통신실패!!!!");
-        },
-        success : function(Parse_data){
-            $("#show").append(Parse_data); //div에 받아온 값을 넣는다.
-        }
-         
-    });
-    }
+		document.querySelector('#nutrients').addEventListener('click',
+				function() {
+					if ($('#nutrientstext').text() == '영양 보충제') {
+						$('#nutrientstext').text('닫기')
+						showNutrients()
+					} else {
+						$('#nutrientstext').text('영양 보충제')
+						$("#show").empty()
+					}
+				})
 
-/*------------------------음식--------------------------------------------------  */
-	
-	document.querySelector('#food').addEventListener('click', function () {
-        if ($('#foodtext').text() == '음식') {
-            $('#foodtext').text('닫기')
-            showFoods()
-        } else {
-            $('#foodtext').text('음식')
-            $("#show").empty()
-         }
-})
+		function showNutrients() {
+			$("#show").innerHtml
+			$.ajax({
+				type : "GET",
+				url : "./MainNtrients.jsp",
+				dataType : "html",
+				error : function() {
+					alert("통신실패!!!!");
+				},
+				success : function(Parse_data) {
+					$("#show").append(Parse_data); //div에 받아온 값을 넣는다.
+				}
 
-	function showFoods() {
-  $("#show").innerHtml
-    $.ajax({
-        type : "GET", 
-        url : "./MainFood.jsp",        
-        dataType : "html",
-        error : function(){
-            alert("통신실패!!!!");
-        },
-        success : function(Parse_data){
-            $("#show").append(Parse_data); //div에 받아온 값을 넣는다.
-        }
-         
-    });
-    }
-	
-	
-/*------------------------간식--------------------------------------------------  */
-document.querySelector('#dessert').addEventListener('click', function () {
-        if ($('#desserttext').text() == '디저트') {
-            $('#desserttext').text('닫기')
-            showDessert()
-        } else {
-            $('#desserttext').text('디저트')
-            $("#show").empty()
-         }
-})
+			});
+		}
 
-function showDessert() {
-  $("#show").innerHtml
-    $.ajax({
-        type : "GET", 
-        url : "./MainDessert.jsp",        
-        dataType : "html",
-        error : function(){
-            alert("통신실패!!!!");
-        },
-        success : function(Parse_data){
-            $("#show").append(Parse_data); //div에 받아온 값을 넣는다.
-        }
-         
-    });
-    }
-	
-	
-</script>
+		/*------------------------음식--------------------------------------------------  */
+
+		document.querySelector('#food').addEventListener('click', function() {
+			if ($('#foodtext').text() == '음식') {
+				$('#foodtext').text('닫기')
+				showFoods()
+			} else {
+				$('#foodtext').text('음식')
+				$("#show").empty()
+			}
+		})
+
+		function showFoods() {
+			$("#show").innerHtml
+			$.ajax({
+				type : "GET",
+				url : "./MainFood.jsp",
+				dataType : "html",
+				error : function() {
+					alert("통신실패!!!!");
+				},
+				success : function(Parse_data) {
+					$("#show").append(Parse_data); //div에 받아온 값을 넣는다.
+				}
+
+			});
+		}
+
+		/*------------------------간식--------------------------------------------------  */
+		document.querySelector('#dessert').addEventListener('click',
+				function() {
+					if ($('#desserttext').text() == '디저트') {
+						$('#desserttext').text('닫기')
+						showDessert()
+					} else {
+						$('#desserttext').text('디저트')
+						$("#show").empty()
+					}
+				})
+
+		function showDessert() {
+			$("#show").innerHtml
+			$.ajax({
+				type : "GET",
+				url : "./MainDessert.jsp",
+				dataType : "html",
+				error : function() {
+					alert("통신실패!!!!");
+				},
+				success : function(Parse_data) {
+					$("#show").append(Parse_data); //div에 받아온 값을 넣는다.
+				}
+
+			});
+		}
+	</script>
 
 
 	<!-- ****** Instagram Area Start ****** -->

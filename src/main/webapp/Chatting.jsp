@@ -12,6 +12,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <div >
 <fieldset>
 <legend>여기는 대화목록입니다</legend>
