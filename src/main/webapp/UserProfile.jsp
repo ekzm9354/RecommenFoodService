@@ -23,8 +23,10 @@ button{
 border: 0;
 background: transparent;
 outline: ; 
+color:#F15F5F;
+font-weight : bold;
 }
-#scrollUp {
+/* #scrollUp {
     bottom: 55px;
     font-size: 14px;
     right: 50%;
@@ -36,12 +38,9 @@ outline: ;
     line-height: 30px;
     border-radius: 50%;
     margin-right: -15px;
-}
-
-/* .project-tab {
-    padding: 10%;
-    margin-top: -8%;
 } */
+
+
 
 </style>
 </head>
@@ -104,7 +103,7 @@ outline: ;
 									</tr>
 								</thead>
 								</table>
-								
+								<div id="showNutriButton"></div>
 								<table class="table2" id="userprofile">
 									<!-- 용자프로필 정보를 띄어줄 공간-->
 									
@@ -134,7 +133,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                            <!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -150,7 +149,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -166,7 +165,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -182,7 +181,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -198,7 +197,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                            <!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -214,7 +213,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -230,7 +229,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -246,7 +245,7 @@ outline: ;
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -294,8 +293,16 @@ outline: ;
     <script type="text/javascript" >
     function deleteTable() {
     	
+  	  $("#userprofile").children().remove();
+  	  $("#showNutriButton").children().remove();
+  	  
+    }
+    function deleteTable2() {
+    	
+  	  $("#userprofile").children().remove();  	  
+    }
     
-  	  $("#userprofile").children().remove();}
+    
   $("#showLabel").click(function(){ 
 	 /* $(document).on('click','#showLabel',function(){ */
        abc= $.ajax({
@@ -314,6 +321,11 @@ outline: ;
         
     });
  $("#showNutri").click(function(){
+	 deleteTable()
+	 document.getElementById('showNutriButton').innerHTML=
+	"<tr><th><button type='button' id='showNutriTag'>날짜별</button></th><th><button type='button' id='showNutriTag2'>영양소별</button></th><tr>"})
+	
+	 $(document).on('click', '#showNutriTag' , function(){
         $.ajax({
             type : "GET", 
             url : "./ShowNutri.jsp?id=<%=id %>",        
@@ -322,12 +334,26 @@ outline: ;
                 alert("통신실패!!!!");
             },
             success : function(Parse_data){
-            	deleteTable()
-                $("#userprofile").append(Parse_data); //div에 받아온 값을 넣는다.
+            	deleteTable2()
+                $("#userprofile").prepend(Parse_data); //div에 받아온 값을 넣는다.
             }
-             
         });
-    });
+    	});
+	 $(document).on('click', '#showNutriTag2' , function(){
+        $.ajax({
+            type : "GET", 
+            url : "./ShowNutri2.jsp?id=<%=id %>",        
+            dataType : "html",
+            error : function(){
+                alert("통신실패!!!!");
+            },
+            success : function(Parse_data){
+            	deleteTable2()
+                $("#userprofile").prepend(Parse_data); //div에 받아온 값을 넣는다.
+            }
+        });
+    	});
+ 
  $("#showFood").click(function(){
         $.ajax({
             type : "GET", 

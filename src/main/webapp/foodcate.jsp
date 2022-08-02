@@ -20,13 +20,18 @@ text-align: center;
 }
 .table td, .table th{
 text-align: center;
+
 }
+.table th{
+color: #F15F5F;}
 
 .project-tab a {
-    color:gray;
-    background-color: transparent;
-    border-color: transparent red;
+    color:#F15F5F;
+    background-color :#FFD8D8 ;
+   /*  background-color: transparent ;
+    border-color: transparent #F15F5F; */
     border-bottom: 3px solid !important;
+    border-bottom-color : #F15F5F;
     font-size: 16px;
     font-weight: bold;
 } 
@@ -34,6 +39,14 @@ text-align: center;
 .project-tab .nav-link:hover {
     border: solid;
 } 
+/*여기부터  ************************************************************************  */
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+div,tr,th,td{
+font-family: 'Black Han Sans', sans-serif;
+}
+/*여기까지 구글웹폰트 스타일css  ************************************************************************ */
+
+						
 /* .keyword:active{
 background-color : pink
 animation-fill-mode:forwards;} */
@@ -47,8 +60,14 @@ animation-fill-mode:forwards;} */
     font-size: 16px;
     font-weight: bold;
 } */
+
 </style>
 <!-- <script src="jquery-3.6.0.min.js"></script> -->
+<!--여기부터 ************************************************************************ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+<!--여기까지 구글 웹폰트 링크  ************************************************************************ -->
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -167,7 +186,7 @@ animation-fill-mode:forwards;} */
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> 이쿠조 </a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> 이쿠조 </a> -->
                         </div>
                     </div>
                 </div>
@@ -183,7 +202,7 @@ animation-fill-mode:forwards;} */
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -199,7 +218,7 @@ animation-fill-mode:forwards;} */
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -215,7 +234,7 @@ animation-fill-mode:forwards;} */
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -231,7 +250,7 @@ animation-fill-mode:forwards;} */
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -247,7 +266,7 @@ animation-fill-mode:forwards;} */
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                          <!--   <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -263,7 +282,7 @@ animation-fill-mode:forwards;} */
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
@@ -279,7 +298,7 @@ animation-fill-mode:forwards;} */
                 <div class="yummy-table">
                     <div class="yummy-table-cell">
                         <div class="follow-me text-center">
-                            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a>
+                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
                         </div>
                     </div>
                 </div>
