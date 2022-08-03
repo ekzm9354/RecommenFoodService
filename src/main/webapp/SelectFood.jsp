@@ -53,7 +53,10 @@
 <body>
 
 <%@ include file="./include.jsp"%>
-
+<%-- <%if (request.getParameter("error").equals("on")){ %>
+<script type="text/javascript">
+alert('음식등록먼저하세요')</script>
+<%} %> --%>
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/메인5.jpg);">
@@ -398,23 +401,23 @@
 			</div>
 		</div>
 		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
+		<!-- <div class="welcome-single-slide">
+			Post Thumb
 			<img src="img/food-img/음식16.jpg" alt="">
-			<!-- Overlay Text -->
+			Overlay Text
 			<div class="project_title">
 				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+					<a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
-					</a> -->
+					</a>
 				</div>
 				<a href="#">
 					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+						“I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street
 					</h5>
 				</a>
 			</div>
-		</div>
+		</div> -->
 
 
 	</section> 
@@ -508,7 +511,8 @@
                             	<input name="keyword" type="text" class="form-control" placeholder="food name" aria-label="Enter search term..." aria-describedby="button-search"/>
                                 <!-- <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" /> -->
                                 <!-- <button class="btn btn-primary" id="button-search" type="button">Go!</button> -->
-                               <input type="submit" class="btn btn-primary" id="button-search" value="조회">
+                               <input type="submit" class="btn btn-primary" id="button-search" value="조회"
+                               style=" margin-right: 50px; left: 70px; top: 20px;">
                             </div>
                         </div>
                     </div>
@@ -789,21 +793,26 @@
 
 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Copywrite Text -->
-                    <div class="copy_right_text text-center">
-                        <p>메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="Main.jsp" target="_blank">밥조 영양조</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- Copywrite Text -->
+				<div class="copy_right_text text-center">
+					<p>
+<!-- 						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a> -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
     
      <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+            <div class="container"><p class="m-0 text-center text-white">
+            	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+            </p></div>
         </footer>
 
     <!-- ****** Footer Menu Area End ****** -->

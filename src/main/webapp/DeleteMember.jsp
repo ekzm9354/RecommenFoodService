@@ -71,7 +71,8 @@
 								</div>
 								<form action="#" class="signin-form">
 									<div class="form-group mb-3" style="
-											    padding-top: 50px;
+											    padding-top: 0px;
+											    padding-bottom: 20px;
 											">
 										<label class="label" for="name"></label> 한번 탈퇴하시면 계정을 되돌릴 수
 										없습니다 <br> 그래도 계정을 탈퇴하시겠습니까?
