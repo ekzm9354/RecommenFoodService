@@ -6,7 +6,6 @@
 <%@page import="ikujo.model.ShowFoodDTO"%>
 <%@page import="ikujo.model.NutrientsDTO"%>
 <%@page import="ikujo.model.NutrientsDAO"%>
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>

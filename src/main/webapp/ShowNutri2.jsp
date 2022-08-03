@@ -1,4 +1,3 @@
-<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="ikujo.model.referenceDTO"%>
 <%@page import="ikujo.model.referenceDAO"%>
 <%@page import="java.math.BigDecimal"%>
