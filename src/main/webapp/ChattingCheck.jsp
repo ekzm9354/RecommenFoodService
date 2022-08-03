@@ -14,12 +14,27 @@
 <!-- Favicon -->
 <link rel="icon" href="img/yerimimg/logoimg.ico">
 
+ <!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
+</style>
+
 <!-- 메일창 html 코드 -->
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 </head>
+
+<link href="ChattingCheck.css" rel="stylesheet">
 <body>
+
 	<%
 	String fromName = null;
 	MemberDTO info = (MemberDTO) session.getAttribute("info");
@@ -40,6 +55,20 @@
 	<%
 	}
 	%>
+	
+<!-- top-line 코드 -->
+  <div class="banner">
+    <div class="banner__content">
+      <div class="banner__text">
+        <strong>Reminder:</strong> your subscription expires in 22 days. Renew to avoid account suspension.
+      </div>
+      <button class="banner__close" type="button">
+        <span class="material-icons">
+          close
+        </span>
+      </button>
+    </div>
+  </div>
 
 <!-- 메일창 html 코드 -->
 <div class="container">
@@ -217,6 +246,32 @@
 </div>
 <!-- 여기까지 -->
 
+
+<!-- Footer-->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- Copywrite Text -->
+				<div class="copy_right_text text-center">
+					<p>
+<!-- 						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a> -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+     <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">
+            	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+            </p></div>
+        </footer>
+
+
+
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
@@ -253,6 +308,13 @@
 			}
 		})
 
+	});
+</script>
+
+<!-- top-line js코드 -->
+<script>
+document.querySelector(".banner__close").addEventListener("click", function () {
+	  this.closest(".banner").style.display = "none";
 	});
 </script>
 </html>
