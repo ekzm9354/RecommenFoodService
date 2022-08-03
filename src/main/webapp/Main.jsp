@@ -50,6 +50,16 @@
 	
 }
 </style>
+
+<!-- 스크롤업 -->
+<style>
+#scrollUp {
+	position: absolute;
+	z-index: 2147483647;
+	top: 2660px;
+}
+</style>
+
 </head>
 
 <link href="Main.css" rel="stylesheet">
@@ -397,20 +407,28 @@ function showDessert() {
 
 
 
+<!-- Footer-->
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<!-- Copywrite Text -->
 				<div class="copy_right_text text-center">
 					<p>
-						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
-						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+<!-- 						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a> -->
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	</footer>
+    
+     <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">
+            	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+            </p></div>
+        </footer>
 
 	<!-- ****** Footer Menu Area End ****** -->
 

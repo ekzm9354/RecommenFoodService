@@ -26,6 +26,7 @@ outline: ;
 color:#F15F5F;
 font-weight : bold;
 }
+
 /* #scrollUp {
     bottom: 55px;
     font-size: 14px;
@@ -40,6 +41,33 @@ font-weight : bold;
     margin-right: -15px;
 } */
 
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #F15F5F!important;
+}
+.bg-dark {
+    background-color: #FFD8D8!important;
+}
+.text-white {
+    color: #F15F5F!important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #F15F5F!important;
+    content: ">"!important;
+}
+.bg-dark {
+    background-color: #343a40!important!important;
+}
+</style>
+
+<!-- 스크롤업 -->
+<style>
+#scrollUp {
+	display: none;
+}
 </style>
 
  <!-- 폰트 적용 -->
@@ -270,19 +298,28 @@ font-weight : bold;
     <!-- ****** Our Creative Portfolio Area End ****** -->
 
 
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Copywrite Text -->
-                    <div class="copy_right_text text-center">
-                        <p>메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="Main.jsp" target="_blank">밥조 영양조</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+<!-- Footer-->
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- Copywrite Text -->
+				<div class="copy_right_text text-center">
+					<p>
+<!-- 						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a> -->
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+     <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">
+            	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+            </p></div>
+        </footer>
 
     <!-- ****** Footer Menu Area End ****** -->
 
@@ -295,7 +332,7 @@ font-weight : bold;
     <!-- All Plugins JS -->
     <script src="js/others/plugins.js"></script>
     <!-- Active JS -->
-    <script src="js/active.js"></script>
+ 	<script src="js/active.js"></script>
 	<!--여기까지 하단 사진 맨위스크롤,, -->
 	
 	
