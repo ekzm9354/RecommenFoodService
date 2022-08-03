@@ -17,26 +17,27 @@
 </head>
 <body>
 
-<div class="chat_window">
-    <div class="top_menu">
-        <div class="buttons">
-            <div class="button close"></div>
-            <div class="button minimize"></div>
-            <div class="button maximize"></div>
-        </div>
-        <div id="whos">대화방 목록</div>
-    </div>
-    <ul id="chattingMain">
-    <div id="chattingRoom">
-   <%
+	<div class="chat_window">
+		<div class="top_menu">
+			<div class="buttons">
+				<div class="button close"></div>
+				<div class="button minimize"></div>
+				<div class="button maximize"></div>
+			</div>
+			<div id="whos">대화방 목록</div>
+		</div>
+		<ul id="chattingMain">
+			<div id="chattingRoom">
+				<%
 MemberDTO info = (MemberDTO) session.getAttribute("info");
 String toName = info.getUserid();
 String fromName = request.getParameter("usaUser");
+System.out.print(info);
 %>
 
-			대화상대 :
-			<%=fromName%><br>
-			<%
+				대화상대 :
+				<%=fromName%><br>
+				<%
 	
 	ChattingDTO dto = new ChattingDTO(toName,fromName);
 	ArrayList<ChattingDTO> MessegesAll = (ArrayList) new ChattingDAO().ChattingAll(dto);
@@ -45,38 +46,38 @@ String fromName = request.getParameter("usaUser");
 	if(MessegesAll != null){
 		for(int i = 0; i<MessegesAll.size();i++){
 	%>
-			<%=MessegesAll.get(i).getToName() %> 님 :
-			<%=MessegesAll.get(i).getMesseges() %><bR>
-			<%=MessegesAll.get(i).getC_date()%><br>
-			<%}
+				<%=MessegesAll.get(i).getToName() %>
+				님 :
+				<%=MessegesAll.get(i).getMesseges() %><bR>
+				<%=MessegesAll.get(i).getC_date()%><br>
+				<%}
 		} %>
-    
-    
-    </div>
-    </ul>
-    <div class="bottom_wrapper clearfix">
-        <div class="message_input_wrapper">
-            <input class="message_input" placeholder="Type your message here..." />
-        </div>
-        
-              
-        <div class="textbox">
-            <input type="submit" value="보내기" id="send">
-            
-           <input type="submit" value="나가기" id="out">
-        </div>
-    </div>
-</div>
-<div class="message_template">
-    <li class="message">
-        <div class="avatar"></div>
-        <div class="text_wrapper">
-            <div class="text"></div>
-        </div>
-    </li>
-</div>
-<!--여기부터 스크립트부분  -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+			</div>
+		</ul>
+		<div class="bottom_wrapper clearfix">
+			<div class="message_input_wrapper">
+				<input class="message_input" placeholder="Type your message here..." />
+			</div>
+
+
+			<div class="textbox">
+				<input type="submit" value="보내기" id="send"> <input
+					type="submit" value="나가기" id="out">
+			</div>
+		</div>
+	</div>
+	<div class="message_template">
+		<li class="message">
+			<div class="avatar"></div>
+			<div class="text_wrapper">
+				<div class="text"></div>
+			</div>
+		</li>
+	</div>
+	<!--여기부터 스크립트부분  -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 		
 		
@@ -199,7 +200,7 @@ String fromName = request.getParameter("usaUser");
 			})
 		});
 	</script>
-<!--여기까지 스크립트부분  -->
+	<!--여기까지 스크립트부분  -->
 
 </body>
 </html>
