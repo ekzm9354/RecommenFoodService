@@ -11,6 +11,13 @@
 		from food
 		where foodnm=#{foodNm}))
 	</insert>
+	<insert id="insertFoodPresent" parameterType="FoodDTO">
+		insert into
+		userui(indexu,udate,userid,usernm,foodid)
+		values (U_SEQ.nextval,sysdate,#{userid},#{userNm},(select foodid
+		from food
+		where foodnm=#{foodNm}))
+	</insert>
 	<select id="SelectFood" parameterType="String" resultType="String">
 		select foodnm from food where foodnm like '%'||#{keyword}||'%'
 	</select>

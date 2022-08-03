@@ -18,6 +18,12 @@ public class FoodDAO {
 		session.close();
 		return row;
 	}
+	public int insertFoodPresent(FoodDTO dto) {
+		session = sqlSessionFactory.openSession(true);
+		row = session.insert("insertFoodPresent", dto);
+		session.close();
+		return row;
+	}
 
 	public ArrayList<String> SelectFood(String keyword) {
 		System.out.println(keyword);

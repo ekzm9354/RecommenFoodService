@@ -24,7 +24,7 @@ public class RecommendFoodInsert extends HttpServlet {
 		System.out.println(userNm);
 		System.out.println(foodNm);
 		
-		new FoodDAO().insertFood(new FoodDTO(userId,userNm,foodNm));
+		new FoodDAO().insertFoodPresent(new FoodDTO(userId,userNm,foodNm));
 		
 		RequestDispatcher rd = request.getRequestDispatcher("./RecommendFood.jsp");
 		rd.forward(request, response);

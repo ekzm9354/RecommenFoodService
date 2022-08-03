@@ -36,8 +36,7 @@ String fromName = request.getParameter("usaUser");
 
 			대화상대 :
 			<%=fromName%><br>
-			<%
-	
+	<%
 	ChattingDTO dto = new ChattingDTO(toName,fromName);
 	ArrayList<ChattingDTO> MessegesAll = (ArrayList) new ChattingDAO().ChattingAll(dto);
 	Gson gson = new Gson();
