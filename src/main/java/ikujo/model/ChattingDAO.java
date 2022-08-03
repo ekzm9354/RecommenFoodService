@@ -36,5 +36,11 @@ public class ChattingDAO {
 		session.close();
 		return row;
 	}
+	public ArrayList<ChattingDTO> ChattingCheck(String userid){
+		session=sqlSessionFactory.openSession(true);
+		ArrayList<ChattingDTO> CheckChatting = (ArrayList) session.selectList("ChattingCheck", userid);
+		session.close();
+		return CheckChatting;
+	}
 	
 }

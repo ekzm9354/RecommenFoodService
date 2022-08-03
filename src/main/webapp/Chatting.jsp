@@ -45,7 +45,7 @@ String fromName = request.getParameter("usaUser");
 	if(MessegesAll != null){
 		for(int i = 0; i<MessegesAll.size();i++){
 	%>
-			<%=MessegesAll.get(i).getToName() %>:
+			<%=MessegesAll.get(i).getToName() %> 님 :
 			<%=MessegesAll.get(i).getMesseges() %><bR>
 			<%=MessegesAll.get(i).getC_date()%><br>
 			<%}
@@ -101,9 +101,10 @@ String fromName = request.getParameter("usaUser");
 						success : function(key) {
 							console.log(key)
 							for(var i =0;i<key.length;i++){
-							$('#chattingRoom').last().append(key[i].toName +":")
+							$('#chattingRoom').last().append(key[i].toName +"님 : ")
 							$('#chattingRoom').last().append(key[i].messeges)
 							$('#chattingRoom').last().append(key[i].c_date+"<br>")
+							location.reload()
 							}
 						},
 						/* 실패 시 */
@@ -111,7 +112,6 @@ String fromName = request.getParameter("usaUser");
 							alert('전송실패');
 							console.log(e);
 						} 
-
 					})
 
 				});
@@ -133,7 +133,7 @@ String fromName = request.getParameter("usaUser");
 			$('#chattingMain').append("<div></div>")
 			대화상대 : '<%=fromName%>'
 			for(var i = 0; i<json.length;i++){
-			$('#chattingMain div').last().append(json[i].toName+":")
+			$('#chattingMain div').last().append(json[i].toName+"님 : ")
 			$('#chattingMain div').last().append(json[i].messeges+"<br>")
 			$('#chattingMain div').last().append(json[i].c_date+"<br>")
 			}
@@ -165,7 +165,7 @@ String fromName = request.getParameter("usaUser");
 				/* 성공 시 */
 				success : function(key) {
 					for(var i =0;i<key.length;i++){
-						$('#chattingMain div').last().append(key[i].toName+":")
+						$('#chattingMain div').last().append(key[i].toName+"님 : ")
 						$('#chattingMain div').last().append(key[i].messeges)
 						$('#chattingMain div').last().append(key[i].c_date+"<br>")
 					}
