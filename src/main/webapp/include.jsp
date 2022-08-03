@@ -143,7 +143,7 @@ img {
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
 								<!-- 드롭바 없애기 -->
-								<li class="nav-item"><a class="nav-link" href="./Loin.jsp">프로필</a></li>
+								<li class="nav-item"><a class="nav-link" href="#"onclick="location.href='./Login.jsp'">프로필</a></li>
 								<!-- 드롭바 여기까지 수정 -->
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="./Login.jsp">메뉴 추천</a></li>

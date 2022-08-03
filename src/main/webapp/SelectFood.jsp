@@ -64,6 +64,14 @@
 
 <%@ include file="./include.jsp"%>
 
+<%String error = request.getParameter("error");
+ if(error != null){%>
+	 <script type="text/javascript">
+	 alert('이전에 먹었던 메뉴를 먼저 등록해주세요')
+	 
+	 </script>
+ <%}%>
+
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/메인5.jpg);">
