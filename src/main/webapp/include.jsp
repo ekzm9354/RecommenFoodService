@@ -68,20 +68,28 @@ img {
 				</div>
 				<%
 				} else {
-				String userid = info.getUserid();
-				ArrayList<ChattingDTO> CheckChatting = (ArrayList) new ChattingDAO().ChattingCheck(userid);
+				%>
 
-				if (CheckChatting != null) {
-				%>
-				
-				<a href="ChattingCheck.jsp">메세지가 있습니다</a>
-				<%
-				}
-				%>
 				<div class="col-7 col-sm-6">
 					<div
 						class="signup-search-area d-flex align-items-center justify-content-end">
 						<div class="login_register_area d-flex">
+							<%
+							String userid = info.getUserid();
+							ArrayList<ChattingDTO> CheckChatting = (ArrayList) new ChattingDAO().ChattingCheck(userid);
+							
+							if (CheckChatting.size() > 0) {
+							%>
+							<div class="login">
+							<a href="ChattingCheck.jsp">새로운 메세지가 있습니다</a>
+							</div>
+							<%
+							}else{
+							%>
+							<div class="login">
+							<a>새로운 메세지 없음</a>
+							</div>
+							<%} %>
 							<!-- 로그인  -->
 							<div class="login">
 								<a href="./Logout.do">로그아웃</a>
@@ -93,7 +101,6 @@ img {
 								<a href="./DeleteMember.jsp">회원탈퇴</a>
 							</div>
 						</div>
-
 
 					</div>
 				</div>
