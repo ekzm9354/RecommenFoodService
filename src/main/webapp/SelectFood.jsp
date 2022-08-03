@@ -530,17 +530,17 @@
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">찌개</a></li>
-                                        <li><a href="#!">샐러드</a></li>
-                                        <li><a href="#!">스테이크</a></li>
+                                    <ul class="list-unstyled mb-0" >
+                                        <li><a href="#!" class="foodCategory">찌개</a></li>
+                                        <li><a href="#!" class="foodCategory">샐러드</a></li>
+                                        <li><a href="#!" class="foodCategory">스테이크</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">치킨</a></li>
-                                        <li><a href="#!">피자</a></li>
-                                        <li><a href="#!">스파게티</a></li>
+                                        <li><a href="#!" class="foodCategory">치킨</a></li>
+                                        <li><a href="#!" class="foodCategory">피자</a></li>
+                                        <li><a href="#!" class="foodCategory">스파게티</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -895,6 +895,12 @@
     		init();
     	});
     });
+    
+    $('.foodCategory').on('click',function(){
+    	var keywords = $(this).text()
+    	console.log(keywords)
+    	$('input[name=keyword]').attr('value',keywords)
+    })
     </script>
 </body>
 </html>
