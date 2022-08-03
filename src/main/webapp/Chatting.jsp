@@ -14,6 +14,17 @@
 <!-- Favicon -->
 <link rel="icon" href="img/yerimimg/logoimg.ico">
 <link href="Chat.css" rel="stylesheet">
+ <!-- 폰트 적용 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+<!-- 폰트 스타일 적용 -->
+<style>
+	*{
+		font-family: 'Dongle', sans-serif;
+	}
+</style>
 </head>
 <body>
 
@@ -46,7 +57,7 @@ String fromName = request.getParameter("usaUser");
 	
 	if(MessegesAll != null){
 		for(int i = 0; i<MessegesAll.size();i++){
-	%> <span style="border:1px solid #E5D85C; border-radius: 5px; display:inline-block;width:400px; height:30px; float:right;vertical-align: middle; ">
+	%> <span style="border:2px solid #E5D85C; border-radius: 10px; display:inline-block;width:400px; height:30px; float:right;vertical-align: middle; ">
 			<%=MessegesAll.get(i).getToName() %>:
 			<%=MessegesAll.get(i).getMesseges() %></span><br>
 			<span style="display:inline-block; width:400px; float:right;text-align: right;"><%=MessegesAll.get(i).getC_date()%></span><br>
