@@ -22,18 +22,18 @@ public class InsertFood implements Command {
 		String name = (String) session.getAttribute("name");
 		String foodNm = request.getParameter("foodNm");
 		String udate = request.getParameter("udate");
-		
+		String moveURL = "";
+		System.out.println(foodNm);
+		System.out.println(id);
 		System.out.println(udate);
+		System.out.println(udate);
+			
 		FoodDTO dto = new FoodDTO(udate, id, name, foodNm);
 		int row = new FoodDAO().insertFood(dto);
-		String moveURL ="";
-		
-		if(row >0) {
-			moveURL="./SelectFood.jsp";
-		}else {
-			moveURL ="./insertFood.jsp";
-		}
-		
+		System.out.println("추가되었습니다");
+			if (row > 0) {
+				moveURL = "./SelectFood.jsp";
+			}
 		return moveURL;
 	}
 
