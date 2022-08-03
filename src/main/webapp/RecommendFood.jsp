@@ -1,3 +1,4 @@
+<%@page import="java.net.URLEncoder"%>
 <%@page import="java.util.Random"%>
 <%@page import="ikujo.model.FoodDTO"%>
 <%@page import="ikujo.model.FoodDAO"%>
@@ -73,14 +74,16 @@ padding: 7px;
 margin:10px;
 display: table-cell;
 }
-/* .tab1 {
-border: 1px solid;} */
+
 /*영양제 부분 양 옆 배치 스타일 */
 .col-md-121{
 flex: 1;
 }
 .row1{ /* div안에 버튼(디저트랜덤뽑기눌러주세요) 가운데로 오게하기 */
 display:flex;
+}
+.row2{
+display:block;
 justify-content: center;
 text-align: center;
 }
@@ -91,8 +94,7 @@ color :#F15F5F;
 border:none;
 display: inline-block;
 }
-/* .col-md-122{
-} 여기 크기 수정해보기,, ㅠ*/
+
 
 
 </style>
@@ -118,20 +120,10 @@ display: inline-block;
 	<%
 	
 	if (category == null && id != null) {
+		String keyword = URLEncoder.encode("밥류");
+		response.sendRedirect("http://59.0.147.198:5000/RecommendFood?id="+id+"&ip="+ip+"&category="+keyword);
 	%>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var keyword = '밥류'
-			console.log(keyword)
-			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
-		       console.log("flask로 간다")
-				var link = "http://59.0.147.198:5000/RecommendFood?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
-			location.href = link;
-			location.replace(link);
-			window.open(link);
-		});
-		
-	</script>
+	
 	<%
 	}
 	%>
@@ -208,7 +200,6 @@ display: inline-block;
 					 <!-- 탭 클릭하면 음식추천으로 넘어가고 영양제추천으로 넘어가는식으로 만들기 -->
 					<div class="menutab">
 					<a class="tab1" href="#rice_tab">음식 추천으로 넘어가기</a>
-					<!-- <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> -->
 					<a class="tab1" href="#nav-home-tab">영양보충제로 넘어가기</a>
 					<a class="tab1" href="#desert">디저트 랜덤뽑기</a>
 					</div>
@@ -276,7 +267,9 @@ display: inline-block;
 									</form>
 										</td>
 									</tr>
-									<%}}}%>
+									<%}}}
+										
+									%>
 								</thead>
 								<tbody id="foods">
 								</tbody>
@@ -409,7 +402,10 @@ display: inline-block;
 										</td>
 							
 									</tr>
-									<%}}}%>
+									<%}}}
+									
+									
+									%>
 										
 										
 									</tbody>
@@ -426,22 +422,25 @@ display: inline-block;
 	<!--◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈여기부터 디저트공간 ◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈ -->
 	<section id="tabs" class="project-tab">
 		<div class="container">
-			<div class="row1">
+			<div class="row2">
 				<div class="col-md-122" >
 				<button id="desert">디저트를 랜덤으로 뽑으려면 눌러주세요! </button>
-				<div id="deCate"></div><!--버튼나옴  -->
-				<div style="margin:100px 0px 100px 0px"></div>
-	</div>
-	</div>
-	</div>
+					<div id="deCate"></div><!--위에 버튼 누르면 디저트 카테고리 나옴  -->
+						<div style="margin:100px 0px 100px 0px"></div>
+				</div>
+			</div>
+		</div>
 	</section>
+	
+	<!--*********************** 자바스크립트 *************************** -->
+	
 	<script type="text/javascript">
 	
 		 $(document).on('click', '#desert' , function(){
 		  
 		  $.ajax({
 	            type : "GET", 
-	            url : "./dessertCate.jsp",        
+	            url : "dessertCate.jsp",        
 	            dataType : "html",
 	            error : function(){
 	                alert("통신실패!!!!");
@@ -460,10 +459,10 @@ display: inline-block;
 	<script src="js/bootstrap/popper.min.js"></script>
 	<!-- Bootstrap-4 js -->
 	<script src="js/bootstrap/bootstrap.min.js"></script>
-	<!-- All Plugins JS -->
-	<script src="js/others/plugins.js"></script>
-	<!-- Active JS -->
-	<script src="js/active.js"></script>
+	<!-- All Plugins JS --> <!--top으로 올라가는 스크롤 없애려고 주석처리~  -->
+	<!-- <script src="js/others/plugins.js"></script>
+	<!-- Active JS --> <!--top으로 올라가는 스크롤 없애려고 주석처리~  -->
+	<!-- <script src="js/active.js"></script> -->
 	
 </body>
 </html>

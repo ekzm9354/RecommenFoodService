@@ -1,5 +1,7 @@
 package ikujo.controller;
 
+import java.sql.Timestamp;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -19,8 +21,10 @@ public class InsertFood implements Command {
 		String id = (String) session.getAttribute("id");
 		String name = (String) session.getAttribute("name");
 		String foodNm = request.getParameter("foodNm");
-
-		FoodDTO dto = new FoodDTO(id, name, foodNm);
+		String udate = request.getParameter("udate");
+		
+		System.out.println(udate);
+		FoodDTO dto = new FoodDTO(udate, id, name, foodNm);
 		int row = new FoodDAO().insertFood(dto);
 		String moveURL ="";
 		

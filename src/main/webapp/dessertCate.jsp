@@ -15,7 +15,7 @@ button{
 background-color: transparent;
 color: #F15F5F;}
 .row{ /* div안에 가운데로 오게하기 */
-display:flex;
+display:block;
 justify-content: center;
 
 }
