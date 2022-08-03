@@ -21,6 +21,9 @@
 	<delete id="deleteUi" parameterType="String">
 		delete from userui where userid=#{userid}
 	</delete>
+	<delete id="deleteNutrients" parameterType="String">
+		delete from s_nutrients where ss_userid=#{userid}
+	</delete>
 	<!-- id 중복확인  -->
 	<select id="CheckId" parameterType="String" resultType="String">
 		select nvl(COUNT(*),0) from userinfo where userid=#{userid}

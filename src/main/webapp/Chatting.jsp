@@ -16,7 +16,6 @@
 <link href="Chat.css" rel="stylesheet">
 </head>
 <body>
-<<<<<<< HEAD
 
 <div >
 <fieldset>
@@ -38,6 +37,17 @@
         <div id="whos">대화방 목록</div>
     </div>
     <ul id="chattingMain">
+
+	<div class="chat_window">
+		<div class="top_menu">
+			<div class="buttons">
+				<div class="button close"></div>
+				<div class="button minimize"></div>
+				<div class="button maximize"></div>
+			</div>
+			<div id="whos">대화방 목록</div>
+		</div>
+		<ul id="chattingMain">
     <div id="chattingRoom">
    <%
 MemberDTO info = (MemberDTO) session.getAttribute("info");
@@ -45,49 +55,50 @@ String toName = info.getUserid();
 String fromName = request.getParameter("usaUser");
 %>
 
-			대화상대 :
-			<%=fromName%><br>
-			<%
+			<div style="border:2px solid #BCE55C; border-radius: 10px; padding: 7px;margin: 10px;box-sizing: border-box;display: table-cell;">
+				대화상대 : <%=fromName%><br></div>
+			<div style="margin:10px 0px 10px 0px"></div><!-- 빈공간 만들기  -->
+			
 	
-	ChattingDTO dto = new ChattingDTO(toName,fromName);
+	<%ChattingDTO dto = new ChattingDTO(toName,fromName);
 	ArrayList<ChattingDTO> MessegesAll = (ArrayList) new ChattingDAO().ChattingAll(dto);
 	Gson gson = new Gson();
 	String json = gson.toJson(MessegesAll);
+	
 	if(MessegesAll != null){
 		for(int i = 0; i<MessegesAll.size();i++){
-	%>
+	%> <span style="border:1px solid #E5D85C; border-radius: 5px; display:inline-block;width:400px; height:30px; float:right;vertical-align: middle; ">
 			<%=MessegesAll.get(i).getToName() %>:
-			<%=MessegesAll.get(i).getMesseges() %><bR>
-			<%=MessegesAll.get(i).getC_date()%><br>
+			<%=MessegesAll.get(i).getMesseges() %></span><br>
+			<span style="display:inline-block; width:400px; float:right;text-align: right;"><%=MessegesAll.get(i).getC_date()%></span><br>
 			<%}
 		} %>
-    
+   
     
     </div>
     </ul>
-    <div class="bottom_wrapper clearfix">
-        <div class="message_input_wrapper">
-            <input class="message_input" placeholder="Type your message here..." />
-        </div>
-        
-              
-        <div class="textbox">
-            <input type="submit" value="보내기" id="send">
-            
-           <input type="submit" value="나가기" id="out">
-        </div>
-    </div>
-</div>
-<div class="message_template">
-    <li class="message">
-        <div class="avatar"></div>
-        <div class="text_wrapper">
-            <div class="text"></div>
-        </div>
-    </li>
-</div>
-<!--여기부터 스크립트부분  -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<div class="bottom_wrapper clearfix">
+			<div class="message_input_wrapper">
+				<input class="message_input" placeholder="보낼 메세지를 입력해주세요..." />
+			</div>
+
+
+			<div class="textbox">
+				<input type="submit" value="보내기" id="send"> <input
+					type="submit" value="나가기" id="out">
+			</div>
+		</div>
+	</div>
+	<div class="message_template">
+		<li class="message">
+			<div class="avatar"></div>
+			<div class="text_wrapper">
+				<div class="text"></div>
+			</div>
+		</li>
+	</div>
+	<!--여기부터 스크립트부분  -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script type="text/javascript">
 		
 		
@@ -112,9 +123,10 @@ String fromName = request.getParameter("usaUser");
 						success : function(key) {
 							console.log(key)
 							for(var i =0;i<key.length;i++){
-							$('#chattingRoom').last().append(key[i].toName +":")
+							$('#chattingRoom').last().append(key[i].toName +"님 : ")
 							$('#chattingRoom').last().append(key[i].messeges)
 							$('#chattingRoom').last().append(key[i].c_date+"<br>")
+							location.reload()
 							}
 						},
 						/* 실패 시 */
@@ -122,7 +134,6 @@ String fromName = request.getParameter("usaUser");
 							alert('전송실패');
 							console.log(e);
 						} 
-
 					})
 
 				});
@@ -144,7 +155,7 @@ String fromName = request.getParameter("usaUser");
 			$('#chattingMain').append("<div></div>")
 			대화상대 : '<%=fromName%>'
 			for(var i = 0; i<json.length;i++){
-			$('#chattingMain div').last().append(json[i].toName+":")
+			$('#chattingMain div').last().append(json[i].toName+"님 : ")
 			$('#chattingMain div').last().append(json[i].messeges+"<br>")
 			$('#chattingMain div').last().append(json[i].c_date+"<br>")
 			}
@@ -176,7 +187,7 @@ String fromName = request.getParameter("usaUser");
 				/* 성공 시 */
 				success : function(key) {
 					for(var i =0;i<key.length;i++){
-						$('#chattingMain div').last().append(key[i].toName+":")
+						$('#chattingMain div').last().append(key[i].toName+"님 : ")
 						$('#chattingMain div').last().append(key[i].messeges)
 						$('#chattingMain div').last().append(key[i].c_date+"<br>")
 					}
@@ -210,7 +221,7 @@ String fromName = request.getParameter("usaUser");
 			})
 		});
 	</script>
-<!--여기까지 스크립트부분  -->
+	<!--여기까지 스크립트부분  -->
 
 </body>
 </html>

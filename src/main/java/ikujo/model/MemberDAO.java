@@ -37,6 +37,12 @@ public class MemberDAO {
 		session.close();
 		return row;
 	}
+	public int deleteNutrients(String id) {
+		session = sqlSessionFactory.openSession(true);
+		row = session.delete("deleteNutrients", id);
+		session.close();
+		return row;
+	}
 	public int update(MemberDTO dto) {
 		session = sqlSessionFactory.openSession(true);
 		row = session.update("update",dto);

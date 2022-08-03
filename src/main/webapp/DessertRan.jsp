@@ -9,6 +9,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style type="text/css">
+
+</style>
 </head>
 <body>
 		<div class="tab-content" id="nav-tabContent">
@@ -17,8 +20,8 @@
 							<table class="table" cellspacing="0">
 								<thead>
 									<tr>
-										<th>디저트 사진</th>
-										<th>디저트 이름</th>
+										<th style="background-color: transparent">디저트 사진</th>
+										<th style="background-color: transparent">디저트 이름</th>
 									</tr>
 								</thead>
 								<tbody id="dessert">

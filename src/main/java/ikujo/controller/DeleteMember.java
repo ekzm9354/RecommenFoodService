@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import ikujo.command.Command;
 import ikujo.model.MemberDAO;
+import ikujo.model.MemberDTO;
 
 public class DeleteMember implements Command {
 
@@ -14,19 +15,16 @@ public class DeleteMember implements Command {
 		System.out.println("[DeleteMember]");
 //
 		HttpSession session = request.getSession();
-		String id= (String) session.getAttribute("id");
+		String id = (String) session.getAttribute("id");
 		System.out.println(id);
 
-		int info = new MemberDAO().deleteInfo(id);
+		int nutrient = new MemberDAO().deleteNutrients(id);
 		int ui = new MemberDAO().deleteUi(id);
-		String moveURL = "";
-		if (info > 0 && ui > 0) {
+		int info = new MemberDAO().deleteInfo(id);
+		
 			session.removeAttribute("info");
-			moveURL = "./Main.jsp";
-		} else {
-			moveURL = "./Main.jsp";
-		}
-		return moveURL;
+			//session.invalidate();
+		return "./Main.jsp";
 	}
 
 }

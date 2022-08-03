@@ -1,3 +1,6 @@
+<%@page import="ikujo.model.ChattingDTO"%>
+<%@page import="ikujo.model.ChattingDAO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="ikujo.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -66,10 +69,27 @@ img {
 				<%
 				} else {
 				%>
+
 				<div class="col-7 col-sm-6">
 					<div
 						class="signup-search-area d-flex align-items-center justify-content-end">
 						<div class="login_register_area d-flex">
+							<%
+							String userid = info.getUserid();
+							ArrayList<ChattingDTO> CheckChatting = (ArrayList) new ChattingDAO().ChattingCheck(userid);
+							
+							if (CheckChatting.size() > 0) {
+							%>
+							<div class="login">
+							<a href="ChattingCheck.jsp">새로운 메세지가 있습니다</a>
+							</div>
+							<%
+							}else{
+							%>
+							<div class="login">
+							<a>새로운 메세지 없음</a>
+							</div>
+							<%} %>
 							<!-- 로그인  -->
 							<div class="login">
 								<a href="./Logout.do">로그아웃</a>
@@ -81,7 +101,6 @@ img {
 								<a href="./DeleteMember.jsp">회원탈퇴</a>
 							</div>
 						</div>
-
 
 					</div>
 				</div>
@@ -124,8 +143,7 @@ img {
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
 								<!-- 드롭바 없애기 -->
-								<li class="nav-item"><a class="nav-link"
-									href="./Loin.jsp">프로필</a></li>
+								<li class="nav-item"><a class="nav-link" href="#"onclick="location.href='./Login.jsp'">프로필</a></li>
 								<!-- 드롭바 여기까지 수정 -->
 								<li class="nav-item" id="insertFood"><a class="nav-link"
 									href="./Login.jsp">메뉴 추천</a></li>
@@ -134,14 +152,13 @@ img {
 								<li class="nav-item"><a class="nav-link" href="#"
 									onclick="location.href='foodcate.jsp'">음식</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
-								<li class="nav-item"><a class="nav-link" href="#">디저트
-										</a></li>
+								<li class="nav-item"><a class="nav-link" href="#">디저트 </a></li>
 								<li class="nav-item"><a class="nav-link" href="#">영양보충제</a>
 								</li>
 
+								<li class="nav-item"><a class="nav-link" href="#">만남의 장</a></li>
 								<li class="nav-item"><a class="nav-link"
-									href="#">만남의 장</a></li>
-								<li class="nav-item"><a class="nav-link" href="ikujoteam.jsp">만든이</a></li>
+									href="ikujoteam.jsp">만든이</a></li>
 
 							</ul>
 						</div>
@@ -151,7 +168,7 @@ img {
 						<div class="collapse navbar-collapse justify-content-center"
 							id="yummyfood-nav">
 							<ul class="navbar-nav" id="yummy-nav">
-<!-- 								<li class="nav-item dropdown"><a
+								<!-- 								<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="#"
 									onclick="location.href='UserProfile.jsp'" id="yummyDropdown"
 									role="button" aria-haspopup="true" aria-expanded="false">프로필</a>
@@ -165,13 +182,15 @@ img {
 								<li class="nav-item"><a class="nav-link" href="#"
 									onclick="location.href='foodcate.jsp'">음식</a></li>
 								<!--예림:메인에서 클릭하면 음식카테고리로 넘어가는거 만들었어요  -->
-								<li class="nav-item"><a class="nav-link" href="Dessert2.jsp">디저트
-										</a></li>
+								<li class="nav-item"><a class="nav-link"
+									href="Dessert2.jsp">디저트 </a></li>
 								<li class="nav-item"><a class="nav-link"
 									href="Nutrition.jsp">영양보충제</a></li>
-								<li class="nav-item"><a class="nav-link" href="Chat.jsp">만남의 장</a></li>
-									
-								<li class="nav-item"><a class="nav-link" href="ikujoteam.jsp">만든이</a></li>
+								<li class="nav-item"><a class="nav-link" href="Chat.jsp">만남의
+										장</a></li>
+
+								<li class="nav-item"><a class="nav-link"
+									href="ikujoteam.jsp">만든이</a></li>
 
 
 							</ul>
