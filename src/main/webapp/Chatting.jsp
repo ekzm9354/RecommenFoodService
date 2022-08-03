@@ -28,6 +28,27 @@
 </head>
 <body>
 
+<div >
+<fieldset>
+<legend>여기는 대화목록입니다</legend>
+<table>
+	<thead>대화방 목록</thead>
+	<tbody id="whos">
+		<tr></tr>
+	</tbody>
+</table>
+</fieldset>
+<div class="chat_window">
+    <div class="top_menu">
+        <div class="buttons">
+            <div class="button close"></div>
+            <div class="button minimize"></div>
+            <div class="button maximize"></div>
+        </div>
+        <div id="whos">대화방 목록</div>
+    </div>
+    <ul id="chattingMain">
+
 	<div class="chat_window">
 		<div class="top_menu">
 			<div class="buttons">
