@@ -73,7 +73,12 @@ margin-right: auto;
 		K.add(dto.getK().intValue());
 		VitaminB.add(dto.getVitaminB().intValue());
 		VitaminC.add(dto.getVitaminC().intValue());
-		}%>
+		}
+		
+		System.out.println(VitaminC.get(udate));
+		System.out.println(referDto.getVitaminC());
+		
+		%>
 		
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var myChart = new Chart(ctx, {
@@ -87,18 +92,18 @@ margin-right: auto;
 	        	{
 	            label: '사용자의 일일 섭취량' , // 차트제목
 	            data: [
-	            <%=Kcal.get(udate)%>,
-	            <%=Carbohydrate.get(udate)%>,
-	            <%=Protein.get(udate)%>,
-	            <%=Fat.get(udate)%>,
-	            <%=Sugar.get(udate)%>,
-	            <%=Ca.get(udate)%>,
-	            <%=Fe.get(udate)%>,
-	            <%=Mg.get(udate)%>,
-	            <%=Na.get(udate)%>,
-	            <%=K.get(udate)%>,
-	            <%=VitaminB.get(udate)%>,
-	            <%=VitaminC.get(udate)%>
+	            (<%=Kcal.get(udate)%>/<%=referDto.getKcal()%>*100)>100? 100:<%=Kcal.get(udate)%>/<%=referDto.getKcal()%>*100,
+	            (<%=Carbohydrate.get(udate)%>/<%=referDto.getCarbohydrate()%>*100)>100? 100:<%=Carbohydrate.get(udate)%>/<%=referDto.getCarbohydrate()%>*100,
+	            (<%=Protein.get(udate)%>/<%=referDto.getProtein()%>*100)>100? 100:<%=Protein.get(udate)%>/<%=referDto.getProtein()%>*100,
+	            (<%=Fat.get(udate)%>/<%=referDto.getFat()%>*100)>100? 100:<%=Fat.get(udate)%>/<%=referDto.getFat()%>*100,
+	            (<%=Sugar.get(udate)%>/<%=referDto.getSugar()%>*100)>100? 100:<%=Sugar.get(udate)%>/<%=referDto.getSugar()%>*100,
+	            (<%=Ca.get(udate)%>/<%=referDto.getCa()%>*100)>100? 100:<%=Ca.get(udate)%>/<%=referDto.getCa()%>*100,
+	            (<%=Fe.get(udate)%>/<%=referDto.getFe()%>*100)>100? 100:<%=Fe.get(udate)%>/<%=referDto.getFe()%>*100,
+	            (<%=Mg.get(udate)%>/<%=referDto.getMg()%>*100)>100? 100:<%=Mg.get(udate)%>/<%=referDto.getMg()%>*100,
+	            (<%=Na.get(udate)%>/<%=referDto.getNa()%>*100)>100? 100:<%=Na.get(udate)%>/<%=referDto.getNa()%>*100,
+	            (<%=K.get(udate)%>/<%=referDto.getK()%>*100)>100? 100:<%=K.get(udate)%>/<%=referDto.getK()%>*100,
+	            (<%=VitaminB.get(udate)%>/<%=referDto.getVitaminB()%>*100)>100? 100:<%=VitaminB.get(udate)%>/<%=referDto.getVitaminB()%>*100,
+	            (<%=VitaminC.get(udate)%>/<%=referDto.getVitaminC()%>*100)>100? 100:<%=VitaminC.get(udate)%>/<%=referDto.getVitaminC()%>*100 ,
 	            ],
 	           /* 컬러 넣기 */
 	            backgroundColor: [
@@ -106,7 +111,7 @@ margin-right: auto;
            		 borderColor: [
                 'rgba(255, 99, 132, 1)']
 	        	},
-	            {
+	         <%--    {
 		            label: '일일 기준 권장 섭취량' , // 차트제목
 		            data: [
 		            <%=referDto.getKcal()%>,
@@ -126,7 +131,7 @@ margin-right: auto;
 		                'rgba(153, 102, 255, 0.2)'],
 		            borderColor: [
 		                'rgba(153, 102, 255, 1)']
-	            },
+	            }, --%>
 	            
 	            
 	            ]		  
@@ -134,9 +139,15 @@ margin-right: auto;
     },
     options: {
         scales: {
-            y: {
-               beginAtZero: true 
-            }
+        	yAxes: [{				
+        		display: true,				
+        		ticks: {					
+        			suggestedMax: 100,    // minimum will be 0, unless there is a lower value.	
+        			// OR
+        			beginAtZero: true  
+        			 // minimum value will be 0.
+        			}			
+        	}]
         }
     }
 });
