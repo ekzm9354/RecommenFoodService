@@ -41,7 +41,7 @@
 /* border:1px solid; */
 text-align: center;
 }
-.tab1, .tab2{/*메뉴추천탭,영양제추천탭 스타일 (수정하기) */
+.tab1{/*메뉴추천탭,영양제추천탭,디저트랜덤탭 스타일 (수정하기) */
 background-color: pink;
 color: maroon;
 padding: 15px 25px;
@@ -77,6 +77,7 @@ flex: 1;
 .row1{
 display:flex;
 }
+
 
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -193,7 +194,7 @@ display:flex;
 					<a class="tab1" href="#rice_tab">음식 추천으로 넘어가기</a>
 					<!-- <a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a> -->
 					<a class="tab1" href="#nav-home-tab">영양보충제로 넘어가기</a>
-					<a class="tab1" href="#">디저트로 넘어가기</a>
+					<a class="tab1" href="#desert">디저트 랜덤뽑기</a>
 					</div>
 				
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
@@ -226,13 +227,13 @@ display:flex;
 							<table class="table">
 								<thead>
 									<tr>
-										<th>음식 사진</th>
-										<th>음식 이름</th>
-										<th>칼로리</th>
-										<th>탄수화물</th>
-										<th>단백질</th>
-										<th>지방</th>
-										<th>선택</th>
+										<th style="background-color: transparent">음식 사진</th>
+										<th style="background-color: transparent">음식 이름</th>
+										<th style="background-color: transparent">칼로리</th>
+										<th style="background-color: transparent">탄수화물</th>
+										<th style="background-color: transparent">단백질</th>
+										<th style="background-color: transparent">지방</th>
+										<th style="background-color: transparent">선택</th>
 										<%
 										int i = 0;
 										String[] menu = request.getParameterValues("menu");
@@ -303,9 +304,9 @@ display:flex;
 								<thead>
 									<tr>
 										<!--  데이터를 요청해줄 버튼 -->
-										<th>영양보충제 이미지</th>
-										<th>영양보충제 이름</th>
-										<th>선택</th>
+										<th style="background-color: transparent">영양보충제 이미지</th>
+										<th style="background-color: transparent">영양보충제 이름</th>
+										<th style="background-color: transparent">선택</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -399,13 +400,14 @@ display:flex;
 								</table>
 							</div>
 						</div>
+				<div style="margin:100px 0px 100px 0px"></div><!-- 빈공간 만들기  -->
 				</div><!--<div class="col-md-121">끝  -->
 				<!-----------------------------------여기까지 쓰세요--------------------------------------- -->
 			</div><!--<div class="row">끝  -->
 		</div>
 	</section>
 
-	<!--여기부터 디저트공간  -->
+	<!--◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈여기부터 디저트공간 ◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈ -->
 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row1">
@@ -433,14 +435,10 @@ display:flex;
 	                $("#deCate").prepend(Parse_data); //div에 받아온 값을 넣는다.
 	            }
 	       	 });
-	    	  
-		
 	})
-	
-	
 	</script>
+	<!--◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈여기까지 디저트공간◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈  -->
 	
-	<!--여기까지 디저트공간  -->
 	<script src="js/jquery/jquery-2.2.4.min.js"></script>
 	<!-- Popper js -->
 	<script src="js/bootstrap/popper.min.js"></script>
