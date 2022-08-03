@@ -29,7 +29,7 @@ margin-right: auto;
 </head>
 <body>
 	<%
-	String id = "zxc";/* request.getParameter("id"); */
+	String id = request.getParameter("id");
 	int udate =Integer.parseInt(request.getParameter("udate")); 
 	ArrayList<referenceDTO> userAvgNutri = new ShowFoodDAO().userAvgNutri(id);
 	referenceDTO referDto = new referenceDAO().referData(id);
