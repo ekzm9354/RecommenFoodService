@@ -13,35 +13,12 @@
 <link rel="icon" href="img/yerimimg/logoimg.ico">
 <link href="FoodMain.css" rel="stylesheet">
 <link href="FoodMain2.css" rel="stylesheet">
+<link href="FoodMain3.css" rel="stylesheet">
 <script
 	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	
-<!-- 조회버튼 -->
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<title>Awesome Search Box</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-<!-- serch 템플릿 -->
-<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<title>Animated Dynamic Form</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	 -->
-	 
-<!-- search 코드 -->
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-
  <!-- 폰트 적용 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,6 +30,11 @@
 		font-family: 'Dongle', sans-serif;
 	}
 </style>
+
+<!-- real search 코드 -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -117,196 +99,121 @@
 	<a href="./SelectFood.jsp"><button>조회하기</button></a>
 	<br> --%>
 
-<!-- search 템플릿 html코드 -->
-<%-- 	<dvi class="container h-100">
-	<div class="d-flex justify-content-center">
-		<div class="card mt-5 col-md-4 animated bounceInDown myForm">
-			<div class="card-header">
-				<h4>먹었던 음식을 등록하세요</h4>
-			</div>
-			<div class="card-body">
-				<form>
-					<div id="dynamic_container">
-						<div class="input-group">
-							<div class="input-group-prepend">
-								<span class="input-group-text br-15"><i class="fas fa-user-graduate"></i></span>
-							</div>
-							<input type="date" class="form-control"/>
-						</div>
-<!-- 						<div class="input-group mt-3">
-							<div class="input-group-prepend">
-								<span class="input-group-text br-15"><i class="fas fa-phone-square"></i></span>
-							</div>
-							<input type="text" placeholder="등록할 음식" class="form-control"/> -->
-							<%
-								info = (MemberDTO) session.getAttribute("info");
-								session.setAttribute("id", info.getUserid());
-								session.setAttribute("name", info.getUserNm());
-								String foodNm = request.getParameter("food");
-								%>
-								<%
-								if (foodNm != null) {
-								%>
-								<form action="InsertFood.do" method="post">
-							<div class="input-group mt-3">
-								<div class="input-group-prepend">
-										<span class="input-group-text br-15"><i class="fas fa-phone-square"></i></span>
-								</div>
-									<input type="text" name="foodNm" value="<%=foodNm%>" class="form-control"/>
-								<div>
-									<button type="submit" value="등록" class="btn btn-success btn-sm float-right submit_btn"><i class="fas fa-arrow-alt-circle-right"></i> 등록</button>
-								</div>
-								</form>
-								<%
-								} else {
-								%>
-								<div class="input-group mt-3">
-									<div class="input-group-prepend">
-											<span class="input-group-text br-15"><i class="fas fa-phone-square"></i></span>
-									</div>
-									<input type="text" placeholder="등록할 음식" class="form-control"/>
-								
-								<% } %>
-						</div>
-					</div>
-				</form>
-			</div>
-			<div class="card-footer">
-				<div class="container h-100">
-			      <div class="d-flex justify-content-center h-100">
-			        <div class="searchbar">
-			          <input class="search_input" type="text" name="" placeholder="돋보기 버튼을 클릭">
-			          <a href="SelectFood.jsp" class="search_icon" id="search"><i class="fas fa-search"></i></a>
-			        </div>
-			      </div>
-			    </div>
-				<!-- <a class="btn btn-secondary btn-sm" id="add_more"><i class="fas fa-plus-circle"></i> Add</a> -->
-				<!-- <a class="btn btn-secondary btn-sm" id="remove_more"><i class="fas fa-trash-alt"></i> Remove</a> -->
-				<!-- <button class="btn btn-success btn-sm float-right submit_btn"><i class="fas fa-arrow-alt-circle-right"></i> Submit</button> -->
-			</div>
+
+	<!-- real search 코드 -->
+	<section class="login-block">
+    <div class="container">
+	<div class="row">
+		<div class="col-md-4 login-sec" style="
+    margin-bottom: 0px;
+    margin-top: -50;
+    border-top-width: 50px;
+    padding-top: 10px;
+    margin-left: 150px;
+  ">
+		    <h2 class="text-center">음 식 등 록</h2>
+		    <div class="login-form">
+  <div class="form-group">
+    <label for="exampleInputEmail1" class="text-uppercase">날짜</label>
+    <input type="date" class="form-control">
+    <!-- <input type="text" class="form-control" placeholder=""> -->
+    
+    <%
+	info = (MemberDTO) session.getAttribute("info");
+	session.setAttribute("id", info.getUserid());
+	session.setAttribute("name", info.getUserNm());
+	String foodNm = request.getParameter("food");
+	%>
+	<%
+	if (foodNm != null) {
+	%>
+
+<form action="InsertFood.do" method="post">
+	  </div>
+	  <div class="form-group">
+	    <label for="exampleInputPassword1" class="text-uppercase">음식 이름</label>
+	    <!-- <input type="password" class="form-control" placeholder=""> -->
+	    <input type="text" name="foodNm" value="<%=foodNm%>" class="form-control" placeholder="음식명">
+	  </div>
+	    <div class="form-check">
+	<!--     <label class="form-check-label">
+	      <input type="checkbox" class="form-check-input">
+	      <small>Remember Me</small>
+	    </label> -->
+	    <button type="submit" class="btn btn-login float-right"
+	    style="border-right-width: 1px;margin-right: 45px;margin-top: 20px;padding-top: 0px;"
+	    >등록</button>
+	  </div>
+</form>  
+	<%
+	}
+	%>
+	  
+	</div>
+	<div class="copy-text" style="margin-bottom: 20px;" 
+	style=" margin-bottom: 20px; left: 70px;"/* 가운데 정렬 */
+	> 
+		밥줘 영양줘 <i class="fa fa-heart"></i> by <a href="./SelectFood.jsp">음식 조회</a></div>
+	</div>
+
+
+		
+		
+		<!-- <div class="col-md-8 banner-sec"> -->
+       <!--      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                 <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                  </ol>
+            <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img class="d-block img-fluid" src="./img/food1.jpg" width=360px height=450px alt="First slide"
+      style="
+    margin-left: 100px;
+		">
+      <div class="carousel-caption d-none d-md-block"> -->
+      
+      
+      
+       <!--  <div class="banner-text">
+            <h2>This is Heaven</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+        </div>	 -->
+<!--   </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="./img/food3.jpg" width=360px height=450px alt="First slide"
+      style="
+    margin-left: 100px;
+		">
+      <div class="carousel-caption d-none d-md-block"> -->
+      
+      
+      
+       <!--  <div class="banner-text">
+            <h2>This is Heaven</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+        </div>	 -->
+    </div>
+    </div>
+<!--     <div class="carousel-item">
+      <img class="d-block img-fluid" src="./img/food2/jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <div class="banner-text">
+            <h2>This is Heaven</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+        </div>	
+    </div>
+  </div> -->
+            </div>	   
+		    
 		</div>
 	</div>
-	</dvi> --%>
-	
-	<!-- Search 코드 -->
-<div class="container">
-
-<div class="row" style="margin-top:20px">
-    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-		<form role="form">
-			<fieldset>
-				<h2>Food Register</h2>
-				<hr class="colorgraph">
-				<div class="form-group">
-					<input type="date" class="form-control input-lg">
-                    <!-- <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address"> -->
-				</div>
-				
-						<%
-						info = (MemberDTO) session.getAttribute("info");
-						session.setAttribute("id", info.getUserid());
-						session.setAttribute("name", info.getUserNm());
-						String foodNm = request.getParameter("food");
-						%>
-						<%
-						if (foodNm != null) {
-						%>
-					<form action="InsertFood.do" method="post">
-				
-				<div class="form-group">
-<!--                     <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password"> --> 
-	                   <input type="text" name="foodNm" value="<%=foodNm%>" class="form-control input-lg" placeholder="food name">
-				</div>
-				<hr class="colorgraph">
-				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-6">
-                        <input type="submit" class="btn btn-lg btn-success btn-block" style="
-						    margin-left: 30px;
-						" value="Register">
-					</div>
-<!-- 					<div class="col-xs-6 col-sm-6 col-md-6">
-						<a href="SelectFood.jsp" class="btn btn-lg btn-primary btn-block">Search</a>
-					</div> -->
-						<%
-						} else{
-						%>
-						<div class="form-group">
-		                    <input type="text" name="foodNm" class="form-control input-lg" placeholder="food name">
-						</div>
-							<% } %>
-			<hr class="colorgraph">
-				<div class="row">
-					<div class="col-xs-6 col-sm-6 col-md-6">
-                        <a href="SelectFood.jsp" class="btn btn-lg btn-primary btn-block" style="
-							    padding-left: -10;
-							    margin-left: 30px;
-							">Search</a>
-					</div>
-				</div>
-			</fieldset>
-		</form>
-	</div>
 </div>
-
-</div>
+</section>
 	
 	
-<%-- 	
-			<div class="container">
-		
-		<div class="row" style="margin-top:20px">
-		    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-				<form role="form">
-					<fieldset>
-						<h2>Register</h2>
-						<hr class="colorgraph">
-						<div class="form-group">
-		                    <input type="date" class="form-control input-lg">
-						</div>
-						
-						<%
-						info = (MemberDTO) session.getAttribute("info");
-						session.setAttribute("id", info.getUserid());
-						session.setAttribute("name", info.getUserNm());
-						String foodNm = request.getParameter("food");
-						%>
-						<%
-						if (foodNm != null) {
-						%>
-					<form action="InsertFood.do" method="post">
-						
-						<div class="form-group">
-		                    <input type="text" name="foodNm" value="<%=foodNm%>" class="form-control input-lg" placeholder="food name">
-						</div>
-<!-- 						<span class="button-checkbox">
-							<button type="button" class="btn" data-color="info">Remember Me</button>
-		                    <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
-							<a href="" class="btn btn-link pull-right">Forgot Password?</a>
-						</span> -->
-						<hr class="colorgraph">
-						<div class="row">
-							<div class="col-xs-6 col-sm-6 col-md-6">
-		                        <input type="submit" class="btn btn-lg btn-success btn-block" value="Register">
-							</div>
-												
-					</form>
-							<%
-							} else{
-							%>
-						<div class="form-group">
-		                    <input type="text" name="foodNm" class="form-control input-lg" placeholder="food name">
-						</div>
-							<% } %>
-							<div class="col-xs-6 col-sm-6 col-md-6">
-								<a href="" class="btn btn-lg btn-primary btn-block">Search</a>
-							</div> 
-						</div>
-					</fieldset>
-				</form>
-			</div>
-		</div>
-		
-		</div> --%>
 
 <%-- 원래 코드
  	<section id="tabs" class="project-tab">
@@ -515,7 +422,9 @@
 
 
         <div class="container">
-            <div class="row">
+            <div class="row" 
+            style=" width: 2000px; margin-left: 70px;" /* 가운데 정렬 */
+            >
                 <div class="col-12">
                     <!-- Copywrite Text -->
                     <div class="copy_right_text text-center">
@@ -524,7 +433,6 @@
                 </div>
             </div>
         </div>
-    </footer>
 
     <!-- ****** Footer Menu Area End ****** -->
 
@@ -539,82 +447,9 @@
     <!-- Active JS -->
     <script src="js/active.js"></script>
     
-    <!-- search js -->
-    <script>
-		$(function(){
-    $('.button-checkbox').each(function(){
-		var $widget = $(this),
-			$button = $widget.find('button'),
-			$checkbox = $widget.find('input:checkbox'),
-			color = $button.data('color'),
-			settings = {
-					on: {
-						icon: 'glyphicon glyphicon-check'
-					},
-					off: {
-						icon: 'glyphicon glyphicon-unchecked'
-					}
-			};
 
-		$button.on('click', function () {
-			$checkbox.prop('checked', !$checkbox.is(':checked'));
-			$checkbox.triggerHandler('change');
-			updateDisplay();
-		});
-
-		$checkbox.on('change', function () {
-			updateDisplay();
-		});
-
-		function updateDisplay() {
-			var isChecked = $checkbox.is(':checked');
-			// Set the button's state
-			$button.data('state', (isChecked) ? "on" : "off");
-
-			// Set the button's icon
-			$button.find('.state-icon')
-				.removeClass()
-				.addClass('state-icon ' + settings[$button.data('state')].icon);
-
-			// Update the button's color
-			if (isChecked) {
-				$button
-					.removeClass('btn-default')
-					.addClass('btn-' + color + ' active');
-			}
-			else
-			{
-				$button
-					.removeClass('btn-' + color + ' active')
-					.addClass('btn-default');
-			}
-		}
-		function init() {
-			updateDisplay();
-			// Inject the icon if applicable
-			if ($button.find('.state-icon').length == 0) {
-				$button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
-			}
-		}
-		init();
-	});
-});
-	</section>
-	<script type="text/javascript">
-
-	$(document).on('click','#search',()=>{
-	
-	
-		console.log("info null")
-		var link = "SelectFood.jsp";
-		location.href=link;
-		location.replace(link);
-		window.open(link);
-	
-	
-	})
-	
-	/* search 템플릿 */
+	<!-- search 템플릿 -->
+	<script>
 		var i=0;
 	$(document).ready(function(){
      $('#add_more').on('click', function(){

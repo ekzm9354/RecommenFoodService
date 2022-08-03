@@ -31,9 +31,13 @@
 	text-align: center;
 }
 
-.table th {
-	text-align: center;
+  .table th{
+ 	 
+	 text-align:center;
+}  
+#nuimage{ padding-right: 180px;
 }
+ 
 </style>
 </head>
 
@@ -43,34 +47,24 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<section class="categories_area clearfix" id="about">
+		<div class="container">
 	<div class="tab-content" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="nav-home" role="tabpanel"
 			aria-labelledby="nav-home-tab">
+			
 			<table class="table" cellspacing="0">
 				<thead>
 					<tr>
-						<th>영양제 사진</th>
-						<th>영양제 이름</th>
+						<th id = nuimage>영양제 사진</th>
+						 <th>영양제 이름</th> 
 					</tr>
 
 				</thead>
+			
+				
+				
+				
 				
 				<tbody id="MainNutrients">
 					<%
@@ -84,9 +78,9 @@
 						<%
 						NutrientsDTO dto = nutriList.get(i);
 						%>
-						<td><img class="Nutrientsimage" src="<%=dto.getImg()%>" width="400px"
+						<td ><img class="Nutrientsimage" style="float: left; " src="<%=dto.getImg()%>" width=400px"
 							height="300px"></td>
-						<td><%=dto.getNutnm()%></td>
+						<td><font size = "6"><%=dto.getNutnm()%></font></td>
 					</tr>
 
 					<%
@@ -105,7 +99,8 @@
 			</table>
 		</div>
 	</div>
-
+</div>
+</section>
 
 
 

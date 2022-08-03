@@ -31,21 +31,45 @@
 .table th {
 	text-align: center;
 }
+div{
+margin: auto;
+height: auto;}
+
+.Dessertimage{padding-left: 150px;
+}
+
+
+
+
+/* .table td{
+text-align: center;
+} */
+
+
 </style>
 </head>
 
 <body>
+<!--여기부터  -->
+
+<section class="categories_area clearfix" id="about">
+		<div class="container">
 <div class="tab-content" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="nav-home" role="tabpanel"
 			aria-labelledby="nav-home-tab">
+			
 			<table class="table" cellspacing="0">
 				<thead>
 					<tr>
-						<th>디저트 사진</th>
+						<th id = deimage >디저트 사진</th>
 						<th>디저트 이름</th>
 					</tr>
 
 				</thead>
+				
+				
+				
+				
 				
 				<tbody id="MainDessert">
 				<%
@@ -56,14 +80,12 @@
 						<%
 						DessertDTO dto = riceList.get(i);
 						%>
-						<td><img class="Dessertimage" src="dfile/<%=dto.getImg()%>" width="400px"
-							height="250px"></td>
-						<td><%=dto.getDname()%></td>
+						<td width="660px"><img class="Dessertimage" style="float: left; " src="dfile/<%=dto.getImg()%>" width="500px"
+							height="300px"></td>
+						<td><font size = "6"><%=dto.getDname()%></font></td>
 					</tr>
 
-					<%
-					}
-					%>
+<%}%>
 					</div>
 					<script>
 					
@@ -77,6 +99,11 @@
 			</table>
 		</div>
 	</div>
+	<!--여기부터  -->
+	<!--  </div> -->
+	</div>
+	</section>
+	<!--여기까지  추가했음 -->
 
 
 </body>

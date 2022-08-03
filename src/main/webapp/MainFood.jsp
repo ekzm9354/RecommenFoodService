@@ -31,10 +31,18 @@
 .table th {
 	text-align: center;
 }
+.table td{
+table-layout:fixed;}
+
+
+
+.Foodimage{padding-left: 100px;}
 </style>
 </head>
 
 <body>
+<section class="categories_area clearfix" id="about">
+		<div class="container">
 <div class="tab-content" id="nav-tabContent">
 		<div class="tab-pane fade show active" id="nav-home" role="tabpanel"
 			aria-labelledby="nav-home-tab">
@@ -56,9 +64,9 @@
 						<%
 						FoodcateDTO dto = riceList.get(i);
 						%>
-						<td><img class="Foodimage" src="file/<%=dto.getImg()%>" width="400px"
+						<td width="660px"><img class="Foodimage" style="float: left;"src="file/<%=dto.getImg()%>" width="500px"
 							height="250px"></td>
-						<td><%=dto.getFoodnm()%></td>
+						<td><font size = "6"><%=dto.getFoodnm()%></font></td>
 					</tr>
 
 					<%
@@ -77,6 +85,8 @@
 			</table>
 		</div>
 	</div>
+	</div>
+	</section>
 
 
 </body>

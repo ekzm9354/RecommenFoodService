@@ -25,9 +25,15 @@ public class MemberDAO {
 		return info;
 	}
 
-	public int Delete(String id) {
+	public int deleteInfo(String id) {
 		session = sqlSessionFactory.openSession(true);
-		row = session.delete("delete", id);
+		row = session.delete("deleteInfo", id);
+		session.close();
+		return row;
+	}
+	public int deleteUi(String id) {
+		session = sqlSessionFactory.openSession(true);
+		row = session.delete("deleteUi", id);
 		session.close();
 		return row;
 	}
