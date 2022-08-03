@@ -154,7 +154,7 @@ margin-right:auto;
 									</div>
 									<div class="timeline-body">
 										<p>
-											email:<br> 역할:팀원<br> 맡은부분:<br> 별칭: 리타<br>
+											email:suji04000809@gmail.com<br> 역할:중재 담당<br> 맡은부분:Front<br> 별칭: 리타<br>
 										</p>
 									</div>
 								</div>

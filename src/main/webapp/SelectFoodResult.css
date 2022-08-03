@@ -9,10 +9,10 @@
 	margin-bottom: 40px;
 	width: 80%;
 	height: 40px;
-	background: #fc6c3f;
+	background: #FFD8D8;
 	background-position: left;
 	background-size: 200%;
-	color: white;
+	color: #F15F5F;
 	font-weight: bold;
 	border: none;
 	cursor: pointer;
@@ -22,4 +22,22 @@
 
 .btn:hover {
 	background-position: right;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 0.75rem;
+    font-size: 25px!important;
+    line-height: 1.25;
+    border-radius: 0.25rem;
+    transition: all .15s ease-in-out;
 }

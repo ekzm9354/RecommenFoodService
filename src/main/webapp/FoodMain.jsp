@@ -42,6 +42,16 @@
 <script
 	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+
+<!-- 스크롤업 -->
+<style>
+#scrollUp {
+	position: absolute;
+	z-index: 2147483647;
+	top: 1500px;
+	display: block;
+}
+</style>
 </head>
 <body>
 	<%@ include file="./include.jsp"%>
@@ -139,7 +149,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 login-sec"
-						style="margin-bottom: 0px; margin-top: -50; border-top-width: 50px; padding-top: 10px; margin-left: 150px;">
+						style="margin-bottom: 0px; margin-top: -50; border-top-width: 50px; padding-top: 10px; margin-left: 100px; left: 80px;">
 						<h2 class="text-center">음 식 등 록</h2>
 						<div class="login-form">
 							<div class="form-group">
@@ -177,47 +187,96 @@
 	</div>
 
 
+<!-- 이미지 -->
+
+	 <!-- <div class="col-md-8 banner-sec"> -->
+	<div style="margin-left: 100px;">
+		<div id="carouselExampleIndicators" class="carousel slide"
+			data-ride="carousel">
+			<ol class="carousel-indicators" style="margin-left: 160px;">
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"
+					class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+			</ol>
 
 
-	<!-- <div class="col-md-8 banner-sec"> -->
-	<!--      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                 <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                  </ol>
-            <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <img class="d-block img-fluid" src="./img/food1.jpg" width=360px height=450px alt="First slide"
-      style="
-    margin-left: 100px;
-		">
-      <div class="carousel-caption d-none d-md-block"> -->
+			<div class="carousel-inner" role="listbox">
+
+				<div class="carousel-item active" style="margin-top: 100px;">
+					<img class="d-block img-fluid" src="./img/foodmain/food1.jpg"
+						width=360px height=450px alt="First slide"
+						style="margin-left: 100px;">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+
+
+				<div class="carousel-item" style="margin-top: 100px;">
+					<img class="d-block img-fluid" src="./img/foodmain/food2.jpg"
+						width=360px height=450px alt="First slide"
+						style="margin-left: 100px;">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+
+
+				<div class="carousel-item" style="margin-top: 100px;">
+					<img class="d-block img-fluid" src="./img/foodmain/food3.jpg"
+						width=360px height=450px alt="First slide"
+						style="margin-left: 100px;">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+
+
+				<div class="carousel-item" style="margin-top: 100px;">
+					<img class="d-block img-fluid" src="./img/foodmain/food4.jpg"
+						width=360px height=450px alt="First slide"
+						style="margin-left: 100px;">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+
+
+				<div class="carousel-item" style="margin-top: 100px;">
+					<img class="d-block img-fluid" src="./img/foodmain/food5.jpg"
+						width=360px height=450px alt="First slide"
+						style="margin-left: 100px;">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+
+
+				<div class="carousel-item" style="margin-top: 100px;">
+					<img class="d-block img-fluid" src="./img/foodmain/food6.jpg"
+						width=360px height=450px alt="First slide"
+						style="margin-left: 100px;">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+
+
+				<div class="carousel-item" style="margin-top: 100px;">
+					<img class="d-block img-fluid" src="./img/foodmain/food7.jpg"
+						width=360px height=450px alt="First slide"
+						style="margin-left: 100px;">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
+
+
+				<div class="carousel-item" style="margin-top: 100px;">
+					<img class="d-block img-fluid" src="./img/foodmain/food8.jpg"
+						width=360px height=450px alt="First slide"
+						style="margin-left: 100px;">
+					<div class="carousel-caption d-none d-md-block"></div>
+				</div>
 
 
 
-	<!--  <div class="banner-text">
-            <h2>This is Heaven</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-        </div>	 -->
-	<!--   </div>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block img-fluid" src="./img/food3.jpg" width=360px height=450px alt="First slide"
-      style="
-    margin-left: 100px;
-		">
-      <div class="carousel-caption d-none d-md-block"> -->
 
 
 
-	<!--  <div class="banner-text">
-            <h2>This is Heaven</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-        </div>	 -->
-	</div>
-	</div>
-	<!--     <div class="carousel-item">
+				<!-- 	    <div class="carousel-item">
       <img class="d-block img-fluid" src="./img/food2/jpg" alt="First slide">
       <div class="carousel-caption d-none d-md-block">
         <div class="banner-text">
@@ -225,10 +284,11 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
         </div>	
     </div>
-  </div> -->
-	</div>
+  </div>  -->
 
-	</div>
+			</div>
+
+		</div>
 	</div>
 	</div>
 	</section>

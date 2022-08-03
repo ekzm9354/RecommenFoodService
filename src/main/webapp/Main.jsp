@@ -50,6 +50,16 @@
 	
 }
 </style>
+
+<!-- 스크롤업 -->
+<style>
+#scrollUp {
+	position: absolute;
+	z-index: 2147483647;
+	top: 2660px;
+}
+</style>
+
 </head>
 
 <link href="Main.css" rel="stylesheet">

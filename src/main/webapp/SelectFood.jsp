@@ -34,6 +34,16 @@
 	}
 </style>
 
+<!-- 스크롤업 -->
+<style>
+#scrollUp {
+	position: absolute;
+	z-index: 2147483647;
+	top: 1500px;
+	display: block;
+}
+</style>
+
 <!-- real html 코드 -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -53,10 +63,7 @@
 <body>
 
 <%@ include file="./include.jsp"%>
-<%-- <%if (request.getParameter("error").equals("on")){ %>
-<script type="text/javascript">
-alert('음식등록먼저하세요')</script>
-<%} %> --%>
+
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/메인5.jpg);">

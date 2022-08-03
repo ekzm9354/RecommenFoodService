@@ -37,6 +37,7 @@
 <body>
 
 	<%@ include file="./include.jsp"%>
+
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
 		style="background-image: url(img/메인5.jpg);">
@@ -101,13 +102,15 @@
  %>
 
 				</a>
+				</div>
 	</form>
 
 	<div class="clearfix"></div>
-	</div>
+	
 
 	<div class="footer">
-		<a href="http://faceboo.com"> <!--                 <img src="https://bakey-api.codeit.kr/files/629/images/facebook.png" height="20">
+		<a href="http://faceboo.com"> <!--                
+		 <img src="https://bakey-api.codeit.kr/files/629/images/facebook.png" height="20">
             </a>
             <a href="http://faceboo.com">
                 <img src="https://bakey-api.codeit.kr/files/629/images/instagram.png" height="20">
@@ -116,8 +119,7 @@
                 <img src="https://bakey-api.codeit.kr/files/629/images/twitter.png" height="20">
             </a> -->
 	</div>
-	</div>
-
+</div>
 	<%-- 	<form action="./FoodMain.jsp">
 		<!------ Include the above in your HEAD tag ---------->
 		<%
@@ -358,9 +360,9 @@
 	<!-- Bootstrap-4 js -->
 	<script src="js/bootstrap/bootstrap.min.js"></script>
 	<!-- All Plugins JS -->
-	<script src="js/others/plugins.js"></script>
+	<!-- <script src="js/others/plugins.js"></script> -->
 	<!-- Active JS -->
-	<script src="js/active.js"></script>
+	<!-- <script src="js/active.js"></script> -->
 
 
 </body>
