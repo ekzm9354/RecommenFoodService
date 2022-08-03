@@ -14,7 +14,7 @@
 button{
 background-color: transparent;
 color: #F15F5F;}
-.row{ /* div안에 가운데로 오게하기 */
+.row2{ /* div안에 가운데로 오게하기 */
 display:block;
 justify-content: center;
 
@@ -27,7 +27,7 @@ justify-content: center;
 <body>
 	<section id="tabs" class="project-tab">
 		<div class="container">
-			<div class="row">
+			<div class="row2">
 				<!-- <div class="col-md-12"> -->
 					<nav> 
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
