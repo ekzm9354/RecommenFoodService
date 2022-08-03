@@ -7,7 +7,7 @@
 	<insert id="insertFood" parameterType="FoodDTO">
 		insert into
 		userui(indexu,udate,userid,usernm,foodid)
-		values (U_SEQ.nextval,sysdate,#{userid},#{userNm},(select foodid
+		values (U_SEQ.nextval,#{udate},#{userid},#{userNm},(select foodid
 		from food
 		where foodnm=#{foodNm}))
 	</insert>
