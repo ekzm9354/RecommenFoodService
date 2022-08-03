@@ -14,10 +14,15 @@ import lombok.RequiredArgsConstructor;
 public class FoodDTO {
 
 	private BigDecimal indexu;
-	private Timestamp udate;
+	@NonNull private String udate;
 	@NonNull private String userid;
 	private String userpw;
 	@NonNull private String userNm;
 	@NonNull private String foodNm;
+	public FoodDTO(@NonNull String userid, @NonNull String userNm, @NonNull String foodNm) {
+		this.userid = userid;
+		this.userNm = userNm;
+		this.foodNm = foodNm;
+	}
 	
 }
