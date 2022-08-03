@@ -120,6 +120,7 @@ display: inline-block;
 	
 	if (category == null && id != null) {
 		String keyword = URLEncoder.encode("밥류");
+		id=URLEncoder.encode(id);
 		response.sendRedirect("http://59.0.147.198:5000/RecommendFood?id="+id+"&ip="+ip+"&category="+keyword);
 	%>
 	
