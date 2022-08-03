@@ -41,9 +41,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 					<div class="col-md-6 text-center mb-5">
-						<h2 class="heading-section">
-							로 그 인
-						</h2>
+						<h2 class="heading-section">로 그 인</h2>
 					</div>
 				</div>
 				<div class="row justify-content-center">
@@ -61,11 +59,10 @@
 							</div>
 							<div class="login-wrap p-4 p-lg-5">
 								<div class="d-flex">
-									<div class="w-100" style="
-										    height: 0px;
-										    width: 0px;
-										">
-										<h3 class="mb-4"><!-- 로 그 인 --></h3>
+									<div class="w-100" style="height: 0px; width: 0px;">
+										<h3 class="mb-4">
+											<!-- 로 그 인 -->
+										</h3>
 									</div>
 									<!-- 소셜미디어		
 									<div class="w-100">
@@ -103,13 +100,13 @@
 											<a href="#">Forgot Password</a>
 										</div> -->
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
 	</form>
-	</div>
-	</div>
-	</div>
-	</div>
-	</div>
-	</section>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/popper.js"></script>

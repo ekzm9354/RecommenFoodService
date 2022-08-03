@@ -82,6 +82,12 @@
   	<description></description>
   	<servlet-class>ikujo.controller.DeleteChattingAjax</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>ChattingDeleteCheck</servlet-name>
+  	<display-name>ChattingDeleteCheck</display-name>
+  	<description></description>
+  	<servlet-class>ikujo.controller.ChattingDeleteCheck</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>FrontController</servlet-name>
   	<url-pattern>*.do</url-pattern>
@@ -133,5 +139,9 @@
   <servlet-mapping>
   	<servlet-name>DeleteChattingAjax</servlet-name>
   	<url-pattern>/DeleteChattingAjax</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ChattingDeleteCheck</servlet-name>
+  	<url-pattern>/ChattingDeleteCheck</url-pattern>
   </servlet-mapping>
 </web-app>

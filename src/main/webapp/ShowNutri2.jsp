@@ -82,7 +82,7 @@ margin-right: auto;
 		
 	var ctx = document.getElementById('myChart').getContext('2d');
 	var myChart = new Chart(ctx, {
-	    type: 'line', // 차트의 형태 (bar, line, pie)
+	    type: 'bar', // 차트의 형태 (bar, line, pie)
 	    data: { // 차트에 들어갈 데이터
 	        labels: ['Kcal','Carbohydrate','protein','fat','sugar','ca','fe','mg','na','k','vitaminB','vitaminC'
 	        

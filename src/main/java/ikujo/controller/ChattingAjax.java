@@ -46,9 +46,7 @@ public class ChattingAjax extends HttpServlet {
 			String json = gson.toJson(showChatting);
 			System.out.println(json);
 			response.getWriter().print(json);
-		} else if (cnt == 2) {
-
-		}
+		} 
 
 	}
 

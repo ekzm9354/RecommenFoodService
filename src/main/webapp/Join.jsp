@@ -58,9 +58,9 @@
 				<div class="card card-2">
 					<!-- <div class="card-heading"></div> -->
 					<div class="card-body">
-						<h2 class="title">회 원 가 입 <img src="./img/jointomato.jpg" weight=50px height=50px style="
+						<h2 class="title">회 원 가 입 <!-- <img src="./img/jointomato.jpg" weight=50px height=50px style="
 									    padding-left: 10px;
-									"></h2>
+									"> --></h2>
 						<div class="input-group">
 							<input name="id" type="text" class="id" placeholder="아이디">
 							<font id="checkid" size="2"></font>
