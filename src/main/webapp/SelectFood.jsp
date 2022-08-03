@@ -67,7 +67,6 @@
 
 	<%@ include file="./include.jsp"%>
 
-<<<<<<< HEAD
 	<%
 	String error = request.getParameter("error");
 	if (error != null) {
@@ -78,9 +77,6 @@
 	<%
 	}
 	%>
-=======
-
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-BIgData-14/-.git
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area" style="background-image: url(img/메인5.jpg);">
