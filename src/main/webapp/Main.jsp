@@ -1,3 +1,4 @@
+<%@page import="org.apache.ibatis.reflection.SystemMetaObject"%>
 <%@page import="ikujo.model.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -67,6 +68,9 @@
 <body>
 
 	<%@ include file="./include.jsp"%>
+	<%
+	System.out.print(info);
+	%>
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area" style="background-image: url(img/메인5.jpg);">

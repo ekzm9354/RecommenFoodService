@@ -6,6 +6,7 @@ import javax.servlet.http.HttpSession;
 
 import ikujo.command.Command;
 import ikujo.model.MemberDAO;
+import ikujo.model.MemberDTO;
 
 public class DeleteMember implements Command {
 
@@ -20,14 +21,10 @@ public class DeleteMember implements Command {
 		int nutrient = new MemberDAO().deleteNutrients(id);
 		int ui = new MemberDAO().deleteUi(id);
 		int info = new MemberDAO().deleteInfo(id);
-		String moveURL = "";
-		if (info > 0 && ui > 0 && nutrient > 0) {
+		
 			session.removeAttribute("info");
-			moveURL = "./Main.jsp";
-		} else {
-			moveURL = "./Main.jsp";
-		}
-		return moveURL;
+			//session.invalidate();
+		return "./Main.jsp";
 	}
 
 }
