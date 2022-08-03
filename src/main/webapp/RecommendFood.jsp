@@ -36,28 +36,33 @@
 	width: 500px;
 	background-color: blue;
 }
-
+#nav-home-tab{ /*영양보충제추천,사용자와비슷한유저가 구매한 영양제추천 css*/
+color: #F15F5F;
+border: none;
+}
 .menutab { 
 /* border:1px solid; */
 text-align: center;
 }
-.tab1{/*메뉴추천탭,영양제추천탭,디저트랜덤탭 스타일 (수정하기) */
-background-color: pink;
-color: maroon;
-padding: 15px 25px;
+.tab1{/*메뉴추천탭,영양제추천탭,디저트랜덤탭 스타일 */
+box-sizing: border-box;
+background-color: white;
+color: /* maroon; */#F15F5F;
+font : bold;
+/* padding: 15px 25px; */
+padding: 7px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 border-radius: 20px;
-border:pink;
+border: 3px solid #f199bc;
 }
+
 .table th, .table tr{
 text-align: center;}
 
 input{ /*input(선택버튼) 꾸미기 스타일!  */
 box-sizing: border-box;
-/* background: linear-gradient(-45deg, #33ccff 0%, #ff99cc 100%);
-color: white; */
 background:white;
 border: 3px solid #f199bc;
 color: #F15F5F;
@@ -74,9 +79,20 @@ border: 1px solid;} */
 .col-md-121{
 flex: 1;
 }
-.row1{
+.row1{ /* div안에 버튼(디저트랜덤뽑기눌러주세요) 가운데로 오게하기 */
 display:flex;
+justify-content: center;
+text-align: center;
 }
+#desert{
+border-radius: 10px;
+background-color: transparent;
+color :#F15F5F;
+border:none;
+display: inline-block;
+}
+/* .col-md-122{
+} 여기 크기 수정해보기,, ㅠ*/
 
 
 </style>
@@ -350,8 +366,8 @@ display:flex;
 							<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 								<a class="nav-item nav-link active" id="nav-home-tab"
 									data-toggle="tab" href="#nav-home" role="tab"
-									aria-controls="nav-home" aria-selected="true">사용자와 비슷한 유저
-									영양제추천</a>
+									aria-controls="nav-home" aria-selected="true">사용자와 비슷한 유저가 구매한
+									영양보충제 추천</a>
 							</div>
 						</nav>
 						<!--여기에 사용자와 비슷한 유저가 선택한 영양제 추천....   -->
@@ -362,9 +378,9 @@ display:flex;
 									<thead>
 										<tr>
 											<!--  데이터를 요청해줄 버튼 -->
-											<th>영양보충제 이미지</th>
-											<th>영양보충제 이름</th>
-											<th>선택</th>
+											<th style="background-color: transparent">영양보충제 이미지</th>
+											<th style="background-color: transparent">영양보충제 이름</th>
+											<th style="background-color: transparent">선택</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -403,7 +419,7 @@ display:flex;
 				<div style="margin:100px 0px 100px 0px"></div><!-- 빈공간 만들기  -->
 				</div><!--<div class="col-md-121">끝  -->
 				<!-----------------------------------여기까지 쓰세요--------------------------------------- -->
-			</div><!--<div class="row">끝  -->
+			</div><!--<div class="row1">끝  -->
 		</div>
 	</section>
 
@@ -411,8 +427,8 @@ display:flex;
 	<section id="tabs" class="project-tab">
 		<div class="container">
 			<div class="row1">
-				<div class="col-md-121" >
-				<button id="desert">디저트 뽑기</button>
+				<div class="col-md-122" >
+				<button id="desert">디저트를 랜덤으로 뽑으려면 눌러주세요! </button>
 				<div id="deCate"></div><!--버튼나옴  -->
 				<div style="margin:100px 0px 100px 0px"></div>
 	</div>
