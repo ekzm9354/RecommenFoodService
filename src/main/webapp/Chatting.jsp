@@ -27,38 +27,38 @@
 			<div id="whos">대화방 목록</div>
 		</div>
 		<ul id="chattingMain">
-			<div id="chattingRoom">
-				<%
+    <div id="chattingRoom">
+   <%
 MemberDTO info = (MemberDTO) session.getAttribute("info");
 String toName = info.getUserid();
 String fromName = request.getParameter("usaUser");
-System.out.print(info);
 %>
 
-				대화상대 :
-				<%=fromName%><br>
-				<%
+			<div style="border:2px solid #BCE55C; border-radius: 10px; padding: 7px;margin: 10px;box-sizing: border-box;display: table-cell;">
+				대화상대 : <%=fromName%><br></div>
+			<div style="margin:10px 0px 10px 0px"></div><!-- 빈공간 만들기  -->
+			
 	
-	ChattingDTO dto = new ChattingDTO(toName,fromName);
+	<%ChattingDTO dto = new ChattingDTO(toName,fromName);
 	ArrayList<ChattingDTO> MessegesAll = (ArrayList) new ChattingDAO().ChattingAll(dto);
 	Gson gson = new Gson();
 	String json = gson.toJson(MessegesAll);
+	
 	if(MessegesAll != null){
 		for(int i = 0; i<MessegesAll.size();i++){
-	%>
-				<%=MessegesAll.get(i).getToName() %>
-				님 :
-				<%=MessegesAll.get(i).getMesseges() %><bR>
-				<%=MessegesAll.get(i).getC_date()%><br>
-				<%}
+	%> <span style="border:1px solid #E5D85C; border-radius: 5px; display:inline-block;width:400px; height:30px; float:right; vertical-align: middle; ">
+			<%=MessegesAll.get(i).getToName() %>:
+			<%=MessegesAll.get(i).getMesseges() %></span><br>
+			<span style="display:inline-block; width:400px; float:right;text-align: right;"><%=MessegesAll.get(i).getC_date()%></span><br>
+			<%}
 		} %>
-
-
-			</div>
-		</ul>
+   
+    
+    </div>
+    </ul>
 		<div class="bottom_wrapper clearfix">
 			<div class="message_input_wrapper">
-				<input class="message_input" placeholder="Type your message here..." />
+				<input class="message_input" placeholder="보낼 메세지를 입력해주세요..." />
 			</div>
 
 
