@@ -33,6 +33,10 @@
 }
 .table td{
 table-layout:fixed;}
+
+
+
+.Foodimage{padding-left: 100px;}
 </style>
 </head>
 
@@ -60,9 +64,9 @@ table-layout:fixed;}
 						<%
 						FoodcateDTO dto = riceList.get(i);
 						%>
-						<td><img class="Foodimage" src="file/<%=dto.getImg()%>" width="400px"
+						<td width="660px"><img class="Foodimage" style="float: left;"src="file/<%=dto.getImg()%>" width="500px"
 							height="250px"></td>
-						<td><%=dto.getFoodnm()%></td>
+						<td><font size = "6"><%=dto.getFoodnm()%></font></td>
 					</tr>
 
 					<%
