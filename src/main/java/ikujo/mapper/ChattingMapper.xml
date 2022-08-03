@@ -19,4 +19,7 @@
 	<delete id="DeleteChatting" parameterType="ChattingDTO">
 		delete from chatting where toName=#{toName} and fromName=#{fromName} or toName=#{fromName} and fromName=#{toName}
 	</delete>
+	<select id="ChattingCheck" parameterType="String" resultType="ChattingDTO">
+		select * from chatting where fromname=#{userid}
+	</select>
 </mapper>
