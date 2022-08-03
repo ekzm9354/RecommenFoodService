@@ -424,9 +424,13 @@
                         
                         <!-- <img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /> --></a>
                         <div class="card-body">
-                            <div class="small text-muted">January 1, 2022</div>
-                            <h2 class="card-title">Featured Post Title</h2>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+                            <div class="small text-muted"><!-- 음식 조회 --></div>
+                            <h2 class="card-title">음식 조회</h2>
+                            <p class="card-text"> <!-- 먹었던 음식을 등록하세요. <br>  -->
+                            					  정확한 영양소 분석을 위해서 음식을 조회하고 정보를 등록해보세요. <br>
+                            					  샐러드, 치킨, 국밥과 같이 단어를 입력하고 음식을 조회하세요. <br>
+                            					  카테고리를 선택하면 자동으로 입력창에 단어를 넣을 수 있습니다.
+                            </p>
                             <!-- <a class="btn btn-primary" href="#!">Read more →</a> -->
                         </div>
                     </div>
@@ -516,26 +520,26 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">Web Design</a></li>
-                                        <li><a href="#!">HTML</a></li>
-                                        <li><a href="#!">Freebies</a></li>
+                                        <li><a href="#!">찌개</a></li>
+                                        <li><a href="#!">샐러드</a></li>
+                                        <li><a href="#!">스테이크</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6">
                                     <ul class="list-unstyled mb-0">
-                                        <li><a href="#!">JavaScript</a></li>
-                                        <li><a href="#!">CSS</a></li>
-                                        <li><a href="#!">Tutorials</a></li>
+                                        <li><a href="#!">치킨</a></li>
+                                        <li><a href="#!">피자</a></li>
+                                        <li><a href="#!">스파게티</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Side widget-->
-                    <div class="card mb-4">
+                   <!--  <div class="card mb-4">
                         <div class="card-header">Side Widget</div>
                         <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
