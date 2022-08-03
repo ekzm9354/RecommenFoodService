@@ -10,13 +10,26 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style type="text/css">
+button{
+background-color: transparent;
+color: #F15F5F;}
+.row2{ /* div안에 가운데로 오게하기 */
+display:block;
+justify-content: center;
+
+}
+#nav-tab{
+
+}
+</style>
 </head>
 <body>
 	<section id="tabs" class="project-tab">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<nav>
+			<div class="row2">
+				<!-- <div class="col-md-12"> -->
+					<nav> 
 						<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
 							<button class="nav-item nav-link keyword" value="과일류" >과일류</button>
 							<button class="nav-item nav-link keyword" value="스무디류" > 스무디류</button>
@@ -28,8 +41,8 @@
 						</div>
 						<div id="deRan"></div>
 					</nav>
-				</div>
-			</div>
+				<!-- </div> col-md-12끝   -->
+			</div><!--  row끝 -->
 		</div>
 	</section>
 	<script type="text/javascript">

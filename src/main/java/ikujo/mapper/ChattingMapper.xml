@@ -20,6 +20,6 @@
 		delete from chatting where toName=#{toName} and fromName=#{fromName} or toName=#{fromName} and fromName=#{toName}
 	</delete>
 	<select id="ChattingCheck" parameterType="String" resultType="ChattingDTO">
-		select * from chatting where fromname=#{userid}
+		select * from chatting where fromname=#{userid} order by toname asc
 	</select>
 </mapper>
