@@ -1,3 +1,4 @@
+<%@page import="java.net.URLEncoder"%>
 <%@page import="java.util.Random"%>
 <%@page import="ikujo.model.FoodDTO"%>
 <%@page import="ikujo.model.FoodDAO"%>
@@ -101,20 +102,10 @@ display:flex;
 	<%
 	
 	if (category == null && id != null) {
+		String keyword = URLEncoder.encode("밥류");
+		response.sendRedirect("http://59.0.147.198:5000/RecommendFood?id="+id+"&ip="+ip+"&category="+keyword);
 	%>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			var keyword = '밥류'
-			console.log(keyword)
-			// 클래스가 키워드인 친구를 클릭했을때 이너 텍스트로 키워드로 가져온다
-		       console.log("flask로 간다")
-				var link = "http://59.0.147.198:5000/RecommendFood?id=<%=id%>&ip=<%=ip%>&category=" + keyword;
-			location.href = link;
-			location.replace(link);
-			window.open(link);
-		});
-		
-	</script>
+	
 	<%
 	}
 	%>
@@ -259,7 +250,9 @@ display:flex;
 									</form>
 										</td>
 									</tr>
-									<%}}}%>
+									<%}}}
+										
+									%>
 								</thead>
 								<tbody id="foods">
 								</tbody>
@@ -392,7 +385,10 @@ display:flex;
 										</td>
 							
 									</tr>
-									<%}}}%>
+									<%}}}
+									
+									
+									%>
 										
 										
 									</tbody>
@@ -439,6 +435,7 @@ display:flex;
 	
 	
 	</script>
+	
 	
 	<!--여기까지 디저트공간  -->
 	<script src="js/jquery/jquery-2.2.4.min.js"></script>
