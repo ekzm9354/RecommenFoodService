@@ -5,6 +5,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="style.css">
+
 <meta charset="UTF-8">
 <title>밥줘 영양줘</title>
 <!-- Favicon -->
@@ -61,16 +63,57 @@
 
 
 <body>
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <%@ include file="./include.jsp"%>
 
 <%String error = request.getParameter("error");
  if(error != null){%>
 	 <script type="text/javascript">
-	 alert('이전에 먹었던 메뉴를 먼저 등록해주세요')
-	 
+	 Swal.fire({
+		  title: '이전에 먹었던 메뉴를 먼저 등록해주세요',
+		  text: "삭제하시면 다시 복구시킬 수 없습니다.",
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		  
+
+
+		})
+
+
+	 /* alert('이전에 먹었던 메뉴를 먼저 등록해주세요')
+	 text: "삭제하시면 다시 복구시킬 수 없습니다."  */
+		
 	 </script>
  <%}%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area"
