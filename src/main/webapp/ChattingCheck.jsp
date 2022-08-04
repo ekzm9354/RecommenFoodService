@@ -1,3 +1,4 @@
+<%@page import="java.math.BigDecimal"%>
 <%@page import="ikujo.model.ChattingDAO"%>
 <%@page import="ikujo.model.ChattingDTO"%>
 <%@page import="java.util.ArrayList"%>
@@ -126,6 +127,7 @@ a {
 					for (int i = 0; i < CheckChatting.size(); i++) {
 						String mes = CheckChatting.get(i).getMesseges();
 						fromName = CheckChatting.get(i).getToName();
+						BigDecimal c_seq = CheckChatting.get(i).getC_seq();
 					%>
 
 				</div>
@@ -157,6 +159,7 @@ a {
 									id="content"></td>
 								<td class="mailbox-send"><input type="submit" id="response"
 									value="보내기"></td>
+									<td><input type="hidden" name="c_seq" value="<%=c_seq%>"></td>
 							</tr>
 
 
@@ -348,14 +351,14 @@ a {
 
 
 </body>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js">var $360  = jQuery.noConflict();</script>
+
 
 <script type="text/javascript">
 	$('#response').on('click',function(){
 		var toName ='<%=toName%>'
 		var fromName = '<%=fromName%>'
 		var cnt =1
-		var messeges = $360('#content').val();
+		var messeges = $('#content').val();
 		$.ajax({
 			/* 어디로 보낼건지? */
 			url : "ChattingAjax",
@@ -389,15 +392,12 @@ a {
 		}) 
 	
 	$('#delete').on('click',function(){
-		var data = toName
-		var fromName = '<%=toName%>'
-		console.log(toName)
-		console.log(fromName)
+		var c_seq = $('input[name=c_seq]').val();
+		console.log(c_seq)
 		$.ajax({
 			url : "ChattingDeleteCheck",
 			data : {
-				toName : data,
-				fromName : fromName
+				c_seq:c_seq
 			},
 			dataType : "json",
 			success : function(key) {

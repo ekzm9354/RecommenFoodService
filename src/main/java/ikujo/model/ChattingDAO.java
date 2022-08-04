@@ -36,9 +36,9 @@ public class ChattingDAO {
 		session.close();
 		return row;
 	}
-	public int ChattingDeleteCheck(ChattingDTO dto){
+	public int ChattingDeleteCheck(String c_seq){
 		session=sqlSessionFactory.openSession(true);
-		row = session.delete("ChattingDeleteCheck", dto);
+		row = session.delete("ChattingDeleteCheck", c_seq);
 		session.close();
 		return row;
 	}

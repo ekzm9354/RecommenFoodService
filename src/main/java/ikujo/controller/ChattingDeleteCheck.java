@@ -1,6 +1,8 @@
 package ikujo.controller;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,13 +23,13 @@ public class ChattingDeleteCheck extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		System.out.println("[ChattingDeleteCheck]");
 
-		String toName = request.getParameter("toName");
-		String fromName = request.getParameter("fromName");
-		System.out.println(toName);
-		System.out.println(fromName);
 		
-		ChattingDTO dto = new ChattingDTO(toName, fromName);
-		int CheckDeleteChatting = new ChattingDAO().ChattingDeleteCheck(dto);
+		String c_seqString =  (String)request.getParameter("c_seq");
+		BigDecimal c_seq = new BigDecimal(c_seqString);
+		System.out.println(c_seqString);
+		System.out.println(c_seq);
+		
+		int CheckDeleteChatting = new ChattingDAO().ChattingDeleteCheck(c_seqString);
 		
 		Gson gson = new Gson();
 		String json = gson.toJson(CheckDeleteChatting);
