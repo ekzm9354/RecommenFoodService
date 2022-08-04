@@ -348,7 +348,7 @@ a {
 
 </body>
 
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <script type="text/javascript">
 	$(document).on('click','#response',function(){
 		var toName ='<%=toName%>'
@@ -369,10 +369,20 @@ a {
 			dataType : "json",
 			/* 성공 시 */
 			success : function(key) {
-				alert('성공')
+				Swal.fire({
+					  title: '메세지가 성공적으로 전송되었습니다.',		
+					  icon: 'success',
+					  confirmButtonColor: '#3085d6',
+					  confirmButtonText: '확인',
+					})
 				},
 			error : function(e) {
-				alert('실패');
+				Swal.fire({
+					  title: '메세지가 전송에 실패하였습니다..',		
+					  icon: 'error',
+					  confirmButtonColor: '#3085d6',
+					  confirmButtonText: '확인',
+					})
 				console.log(e);
 			}
 		})
