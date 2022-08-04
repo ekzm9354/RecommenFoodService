@@ -1,3 +1,5 @@
+<%@page import="ikujo.model.ShowFoodDAO"%>
+<%@page import="ikujo.model.ShowFoodDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -340,6 +342,10 @@ font-weight : bold;
 	
 <%
  	String id =(String)session.getAttribute("id");
+    ArrayList<ShowFoodDTO> foodList= new ShowFoodDAO().showFoodId(id);
+    if (foodList.size()==0){
+    	response.sendRedirect("./SelectFood.jsp?error=on");
+    }
 %>
     <script type="text/javascript" >
     function deleteTable() {
@@ -362,7 +368,6 @@ font-weight : bold;
             		//호출 URL을 설정한다. GET방식일경우 뒤에 파라티터를 붙여서 사용해도된다.
             dataType : "html",//호출한 페이지의 형식이다. xml,json,html,text등의 여러 방식을 사용할 수 있다.
             error : function(){
-                alert("통신실패!!!!");
             },
             success : function(Parse_data){
             	deleteTable()
@@ -379,7 +384,6 @@ font-weight : bold;
             url : "./ShowNutri.jsp?id=<%=id %>",        
             dataType : "html",
             error : function(){
-                alert("통신실패!!!!");
             },
             success : function(Parse_data){
             	deleteTable2()
@@ -395,7 +399,6 @@ font-weight : bold;
             		
             dataType : "html",
             error : function(){
-                alert("통신실패!!!!");
             },
             success : function(Parse_data){
             	
@@ -411,7 +414,6 @@ font-weight : bold;
             		
             dataType : "html",
             error : function(){
-                alert("통신실패!!!!");
             },
             success : function(Parse_data){
             	

@@ -143,7 +143,7 @@
 	if (foodNm != null) {
 	%>
 
-	<form action="InsertFood.do" method="post">
+	<form action="InsertFood.do" method="post" onsubmit="return formSub();">
 		<!-- real search 코드 -->
 		<section class="login-block">
 			<div class="container">
@@ -177,7 +177,26 @@
 	<%
 	}
 	%>
-
+	<script type="text/javascript">
+	function formSub(){
+		if($("input[name=udate]").val()!='' && $("input[name=foodNm]").val() != '')
+		{
+			return true;
+	}
+		else{
+			if($("input[name=udate]").val()=='' && $("input[name=foodNm]").val() == ''){
+				alert('음식이름과 날짜를 미입력했습니다')	
+			}
+			else if($("input[name=udate]").val()==''){
+				alert('날짜를 미입력했습니다')	
+			}
+			else{
+				alert('음식이름을 미입력했습니다')	
+			}
+			return false;
+			}
+		}
+	</script>
 	</div>
 	<div class="copy-text" style="margin-bottom: 20px;"
 		style=" margin-bottom: 20px; left: 70px;"/*가운데정렬*/
