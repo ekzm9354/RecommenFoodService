@@ -123,7 +123,7 @@ margin-right:auto;
 									</div>
 									<div class="timeline-body">
 										<p>
-											email:<br> 역할:팀장님<br> 맡은부분:<br> 별칭: 권도형<br>
+											email:ekzm9354@gmail.com<br> 역할:팀장님<br> 맡은부분:Back&Front<br> 별칭: 권도형<br>
 										</p>
 									</div>
 								</div>
