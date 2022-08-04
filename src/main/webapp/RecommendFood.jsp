@@ -467,7 +467,6 @@ display: inline-block;
 	            url : "dessertCate.jsp",        
 	            dataType : "html",
 	            error : function(){
-	                alert("통신실패!!!!");
 	            },
 	            success : function(Parse_data){
 	            	$("#deCate").children().remove();

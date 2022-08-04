@@ -64,7 +64,6 @@ margin-right: auto;
 	            url : "./ShowNutri2.jsp?id=<%=id %>&udate="+ date,        
 	            dataType : "html",
 	            error : function(){
-	                alert("통신실패!!!!");
 	            },
 	            success : function(Parse_data){
 	            	deleteTable2()
@@ -80,7 +79,6 @@ margin-right: auto;
             		
             dataType : "html",
             error : function(){
-                alert("통신실패!!!!");
             },
             success : function(Parse_data){
             	

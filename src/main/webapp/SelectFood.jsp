@@ -91,7 +91,7 @@
 		
 	 </script>
  <%}%>
-	<%
+	<%-- <%
 	error = request.getParameter("error");
 	if (error != null) {
 	%>
@@ -101,7 +101,7 @@
 	<%
 	}
 	%>
-
+ --%>
 
 
 
@@ -987,12 +987,5 @@
 		})
 	</script>
 	
-    <% error = request.getParameter("error");
- if(error != null){%>
-	 <script type="text/javascript">
-	 alert('이전에 먹었던 메뉴를 먼저 등록해주세요')
-	 
-	 </script>
- <%}%>
 </body>
 </html>
