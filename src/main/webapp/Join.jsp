@@ -52,7 +52,7 @@
 
 <body>
 
-	<form action="Join.do" method="POST" class="joinForm">
+	<form action="Join.do" method="POST" class="joinForm" onsubmit="return joinSub()">
 		<div class="page-wrapper bg-red p-t-180 p-b-100 font-robo">
 			<div class="wrapper wrapper--w960">
 				<div class="card card-2">
@@ -76,7 +76,7 @@
 								<div class="input-group">
 									<div class="rs-select2 js-select-simple select--no-search">
 
-										<select name="gender">
+										<select name="gender" id="genderSel">
 											<option disabled="disabled" selected="selected">성별</option>
 											<option>남성</option>
 											<option>여성</option>
@@ -88,7 +88,7 @@
 						</div>
 						<div class="input-group">
 							<div class="rs-select2 js-select-simple select--no-search">
-								<select name="age">
+								<select name="age"  id="ageSel">
 									<option disabled="disabled" selected="selected">나이</option>
 									<option>20</option>
 									<option>30</option>
@@ -112,6 +112,57 @@
 			</div>
 		</div>
 	</form>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script type="text/javascript">
+	function joinSub(){
+		if($("input[name=id]").val()!='' && $("input[name=pw]").val() != '' && $("#genderSel").val() != '' && $("#ageSel").val() != '' && $("input[name=name]").val() != ''){
+			return true;
+			}
+		else{
+			if($("input[name=id]").val()==''){
+				Swal.fire({
+		  title: '아이디를 미입력했습니다.',
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
+			}
+			else if($("input[name=pw]").val()==''){
+						Swal.fire({
+		  title: '비밀번호를 미입력했습니다',
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
+			}
+			else if($("#genderSel").val()==null){
+						Swal.fire({
+		  title: '성별을 선택하세요',
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
+			}
+			else if($("#ageSel").val()==null){
+						Swal.fire({
+		  title: '나이를 선택하세요',
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
+			}
+			else if($("input[name=name]").val()==''){
+						Swal.fire({
+		  title: '닉네임을 미입력했습니다',
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
+			}
+			return false;
+			}
+		}
+	</script>
 
 
 	<!-- Jquery JS-->
