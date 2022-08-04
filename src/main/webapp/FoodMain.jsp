@@ -177,6 +177,7 @@
 	<%
 	}
 	%>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<script type="text/javascript">
 	function formSub(){
 		if($("input[name=udate]").val()!='' && $("input[name=foodNm]").val() != '')
@@ -185,13 +186,31 @@
 	}
 		else{
 			if($("input[name=udate]").val()=='' && $("input[name=foodNm]").val() == ''){
-				alert('음식이름과 날짜를 미입력했습니다')	
+				/* alert('음식이름과 날짜를 미입력했습니다') */	
+				Swal.fire({
+		  title: '음식이름과 날짜를 미입력했습니다',
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
 			}
 			else if($("input[name=udate]").val()==''){
-				alert('날짜를 미입력했습니다')	
+				/* alert('날짜를 미입력했습니다') */
+						Swal.fire({
+		  title: '날짜를 미입력했습니다',
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
 			}
 			else{
-				alert('음식이름을 미입력했습니다')	
+				/* alert('음식이름을 미입력했습니다')	 */
+								Swal.fire({
+		  title: '음식이름을 미입력했습니다',
+		  icon: 'warning',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
 			}
 			return false;
 			}

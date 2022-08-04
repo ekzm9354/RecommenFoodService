@@ -14,103 +14,113 @@
 <!-- Favicon -->
 <link rel="icon" href="img/yerimimg/logoimg.ico">
 <link href="Chat.css" rel="stylesheet">
- <!-- 폰트 적용 -->
+<!-- 폰트 적용 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap"
+	rel="stylesheet">
 
 <!-- 폰트 스타일 적용 -->
 <style>
-	*{
-		font-family: 'Dongle', sans-serif;
-	}
+* {
+	font-family: 'Dongle', sans-serif;
+}
 </style>
 </head>
 <body>
 
-<div >
-<fieldset>
-<legend>여기는 대화목록입니다</legend>
-<table>
-	<thead>대화방 목록</thead>
-	<tbody id="whos">
-		<tr></tr>
-	</tbody>
-</table>
-</fieldset>
-<div class="chat_window">
-    <div class="top_menu">
-        <div class="buttons">
-            <div class="button close"></div>
-            <div class="button minimize"></div>
-            <div class="button maximize"></div>
-        </div>
-        <div id="whos">대화방 목록</div>
-    </div>
-    <ul id="chattingMain">
-
-	<div class="chat_window">
-		<div class="top_menu">
-			<div class="buttons">
-				<div class="button close"></div>
-				<div class="button minimize"></div>
-				<div class="button maximize"></div>
+	<div>
+		<fieldset>
+			<legend>여기는 대화목록입니다</legend>
+			<table>
+				<thead>대화방 목록
+				</thead>
+				<tbody id="whos">
+					<tr></tr>
+				</tbody>
+			</table>
+		</fieldset>
+		<div class="chat_window">
+			<div class="top_menu">
+				<div class="buttons">
+					<div class="button close"></div>
+					<div class="button minimize"></div>
+					<div class="button maximize"></div>
+				</div>
+				<div id="whos">대화방 목록</div>
 			</div>
-			<div id="whos">대화방 목록</div>
-		</div>
-		<ul id="chattingMain">
-    <div id="chattingRoom">
-   <%
+			<ul id="chattingMain">
+
+				<div class="chat_window">
+					<div class="top_menu">
+						<div class="buttons">
+							<div class="button close"></div>
+							<div class="button minimize"></div>
+							<div class="button maximize"></div>
+						</div>
+						<div id="whos">대화방 목록</div>
+					</div>
+					<ul id="chattingMain">
+						<div id="chattingRoom">
+							<%
 MemberDTO info = (MemberDTO) session.getAttribute("info");
 String toName = info.getUserid();
 String fromName = request.getParameter("usaUser");
 %>
 
-			<div style="border:2px solid #BCE55C; border-radius: 10px; padding: 7px;margin: 10px;box-sizing: border-box;display: table-cell;">
-				대화상대 : <%=fromName%><br></div>
-			<div style="margin:10px 0px 10px 0px"></div><!-- 빈공간 만들기  -->
-			
-	
-	<%ChattingDTO dto = new ChattingDTO(toName,fromName);
+							<div
+								style="border: 2px solid #BCE55C; border-radius: 10px; padding: 7px; margin: 10px; box-sizing: border-box; display: table-cell;">
+								대화상대 :
+								<%=fromName%><br>
+							</div>
+							<div style="margin: 10px 0px 10px 0px"></div>
+							<!-- 빈공간 만들기  -->
+
+
+							<%ChattingDTO dto = new ChattingDTO(toName,fromName);
 	ArrayList<ChattingDTO> MessegesAll = (ArrayList) new ChattingDAO().ChattingAll(dto);
 	Gson gson = new Gson();
 	String json = gson.toJson(MessegesAll);
 	
 	if(MessegesAll != null){
 		for(int i = 0; i<MessegesAll.size();i++){
-	%> <span style="border:2px solid #E5D85C; border-radius: 10px; display:inline-block;width:400px; height:30px; float:right;vertical-align: middle; ">
-			<%=MessegesAll.get(i).getToName() %>:
-			<%=MessegesAll.get(i).getMesseges() %></span><br>
-			<span style="display:inline-block; width:400px; float:right;text-align: right;"><%=MessegesAll.get(i).getC_date()%></span><br>
-			<%}
+	%>
+							<span
+								style="border: 2px solid #E5D85C; border-radius: 10px; display: inline-block; width: 400px; height: 30px; float: right; vertical-align: middle;">
+								<%=MessegesAll.get(i).getToName() %>: <%=MessegesAll.get(i).getMesseges() %></span><br>
+							<span
+								style="display: inline-block; width: 400px; float: right; text-align: right;"><%=MessegesAll.get(i).getC_date()%></span><br>
+							<%}
 		} %>
-   
-    
-    </div>
-    </ul>
-		<div class="bottom_wrapper clearfix">
-			<div class="message_input_wrapper">
-				<input class="message_input" placeholder="보낼 메세지를 입력해주세요..." />
-			</div>
 
 
-			<div class="textbox">
-				<input type="submit" value="보내기" id="send"> <input
-					type="submit" value="나가기" id="out">
-			</div>
-		</div>
-	</div>
-	<div class="message_template">
-		<li class="message">
-			<div class="avatar"></div>
-			<div class="text_wrapper">
-				<div class="text"></div>
-			</div>
-		</li>
-	</div>
-	<!--여기부터 스크립트부분  -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript">
+						</div>
+					</ul>
+					<div class="bottom_wrapper clearfix">
+						<div class="message_input_wrapper">
+							<input class="message_input" placeholder="보낼 메세지를 입력해주세요..." />
+						</div>
+
+
+						<div class="textbox">
+							<input type="submit" value="보내기" id="send"> <input
+								type="submit" value="나가기" id="out">
+						</div>
+					</div>
+				</div>
+				<div class="message_template">
+					<li class="message">
+						<div class="avatar"></div>
+						<div class="text_wrapper">
+							<div class="text"></div>
+						</div>
+					</li>
+				</div>
+				<!--여기부터 스크립트부분  -->
+				<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+				<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+				<script type="text/javascript">
 		
 		
 		$('#send').on('click',function() {
@@ -142,7 +152,14 @@ String fromName = request.getParameter("usaUser");
 						},
 						/* 실패 시 */
 						 error : function(e) {
-							alert('전송실패');
+							/* alert('전송실패'); */
+							Swal.fire({
+		  title: '전송에 실패하였습니다.',
+		  icon: 'error',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
+			
 							console.log(e);
 						} 
 					})
@@ -205,34 +222,56 @@ String fromName = request.getParameter("usaUser");
 				},
 				/* 실패 시 */
 				error : function(e) {
-					alert('실패');
+					/* alert('실패'); */
+					Swal.fire({
+		  title: '실패',
+		  icon: 'error',
+		  confirmButtonColor: '#3085d6',
+		  confirmButtonText: '확인',
+		})
 					console.log(e);
 				}
 
 			})
 
 		});
+		
 		$(document).on('click','#delete',function(){
 			var toName='<%=toName%>'
 			var fromName='<%=fromName%>'
-			$.ajax({
-				url : "DeleteChattingAjax",
-				data : {
-					toName : toName,
-					fromName : fromName
-				},
-				success : function(key) {
-					alert('삭제되었습니다')
-					var link = "Chat.jsp";
-					location.href = link;
-				},
-				error : function(key) {
-					alert('삭제가 불가합니다')
-				}
-			})
-		});
-	</script>
-	<!--여기까지 스크립트부분  -->
+						$.ajax({
+							url : "DeleteChattingAjax",
+							data : {
+								toName : toName,
+								fromName : fromName
+							},
+							success : function(key) {
+								/* alert('삭제되었습니다') 
+								 */
+								Swal.fire({
+									title : '삭제되었습니다.',
+									icon : 'success',
+									confirmButtonColor : '#3085d6',
+									confirmButtonText : '확인',
+								})
+								setTimeout(function() {
+									var link = "Chat.jsp";
+									location.href = link;
+								}, 1000);
 
+							},
+							error : function(key) {
+								/* alert('삭제가 불가합니다') */
+								Swal.fire({
+									title : '삭제가 불가합니다.',
+									icon : 'error',
+									confirmButtonColor : '#3085d6',
+									confirmButtonText : '확인',
+								})
+							}
+						})
+					});
+				</script>
+				<!--여기까지 스크립트부분  -->
 </body>
 </html>
