@@ -118,6 +118,22 @@ a {
 
 
 					<!-- 코드 통합(기능 + html) -->
+
+				</div>
+				<hr>
+				<div class="table-responsive mailbox-messages">
+					<table class="table table-hover table-striped">
+						<tbody id="dd">
+							<tr>
+								<td><input type="checkbox" ></td>
+								<td class="mailbox-star"><a href="#"><i class="fa fa-star text-yellow"></i></a></td>
+								<td class="mailbox-name">보낸이</td>
+								<td class="mailbox-subject"><b>메세지</b></td>
+								<td class="mailbox-attachment"></td>
+								<td class="mailbox-date">답장</td>
+								<!-- 수지 추가 보내기버튼-->
+								<td class="mailbox-send">보내기</td>
+							</tr>
 					<%
 					String fromName = null;
 					MemberDTO info = (MemberDTO) session.getAttribute("info");
@@ -129,36 +145,15 @@ a {
 						fromName = CheckChatting.get(i).getToName();
 						BigDecimal c_seq = CheckChatting.get(i).getC_seq();
 					%>
-
-				</div>
-				<hr>
-				<div class="table-responsive mailbox-messages">
-					<table class="table table-hover table-striped">
-						<tbody id="dd">
-							<tr>
-								<td><input type="checkbox" ></td>
-								<td class="mailbox-star"><a href="#"><i
-										class="fa fa-star text-yellow"></i></a></td>
-								<td class="mailbox-name"><a href="read-mail.html">보낸이</a></td>
-								<td class="mailbox-subject"><b>메세지</b></td>
-								<td class="mailbox-attachment"></td>
-								<td class="mailbox-date">도착시간</td>
-								<!-- 수지 추가 보내기버튼-->
-								<td class="mailbox-send">보내기</td>
-
-							</tr>
 							<tr>
 								<td><input type="checkbox" id="toSend"></td>
-								<td class="mailbox-star"><a href="#"><i
-										class="fa fa-star-o text-yellow"></i></a></td>
-								<td class="mailbox-name toName"><a href="read-mail.html"><%=fromName%></a></td>
+								<td class="mailbox-star"><a href="#"><i	class="fa fa-star-o text-yellow"></i></a></td>
+								<td class="mailbox-name toName"><%=fromName%></td>
 								<td class="mailbox-subject"><b></b><%=mes%></td>
 								<td class="mailbox-attachment"><i class="fa fa-paperclip"></i></td>
 								<!-- 도착시간 넣어주세여 -->
-								<td class="mailbox-date"><input type="text" name="text"
-									id="content"></td>
-								<td class="mailbox-send"><input type="submit" id="response"
-									value="보내기"></td>
+								<td class="mailbox-date"><input type="text" name="text"	id="content"></td>
+								<td class="mailbox-send"><input type="submit" id="response"	value="보내기"></td>
 									<td><input type="hidden" name="c_seq" value="<%=c_seq%>"></td>
 							</tr>
 
@@ -354,7 +349,7 @@ a {
 
 
 <script type="text/javascript">
-	$('#response').on('click',function(){
+	$(document).on('click','#response',function(){
 		var toName ='<%=toName%>'
 		var fromName = '<%=fromName%>'
 		var cnt =1

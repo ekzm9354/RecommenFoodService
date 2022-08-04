@@ -66,9 +66,10 @@
 
 
 <body>
-<<<<<<< HEAD
+
+	<%@ include file="./include.jsp"%>
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-<%@ include file="./include.jsp"%>
 
 
 <%String error = request.getParameter("error");
@@ -80,9 +81,6 @@
 		  icon: 'warning',
 		  confirmButtonColor: '#3085d6',
 		  confirmButtonText: '확인',
-		  
-
-
 		})
 
 
@@ -91,45 +89,6 @@
 		
 	 </script>
  <%}%>
-	<%-- <%
-	error = request.getParameter("error");
-	if (error != null) {
-	%>
-	<script type="text/javascript">
-		alert('이전에 먹었던 메뉴를 먼저 등록해주세요')
-	</script>
-	<%
-	}
-	%>
- --%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	<!-- ****** Breadcumb Area Start ****** -->
 	<div class="breadcumb-area" style="background-image: url(img/메인5.jpg);">
