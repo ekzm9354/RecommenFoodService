@@ -139,7 +139,7 @@ margin-right:auto;
 									</div>
 									<div class="timeline-body">
 										<p>
-											email:<br> 역할:팀원<br> 맡은부분:<br> 별칭:<br>
+											email:gva031033@gmail.com<br> 역할:팀원<br> 맡은부분:Front<br> 별칭:잼민이<br>
 										</p>
 									</div>
 								</div>
@@ -163,7 +163,7 @@ margin-right:auto;
 
 							<li class="timeline-inverted animate-box">
 								<div class="timeline-badge"
-									style="background-image: url(img/yerimimg/예림.jpg);"></div>
+									style="background-image: url(img/yerimimg/ggz.jpg);"></div>
 								<!--여기에 사진  -->
 								<div class="timeline-panel">
 									<div class="timeline-heading">
@@ -172,7 +172,7 @@ margin-right:auto;
 									</div>
 									<div class="timeline-body">
 										<p>
-											email:<br> 역할:팀원<br> 맡은부분:<br> 별칭:<br>
+											email:yeah.rrim@gmail.com<br> 역할:팀원<br> 맡은부분:Front<br> 별칭:옒<br>
 										</p>
 									</div>
 								</div>
@@ -189,7 +189,7 @@ margin-right:auto;
 									</div>
 									<div class="timeline-body">
 										<p>
-											email:<br> 역할:팀원<br> 맡은부분:<br> 별칭: 총사령관<br>
+											email:qopxc1103@gmail.com<br> 역할:팀원<br> 맡은부분:Back&Front<br> 별칭: 총사령관<br>
 										</p>
 									</div>
 								</div>
