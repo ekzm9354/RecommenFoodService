@@ -133,6 +133,7 @@ a {
 								<td class="mailbox-date">답장</td>
 								<!-- 수지 추가 보내기버튼-->
 								<td class="mailbox-send">보내기</td>
+								<td></td>
 							</tr>
 					<%
 					String fromName = null;
