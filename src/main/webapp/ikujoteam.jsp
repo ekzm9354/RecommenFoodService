@@ -48,6 +48,7 @@ margin-right:auto;
 	}
 </style>	
 
+
 </head>
 <body>
 <%@ include file="./include.jsp"%>
@@ -384,14 +385,16 @@ margin-right:auto;
 	</div>
     
      <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">
-            	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
-						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
-            </p></div>
-        </footer>
-        
-        
+		<footer class="py-5 bg-dark" style="padding-top: 48px!important; padding-bottom: 48px!important;">
+			<div class="container">
+				<p class="m-0 text-center text-white">
+					메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+					by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+				</p>
+			</div>
+		</footer>
+
+
 
 		<!-- ****** Footer Menu Area End ****** -->
 

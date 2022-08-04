@@ -1,3 +1,4 @@
+<%@page import="java.sql.Timestamp"%>
 <%@page import="com.google.gson.Gson"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="ikujo.model.ChattingDTO"%>
@@ -27,11 +28,12 @@
 	font-family: 'Dongle', sans-serif;
 }
 </style>
+
 </head>
 <body>
 
 	<div>
-		<fieldset>
+<!-- 		<fieldset>
 			<legend>여기는 대화목록입니다</legend>
 			<table>
 				<thead>대화방 목록
@@ -40,8 +42,9 @@
 					<tr></tr>
 				</tbody>
 			</table>
-		</fieldset>
-		<div class="chat_window">
+		</fieldset> -->
+		
+		<!-- <div class="chat_window"> 수지 수정  상단 바 부분-->
 			<div class="top_menu">
 				<div class="buttons">
 					<div class="button close"></div>
@@ -49,8 +52,11 @@
 					<div class="button maximize"></div>
 				</div>
 				<div id="whos">대화방 목록</div>
+				<div></div>
 			</div>
-			<ul id="chattingMain">
+			
+			
+			<!-- <ul id="chattingMain"> --> <!-- 채팅바 수정 수지 -->
 
 				<div class="chat_window">
 					<div class="top_menu">
@@ -59,15 +65,17 @@
 							<div class="button minimize"></div>
 							<div class="button maximize"></div>
 						</div>
-						<div id="whos">대화방 목록</div>
-					</div>
-					<ul id="chattingMain">
-						<div id="chattingRoom">
 							<%
 MemberDTO info = (MemberDTO) session.getAttribute("info");
 String toName = info.getUserid();
 String fromName = request.getParameter("usaUser");
+
+
 %>
+						<div id="whos"><%=fromName%>님과의 대화방</div>
+					</div>
+					<ul id="chattingMain">
+						<div id="chattingRoom">
 
 							<div
 								style="border: 2px solid #BCE55C; border-radius: 10px; padding: 7px; margin: 10px; box-sizing: border-box; display: table-cell;">
@@ -80,19 +88,35 @@ String fromName = request.getParameter("usaUser");
 
 							<%ChattingDTO dto = new ChattingDTO(toName,fromName);
 	ArrayList<ChattingDTO> MessegesAll = (ArrayList) new ChattingDAO().ChattingAll(dto);
+	String name = "";
+	String messegess = "";
+	Timestamp timestamp = null;
 	Gson gson = new Gson();
 	String json = gson.toJson(MessegesAll);
-	
+
 	if(MessegesAll != null){
 		for(int i = 0; i<MessegesAll.size();i++){
-	%>
+		 name=MessegesAll.get(i).getToName();
+		 messegess = MessegesAll.get(i).getMesseges();
+		 timestamp =  MessegesAll.get(i).getC_date();
+		 if(name.equals(toName)){
+			 
+		 
+	%>	
+		<span
+		style="border: 2px solid #E5D85C; border-radius: 10px; display: inline-block; width: 400px; height: 44px; float: right; vertical-align: middle; margin-right: 0px; padding-top: 4px; padding-left: 7px;">
+		<%=name %>: <%=messegess %></span><br> <span
+		style="display: inline-block; width: 400px; float: right; text-align: right; margin-right: 0px; padding-top: 5px; padding-bottom: 5px;"><%=timestamp%></span><br>
+							<%}else{%>
 							<span
-								style="border: 2px solid #E5D85C; border-radius: 10px; display: inline-block; width: 400px; height: 30px; float: right; vertical-align: middle;">
-								<%=MessegesAll.get(i).getToName() %>: <%=MessegesAll.get(i).getMesseges() %></span><br>
-							<span
-								style="display: inline-block; width: 400px; float: right; text-align: right;"><%=MessegesAll.get(i).getC_date()%></span><br>
-							<%}
-		} %>
+								style="border: 2px solid #BCE55C; border-radius: 10px; display: inline-block; width: 400px; height: 44px; float: right; vertical-align: middle; margin-right: 325px; padding-top: 4px; padding-left: 7px;">
+								<%=name %>: <%=messegess %></span><br> <span
+								style="display: inline-block; width: 400px; float: right; text-align: right; margin-right: 555px; padding-top: 5px; padding-bottom: 5px;"><%=timestamp%></span><br>
+							
+		 <%} %>
+	<%}} %>
+
+							
 
 
 						</div>
@@ -167,7 +191,8 @@ String fromName = request.getParameter("usaUser");
 				});
 		$('#out').click(function(){
 			var fromName = '<%=fromName%>'
-			$('#whos').append("<tr></tr>");
+			$('#whos').append("<tr id='trcss'></tr>");
+			$('#trcss').css('padding-left','1450px');
 			$('#whos tr').last().append("<td>"+fromName+"님과의 대화방</td>")
 		    $('#chattingRoom').remove()
 		    $('.textbox').remove()
@@ -176,6 +201,11 @@ String fromName = request.getParameter("usaUser");
 		    
 			$('#whos tr>td').append("<td>"+"<button id=delete>"+"삭제하기</button></td>")
 			$('#whos tr>td').append("<td>"+"<button id=inRoom>"+"입장하기</button></td>")
+			$('#whos tr>td').append("<td>"+"<button id=outMain>"+"나가기</button></td>")
+		})
+		$(document).on('click','#outMain',function(){
+			var link = "Main.jsp";
+			location.href=link;
 		})
 		$(document).on('click','#inRoom',function(){
 			var json = <%=json%>

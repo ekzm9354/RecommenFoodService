@@ -7,7 +7,7 @@
 
 body {
   background-color: #edeff2;
-  font-family: "Calibri", "Roboto", sans-serif;
+  font-family: 'Dongle', sans-serif;
 }
 
 .chat_window {
@@ -207,14 +207,34 @@ body {
 	
 }
 
-#delete{
-	font-size:22px;
+#delete {
+    font-size: 22px;
+    border-radius: 1px solid 20px;
+    border-radius: 20px;
+    background: #E4F7BA;
+    border-color: #E4F7BA;
 }
 #inRoom{
-	font-size:22px;
+	font-size: 22px;
+    border-radius: 1px solid 20px;
+    border-radius: 20px;
+    background: #E4F7BA;
+    border-color: #E4F7BA;
 }
 
 #whos tr td{
-	padding-left: 20px;
-}
+	padding-left: 10px;
+	/* padding-left: 1450px; */
 
+}
+ #trcss{
+   
+     padding-left: 1450px;
+} 
+#outMain{
+	font-size: 22px;
+    border-radius: 1px solid 20px;
+    border-radius: 20px;
+    background: #E4F7BA;
+    border-color: #E4F7BA;
+}
