@@ -43,8 +43,7 @@
 #scrollUp {
 	position: absolute;
 	z-index: 2147483647;
-	top: 1500px;
-	display: block;
+	top: 1540px;
 }
 </style>
 
