@@ -135,9 +135,6 @@ height: 300px;
 
 	<p class="kimch" style="text-align: center; font-size: 100px">내 몸은
 		내가 지킨다...</p>
-	<br>
-	<br>
-
 	<img width="900px"
 		src="https://health.chosun.com/site/data/img_dir/2022/03/03/2022030302148_0.jpg">
 	<br>
