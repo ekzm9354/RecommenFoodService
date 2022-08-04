@@ -70,7 +70,6 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <%@ include file="./include.jsp"%>
 
-	<%@ include file="./include.jsp"%>
 
 <%String error = request.getParameter("error");
  if(error != null){%>
