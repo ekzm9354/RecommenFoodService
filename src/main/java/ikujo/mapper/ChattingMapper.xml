@@ -19,8 +19,8 @@
 	<delete id="DeleteChatting" parameterType="ChattingDTO">
 		delete from chatting where toName=#{toName} and fromName=#{fromName} or toName=#{fromName} and fromName=#{toName}
 	</delete>
-	<delete id="ChattingDeleteCheck" parameterType="ChattingDTO">
-		delete from chatting where toName=#{toName} and fromName=#{fromName}
+	<delete id="ChattingDeleteCheck" parameterType="String">
+		delete from chatting where c_seq=#{c_seq}
 	</delete>
 	<select id="ChattingCheck" parameterType="String" resultType="ChattingDTO">
 		select * from chatting where fromname=#{userid} order by toname asc

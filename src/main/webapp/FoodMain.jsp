@@ -169,8 +169,9 @@
 	      <input type="checkbox" class="form-check-input">
 	      <small>Remember Me</small>
 	    </label> -->
-								<button type="submit" class="btn btn-login float-right"
+								<button type="submit" class="btn btn-login float-right "
 									style="border-right-width: 1px; margin-right: 45px; margin-top: 20px; padding-top: 0px;">등록</button>
+
 							</div>
 	</form>
 	<%
@@ -179,7 +180,7 @@
 
 	</div>
 	<div class="copy-text" style="margin-bottom: 20px;"
-		style=" margin-bottom: 20px; left: 70px;" /* 가운데 정렬*/
+		style=" margin-bottom: 20px; left: 70px;"/*가운데정렬*/
 	>
 		밥줘 영양줘 <i class="fa fa-heart"></i> by <a href="./SelectFood.jsp">음식
 			조회</a>
@@ -187,9 +188,9 @@
 	</div>
 
 
-<!-- 이미지 -->
+	<!-- 이미지 -->
 
-	 <!-- <div class="col-md-8 banner-sec"> -->
+	<!-- <div class="col-md-8 banner-sec"> -->
 	<div style="margin-left: 100px;">
 		<div id="carouselExampleIndicators" class="carousel slide"
 			data-ride="carousel">
@@ -501,28 +502,30 @@
 	<!-- ****** Our Creative Portfolio Area End ****** -->
 
 
-<!-- Footer-->
+	<!-- Footer-->
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
 				<!-- Copywrite Text -->
 				<div class="copy_right_text text-center">
 					<p>
-<!-- 						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						<!-- 						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
 						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a> -->
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-    
-     <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">
-            	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
-						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
-            </p></div>
-        </footer>
+
+	<!-- Footer-->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">
+				메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i> by
+				<a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+			</p>
+		</div>
+	</footer>
 
 	<!-- ****** Footer Menu Area End ****** -->
 

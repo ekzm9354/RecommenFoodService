@@ -11,7 +11,7 @@ import lombok.Getter;
 @Getter
 @AllArgsConstructor
 public class ChattingDTO {
-	private BigDecimal s_seq;
+	private BigDecimal c_seq;
 	private Timestamp c_date;
 //	받는 사람
 	private String toName;
