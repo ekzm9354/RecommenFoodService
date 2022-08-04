@@ -24,16 +24,18 @@
 
 <link href="FoodMain.css" rel="stylesheet">
 
- <!-- 폰트 적용 -->
+<!-- 폰트 적용 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap"
+	rel="stylesheet">
 
 <!-- 폰트 스타일 적용 -->
 <style>
-	*{
-		font-family: 'Dongle', sans-serif;
-	}
+* {
+	font-family: 'Dongle', sans-serif;
+}
 </style>
 
 <!-- 스크롤업 -->
@@ -47,13 +49,14 @@
 </style>
 
 <!-- real html 코드 -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Blog Home - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<title>Blog Home - Start Bootstrap Template</title>
+<!-- Favicon-->
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
 
 </head>
@@ -63,8 +66,11 @@
 
 
 <body>
+<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 <%@ include file="./include.jsp"%>
+
+	<%@ include file="./include.jsp"%>
 
 <%String error = request.getParameter("error");
  if(error != null){%>
@@ -86,6 +92,17 @@
 		
 	 </script>
  <%}%>
+	<%
+	error = request.getParameter("error");
+	if (error != null) {
+	%>
+	<script type="text/javascript">
+		alert('이전에 먹었던 메뉴를 먼저 등록해주세요')
+	</script>
+	<%
+	}
+	%>
+
 
 
 
@@ -116,8 +133,7 @@
 
 
 	<!-- ****** Breadcumb Area Start ****** -->
-	<div class="breadcumb-area"
-		style="background-image: url(img/메인5.jpg);">
+	<div class="breadcumb-area" style="background-image: url(img/메인5.jpg);">
 		<div class="container h-100">
 			<div class="row h-100 align-items-center">
 				<div class="col-12">
@@ -146,11 +162,11 @@
 		</div>
 	</div>
 	<!-- ****** Breadcumb Area End ****** -->
-	
-	
+
+
 	<!-- *******real html 코드 ******* -->
-   <!-- Responsive navbar-->
-        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<!-- Responsive navbar-->
+	<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#!">Start Bootstrap</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -173,293 +189,289 @@
                 </div>
             </div>
         </header> -->
-        <!-- Page content-->
-        <div class="container">
-            <div class="row">
-                <!-- Blog entries-->
-                <div class="col-lg-8" style="
-						    padding-bottom: 50px;
-						    padding-top: 50px;
-						">
-                    <!-- Featured blog post-->
-                    <div class="card mb-4">
-                        <a href="#!">
-                        <!-- 이미지 넣는 부분 -->
-                        <!-- ****** Welcome Post Area Start ****** -->
- 	<section class="welcome-post-sliders owl-carousel">
+	<!-- Page content-->
+	<div class="container">
+		<div class="row">
+			<!-- Blog entries-->
+			<div class="col-lg-8"
+				style="padding-bottom: 50px; padding-top: 50px;">
+				<!-- Featured blog post-->
+				<div class="card mb-4">
+					<a href="#!"> <!-- 이미지 넣는 부분 --> <!-- ****** Welcome Post Area Start ****** -->
+						<section class="welcome-post-sliders owl-carousel">
 
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식1.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식1.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식2.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식2.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식3.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식3.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식4.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식4.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식5.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식5.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식6.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식6.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식7.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식7.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식8.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식8.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식9.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식9.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식10.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식10.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식11.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식11.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식12.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식12.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식13.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식13.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식14.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식14.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<div class="welcome-single-slide">
-			<!-- Post Thumb -->
-			<img src="img/food-img/음식15.jpg" alt="">
-			<!-- Overlay Text -->
-			<div class="project_title">
-				<div class="post-date-commnents d-flex">
-					<!-- <a href="#"> May 19, 2017
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<div class="welcome-single-slide">
+								<!-- Post Thumb -->
+								<img src="img/food-img/음식15.jpg" alt="">
+								<!-- Overlay Text -->
+								<div class="project_title">
+									<div class="post-date-commnents d-flex">
+										<!-- <a href="#"> May 19, 2017
 					</a> <a href="#"> 5 Comment
 					</a> -->
-				</div>
-				<a href="#">
-					<h5>
-						<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
-					</h5>
-				</a>
-			</div>
-		</div>
-		<!-- Single Slide -->
-		<!-- <div class="welcome-single-slide">
+									</div>
+									<a href="#">
+										<h5>
+											<!-- “I’ve Come and I’m Gone”: A Tribute to Istanbul’s Street -->
+										</h5>
+									</a>
+								</div>
+							</div>
+							<!-- Single Slide -->
+							<!-- <div class="welcome-single-slide">
 			Post Thumb
 			<img src="img/food-img/음식16.jpg" alt="">
 			Overlay Text
@@ -478,24 +490,21 @@
 		</div> -->
 
 
-	</section> 
-	<!-- ****** Welcome Area End ****** -->
-                        
-                        
-                        
-                        <!-- <img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /> --></a>
-                        <div class="card-body">
-                            <div class="small text-muted"><!-- 음식 조회 --></div>
-                            <h2 class="card-title">음식 조회</h2>
-                            <p class="card-text"> <!-- 먹었던 음식을 등록하세요. <br>  -->
-                            					  정확한 영양소 분석을 위해서 음식을 조회하고 정보를 등록해보세요. <br>
-                            					  샐러드, 치킨, 국밥과 같이 단어를 입력하고 음식을 조회하세요. <br>
-                            					  카테고리를 선택하면 자동으로 입력창에 단어를 넣을 수 있습니다.
-                            </p>
-                            <!-- <a class="btn btn-primary" href="#!">Read more →</a> -->
-                        </div>
-                    </div>
-                    <!-- Nested row for non-featured blog posts
+						</section> <!-- ****** Welcome Area End ****** --> <!-- <img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /> --></a>
+					<div class="card-body">
+						<div class="small text-muted">
+							<!-- 음식 조회 -->
+						</div>
+						<h2 class="card-title">음식 조회</h2>
+						<p class="card-text">
+							<!-- 먹었던 음식을 등록하세요. <br>  -->
+							정확한 영양소 분석을 위해서 음식을 조회하고 정보를 등록해보세요. <br> 샐러드, 치킨, 국밥과 같이
+							단어를 입력하고 음식을 조회하세요. <br> 카테고리를 선택하면 자동으로 입력창에 단어를 넣을 수 있습니다.
+						</p>
+						<!-- <a class="btn btn-primary" href="#!">Read more →</a> -->
+					</div>
+				</div>
+				<!-- Nested row for non-featured blog posts
                     <div class="row">
                         <div class="col-lg-6">
                             Blog post
@@ -542,8 +551,8 @@
                             </div>
                         </div>
                     </div> -->
-                    <!-- Pagination-->
-                    <!-- <nav aria-label="Pagination">
+				<!-- Pagination-->
+				<!-- <nav aria-label="Pagination">
                         <hr class="my-0" />
                         <ul class="pagination justify-content-center my-4">
                             <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Newer</a></li>
@@ -555,66 +564,77 @@
                             <li class="page-item"><a class="page-link" href="#!">Older</a></li>
                         </ul>
                     </nav> -->
-                </div>
-                <!-- Side widgets-->
-                <div class="col-lg-4" style="
-							    padding-top: 50px;
-							">
-                    <!-- Search widget-->
-                    <form action="SelectFood.do" method="post">
-                    <div class="card mb-4">
-                        <div class="card-header">Search</div>
-                        <div class="card-body">
-                            <div class="input-group">
-                            	<input name="keyword" type="text" class="form-control" placeholder="food name" aria-label="Enter search term..." aria-describedby="button-search"/>
-                                <!-- <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" /> -->
-                                <!-- <button class="btn btn-primary" id="button-search" type="button">Go!</button> -->
-                               <input type="submit" class="btn btn-primary" id="button-search" value="조회"
-                               style=" margin-right: 50px; left: 70px; top: 20px;">
-                            </div>
-                        </div>
-                    </div>
-                    </form>
-                    <!-- Categories widget-->
-                    <div class="card mb-4">
-                        <div class="card-header">Categories</div>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0" >
-                                        <li><a href="#!" class="foodCategory">찌개</a></li>
-                                        <li><a href="#!" class="foodCategory">샐러드</a></li>
-                                        <li><a href="#!" class="foodCategory">스테이크</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#!" class="foodCategory">치킨</a></li>
-                                        <li><a href="#!" class="foodCategory">피자</a></li>
-                                        <li><a href="#!" class="foodCategory">스파게티</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Side widget-->
-                   <!--  <div class="card mb-4">
+			</div>
+			<!-- Side widgets-->
+			<div class="col-lg-4" style="padding-top: 50px;">
+				<!-- Search widget-->
+			<%-- 	<%
+				String error1 = (String) session.getAttribute("error");
+				String id = (String) session.getAttribute("id");
+				if (error1.equals("1")) {
+				%> --%>
+			<!-- 	<script type="text/javascript">
+				 alert('미입력 값이 있습니다')
+				</script> -->
+
+				<form action="SelectFood.do" method="post">
+					<div class="card mb-4">
+						<div class="card-header">Search</div>
+						<div class="card-body">
+							<div class="input-group">
+								<input name="keyword" type="text" class="form-control"
+									placeholder="food name" aria-label="Enter search term..."
+									aria-describedby="button-search" />
+								<!-- <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" /> -->
+								<!-- <button class="btn btn-primary" id="button-search" type="button">Go!</button> -->
+								<input type="submit" class="btn btn-primary" id="button-search"
+									value="조회" style="margin-right: 50px; left: 70px; top: 20px;">
+							</div>
+						</div>
+					</div>
+				</form>
+				<!-- Categories widget-->
+				<div class="card mb-4">
+					<div class="card-header">Categories</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-sm-6">
+								<ul class="list-unstyled mb-0">
+									<li><a href="#!" class="foodCategory">찌개</a></li>
+									<li><a href="#!" class="foodCategory">샐러드</a></li>
+									<li><a href="#!" class="foodCategory">스테이크</a></li>
+								</ul>
+							</div>
+							<div class="col-sm-6">
+								<ul class="list-unstyled mb-0">
+									<li><a href="#!" class="foodCategory">치킨</a></li>
+									<li><a href="#!" class="foodCategory">피자</a></li>
+									<li><a href="#!" class="foodCategory">스파게티</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Side widget-->
+				<!--  <div class="card mb-4">
                         <div class="card-header">Side Widget</div>
                         <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
                     </div> -->
-                </div>
-            </div>
-        </div>
-       <!-- footer 자리 -->
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-	
-	
-	
+			</div>
+		</div>
+	</div>
+	<!-- footer 자리 -->
+	<!-- Bootstrap core JS-->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Core theme JS-->
+	<script src="js/scripts.js"></script>
+<%-- 	<%
+	}else if(error1==null){
+	%> --%>
+				
 	<!-- html코드 -->
-<!-- <form action="SelectFood.do" method="post">
+	<!-- <form action="SelectFood.do" method="post">
 			<div class="container">
 		
 		<div class="row" style="margin-top:20px">
@@ -651,13 +671,13 @@
 		</div>
 
 </div>
-	</form> -->	
-	
-	
-	
-	
+	</form> -->
+
+
+
+
 	<!-- html 코드 -->
-<!-- 	<div class="container forget-password">
+	<!-- 	<div class="container forget-password">
             <div class="row">
                 <div class="col-md-12 col-md-offset-4">
                     <div class="panel panel-default">
@@ -697,8 +717,8 @@
                 </div>
             </div>
         </div> -->
-	
-<!-- 원래코드 	
+
+	<!-- 원래코드 	
 	<form action="SelectFood.do" method="post">
 	<h2>S E A R C H</h2>
 		<div class="textForm">
@@ -711,142 +731,144 @@
 		<input type="text" name="keyword"><br> <input
 			type="submit" value="조회하기"> 예)'치킨','샐러드','파스타' 와 같이 입력해주세요
 	</form> -->
-	
-	
-	
-	    <!-- ****** Instagram Area Start ****** -->
-    <div class="instargram_area owl-carousel section_padding_100_0 clearfix" id="portfolio">
 
-        <!-- Instagram Item -->
-        <div class="instagram_gallery_item">
-            <!-- Instagram Thumb -->
-            <img src="img/instagram-img/1.jpg" alt="">
-            <!-- Hover -->
-            <div class="hover_overlay">
-                <div class="yummy-table">
-                    <div class="yummy-table-cell">
-                        <div class="follow-me text-center">
-                            <!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Instagram Item -->
-        <div class="instagram_gallery_item">
-            <!-- Instagram Thumb -->
-            <img src="img/instagram-img/2.jpg" alt="">
-            <!-- Hover -->
-            <div class="hover_overlay">
-                <div class="yummy-table">
-                    <div class="yummy-table-cell">
-                        <div class="follow-me text-center">
-                            <!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- Instagram Item -->
-        <div class="instagram_gallery_item">
-            <!-- Instagram Thumb -->
-            <img src="img/instagram-img/3.jpg" alt="">
-            <!-- Hover -->
-            <div class="hover_overlay">
-                <div class="yummy-table">
-                    <div class="yummy-table-cell">
-                        <div class="follow-me text-center">
-                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+	<!-- ****** Instagram Area Start ****** -->
+	<div
+		class="instargram_area owl-carousel section_padding_100_0 clearfix"
+		id="portfolio">
 
-        <!-- Instagram Item -->
-        <div class="instagram_gallery_item">
-            <!-- Instagram Thumb -->
-            <img src="img/instagram-img/4.jpg" alt="">
-            <!-- Hover -->
-            <div class="hover_overlay">
-                <div class="yummy-table">
-                    <div class="yummy-table-cell">
-                        <div class="follow-me text-center">
-                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- Instagram Item -->
+		<div class="instagram_gallery_item">
+			<!-- Instagram Thumb -->
+			<img src="img/instagram-img/1.jpg" alt="">
+			<!-- Hover -->
+			<div class="hover_overlay">
+				<div class="yummy-table">
+					<div class="yummy-table-cell">
+						<div class="follow-me text-center">
+							<!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- Instagram Item -->
-        <div class="instagram_gallery_item">
-            <!-- Instagram Thumb -->
-            <img src="img/instagram-img/5.jpg" alt="">
-            <!-- Hover -->
-            <div class="hover_overlay">
-                <div class="yummy-table">
-                    <div class="yummy-table-cell">
-                        <div class="follow-me text-center">
-                            <!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- Instagram Item -->
+		<div class="instagram_gallery_item">
+			<!-- Instagram Thumb -->
+			<img src="img/instagram-img/2.jpg" alt="">
+			<!-- Hover -->
+			<div class="hover_overlay">
+				<div class="yummy-table">
+					<div class="yummy-table-cell">
+						<div class="follow-me text-center">
+							<!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- Instagram Item -->
-        <div class="instagram_gallery_item">
-            <!-- Instagram Thumb -->
-            <img src="img/instagram-img/6.jpg" alt="">
-            <!-- Hover -->
-            <div class="hover_overlay">
-                <div class="yummy-table">
-                    <div class="yummy-table-cell">
-                        <div class="follow-me text-center">
-                           <!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- Instagram Item -->
+		<div class="instagram_gallery_item">
+			<!-- Instagram Thumb -->
+			<img src="img/instagram-img/3.jpg" alt="">
+			<!-- Hover -->
+			<div class="hover_overlay">
+				<div class="yummy-table">
+					<div class="yummy-table-cell">
+						<div class="follow-me text-center">
+							<!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- Instagram Item -->
-        <div class="instagram_gallery_item">
-            <!-- Instagram Thumb -->
-            <img src="img/instagram-img/1.jpg" alt="">
-            <!-- Hover -->
-            <div class="hover_overlay">
-                <div class="yummy-table">
-                    <div class="yummy-table-cell">
-                        <div class="follow-me text-center">
-                            <!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- Instagram Item -->
+		<div class="instagram_gallery_item">
+			<!-- Instagram Thumb -->
+			<img src="img/instagram-img/4.jpg" alt="">
+			<!-- Hover -->
+			<div class="hover_overlay">
+				<div class="yummy-table">
+					<div class="yummy-table-cell">
+						<div class="follow-me text-center">
+							<!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        <!-- Instagram Item -->
-        <div class="instagram_gallery_item">
-            <!-- Instagram Thumb -->
-            <img src="img/instagram-img/2.jpg" alt="">
-            <!-- Hover -->
-            <div class="hover_overlay">
-                <div class="yummy-table">
-                    <div class="yummy-table-cell">
-                        <div class="follow-me text-center">
-                          <!--   <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+		<!-- Instagram Item -->
+		<div class="instagram_gallery_item">
+			<!-- Instagram Thumb -->
+			<img src="img/instagram-img/5.jpg" alt="">
+			<!-- Hover -->
+			<div class="hover_overlay">
+				<div class="yummy-table">
+					<div class="yummy-table-cell">
+						<div class="follow-me text-center">
+							<!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    </div>
-    <!-- ****** Our Creative Portfolio Area End ****** -->
+		<!-- Instagram Item -->
+		<div class="instagram_gallery_item">
+			<!-- Instagram Thumb -->
+			<img src="img/instagram-img/6.jpg" alt="">
+			<!-- Hover -->
+			<div class="hover_overlay">
+				<div class="yummy-table">
+					<div class="yummy-table-cell">
+						<div class="follow-me text-center">
+							<!--  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Instagram Item -->
+		<div class="instagram_gallery_item">
+			<!-- Instagram Thumb -->
+			<img src="img/instagram-img/1.jpg" alt="">
+			<!-- Hover -->
+			<div class="hover_overlay">
+				<div class="yummy-table">
+					<div class="yummy-table-cell">
+						<div class="follow-me text-center">
+							<!-- <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Instagram Item -->
+		<div class="instagram_gallery_item">
+			<!-- Instagram Thumb -->
+			<img src="img/instagram-img/2.jpg" alt="">
+			<!-- Hover -->
+			<div class="hover_overlay">
+				<div class="yummy-table">
+					<div class="yummy-table-cell">
+						<div class="follow-me text-center">
+							<!--   <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i> Follow me</a> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- ****** Our Creative Portfolio Area End ****** -->
 
 
 
@@ -857,101 +879,121 @@
 				<!-- Copywrite Text -->
 				<div class="copy_right_text text-center">
 					<p>
-<!-- 						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
+						<!-- 						메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
 						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a> -->
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
-    
-     <!-- Footer-->
-        <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">
-            	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
-						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
-            </p></div>
-        </footer>
 
-    <!-- ****** Footer Menu Area End ****** -->
+	<!-- Footer-->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">
+				메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i> by
+				<a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+			</p>
+		</div>
+	</footer>
 
-    <!-- Jquery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap-4 js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins JS -->
-    <script src="js/others/plugins.js"></script>
-    <!-- Active JS -->
-    <script src="js/active.js"></script>
-    
-    <!-- html js -->
-    <script>
-    $(function(){
-        $('.button-checkbox').each(function(){
-    		var $widget = $(this),
-    			$button = $widget.find('button'),
-    			$checkbox = $widget.find('input:checkbox'),
-    			color = $button.data('color'),
-    			settings = {
-    					on: {
-    						icon: 'glyphicon glyphicon-check'
-    					},
-    					off: {
-    						icon: 'glyphicon glyphicon-unchecked'
-    					}
-    			};
+	<!-- ****** Footer Menu Area End ****** -->
 
-    		$button.on('click', function () {
-    			$checkbox.prop('checked', !$checkbox.is(':checked'));
-    			$checkbox.triggerHandler('change');
-    			updateDisplay();
-    		});
+	<!-- Jquery-2.2.4 js -->
+	<script src="js/jquery/jquery-2.2.4.min.js"></script>
+	<!-- Popper js -->
+	<script src="js/bootstrap/popper.min.js"></script>
+	<!-- Bootstrap-4 js -->
+	<script src="js/bootstrap/bootstrap.min.js"></script>
+	<!-- All Plugins JS -->
+	<script src="js/others/plugins.js"></script>
+	<!-- Active JS -->
+	<script src="js/active.js"></script>
 
-    		$checkbox.on('change', function () {
-    			updateDisplay();
-    		});
+	<!-- html js -->
+	<script>
+		$(function() {
+			$('.button-checkbox')
+					.each(
+							function() {
+								var $widget = $(this), $button = $widget
+										.find('button'), $checkbox = $widget
+										.find('input:checkbox'), color = $button
+										.data('color'), settings = {
+									on : {
+										icon : 'glyphicon glyphicon-check'
+									},
+									off : {
+										icon : 'glyphicon glyphicon-unchecked'
+									}
+								};
 
-    		function updateDisplay() {
-    			var isChecked = $checkbox.is(':checked');
-    			// Set the button's state
-    			$button.data('state', (isChecked) ? "on" : "off");
+								$button.on('click', function() {
+									$checkbox.prop('checked', !$checkbox
+											.is(':checked'));
+									$checkbox.triggerHandler('change');
+									updateDisplay();
+								});
 
-    			// Set the button's icon
-    			$button.find('.state-icon')
-    				.removeClass()
-    				.addClass('state-icon ' + settings[$button.data('state')].icon);
+								$checkbox.on('change', function() {
+									updateDisplay();
+								});
 
-    			// Update the button's color
-    			if (isChecked) {
-    				$button
-    					.removeClass('btn-default')
-    					.addClass('btn-' + color + ' active');
-    			}
-    			else
-    			{
-    				$button
-    					.removeClass('btn-' + color + ' active')
-    					.addClass('btn-default');
-    			}
-    		}
-    		function init() {
-    			updateDisplay();
-    			// Inject the icon if applicable
-    			if ($button.find('.state-icon').length == 0) {
-    				$button.prepend('<i class="state-icon ' + settings[$button.data('state')].icon + '"></i> ');
-    			}
-    		}
-    		init();
-    	});
-    });
-    
-    $('.foodCategory').on('click',function(){
-    	var keywords = $(this).text()
-    	console.log(keywords)
-    	$('input[name=keyword]').attr('value',keywords)
-    })
-    </script>
+
+								function updateDisplay() {
+									var isChecked = $checkbox.is(':checked');
+									// Set the button's state
+									$button.data('state', (isChecked) ? "on"
+											: "off");
+
+									// Set the button's icon
+									$button
+											.find('.state-icon')
+											.removeClass()
+											.addClass(
+													'state-icon '
+															+ settings[$button
+																	.data('state')].icon);
+
+									// Update the button's color
+									if (isChecked) {
+										$button.removeClass('btn-default')
+												.addClass(
+														'btn-' + color
+																+ ' active');
+									} else {
+										$button.removeClass(
+												'btn-' + color + ' active')
+												.addClass('btn-default');
+									}
+								}
+								function init() {
+									updateDisplay();
+									// Inject the icon if applicable
+									if ($button.find('.state-icon').length == 0) {
+										$button.prepend('<i class="state-icon '
+												+ settings[$button
+														.data('state')].icon
+												+ '"></i> ');
+									}
+								}
+								init();
+							});
+		});
+
+		$('.foodCategory').on('click', function() {
+			var keywords = $(this).text()
+			console.log(keywords)
+			$('input[name=keyword]').attr('value', keywords)
+		})
+	</script>
+	
+    <% error = request.getParameter("error");
+ if(error != null){%>
+	 <script type="text/javascript">
+	 alert('이전에 먹었던 메뉴를 먼저 등록해주세요')
+	 
+	 </script>
+ <%}%>
 </body>
 </html>

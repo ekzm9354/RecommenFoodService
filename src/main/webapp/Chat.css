@@ -55,7 +55,7 @@ body {
 .top_menu #whos {
   text-align: center;
   color: #bcbdc0;
-  font-size: 20px;
+  font-size: 35px;
 }
 
 #chattingMain {
@@ -65,6 +65,7 @@ body {
   margin: 0;
   height: 347px;
   overflow: scroll;
+  font-size: 25px;
 }
 #chattingMain .message {
   clear: both;
@@ -168,6 +169,7 @@ body {
   position: absolute;
   outline-width: 0;
   color: gray;
+  font-size: 25px;
 }
 .bottom_wrapper .textbox {
   width: 140px;
@@ -200,7 +202,19 @@ body {
 #send, #out{
 	border: none;
 	background-color: #E4F7BA;
-	font-size:17px;
+	font-size: 30px;
 	border-radius: 10px;
 	
 }
+
+#delete{
+	font-size:22px;
+}
+#inRoom{
+	font-size:22px;
+}
+
+#whos tr td{
+	padding-left: 20px;
+}
+
