@@ -66,7 +66,8 @@ img {
 	
 		<div style="margin-top: 50px; margin-bottom: 50px;">
 		
-			<a href="ChttingFlask"><img src="./img/chatlogo.jpg"></a> <!-- 이미지 -->
+			<a href="ChttingFlask"><img src="./img/chatlogo1.jpg"
+			style="margin-bottom: 100px;"></a> <!-- 이미지 -->
 		</div>
 
 

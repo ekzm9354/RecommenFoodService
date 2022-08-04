@@ -60,8 +60,12 @@ font-weight : bold;
     color: #F15F5F!important;
     content: ">"!important;
 }
-.bg-dark {
-    background-color: #343a40!important!important;
+#pinnk{
+	color: #F15F5F!important;
+}
+#red{
+	color: #F15F5F!important; 
+	font-size : 35px
 }
 </style>
 
@@ -317,9 +321,9 @@ font-weight : bold;
     
      <!-- Footer-->
         <footer class="py-5 bg-dark" id="pink">
-            <div class="container"><p class="m-0 text-center text-white">
+            <div class="container"><p class="m-0 text-center text-white" id="pinnk">
             	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
-						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
+						by <a href="Main.jsp" target="_blank" id="red">밥줘 영양줘</a>
             </p></div>
         </footer>
 
