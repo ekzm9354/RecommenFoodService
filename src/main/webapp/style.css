@@ -208,8 +208,8 @@ ol {
 }
 
 #scrollUp {
-    bottom: 55px;
-    font-size: 14px;
+	bottom: 125px;    
+	font-size: 14px;
     right: 50%;
     width: 30px;
     background-color: #F15F5F;
@@ -1564,3 +1564,6 @@ button, input, optgroup, select, textarea {
     color: #F15F5F!important;
 }
 
+#pink{
+	background-color: #FFD8D8!important;
+}

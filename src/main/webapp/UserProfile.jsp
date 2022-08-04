@@ -316,7 +316,7 @@ font-weight : bold;
 	</div>
     
      <!-- Footer-->
-        <footer class="py-5 bg-dark">
+        <footer class="py-5 bg-dark" id="pink">
             <div class="container"><p class="m-0 text-center text-white">
             	메뉴 추천 | 영양보충제 추천 <i class="fa fa-heart-o" aria-hidden="true"></i>
 						by <a href="Main.jsp" target="_blank">밥줘 영양줘</a>
