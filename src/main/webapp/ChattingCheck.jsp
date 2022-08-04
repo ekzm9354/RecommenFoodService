@@ -354,7 +354,7 @@ a {
 
 
 <script type="text/javascript">
-	$('#response').on('click',function(){
+	$(document).on('click','#response',function(){
 		var toName ='<%=toName%>'
 		var fromName = '<%=fromName%>'
 		var cnt =1
