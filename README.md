@@ -13,6 +13,7 @@
   
   
 # 2. 주요기능
+![image](https://user-images.githubusercontent.com/106305465/183364240-35950aa8-ad00-4337-901f-5b02ffa49dbd.png)
 * 카테고리별 식메뉴/영양보충제 추천(콘텐츠기반 필터링)
 * 식습관이 비슷한 타 사용자가 선택한 영양보충제 추천(협업 필터링)
 * 실시간 1:1 채팅 및 메세지함
@@ -28,7 +29,14 @@
 데이터베이스|Oracle
 
 
-# 4. 서비스 아키텍처
+# 4. 아키텍처(구조)
 
 
-# 
+# 5. 기능 흐름도
+
+### ERD
+![image](https://user-images.githubusercontent.com/106305465/183364502-01a54d58-bc9b-4da1-bdf6-8128e3f915b6.png)
+
+### 서비스 흐름도
+![image](https://user-images.githubusercontent.com/106305465/183364928-6ef057d3-050b-4d1d-ae1e-11130dee15b4.png)
+
