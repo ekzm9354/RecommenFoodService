@@ -22,8 +22,8 @@
 # 3. 개발환경
 구분|내용
 ---|---|
-사용언어|Java,HTML/CSS,JQuery,Python
-사용 라이브러리| Bootstrap,Mybatis,Maven,Flask,
+사용언어|Java,HTML/CSS,JavaScript,Python
+사용 라이브러리| Bootstrap,Mybatis,Maven,Flask,JQuery,cx_Oracle,norm,etc
 개발도구|Eclipse,VisualStudioCode,Jupyter
 서버환경| tomcat 9.0, Flask
 데이터베이스|Oracle
