@@ -32,7 +32,7 @@
 
 
 # 4. 유스케이스
-![image](https://user-images.githubusercontent.com/106305465/183549840-2b561cd3-2178-42b7-8b8d-2745afe42400.png)
+![image](https://user-images.githubusercontent.com/106305465/183550026-62350ec9-7e95-450f-8daf-b8e1f83817ec.png)
 
 # 5. 기능 흐름도
 
