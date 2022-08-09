@@ -75,6 +75,5 @@
 # 8. 팀원단위 업무분장
 # 9. 트러블슈팅
 # 10. 시연영상
-```html
-<iframe id="video" width="648" height="364.5" src="C:\Users\smhrd\Desktop\vllo.mp4" frameborder="0"> </iframe>
-```
+
+<iframe width="895" height="503" src="https://www.youtube.com/embed/7iu3jahNv7s" title="밥줘영양줘" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
