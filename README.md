@@ -73,5 +73,13 @@
 ![image](https://user-images.githubusercontent.com/106305465/183537607-5e4e1c86-11ed-4218-9d0e-d2958ce19267.png)
 
 # 8. 팀원단위 업무분장
+![image](https://user-images.githubusercontent.com/106305465/183547757-96eccdc4-6d6b-405d-82d1-124e96dccb7a.png)
+
 # 9. 트러블슈팅
+
+### Flask 서버 구축
+![image](https://user-images.githubusercontent.com/106305465/183547699-06279335-cfb5-44c5-9745-2df309094e5f.png)
+
+### BootStrap 충돌문제
+### ![image](https://user-images.githubusercontent.com/106305465/183547730-a0332fcc-037a-4e9c-9b1a-456627ed0641.png)
 # 10. 시연영상
