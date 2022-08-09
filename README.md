@@ -84,3 +84,13 @@
 ### ![image](https://user-images.githubusercontent.com/106305465/183547730-a0332fcc-037a-4e9c-9b1a-456627ed0641.png)
 # 10. 시연영상
 [![image ALT TEXT HERE](https://user-images.githubusercontent.com/106305465/183548672-1a7153eb-d878-4fad-a32c-0ec3cbd7089a.png)](https://www.youtube.com/watch?v=7iu3jahNv7s)
+
+# 11. 참고문헌
+### 소비자의 과체중비만지각과 외식 시 영양정보 활용 차이.pdf
+### The_Effects_of_Regular_Dietary_Habits_on_Obesity_Indices_and_Nutrition_Intakes_in_Adult_Males.pdf
+### 한국영양학회 (kns.or.kr)
+### 식품영양성분 데이터베이스 (foodsafetykorea.go.kr)
+
+
+
+
