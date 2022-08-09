@@ -76,5 +76,5 @@
 # 9. 트러블슈팅
 # 10. 시연영상
 ```html
-<iframe id="video" width="648px" height="364.5px" src="C:\Users\smhrd\Desktop\vllo.mp4" frameborder="0"> </iframe>
+<iframe id="video" width="648" height="364.5" src="C:\Users\smhrd\Desktop\vllo.mp4" frameborder="0"> </iframe>
 ```
