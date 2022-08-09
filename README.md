@@ -31,8 +31,8 @@
 데이터베이스|Oracle
 
 
-# 4. 아키텍처(구조)
-
+# 4. 유스케이스
+![image](https://user-images.githubusercontent.com/106305465/183549840-2b561cd3-2178-42b7-8b8d-2745afe42400.png)
 
 # 5. 기능 흐름도
 
