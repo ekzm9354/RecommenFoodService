@@ -83,5 +83,4 @@
 ### BootStrap 충돌문제
 ### ![image](https://user-images.githubusercontent.com/106305465/183547730-a0332fcc-037a-4e9c-9b1a-456627ed0641.png)
 # 10. 시연영상
-[![image](https://user-images.githubusercontent.com/106305465/183548672-1a7153eb-d878-4fad-a32c-0ec3cbd7089a.png)]
-(https://www.youtube.com/watch?v=7iu3jahNv7s)
+[![image ALT TEXT HERE](https://user-images.githubusercontent.com/106305465/183548672-1a7153eb-d878-4fad-a32c-0ec3cbd7089a.png)](https://www.youtube.com/watch?v=7iu3jahNv7s)
